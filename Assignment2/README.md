@@ -40,6 +40,8 @@ pip install . --user
 pip install jupyter --user
 (pip install PyQt5==5.9.2 if you can use X11)
 ```
+notebooks/tutorial.ipynb
+
 ```
 wget https://www2.graphviz.org/Packages/stable/portable_source/graphviz-2.44.1.tar.gz
 tar -zxvf graphviz-2.44.1.tar.gz 
