@@ -9,7 +9,7 @@ cd /gpfs/ysm/project/beng469/beng469_my393
 ```
 
 ```
-mkdir Lecture2-CNV && cd Lecture2-CNV
+mkdir Assignment2-CNV && cd Assignment2-CNV
 module load CMake/3.9.1
 module load Python/3.6.2-foss-2017b
 ```
