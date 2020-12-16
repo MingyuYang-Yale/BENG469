@@ -26,3 +26,12 @@ cd build
 make 
 make install
 ```
+```
+cd ../../SCICoNE/
+
+mkdir build && cd build
+
+cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_PREFIX_PATH=/gpfs/ysm/project/beng469/beng469_my393/Lecture2-CNV/nlopt/out.build
+
+make 
+```
