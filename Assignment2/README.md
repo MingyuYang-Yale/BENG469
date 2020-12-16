@@ -32,3 +32,20 @@ mkdir build && cd build
 cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_PREFIX_PATH=/gpfs/ysm/project/beng469/beng469_my393/Lecture2-CNV/nlopt/out.build
 make 
 ```
+```
+cd ../pyscicone
+pip install scipy --upgrade --user
+pip install . --user 
+pip install jupyter --user
+(pip install PyQt5==5.9.2 if you can use X11)
+```
+```
+wget https://www2.graphviz.org/Packages/stable/portable_source/graphviz-2.44.1.tar.gz
+tar -zxvf graphviz-2.44.1.tar.gz 
+cd graphviz-2.44.1/
+mkdir mybuild
+module load Perl/5.26.0-GCCcore-6.4.0
+./configure --prefix=/gpfs/ysm/project/beng469/beng469_my393/Lecture2-CNV/graphviz-2.44.1/mybuild
+make 
+make install
+```
