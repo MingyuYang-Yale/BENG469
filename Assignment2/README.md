@@ -1,7 +1,11 @@
 # Single-cell copy number calling and event history reconstruction
 
+Mallory, X.F., Edrisi, M., Navin, N. et al. Methods for copy number aberration detection from single-cell DNA-sequencing data. Genome Biol 21, 208 (2020). https://doi.org/10.1186/s13059-020-02119-8
 
 
+Single-cell copy number calling and event history reconstruction
+Jack Kuipers, Mustafa Anıl Tuncel, Pedro Ferreira, Katharina Jahn, Niko Beerenwinkel
+bioRxiv 2020.04.28.065755; doi: https://doi.org/10.1101/2020.04.28.065755
 ```
 ssh -Y beng469_my393@farnam.hpc.yale.edu
 srun --pty --x11 -p interactive --mem=20g bash
