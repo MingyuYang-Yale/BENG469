@@ -15,6 +15,7 @@ module load Python/3.6.2-foss-2017b
 ```
 ```
 git clone https://github.com/cbg-ethz/SCICoNE.git
+
 git clone git://github.com/stevengj/nlopt
 ```
 ```
