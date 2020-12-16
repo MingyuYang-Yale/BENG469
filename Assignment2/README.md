@@ -75,3 +75,5 @@ https://support.10xgenomics.com/single-cell-dna/software/pipelines/latest/instal
 srun --pty --x11 -c 8 -p interactive --mem=32g bash
 
 https://support.10xgenomics.com/single-cell-dna/software/pipelines/latest/using/tutorial
+
+tar -xzvf cellranger-dna-1.1.0.tar.gz
