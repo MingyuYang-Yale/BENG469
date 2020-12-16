@@ -55,3 +55,7 @@ module load Perl/5.26.0-GCCcore-6.4.0
 make 
 make install
 ```
+```
+cd ../../SCICoNE/pyscicone
+/gpfs/ysm/project/beng469/beng469_my393/Lecture2-CNV/graphviz-2.44.1/mybuild/bin/dot -Tpdf -O  Source.gv
+```
