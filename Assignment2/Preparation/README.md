@@ -169,3 +169,20 @@ make install
 cd ../../SCICoNE/pyscicone
 /gpfs/ysm/project/beng469/beng469_my393/Assignment2-CNV/graphviz-2.44.1/mybuild/bin/dot -Tpdf -O  Source.gv
 ```
+
+
+```Java
+public static void main(String[]args){} //Java
+```
+```c
+int main(int argc, char *argv[]) //C
+```
+```Bash
+echo "hello GitHub" #Bash
+```
+```javascript
+document.getElementById("myH1").innerHTML="Welcome to my Homepage"; //javascipt
+```
+```cpp
+string &operator+(const string& A,const string& B) //cpp
+```
