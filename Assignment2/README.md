@@ -1,3 +1,11 @@
+
+In this tutorial, you will learn how to:
+
+1. Install and test the Cell Ranger DNA pipeline on HPC.
+2. Run cellranger-dna cnv using raw FASTQ files to perform CNV calling and clustering.
+3. Install and test the SCICoNE pipeline on HPC
+4. Running SCICoNE on 10x Genomics data to reconstructs the history of copy number events in a frozen breast tumor tissue from a triple negative ductal carcinoma.
+
 ## Running cellranger-dna cnv
 ```
 ( https://support.10xgenomics.com/single-cell-dna/software/downloads/latest? )
