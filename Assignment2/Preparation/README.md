@@ -138,7 +138,7 @@ make install
 ```
 cd ../../SCICoNE/
 mkdir build && cd build
-cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ 
+cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_PREFIX_PATH=/gpfs/ysm/project/beng469/beng469_my393/Assignment2-CNV/nlopt/out.build
 make 
 ```
 ```
@@ -156,6 +156,8 @@ ipython3
 https://github.com/cbg-ethz/SCICoNE/blob/master/notebooks/tutorial.ipynb
 
 ```
+cd ../../
+
 wget https://www2.graphviz.org/Packages/stable/portable_source/graphviz-2.44.1.tar.gz
 tar -zxvf graphviz-2.44.1.tar.gz 
 cd graphviz-2.44.1/
