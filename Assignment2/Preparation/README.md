@@ -13,6 +13,8 @@ cd /gpfs/ysm/project/beng469/beng469_my393
 
 ```
 vi ~/.bashrc
+
+(The purpose of a .bashrc file is to provide a place where you can set up variables, functions and aliases, define your settings that you want to use every time you open a new terminal window.)
 ```
 
 Add the following codes to ~/.bashrc : 
