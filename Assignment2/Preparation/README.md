@@ -1,20 +1,20 @@
-`In this tutorial, you will learn how to:`
+In this tutorial, you will learn how to:
 
-1. Install and test the 10x Cell Ranger DNA pipeline on HPC.
+1. Install and test the **10x Cell Ranger DNA pipeline** on HPC.
 2. Run cellranger-dna cnv using raw FASTQ files to perform CNV calling.
 3. Install and test the SCICoNE pipeline on HPC
-4. Running SCICoNE on simulate_data to reconstructs the history of copy number events 
+4. Running **SCICoNE** on simulate_data to reconstructs the history of copy number events 
 
 (10x Genomics data : a frozen breast tumor tissue from a triple negative ductal carcinoma. )
 
 
-Login HPC:(need to first connect to Yale's VPN if off campus)
+Login HPC:(need to first connect to Yale's **VPN** if off campus)
 ```
 ssh -Y beng469_my393@farnam.hpc.yale.edu
 srun --pty --x11 -p interactive --mem=20g bash
 cd /gpfs/ysm/project/beng469/beng469_my393
 ```
-(The purpose of a .bashrc file is to provide a place where you can set up variables, functions and aliases, define your settings that you want to use every time you open a new terminal window.)
+The purpose of a .bashrc file is to provide a place where you can set up variables, functions and aliases, define your settings that you want to use every time you open a new terminal window.
 ```
 vi ~/.bashrc
 ```
