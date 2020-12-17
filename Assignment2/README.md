@@ -70,10 +70,11 @@ wget -O cellranger-dna-1.1.0.tar.gz "https://cf.10xgenomics.com/releases/cell-dn
 
 wget https://cf.10xgenomics.com/supp/cell-dna/refdata-GRCh37-1.0.0.tar.gz
 
-https://support.10xgenomics.com/single-cell-dna/software/pipelines/latest/installation
+(https://support.10xgenomics.com/single-cell-dna/software/pipelines/latest/installation)
 
-srun --pty --x11 -c 8 -p interactive --mem=32g bash
+tar -xzvf cellranger-dna-1.1.0.tar.gz
+tar -zxvf refdata-GRCh37-1.0.0.tar.gz
 
 https://support.10xgenomics.com/single-cell-dna/software/pipelines/latest/using/tutorial
 
-tar -xzvf cellranger-dna-1.1.0.tar.gz
+**Running cellranger-dna cnv**
