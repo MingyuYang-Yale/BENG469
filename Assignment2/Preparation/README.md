@@ -1,4 +1,4 @@
-In this tutorial, you will learn how to:
+`In this tutorial, you will learn how to:`
 
 1. Install and test the 10x Cell Ranger DNA pipeline on HPC.
 2. Run cellranger-dna cnv using raw FASTQ files to perform CNV calling.
