@@ -32,17 +32,8 @@ alias ls='ls $LS_OPTIONS'
 LS_COLORS='di=00;31;44:*.gz=01;31:*.txt=04;32:*.sh=01;34:*.pl=05;33:'
 export LS_COLORS
 ```
-In this tutorial, you will learn how to:
 
-1. Install and test the 10x Cell Ranger DNA pipeline on HPC.
-2. Run cellranger-dna cnv using raw FASTQ files to perform CNV calling.
-3. Install and test the SCICoNE pipeline on HPC
-4. Running SCICoNE on 10x Genomics data to reconstructs the history of copy number events in a frozen breast tumor tissue from a triple negative ductal carcinoma.
-
-u – User name
-h – Host name
-w – Path of the current working directory
-
+u – User name  h – Host name  w – Path of the current working directory
 About color : https://gist.github.com/vratiu/9780109
 
 ## Running cellranger-dna cnv
