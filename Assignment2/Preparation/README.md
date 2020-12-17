@@ -55,7 +55,7 @@ Intra-tumor heterogeneity (ITH) has been a major confounding factor in cancer pr
 
 (Inferring a phylogenetic tree based on CNAs detected from scDNAseq data to capture the cell-lineage tree which is crucial for unraveling ITH yet has not been extensively studied or pursued. Much work has been done on inferring such trees from SNV scDNAseq data.)
 
-### Running cellranger-dna cnv
+### Install 10x Cell Ranger DNA pipeline
 ```
 mkdir Assignment2-CNV && cd Assignment2-CNV
 ```
@@ -81,7 +81,7 @@ wget https://cf.10xgenomics.com/supp/cell-dna/refdata-GRCh37-1.0.0.tar.gz
 tar -xzvf cellranger-dna-1.1.0.tar.gz
 tar -zxvf refdata-GRCh37-1.0.0.tar.gz
 ```
-
+### Running cellranger-dna cnv
 ```
 vi run-CNV.sh
 ```
@@ -109,7 +109,7 @@ Add the following codes to run-CNV.sh :
 ```
 sbatch run-CNV.sh
 ```
-###  Running SCICoNE
+###  Install SCICoNE
 Jack Kuipers, Mustafa Anıl Tuncel, Pedro Ferreira, Katharina Jahn, Niko Beerenwinkel. Single-cell copy number calling and event history reconstruction. bioRxiv 2020.04.28.065755; doi: https://doi.org/10.1101/2020.04.28.065755
 
 
@@ -131,7 +131,7 @@ cd build
 make 
 make install
 ```
-Install SCICoNE
+
 ```
 cd ../../SCICoNE/
 mkdir build && cd build
@@ -149,7 +149,7 @@ pip install jupyter --user
 ```
 ipython3
 ```
-
+###  Running SCICoNE
 https://github.com/cbg-ethz/SCICoNE/blob/master/notebooks/tutorial.ipynb
 
 ```
