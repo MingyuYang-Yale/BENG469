@@ -1,6 +1,6 @@
 ## Running cellranger-dna cnv
 ```
-https://support.10xgenomics.com/single-cell-dna/software/downloads/latest?
+( https://support.10xgenomics.com/single-cell-dna/software/downloads/latest? )
 
 wget -O cellranger-dna-1.1.0.tar.gz "https://cf.10xgenomics.com/releases/cell-dna/cellranger-dna-1.1.0.tar.gz?Expires=1608195268&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jZi4xMHhnZW5vbWljcy5jb20vcmVsZWFzZXMvY2VsbC1kbmEvY2VsbHJhbmdlci1kbmEtMS4xLjAudGFyLmd6IiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjA4MTk1MjY4fX19XX0_&Signature=AMYk4OZ~MkMi-WmDWE87TwKH58VtB70K3pddIBULKC~kUKxG4nPj21Nn1fB5FxCxWU4wvGhCS5M5ao2ReK77QQN-0to6cGNrMqkW-78pk3wL3xTqQ7dyx9ubBaFr2W4efsZyXyM-6mzbz9GbMpvZZ4YfYHGltHzXe9WtHiHokIJ~EQW0TaCukrRON6QCgloBDmjoZJGKaBGa8xatCMEsMpj2AJNMDyNYQkxKK5rkPCRjK5RGJdqJ4pZTUf4f8nWPDAJxrr9azSrjNcla8mZxfmbvI0Er3w0KqS9o4OLN4PWNpCxaEnqqCQ4Fu5VRybWZ0jtY~wIbPGlkGkUfnB-MRQ__&Key-Pair-Id=APKAI7S6A5RYOXBWRPDA"
 
@@ -13,11 +13,10 @@ wget https://cg.10xgenomics.com/samples/cell-dna/1.1.0/breast_tissue_A_2k/breast
 
 tar -xzvf cellranger-dna-1.1.0.tar.gz
 tar -zxvf refdata-GRCh37-1.0.0.tar.gz
-
+```
+```
 https://support.10xgenomics.com/single-cell-dna/software/pipelines/latest/using/tutorial
-```
 
-```
 #!/bin/bash
 
 #SBATCH --job-name=CNV-calling
