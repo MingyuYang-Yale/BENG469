@@ -37,6 +37,10 @@ export LS_COLORS
 3. w – Path of the current working directory
 4. About color : https://gist.github.com/vratiu/9780109
 
+```
+source ~/.bashrc
+```
+
 ## Running cellranger-dna cnv
 ```
 mkdir Assignment2-CNV && cd Assignment2-CNV
