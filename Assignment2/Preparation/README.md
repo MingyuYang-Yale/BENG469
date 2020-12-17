@@ -36,10 +36,10 @@ alias ls='ls $LS_OPTIONS'
 LS_COLORS='di=00;31;44:*.gz=01;31:*.txt=04;32:*.sh=01;34:*.pl=05;33:'
 export LS_COLORS
 ```
-                h – Host name 
-                u – User name  
-                w – Path of the current working directory
-                About color : https://gist.github.com/vratiu/9780109
+h – Host name 
+u – User name  
+w – Path of the current working directory
+About color : https://gist.github.com/vratiu/9780109
 
 ```
 source ~/.bashrc
