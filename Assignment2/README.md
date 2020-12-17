@@ -32,7 +32,7 @@ https://support.10xgenomics.com/single-cell-dna/software/pipelines/latest/using/
 --localcores=32
 ```
 
-# Single-cell copy number calling and event history reconstruction
+## SCICoNE: Single-cell copy number calling and event history reconstruction
 
 Mallory, X.F., Edrisi, M., Navin, N. et al. Methods for copy number aberration detection from single-cell DNA-sequencing data. Genome Biol 21, 208 (2020). https://doi.org/10.1186/s13059-020-02119-8
 
