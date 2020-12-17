@@ -39,6 +39,7 @@ export LS_COLORS
 u – User name
 h – Host name
 w – Path of the current working directory
+
 About color : https://gist.github.com/vratiu/9780109
 
 ## Running cellranger-dna cnv
