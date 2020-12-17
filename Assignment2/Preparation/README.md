@@ -1,7 +1,3 @@
-
-
-
-
 In this tutorial, you will learn how to:
 
 1. Install and test the 10x Cell Ranger DNA pipeline on HPC.
@@ -36,6 +32,7 @@ alias ls='ls $LS_OPTIONS'
 LS_COLORS='di=00;31;44:*.gz=01;31:*.txt=04;32:*.sh=01;34:*.pl=05;33:'
 export LS_COLORS
 ```
+
 u – User name
 h – Host name
 w – Path of the current working directory
