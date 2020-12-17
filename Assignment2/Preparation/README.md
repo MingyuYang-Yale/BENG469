@@ -20,7 +20,7 @@ if [ "$TERM" = "xterm" ]
         then
         export PS1="\[\033]2;\h:\u \w\007\033[33;1m\]\u \033[36;1m\t\033[0m \[\033[35;1m\]\w\[\033[0m\]\n\[\e[32;1m\]$ \[\e[0m\]"
 else
-        export PS1="\[\033[32;1m\]\h:\u \[\033[32;1m\]\w\$\[\033[0m\]"
+        export PS1="\[\033[32;1m\]\h:\u \[\033[32;1m\]\$\[\033[0m\]"
 fi
 
 export LS_OPTIONS='--color=auto'
