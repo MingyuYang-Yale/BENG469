@@ -35,9 +35,9 @@ tar -zxvf refdata-GRCh37-1.0.0.tar.gz
 #SBATCH --mem-per-cpu=8g
 #SBATCH --partition=scavenge
 
-/gpfs/ysm/project/beng469/beng469_my393/Lecture2-CNV/cellranger-dna-1.1.0/cellranger-dna cnv --id=breast_tissue_A_2k \
---fastqs=/gpfs/ysm/project/beng469/beng469_my393/Lecture2-CNV/breast_tissue_A_2k_fastqs \
---reference=/gpfs/ysm/project/beng469/beng469_my393/Lecture2-CNV/refdata-GRCh37-1.0.0 \
+/gpfs/ysm/project/beng469/beng469_my393/Assignment2-CNV/cellranger-dna-1.1.0/cellranger-dna cnv --id=breast_tissue_A_2k \
+--fastqs=/gpfs/ysm/project/beng469/beng469_my393/Assignment2-CNV/breast_tissue_A_2k_fastqs \
+--reference=/gpfs/ysm/project/beng469/beng469_my393/Assignment2-CNV/refdata-GRCh37-1.0.0 \
 --localmem=256 \
 --localcores=32
 ```
@@ -77,7 +77,7 @@ make install
 ```
 cd ../../SCICoNE/
 mkdir build && cd build
-cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_PREFIX_PATH=/gpfs/ysm/project/beng469/beng469_my393/Lecture2-CNV/nlopt/out.build
+cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_PREFIX_PATH=/gpfs/ysm/project/beng469/beng469_my393/Assignment2-CNV/nlopt/out.build
 make 
 ```
 ```
@@ -98,13 +98,13 @@ tar -zxvf graphviz-2.44.1.tar.gz 
 cd graphviz-2.44.1/
 mkdir mybuild
 module load Perl/5.26.0-GCCcore-6.4.0
-./configure --prefix=/gpfs/ysm/project/beng469/beng469_my393/Lecture2-CNV/graphviz-2.44.1/mybuild
+./configure --prefix=/gpfs/ysm/project/beng469/beng469_my393/Assignment2-CNV/graphviz-2.44.1/mybuild
 make 
 make install
 ```
 ```
 cd ../../SCICoNE/pyscicone
-/gpfs/ysm/project/beng469/beng469_my393/Lecture2-CNV/graphviz-2.44.1/mybuild/bin/dot -Tpdf -O  Source.gv
+/gpfs/ysm/project/beng469/beng469_my393/Assignment2-CNV/graphviz-2.44.1/mybuild/bin/dot -Tpdf -O  Source.gv
 ```
 
 
