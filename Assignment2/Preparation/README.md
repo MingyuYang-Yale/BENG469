@@ -111,9 +111,9 @@ module load Python/3.6.2-foss-2017b
 ```
 ```
 git clone https://github.com/cbg-ethz/SCICoNE.git
-
 git clone git://github.com/stevengj/nlopt
 ```
+Install nlopt:
 ```
 cd nlopt
 mkdir build 
@@ -123,6 +123,7 @@ cd build
 make 
 make install
 ```
+Install SCICoNE
 ```
 cd ../../SCICoNE/
 mkdir build && cd build
@@ -136,6 +137,8 @@ pip install . --user
 pip install jupyter --user
 (pip install PyQt5==5.9.2 if you can use X11)
 
+```
+```
 ipython3
 ```
 
