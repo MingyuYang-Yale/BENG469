@@ -1,9 +1,36 @@
+
+
+
+
 In this tutorial, you will learn how to:
 
 1. Install and test the 10x Cell Ranger DNA pipeline on HPC.
 2. Run cellranger-dna cnv using raw FASTQ files to perform CNV calling.
 3. Install and test the SCICoNE pipeline on HPC
 4. Running SCICoNE on 10x Genomics data to reconstructs the history of copy number events in a frozen breast tumor tissue from a triple negative ductal carcinoma.
+
+```
+ssh -Y beng469_my393@farnam.hpc.yale.edu
+srun --pty --x11 -p interactive --mem=20g bash
+cd /gpfs/ysm/project/beng469/beng469_my393
+```
+
+```
+if [ "$TERM" = "xterm" ]
+        then
+        export PS1="\[\033]2;\h:\u \w\007\033[33;1m\]\u \033[36;1m\t\033[0m \[\033[35;1m\]\w\[\033[0m\]\n\[\e[32;1m\]$ \[\e[0m\]"
+else
+        export PS1="\[\033[32;1m\]\h:\u \[\033[32;1m\]\w\$\[\033[0m\]"
+fi
+
+export LS_OPTIONS='--color=auto'
+eval "$(dircolors -b)"
+alias ls='ls $LS_OPTIONS'
+
+LS_COLORS='di=00;31;44:*.gz=01;31:*.txt=04;32:*.sh=01;34:*.pl=05;33:'
+export LS_COLORS
+```
+
 
 ## Running cellranger-dna cnv
 ```
@@ -49,11 +76,7 @@ Mallory, X.F., Edrisi, M., Navin, N. et al. Methods for copy number aberration d
 
 
 Jack Kuipers, Mustafa Anıl Tuncel, Pedro Ferreira, Katharina Jahn, Niko Beerenwinkel. Single-cell copy number calling and event history reconstruction. bioRxiv 2020.04.28.065755; doi: https://doi.org/10.1101/2020.04.28.065755
-```
-ssh -Y beng469_my393@farnam.hpc.yale.edu
-srun --pty --x11 -p interactive --mem=20g bash
-cd /gpfs/ysm/project/beng469/beng469_my393
-```
+
 
 ```
 mkdir Assignment2-CNV && cd Assignment2-CNV
