@@ -14,7 +14,7 @@ wget -O cellranger-dna-1.1.0.tar.gz "https://cf.10xgenomics.com/releases/cell-dn
 
 wget https://cf.10xgenomics.com/supp/cell-dna/refdata-GRCh37-1.0.0.tar.gz
 
-wget https://cg.10xgenomics.com/samples/cell-dna/1.1.0/breast_tissue_A_2k/breast_tissue_A_2k_fastqs.tar
+#wget https://cg.10xgenomics.com/samples/cell-dna/1.1.0/breast_tissue_A_2k/breast_tissue_A_2k_fastqs.tar
 ```
 ```
 ( https://support.10xgenomics.com/single-cell-dna/software/pipelines/latest/installation )
