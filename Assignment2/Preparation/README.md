@@ -7,7 +7,7 @@ In this tutorial, you will learn how to:
 
 (10x Genomics data : a frozen breast tumor tissue from a triple negative ductal carcinoma. )
 
-
+***
 Login HPC:(need to first connect to Yale's **VPN** if off campus)
 ```
 ssh -Y beng469_my393@farnam.hpc.yale.edu
@@ -54,7 +54,7 @@ Mallory, X.F., Edrisi, M., Navin, N. et al. Methods for copy number aberration d
 Intra-tumor heterogeneity (ITH) has been a major confounding factor in cancer prognosis, treatment, and prevention. ITH describes the phenomenon in cancer when one tumor contains multiple subclones, each characterized by a certain group of genetic variations. When ITH is not fully characterized, cancer treatment tends to target only major clones whereas the small subclones may grow mid- or post-treatment, leading to cancer relapse. Fully characterizing ITH helps understanding cancer growth and thus can improve cancer treatment and prevention. To achieve that, one needs to correctly detect genetic variations in each cell and infer the phylogenetic tree of the subclones.
 
 (Inferring a phylogenetic tree based on CNAs detected from scDNAseq data to capture the cell-lineage tree which is crucial for unraveling ITH yet has not been extensively studied or pursued. Much work has been done on inferring such trees from SNV scDNAseq data.)
-
+***
 ### Install 10x Cell Ranger DNA pipeline
 ```
 mkdir Assignment2-CNV && cd Assignment2-CNV
@@ -109,6 +109,7 @@ Add the following codes to run-CNV.sh :
 ```
 sbatch run-CNV.sh
 ```
+***
 ###  Install SCICoNE
 Jack Kuipers, Mustafa Anıl Tuncel, Pedro Ferreira, Katharina Jahn, Niko Beerenwinkel. Single-cell copy number calling and event history reconstruction. bioRxiv 2020.04.28.065755; doi: https://doi.org/10.1101/2020.04.28.065755
 
