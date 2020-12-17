@@ -15,11 +15,11 @@ srun --pty --x11 -p interactive --mem=20g bash
 cd /gpfs/ysm/project/beng469/beng469_my393
 ```
 
-Add the following code to ~/.bashrc : 
-
 ```
 vi ~/.bashrc
 ```
+
+Add the following code to ~/.bashrc : 
 
 ```
 if [ "$TERM" = "xterm" ]
