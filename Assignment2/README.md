@@ -77,4 +77,4 @@ tar -zxvf refdata-GRCh37-1.0.0.tar.gz
 
 https://support.10xgenomics.com/single-cell-dna/software/pipelines/latest/using/tutorial
 
-**Running cellranger-dna cnv**
+**Running cellranger-dna cnv
