@@ -89,7 +89,7 @@ vi run-CNV.sh
 ```
 Add the following codes to run-CNV.sh : 
 ```
-<https://support.10xgenomics.com/single-cell-dna/software/pipelines/latest/using/tutorial>
+(https://support.10xgenomics.com/single-cell-dna/software/pipelines/latest/using/tutorial)
 
 #!/bin/bash
 
