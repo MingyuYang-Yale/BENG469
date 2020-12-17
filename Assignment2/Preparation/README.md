@@ -3,7 +3,9 @@ In this tutorial, you will learn how to:
 1. Install and test the 10x Cell Ranger DNA pipeline on HPC.
 2. Run cellranger-dna cnv using raw FASTQ files to perform CNV calling.
 3. Install and test the SCICoNE pipeline on HPC
-4. Running SCICoNE on 10x Genomics data to reconstructs the history of copy number events in a frozen breast tumor tissue from a triple negative ductal carcinoma.
+4. Running SCICoNE on simulate_data to reconstructs the history of copy number events 
+
+(10x Genomics data : a frozen breast tumor tissue from a triple negative ductal carcinoma. )
 
 ```
 ssh -Y beng469_my393@farnam.hpc.yale.edu
@@ -40,7 +42,7 @@ export LS_COLORS
 ```
 source ~/.bashrc
 ```
-## SCICoNE: Single-cell copy number calling and event history reconstruction
+## Single-cell copy number calling and event history reconstruction
 
 Mallory, X.F., Edrisi, M., Navin, N. et al. Methods for copy number aberration detection from single-cell DNA-sequencing data. Genome Biol 21, 208 (2020). https://doi.org/10.1186/s13059-020-02119-8
 
