@@ -19,7 +19,7 @@ cd /gpfs/ysm/project/beng469/beng469_my393
 vi ~/.bashrc
 ```
 
-Add the following code to ~/.bashrc : 
+Add the following codes to ~/.bashrc : 
 
 ```
 if [ "$TERM" = "xterm" ]
