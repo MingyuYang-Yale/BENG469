@@ -39,6 +39,9 @@ export LS_COLORS
 
 ## Running cellranger-dna cnv
 ```
+mkdir Assignment2-CNV && cd Assignment2-CNV
+```
+```
 ( https://support.10xgenomics.com/single-cell-dna/software/downloads/latest? )
 
 * wget -O cellranger-dna-1.1.0.tar.gz "https://cf.10xgenomics.com/releases/cell-dna/cellranger-dna-1.1.0.tar.gz?Expires=1608195268&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jZi4xMHhnZW5vbWljcy5jb20vcmVsZWFzZXMvY2VsbC1kbmEvY2VsbHJhbmdlci1kbmEtMS4xLjAudGFyLmd6IiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjA4MTk1MjY4fX19XX0_&Signature=AMYk4OZ~MkMi-WmDWE87TwKH58VtB70K3pddIBULKC~kUKxG4nPj21Nn1fB5FxCxWU4wvGhCS5M5ao2ReK77QQN-0to6cGNrMqkW-78pk3wL3xTqQ7dyx9ubBaFr2W4efsZyXyM-6mzbz9GbMpvZZ4YfYHGltHzXe9WtHiHokIJ~EQW0TaCukrRON6QCgloBDmjoZJGKaBGa8xatCMEsMpj2AJNMDyNYQkxKK5rkPCRjK5RGJdqJ4pZTUf4f8nWPDAJxrr9azSrjNcla8mZxfmbvI0Er3w0KqS9o4OLN4PWNpCxaEnqqCQ4Fu5VRybWZ0jtY~wIbPGlkGkUfnB-MRQ__&Key-Pair-Id=APKAI7S6A5RYOXBWRPDA"
@@ -54,6 +57,11 @@ wget https://cf.10xgenomics.com/supp/cell-dna/refdata-GRCh37-1.0.0.tar.gz
 tar -xzvf cellranger-dna-1.1.0.tar.gz
 tar -zxvf refdata-GRCh37-1.0.0.tar.gz
 ```
+
+```
+vi run-CNV.sh
+```
+Add the following codes to run-CNV.sh : 
 ```
 ( https://support.10xgenomics.com/single-cell-dna/software/pipelines/latest/using/tutorial )
 
@@ -70,8 +78,12 @@ tar -zxvf refdata-GRCh37-1.0.0.tar.gz
 /gpfs/ysm/project/beng469/beng469_my393/Assignment2-CNV/cellranger-dna-1.1.0/cellranger-dna cnv --id=breast_tissue_A_2k \
 --fastqs=/gpfs/ysm/project/beng469/beng469_my393/Assignment2-CNV/breast_tissue_A_2k_fastqs \
 --reference=/gpfs/ysm/project/beng469/beng469_my393/Assignment2-CNV/refdata-GRCh37-1.0.0 \
---localmem=256 \
---localcores=32
+--localmem=128 \
+--localcores=16
+```
+
+```
+sbatch run-CNV.sh
 ```
 
 ## SCICoNE: Single-cell copy number calling and event history reconstruction
@@ -84,7 +96,6 @@ Jack Kuipers, Mustafa Anıl Tuncel, Pedro Ferreira, Katharina Jahn, Niko Beerenw
 
 
 ```
-mkdir Assignment2-CNV && cd Assignment2-CNV
 module load CMake/3.9.1
 module load Python/3.6.2-foss-2017b
 ```
