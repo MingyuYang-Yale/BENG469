@@ -63,6 +63,8 @@ cd ../../SCICoNE/pyscicone
 /gpfs/ysm/project/beng469/beng469_my393/Lecture2-CNV/graphviz-2.44.1/mybuild/bin/dot -Tpdf -O  Source.gv
 ```
 
+
+## Running cellranger-dna cnv
 ```
 https://support.10xgenomics.com/single-cell-dna/software/downloads/latest?
 
@@ -76,23 +78,4 @@ tar -xzvf cellranger-dna-1.1.0.tar.gz
 tar -zxvf refdata-GRCh37-1.0.0.tar.gz
 
 https://support.10xgenomics.com/single-cell-dna/software/pipelines/latest/using/tutorial
-
-## Schematic workflow
-
-<p><img src="https://github.com/MingyuYang-Yale/DBiT-seq/blob/master/workflow.png" alt="foo bar" title="train &amp; tracks" /></p>
-
-All raw and processed files are available at GEO **(GSE137986)**
-
-## Pre-processing
-This is [code](https://github.com/MingyuYang-Yale/DBiT-seq/tree/master/Pre-processing) for quality control and reformating the read file for compatibility with st-pipeline.
-
-In our datasets, read2 contains the barcode and UMI, so we need to reformat the read file for compatibility with st-pipeline.
-<p><img src="https://github.com/MingyuYang-Yale/DBiT-seq/blob/master/Pre-processing/schematic.png" alt="foo bar" title="train &amp; tracks" /></p>
-
-To reformat the read file, run
-
 ```
-perl reformat.pl -indir 01.rawdata -outdir 02.reformatdata -sample 10t
-```
-## Generate gene expression matrix
-
