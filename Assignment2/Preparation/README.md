@@ -40,6 +40,7 @@ export LS_COLORS
 ```
 source ~/.bashrc
 ```
+## SCICoNE: Single-cell copy number calling and event history reconstruction
 
 Mallory, X.F., Edrisi, M., Navin, N. et al. Methods for copy number aberration detection from single-cell DNA-sequencing data. Genome Biol 21, 208 (2020). https://doi.org/10.1186/s13059-020-02119-8
 
@@ -48,7 +49,7 @@ Intra-tumor heterogeneity (ITH) has been a major confounding factor in cancer pr
 
 (Inferring a phylogenetic tree based on CNAs detected from scDNAseq data to capture the cell-lineage tree which is crucial for unraveling ITH yet has not been extensively studied or pursued. Much work has been done on inferring such trees from SNV scDNAseq data.)
 
-## Running cellranger-dna cnv
+### Running cellranger-dna cnv
 ```
 mkdir Assignment2-CNV && cd Assignment2-CNV
 ```
@@ -102,9 +103,7 @@ Add the following codes to run-CNV.sh :
 ```
 sbatch run-CNV.sh
 ```
-
-## SCICoNE: Single-cell copy number calling and event history reconstruction
-
+###  Running SCICoNE
 Jack Kuipers, Mustafa Anıl Tuncel, Pedro Ferreira, Katharina Jahn, Niko Beerenwinkel. Single-cell copy number calling and event history reconstruction. bioRxiv 2020.04.28.065755; doi: https://doi.org/10.1101/2020.04.28.065755
 
 
