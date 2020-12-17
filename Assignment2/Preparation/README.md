@@ -75,10 +75,10 @@ wget https://cf.10xgenomics.com/supp/cell-dna/refdata-GRCh37-1.0.0.tar.gz
 10x datasets:
 ```
 # wget https://cg.10xgenomics.com/samples/cell-dna/1.1.0/breast_tissue_A_2k/breast_tissue_A_2k_fastqs.tar 
-(info : https://support.10xgenomics.com/single-cell-dna/datasets/1.1.0/breast_tissue_A_2k)
+[](info : https://support.10xgenomics.com/single-cell-dna/datasets/1.1.0/breast_tissue_A_2k)
 ```
 ```
-(https://support.10xgenomics.com/single-cell-dna/software/pipelines/latest/installation)
+[](https://support.10xgenomics.com/single-cell-dna/software/pipelines/latest/installation)
 
 tar -xzvf cellranger-dna-1.1.0.tar.gz
 tar -zxvf refdata-GRCh37-1.0.0.tar.gz
@@ -89,7 +89,7 @@ vi run-CNV.sh
 ```
 Add the following codes to run-CNV.sh : 
 ```
-(https://support.10xgenomics.com/single-cell-dna/software/pipelines/latest/using/tutorial)
+[](https://support.10xgenomics.com/single-cell-dna/software/pipelines/latest/using/tutorial)
 
 #!/bin/bash
 
