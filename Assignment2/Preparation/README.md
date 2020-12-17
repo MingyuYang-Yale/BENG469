@@ -21,7 +21,7 @@ vi ~/.bashrc
 
 Add the following codes to ~/.bashrc : 
 
-```
+‘ ```
 if [ "$TERM" = "xterm" ]
         then
         export PS1="\[\033]2;\h:\u \w\007\033[33;1m\]\u \033[36;1m\t\033[0m \[\033[35;1m\]\w\[\033[0m\]\n\[\e[32;1m\]$ \[\e[0m\]"
@@ -35,7 +35,7 @@ alias ls='ls $LS_OPTIONS'
 
 LS_COLORS='di=00;31;44:*.gz=01;31:*.txt=04;32:*.sh=01;34:*.pl=05;33:'
 export LS_COLORS
-```
+```‘
 1. h – Host name 
 2. u – User name  
 3. w – Path of the current working directory
