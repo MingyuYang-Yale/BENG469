@@ -1,2 +1,2 @@
 
-<p><img src="https://github.com/MingyuYang-Yale/DBiT-seq/blob/master/workflow.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/mail-from-ycrc.png" alt="foo bar" title="train &amp; tracks" /></p>
