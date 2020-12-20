@@ -176,8 +176,9 @@ cd ../../SCICoNE/pyscicone
 
 
 
-
+````
 cd /gpfs/ysm/project/beng469/beng469_my393/Assignment2-CNV/SCICoNE/pyscicone/
 module load Mesa/17.0.2-foss-2017a
 module load Python/3.6.2-foss-2017b
 ipython3
+````
