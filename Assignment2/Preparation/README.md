@@ -177,10 +177,16 @@ cd ../../SCICoNE/pyscicone
 
 
 ````
+Download and install XQuartz()
+launchctl load -w /Library/LaunchAgents/org.macosforge.xquartz.startx.plist
 sudo vi /etc/ssh/ssh_config
+
+ssh -Y beng469_my393@farnam.hpc.yale.edu
+srun --pty --x11 -p interactive --mem=20g bash
 
 cd /gpfs/ysm/project/beng469/beng469_my393/Assignment2-CNV/SCICoNE/pyscicone/
 module load Mesa/17.0.2-foss-2017a
 module load Python/3.6.2-foss-2017b
 ipython3
+
 ````
