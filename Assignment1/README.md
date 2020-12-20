@@ -1,7 +1,4 @@
-```diff 
-this will be highlighted in green 
-this will be highlighted in red 
-``` 
+
 # Introduction to HPC
 
 ## Log on to the Clusters
