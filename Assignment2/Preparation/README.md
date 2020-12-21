@@ -8,7 +8,7 @@ In this tutorial, you will learn how to:
 (10x Genomics data : a frozen breast tumor tissue from a triple negative ductal carcinoma. )
 
 ***
-Login HPC:(need to first connect to Yale's **VPN** if off campus)
+Login HPC:(need to connect to Yale's **VPN** if off campus)
 
 ```
 ssh -Y beng469_my393@farnam.hpc.yale.edu
