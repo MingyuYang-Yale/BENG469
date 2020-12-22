@@ -122,6 +122,6 @@ Canceling jobs
 Checking job resource usage
 
 More information:
-(slurm.schedmd.com)
-(docs.ycrc.yale.edu/clusters-at-yale/job-scheduling)
+(slurm.schedmd.com)    
+(docs.ycrc.yale.edu/clusters-at-yale/job-scheduling)      
 
