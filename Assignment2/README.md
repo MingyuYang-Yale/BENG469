@@ -152,5 +152,5 @@ Scavenge: (very useful for short or well-checkpointed jobs)
  Usually your best choice for production computing   
  
  
-
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Slurm%20Commands.png" alt="foo bar" title="train &amp; tracks" /></p>
 
