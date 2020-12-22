@@ -89,3 +89,5 @@ The per_cell_summary_metrics.csv contains various metrics that provide per-cell 
 
 The **cnv_data.h5** file is in the HDF5 file format is designed to manage and store large datasets. It is structured similar to a dictionary, with a series of keys storing values. It is a binary file, so it cannot be viewed without special tools.
 
+https://github.com/cbg-ethz/SCICoNE/blob/master/notebooks/10x_example.ipynb
+
