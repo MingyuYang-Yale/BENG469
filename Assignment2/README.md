@@ -50,5 +50,9 @@ vi run-CNV.sh
 ```
 #SBATCH --time=4320
 ```
-cd /gpfs/ysm/scratch60/beng469/beng469_my393
+
+outputs: /gpfs/ysm/scratch60/beng469/beng469_my393/breast_tissue_A_2k/outs/
+```
+cd /gpfs/ysm/scratch60/beng469/beng469_my393/breast_tissue_A_2k/outs/
+```
 
