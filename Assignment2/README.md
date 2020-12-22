@@ -1,7 +1,4 @@
 
-https://youtu.be/kchwMk4R2g8
-
-
 #### Setup X11 (MAC):
 Download and install XQuartz(https://www.xquartz.org)
 ```
@@ -33,6 +30,8 @@ ipython3
 https://github.com/cbg-ethz/SCICoNE/blob/master/notebooks/tutorial.ipynb
 
 ***
+
+https://youtu.be/kchwMk4R2g8
 
 ### Results from cellranger-dna cnv :
 
