@@ -13,6 +13,8 @@ the terminal should respond : " /private/tmp/com.apple.launchd.y8vzcm7AMF/org.ma
 (sudo vi /etc/ssh/ssh_config)
 (export DISPLAY=:0.0)
 
+
+#### Test X11
 ```
 ssh -Y beng469_my393@farnam.hpc.yale.edu
 srun --pty --x11 -p interactive --mem=20g bash
@@ -27,6 +29,6 @@ ipython3
 ```
 https://github.com/cbg-ethz/SCICoNE/blob/master/notebooks/tutorial.ipynb
 
-Results from CellRanger DNA :
+#### Results from cellranger-dna cnv :
 
 /gpfs/ysm/scratch60/beng469/beng469_my393
