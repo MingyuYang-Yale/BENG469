@@ -87,7 +87,9 @@ scp beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/scratch60/beng469/beng469_my393/
 The per_cell_summary_metrics.csv contains various metrics that provide per-cell information, and is easily visualized in Excel.
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/per%20cell%20summary.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-The **cnv_data.h5** file is in the HDF5 file format is designed to manage and store large datasets. It is structured similar to a dictionary, with a series of keys storing values. It is a binary file, so it cannot be viewed without special tools.
+The **cnv_data.h5** file is in the HDF5 file format is designed to manage and store large datasets. It is structured similar to a dictionary, with a series of keys storing values. Contains all of the key outputs of the pipeline. HDF5 files can be read by tools like **h5py**. The general structure is similar to a dictionary, with a series of keys storing values. Each of the sections below represent a key in the HDF5 file.
+
+
 
 ## Running SCICoNE on 10x Genomics data
 https://github.com/cbg-ethz/SCICoNE/blob/master/notebooks/10x_example.ipynb
