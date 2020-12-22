@@ -104,6 +104,6 @@ ipython3
 https://github.com/cbg-ethz/SCICoNE/blob/master/notebooks/10x_example.ipynb
 
 ***
-
+#### Storage
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Storage.png" alt="foo bar" title="train &amp; tracks" /></p>
 
