@@ -53,6 +53,7 @@ vi run-CNV.sh
 
 #SBATCH --time=4320
 ```
+###
 Once the run is completed, navigate to the outs directory.
 ```
 cd /gpfs/ysm/scratch60/beng469/beng469_my393/breast_tissue_A_2k/outs/
