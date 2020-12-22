@@ -46,7 +46,7 @@ sbatch run-CNV.sh
 ```
 ***
 #### Storage
-<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Storage.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Storage.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 All storage areas have quotas, both size and file count
 To check your group’s cluster quotas, run **getquota**
