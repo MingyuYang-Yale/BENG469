@@ -33,7 +33,7 @@ https://github.com/cbg-ethz/SCICoNE/blob/master/notebooks/tutorial.ipynb
 
 ### Results from cellranger-dna cnv :
 
-<p><img src="Assignment2/email from cluster.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img src="https://github.com/MingyuYang-Yale/BENG469/Assignment2/email from cluster.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ( Rong : **Disk quota exceeded** (os error 122) )
 
