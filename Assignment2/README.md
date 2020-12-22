@@ -103,3 +103,20 @@ ipython3
 ```
 https://github.com/cbg-ethz/SCICoNE/blob/master/notebooks/10x_example.ipynb
 
+ Home
+~/
+Scripts, final results
+125GiB/Person
+✔️
+Project
+~/project
+Larger datasets (keep a copy elsewhere)
+4TiB/Group
+✗
+Scratch60
+~/scratch60
+Temporary, shared files, purged every 60 days
+20TiB/Group
+✗
+
+
