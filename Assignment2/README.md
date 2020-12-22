@@ -150,7 +150,7 @@ Scavenge: (very useful for short or well-checkpointed jobs)
  For development, debugging, or interactive environments like R and Matlab   
  One or a few jobs at a time   
 
-**Batch jobs:   **
+**Batch jobs:**
  Non-interactive   
  Can run many jobs simultaneously   
  Usually your best choice for production computing   
