@@ -42,7 +42,7 @@ Email from farnam cluster:
 ( Xiaoyu : CANCELLED **DUE TO TIME LIMIT** )
 
 ```
-cp /gpfs/ysm/**project**/beng469/beng469_my393/Assignment2-CNV/run-CNV.sh /gpfs/ysm/**scratch60**/beng469/beng469_my393
+cp /gpfs/ysm/project/beng469/beng469_my393/Assignment2-CNV/run-CNV.sh /gpfs/ysm/scratch60/beng469/beng469_my393
 ```
 ```
 vi run-CNV.sh
