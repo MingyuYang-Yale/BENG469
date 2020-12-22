@@ -61,7 +61,7 @@ Open the web_summary.html file in a web browser
 ```
 scp beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/scratch60/beng469/beng469_my393/breast_tissue_A_2k/outs/web_summary.html ./
 ```
-In this dataset there are 2.32 billion NovaSeq paired end reads.
+In this dataset there are **2.32 billion** NovaSeq paired end reads.
 
 *Note that the sequencing was 100 x 100 following standard sequencing requirements, but the first 16 bases, the 10x barcode that identifies the droplet, are trimmed from Read 1.
 
