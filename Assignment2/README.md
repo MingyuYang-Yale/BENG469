@@ -65,11 +65,14 @@ Once the run is completed, navigate to the outs directory.
 ```
 cd /gpfs/ysm/scratch60/beng469/beng469_my393/breast_tissue_A_2k/outs/
 ```
-Open the web_summary.html file in a web browser
+
+Transfer Data to your laptop: scp -r netid@farnam.hpc.yale.edu:sourcedir ~/destdir
+
 ```
 scp beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/scratch60/beng469/beng469_my393/breast_tissue_A_2k/outs/web_summary.html ./
 
 ```
+Open the web_summary.html file in a web browser
 
 ***
 
