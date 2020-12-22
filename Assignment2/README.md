@@ -31,7 +31,7 @@ https://github.com/cbg-ethz/SCICoNE/blob/master/notebooks/tutorial.ipynb
 
 ***
 
-#### Results from cellranger-dna cnv :
+### Results from cellranger-dna cnv :
 
 Rong : **Disk quota exceeded** (os error 122)
 
