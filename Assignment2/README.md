@@ -61,6 +61,7 @@ cd /gpfs/ysm/scratch60/beng469/beng469_my393/breast_tissue_A_2k/outs/
 Open the web_summary.html file in a web browser
 ```
 scp beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/scratch60/beng469/beng469_my393/breast_tissue_A_2k/outs/web_summary.html ./
+
 ```
 
 ***
@@ -78,3 +79,7 @@ Note that both axes are on a logarithmic scale. Most barcodes called as cells ha
 **DIMAPD** : Depth-Independent Median Absolute deviation of Pairwise Differences (DIMAPD) **measures the bin-to-bin deviation of read depth in a cell**, perturbed by biological or technical variability. It is one of two methods to detect noisy cells. The other method is that the ploidy_confidence was low. Most of the cells should have a DIMAPD below the threshold for noisy cells marked by the dashed red line as seen here.
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/DIMAPD.png" alt="foo bar" title="train &amp; tracks" /></p>
 https://support.10xgenomics.com/single-cell-dna/datasets/1.1.0/breast_tissue_A_2k
+
+Look at other output files in the outs directory:
+scp beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/scratch60/beng469/beng469_my393/breast_tissue_A_2k/outs/per_cell_summary_metrics.csv ./
+The per_cell_summary_metrics.csv contains various metrics that provide per-cell information, and is easily visualized in Excel or another similar program.
