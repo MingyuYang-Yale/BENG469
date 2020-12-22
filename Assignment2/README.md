@@ -143,7 +143,7 @@ Scavenge: (very useful for short or well-checkpointed jobs)
 
 ### Interactive vs. Batch   
 **Interactive jobs:**       
- For development, debugging, or interactive environments like R.
+ For development, debugging, or interactive environments like R    
  One or a few jobs at a time   
 
 **Batch jobs:**
