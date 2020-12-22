@@ -165,10 +165,13 @@ make install
 ```
 ipython3
 ```
+
 ###  Running SCICoNE
+
 https://github.com/cbg-ethz/SCICoNE/blob/master/notebooks/tutorial.ipynb
 
-gg=inferred_tree.plot_tree(node_labels=True, node_sizes=False)
+```
+* gg=inferred_tree.plot_tree(node_labels=True, node_sizes=False)
 gg.save()
 
 ```
