@@ -181,7 +181,7 @@ cd ../../SCICoNE/pyscicone
 /gpfs/ysm/project/beng469/beng469_my393/Assignment2-CNV/graphviz-2.44.1/mybuild/bin/dot -Tpdf -O  Source.gv
 ```
 
-#### SET X11:
+#### X11:
 Download and install XQuartz(https://www.xquartz.org)
 ```
 launchctl load -w /Library/LaunchAgents/org.macosforge.xquartz.startx.plist
