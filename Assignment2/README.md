@@ -127,27 +127,23 @@ More information:
 
 #### Partitions
 General Purpose: 
- interactive for interactive jobs (srun)
- general default on Farnam/Ruddle
- day default on Grace
- week long jobs on grace (do not submit < 24 hour jobs to week)
+ **interactive** for interactive jobs (srun)
+ **general** default on Farnam/Ruddle
 
 Special Use Cases:
- gpu nodes with gpus
- gpu_devel for short gpu test jobs
- bigmem nodes with large RAM (for jobs requiring >= 100G)
- mpi nodes for tightly, coupled parallel codes  (Grace only)
- pi_name reserved for specific groups
+ **gpu** nodes with gpus
+ **gpu_devel** for short gpu test jobs
+ **bigmem** nodes with large RAM (for jobs requiring >= 100G)
+ **mpi** nodes for tightly, coupled parallel codes  (Grace only)
+ **pi_name** reserved for specific groups
 
 Scavenge: (very useful for short or well-checkpointed jobs)
- scavenge uses idle nodes from other partitions (can be preempted)
- scavenge_gpu uses idle gpu nodes from other partitions (can be preempted)
+ **scavenge** uses idle nodes from other partitions (can be preempted)
+ **scavenge_gpu** uses idle gpu nodes from other partitions (can be preempted)
 
 ### Interactive vs. Batch
-**Interactive jobs:**   
- Like a remote session   
- Requires an active connection   
- For development, debugging, or interactive environments like R and Matlab   
+**Interactive jobs:**      
+ For development, debugging, or interactive environments like R.
  One or a few jobs at a time   
 
 **Batch jobs:**
