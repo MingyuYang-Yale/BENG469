@@ -156,7 +156,6 @@ wget https://www2.graphviz.org/Packages/stable/portable_source/graphviz-2.44.1.t
 tar -zxvf graphviz-2.44.1.tar.gz 
 cd graphviz-2.44.1/
 mkdir mybuild
-cd mybuild
 module load Perl/5.26.0-GCCcore-6.4.0
 ./configure --prefix=/gpfs/ysm/project/beng469/beng469_my393/Assignment2-CNV/graphviz-2.44.1/mybuild
 make 
