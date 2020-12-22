@@ -33,6 +33,8 @@ https://github.com/cbg-ethz/SCICoNE/blob/master/notebooks/tutorial.ipynb
 
 ### Results from cellranger-dna cnv :
 
+<p><img src="https://github.com/MingyuYang-Yale/DBiT-seq/blob/master/Pre-processing/schematic.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 ( Rong : **Disk quota exceeded** (os error 122) )
 
 ( Xiaoyu : CANCELLED **DUE TO TIME LIMIT** )
