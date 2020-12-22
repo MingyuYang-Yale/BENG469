@@ -26,3 +26,7 @@ module load Python/3.6.2-foss-2017b
 ipython3
 ```
 https://github.com/cbg-ethz/SCICoNE/blob/master/notebooks/tutorial.ipynb
+
+Results from CellRanger DNA :
+
+/gpfs/ysm/scratch60/beng469/beng469_my393
