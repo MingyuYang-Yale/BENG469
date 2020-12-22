@@ -65,4 +65,8 @@ scp beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/scratch60/beng469/beng469_my393/
 
 **Cell Plots** : A histogram of barcodes ranked by mapped reads. A clean dataset should have a single steep cliff or drop off demonstrating the separation of signal (droplets containing cells) from noise (empty droplets), as seen below.
 
+The green portion on the left is mapped reads in cells, that are retained for subsequent analyses.
+
+Note that both axes are on a logarithmic scale. Most barcodes called as cells have >1M mapped reads, in contrast to barcodes called as empty droplets which have <10K mapped reads. 
+
 https://support.10xgenomics.com/single-cell-dna/datasets/1.1.0/breast_tissue_A_2k
