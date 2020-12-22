@@ -39,16 +39,16 @@ Email from farnam cluster:
 
 ( Rong : **Disk quota exceeded** (os error 122) )
 
-( Xiaoyu : CANCELLED **DUE TO TIME LIMIT** )
-
 ```
 cd /gpfs/ysm/scratch60/fan/rf273
-mkdir Assignment2-CNV
-cd Assignment2-CNV
 cp /gpfs/ysm/project/fan/rf273/Assignment2-CNV/run-CNV.sh ./
 sbatch run-CNV.sh
 ```
+
+( Xiaoyu : CANCELLED **DUE TO TIME LIMIT** )
+
 ```
+cd /gpfs/ysm/scratch60/beng469/beng469_xq39
 vi run-CNV.sh
 ```
 ```
