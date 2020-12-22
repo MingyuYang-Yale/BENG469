@@ -37,5 +37,12 @@ Rong : **Disk quota exceeded** (os error 122)
 
 Xiaoyu : CANCELLED **DUE TO TIME LIMIT** 
 
+```
+cp run-CNV.sh /gpfs/ysm/scratch60/beng469/beng469_my393
+vi run-CNV.sh
+```
+```
+#SBATCH --time=4320
+```
 /gpfs/ysm/scratch60/beng469/beng469_my393
 
