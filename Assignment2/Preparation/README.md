@@ -150,15 +150,6 @@ pip install jupyter --user
 
 ```
 ```
-ipython3
-```
-###  Running SCICoNE
-https://github.com/cbg-ethz/SCICoNE/blob/master/notebooks/tutorial.ipynb
-
-gg=inferred_tree.plot_tree(node_labels=True, node_sizes=False)
-gg.save()
-
-```
 cd ../../
 
 wget https://www2.graphviz.org/Packages/stable/portable_source/graphviz-2.44.1.tar.gz
@@ -171,6 +162,18 @@ module load Perl/5.26.0-GCCcore-6.4.0
 make 
 make install
 ```
+
+```
+ipython3
+```
+###  Running SCICoNE
+https://github.com/cbg-ethz/SCICoNE/blob/master/notebooks/tutorial.ipynb
+
+gg=inferred_tree.plot_tree(node_labels=True, node_sizes=False)
+gg.save()
+
+```
+
 ```
 cd ../../SCICoNE/pyscicone
 /gpfs/ysm/project/beng469/beng469_my393/Assignment2-CNV/graphviz-2.44.1/mybuild/bin/dot -Tpdf -O  Source.gv
