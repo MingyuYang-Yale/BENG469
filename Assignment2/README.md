@@ -84,4 +84,4 @@ Look at other output files in the outs directory:
 ```
 scp beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/scratch60/beng469/beng469_my393/breast_tissue_A_2k/outs/per_cell_summary_metrics.csv ./
 ```
-The per_cell_summary_metrics.csv contains various metrics that provide per-cell information, and is easily visualized in Excel or another similar program.
+The per_cell_summary_metrics.csv contains various metrics that provide per-cell information, and is easily visualized in Excel.
