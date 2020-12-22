@@ -114,7 +114,7 @@ ipython3
 https://github.com/cbg-ethz/SCICoNE/blob/master/notebooks/10x_example.ipynb
 
 ***
-### Slurm Overview
+## Slurm Overview
 Slurm manages all the details of compute node usage:   
 Prioritizing and scheduling jobs   
 Listing running and pending jobs   
@@ -125,19 +125,19 @@ More information:
 (slurm.schedmd.com)    
 (docs.ycrc.yale.edu/clusters-at-yale/job-scheduling)     
 
-#### Partitions   
-General Purpose:    
+### Partitions   
+#### General Purpose:    
  **interactive** for interactive jobs (srun)   
  **general** default on Farnam/Ruddle.  
 
-Special Use Cases:   
+#### Special Use Cases:   
  **gpu** nodes with gpus    
  **gpu_devel** for short gpu test jobs   
  **bigmem** nodes with large RAM (for jobs requiring >= 100G)   
  **mpi** nodes for tightly, coupled parallel codes  (Grace only)   
  **pi_name** reserved for specific groups   
 
-Scavenge: (very useful for short or well-checkpointed jobs)   
+#### Scavenge: (very useful for short or well-checkpointed jobs)   
  **scavenge** uses idle nodes from other partitions (can be preempted)   
  **scavenge_gpu** uses idle gpu nodes from other partitions (can be preempted)   
 
