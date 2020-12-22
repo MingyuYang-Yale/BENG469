@@ -58,12 +58,7 @@ Outputs:
 ```
 cd /gpfs/ysm/scratch60/beng469/beng469_my393/breast_tissue_A_2k/outs/
 ```
-https://support.10xgenomics.com/single-cell-dna/datasets/1.1.0/breast_tissue_A_2k
 ```
 scp beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/scratch60/beng469/beng469_my393/breast_tissue_A_2k/outs/web_summary.html ./
 ```
-```
-scp beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/scratch60/beng469/beng469_my393/breast_tissue_A_2k/outs/per_cell_summary_metrics.csv ./ 
-```
 https://support.10xgenomics.com/single-cell-dna/datasets/1.1.0/breast_tissue_A_2k
-
