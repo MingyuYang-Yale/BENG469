@@ -92,7 +92,8 @@ The **cnv_data.h5** file is in the HDF5 file format is designed to manage and st
 
 
 ## Running SCICoNE on 10x Genomics data
-https://github.com/cbg-ethz/SCICoNE/blob/master/notebooks/10x_example.ipynb
+
+/gpfs/ysm/scratch60/beng469/beng469_my393/breast_tissue_A_2k/outs/cnv_data.h5
 
 ```
 cd /gpfs/ysm/project/beng469/beng469_my393/Assignment2-CNV/SCICoNE/pyscicone
@@ -100,4 +101,5 @@ module load Mesa/17.0.2-foss-2017a
 module load Python/3.6.2-foss-2017b
 ipython3
 ```
-/gpfs/ysm/scratch60/beng469/beng469_my393/breast_tissue_A_2k/outs/cnv_data.h5
+https://github.com/cbg-ethz/SCICoNE/blob/master/notebooks/10x_example.ipynb
+
