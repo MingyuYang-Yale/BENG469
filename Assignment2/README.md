@@ -115,11 +115,11 @@ https://github.com/cbg-ethz/SCICoNE/blob/master/notebooks/10x_example.ipynb
 
 ***
 ### Slurm Overview
-Slurm manages all the details of compute node usage:
-Prioritizing and scheduling jobs
-Listing running and pending jobs
-Canceling jobs
-Checking job resource usage
+Slurm manages all the details of compute node usage:   
+Prioritizing and scheduling jobs   
+Listing running and pending jobs   
+Canceling jobs   
+Checking job resource usage   
 
 More information:
 (slurm.schedmd.com)    
