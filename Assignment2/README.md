@@ -44,13 +44,14 @@ cd /gpfs/ysm/scratch60/fan/rf273
 cp /gpfs/ysm/project/fan/rf273/Assignment2-CNV/run-CNV.sh ./
 sbatch run-CNV.sh
 ```
-***
+
 #### Storage
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Storage.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 All storage areas have quotas, both size and file count
 To check your group’s cluster quotas, run **getquota**
 
+***
 ( Xiaoyu : CANCELLED **DUE TO TIME LIMIT** )
 
 ```
