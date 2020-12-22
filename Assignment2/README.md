@@ -10,8 +10,8 @@ echo $DISPLAY
 ```
 the terminal should respond : " /private/tmp/com.apple.launchd.y8vzcm7AMF/org.macosforge.xquartz:0 "
 
-(sudo vi /etc/ssh/ssh_config).   
-(export DISPLAY=:0.0).        
+(sudo vi /etc/ssh/ssh_config)   
+(export DISPLAY=:0.0)        
 
 
 #### Test X11
