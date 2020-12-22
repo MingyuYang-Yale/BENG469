@@ -50,8 +50,7 @@ sbatch run-CNV.sh
 ```
 cd /gpfs/ysm/scratch60/beng469/beng469_xq39
 vi run-CNV.sh
-```
-```
+
 #SBATCH --time=4320
 ```
 
