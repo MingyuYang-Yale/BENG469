@@ -144,15 +144,15 @@ Scavenge: (very useful for short or well-checkpointed jobs)
  scavenge_gpu uses idle gpu nodes from other partitions (can be preempted)
 
 ### Interactive vs. Batch
-Interactive jobs:
- Like a remote session
- Requires an active connection
- For development, debugging, or interactive environments like R and Matlab
- One or a few jobs at a time
-Batch jobs:
- Non-interactive
- Can run many jobs simultaneously
- Usually your best choice for production computing
+Interactive jobs:   
+ Like a remote session   
+ Requires an active connection   
+ For development, debugging, or interactive environments like R and Matlab   
+ One or a few jobs at a time   
+Batch jobs:   
+ Non-interactive   
+ Can run many jobs simultaneously   
+ Usually your best choice for production computing   
  
  
 
