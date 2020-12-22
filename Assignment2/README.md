@@ -33,9 +33,9 @@ https://github.com/cbg-ethz/SCICoNE/blob/master/notebooks/tutorial.ipynb
 
 #### Results from cellranger-dna cnv :
 
+Rong : **Disk quota exceeded** (os error 122)
+
+Xiaoyu : slurmstepd: error: *** JOB 45177987 ON p02r09n02 CANCELLED AT 2020-12-19T16:15:27 **DUE TO TIME LIMIT** ***
+
 /gpfs/ysm/scratch60/beng469/beng469_my393
-
-Rong : Disk quota exceeded (os error 122)
-
-Xiaoyu : slurmstepd: error: *** JOB 45177987 ON p02r09n02 CANCELLED AT 2020-12-19T16:15:27 DUE TO TIME LIMIT ***
 
