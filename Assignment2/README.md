@@ -123,5 +123,37 @@ Checking job resource usage
 
 More information:
 (slurm.schedmd.com)    
-(docs.ycrc.yale.edu/clusters-at-yale/job-scheduling)      
+(docs.ycrc.yale.edu/clusters-at-yale/job-scheduling)     
+
+#### Partitions
+General Purpose: 
+ interactive for interactive jobs (srun)
+ general default on Farnam/Ruddle
+ day default on Grace
+ week long jobs on grace (do not submit < 24 hour jobs to week)
+
+Special Use Cases:
+ gpu nodes with gpus
+ gpu_devel for short gpu test jobs
+ bigmem nodes with large RAM (for jobs requiring >= 100G)
+ mpi nodes for tightly, coupled parallel codes  (Grace only)
+ pi_name reserved for specific groups
+
+Scavenge: (very useful for short or well-checkpointed jobs)
+ scavenge uses idle nodes from other partitions (can be preempted)
+ scavenge_gpu uses idle gpu nodes from other partitions (can be preempted)
+
+### Interactive vs. Batch
+Interactive jobs:
+ Like a remote session
+ Requires an active connection
+ For development, debugging, or interactive environments like R and Matlab
+ One or a few jobs at a time
+Batch jobs:
+ Non-interactive
+ Can run many jobs simultaneously
+ Usually your best choice for production computing
+ 
+ 
+
 
