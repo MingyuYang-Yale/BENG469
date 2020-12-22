@@ -25,3 +25,4 @@ module load Mesa/17.0.2-foss-2017a
 module load Python/3.6.2-foss-2017b
 ipython3
 ```
+https://github.com/cbg-ethz/SCICoNE/blob/master/notebooks/tutorial.ipynb
