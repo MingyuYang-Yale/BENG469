@@ -29,9 +29,9 @@ ipython3
 ```
 https://github.com/cbg-ethz/SCICoNE/blob/master/notebooks/tutorial.ipynb
 
-***
-
 https://youtu.be/kchwMk4R2g8
+
+***
 
 ### Results from cellranger-dna cnv :
 
