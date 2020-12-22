@@ -66,7 +66,7 @@ Once the run is completed, navigate to the outs directory.
 cd /gpfs/ysm/scratch60/beng469/beng469_my393/breast_tissue_A_2k/outs/
 ```
 
-Transfer Data to your laptop: scp -r netid@farnam.hpc.yale.edu:sourcedir ~/destdir
+Transfer Data to your laptop: ( scp -r netid@farnam.hpc.yale.edu:sourcedir ~/destdir )
 
 ```
 scp beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/scratch60/beng469/beng469_my393/breast_tissue_A_2k/outs/web_summary.html ./
