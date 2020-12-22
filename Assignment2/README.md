@@ -1,5 +1,5 @@
 
-#### X11:
+#### Setup X11 (MAC):
 Download and install XQuartz(https://www.xquartz.org)
 ```
 launchctl load -w /Library/LaunchAgents/org.macosforge.xquartz.startx.plist
