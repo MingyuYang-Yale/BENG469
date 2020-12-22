@@ -1,4 +1,7 @@
 
+[![Everything Is AWESOME](http://i.imgur.com/Ot5DWAW.png)](https://youtu.be/kchwMk4R2g8 "Everything Is AWESOME")
+
+
 #### Setup X11 (MAC):
 Download and install XQuartz(https://www.xquartz.org)
 ```
