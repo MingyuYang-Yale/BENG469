@@ -65,6 +65,7 @@ scp beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/scratch60/beng469/beng469_my393/
 **Sequencing** :In this dataset there are **2.32 billion** NovaSeq paired end reads. (Note that the sequencing was 100 x 100 following standard sequencing requirements, but the first 16 bases, the 10x barcode that identifies the droplet, are trimmed from Read 1.)
 
 **Cell Plots** : A histogram of barcodes ranked by mapped reads. A clean dataset should have a single steep cliff or drop off demonstrating the separation of signal (droplets containing cells) from noise (empty droplets), as seen below.
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Cell%20Plots.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 The green portion on the left is mapped reads in cells, that are retained for subsequent analyses.
 
