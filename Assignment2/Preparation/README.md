@@ -100,7 +100,7 @@ Add the following codes to run-CNV.sh :
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=mingyu.yang@yale.edu
 #SBATCH --mem-per-cpu=8g
-#SBATCH --partition=scavenge
+#SBATCH --partition=general
 
 /gpfs/ysm/project/beng469/beng469_my393/Assignment2-CNV/cellranger-dna-1.1.0/cellranger-dna cnv --id=breast_tissue_A_2k \
 --fastqs=/gpfs/ysm/project/beng469/beng469_my393/Assignment2-CNV/breast_tissue_A_2k_fastqs \
