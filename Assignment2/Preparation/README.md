@@ -96,6 +96,7 @@ Add the following codes to run-CNV.sh :
 #SBATCH --job-name=CNV-calling
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=16
+#SBATCH --time=4320
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=mingyu.yang@yale.edu
 #SBATCH --mem-per-cpu=8g
