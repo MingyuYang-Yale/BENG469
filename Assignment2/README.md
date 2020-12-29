@@ -99,7 +99,7 @@ Note that both axes are on a logarithmic scale. Most barcodes called as cells ha
 
 Look at other output files in the outs directory:
 ```
-scp beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/scratch60/beng469/beng469_my393/breast_tissue_A_2k/outs/per_cell_summary_metrics.csv ./
+scp beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/scratch60/beng469/beng469_my393/breast_tissue_E_2k/outs/per_cell_summary_metrics.csv ./
 ```
 The per_cell_summary_metrics.csv contains various metrics that provide per-cell information, and is easily visualized in Excel.
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/per%20cell%20summary.png" alt="foo bar" title="train &amp; tracks" /></p>
