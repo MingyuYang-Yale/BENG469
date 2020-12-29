@@ -85,7 +85,7 @@ Open the web_summary.html file in a web browser
 **Sequencing** :In this dataset there are **3.02 billion** NovaSeq paired end reads. (Note that the sequencing was 100 x 100 following standard sequencing requirements, but the first 16 bases, the 10x barcode that identifies the droplet, are trimmed from Read 1.)
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Sequencing.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-https://support.10xgenomics.com/single-cell-dna/datasets/1.1.0/breast_tissue_A_2k
+https://support.10xgenomics.com/single-cell-dna/datasets/1.1.0/breast_tissue_E_2k
 
 **Cell Plots** : A histogram of barcodes ranked by mapped reads. A clean dataset should have a single steep cliff or drop off demonstrating the separation of signal (droplets containing cells) from noise (empty droplets), as seen below.
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Cell%20Plots-E.png" alt="foo bar" title="train &amp; tracks" /></p>
