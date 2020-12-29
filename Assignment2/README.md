@@ -95,7 +95,7 @@ The green portion on the left is mapped reads in cells, that are retained for su
 Note that both axes are on a logarithmic scale. Most barcodes called as cells have >1M mapped reads, in contrast to barcodes called as empty droplets which have <10K mapped reads. 
 
 **DIMAPD** : Depth-Independent Median Absolute deviation of Pairwise Differences (DIMAPD) **measures the bin-to-bin deviation of read depth in a cell**, perturbed by biological or technical variability. It is one of two methods to detect noisy cells. Most of the cells should have a DIMAPD below the threshold for noisy cells marked by the dashed red line as seen here.
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/DIMAPD.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/DIMAPD-E.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 Look at other output files in the outs directory:
 ```
