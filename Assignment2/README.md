@@ -88,7 +88,7 @@ Open the web_summary.html file in a web browser
 https://support.10xgenomics.com/single-cell-dna/datasets/1.1.0/breast_tissue_A_2k
 
 **Cell Plots** : A histogram of barcodes ranked by mapped reads. A clean dataset should have a single steep cliff or drop off demonstrating the separation of signal (droplets containing cells) from noise (empty droplets), as seen below.
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Cell%20Plots.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Cell%20Plots-E.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 The green portion on the left is mapped reads in cells, that are retained for subsequent analyses.
 
