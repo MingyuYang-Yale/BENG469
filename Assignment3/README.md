@@ -2,7 +2,7 @@
 In this tutorial, we will learn how to analyze data from this Nature paper:https://www.nature.com/articles/s41586-020-2864-x
 
 <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Nature-paper.png" alt="foo bar" title="train &amp; tracks" /></p>
-
+***
 They used a commercial platform from Mission Bio called Tapestri.
 <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Pipeline.png" alt="foo bar" title="train &amp; tracks" /></p>
 
