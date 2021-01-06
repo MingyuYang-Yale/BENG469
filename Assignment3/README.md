@@ -27,27 +27,35 @@ wget https://raw.githubusercontent.com/circulosmeos/gdown.pl/master/gdown.pl
 chmod +x gdown.pl
 ```
 
-change the first line:
-#!/usr/bin/perl
-
+change the first line to : #!/usr/bin/perl
+```
+vi gdown.pl
+```
+```
 cp /gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV/download.sh ./
+```
+```
 sh download.sh
-
-mkdir data
-mkdir analysis
-
-mv MSK* data
-
-cd data
-
+```
+```
 for i in MSK15 MSK18 MSK71 MSK91 MSK103 MSK130;do mkdir $i; mv $i* $i;done
-
-cd ../
-
+```
+```
+mkdir data
+```
+```
+mv MSK* data
+```
+```
+mkdir analysis
+```
+```
 module load R/3.6.1-foss-2018b
-
+```
+```
 R
-
+```
+```
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 
@@ -69,7 +77,8 @@ devtools::install_local(path = "tapestri_1.1.0.tar.gz", repos='http://cran.us.r-
 
 https://portal.missionbio.com/. 
 https://support.missionbio.com/hc/en-us/articles/360045899834-Installation-instructions-for-tapestri-R
-
+```
+```
 setwd("/gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV")
 options(stringsAsFactors = FALSE)
 
@@ -100,3 +109,4 @@ for(i in names(sample_set)){
                              name=i)
   saveRDS(snv,paste0("./analysis/",i,".rds"))
 }
+```
