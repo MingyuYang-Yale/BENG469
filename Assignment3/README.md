@@ -1,3 +1,5 @@
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Per%20cell%20summary-E.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 https://www.nature.com/articles/s41586-020-2864-x
 
 Login HPC:(need to connect to Yale's **VPN** if off campus)
