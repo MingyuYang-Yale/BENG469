@@ -83,8 +83,6 @@ https://portal.missionbio.com/
 ```
 ```
 devtools::install_local(path = "tapestri_1.1.0.tar.gz", repos='http://cran.us.r-project.org', upgrade="never")
-
-
 ```
 
 ```
