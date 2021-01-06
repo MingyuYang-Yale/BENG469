@@ -4,7 +4,7 @@ In this tutorial, we will learn how to analyze data from this Nature paper:https
 <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Nature-paper.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ***
-They used a commercial platform from Mission Bio called Tapestri. this methodology uses single cell droplet encapsulation and barcoded beads to perform amplicon next generation sequencing. 
+They used a commercial platform from **Mission Bio** called **Tapestri**. The methodology uses single cell droplet encapsulation and barcoded beads to perform amplicon next generation sequencing. 
 <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Pipeline.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ***
