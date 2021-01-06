@@ -20,7 +20,7 @@ mkdir Assignment3-SNV && cd Assignment3-SNV
 ```
 
 ***
-Download Data:
+### Download Data:
 
 Critical files used for analysis can be found on google drive: https://drive.google.com/drive/folders/17Zw6Ixu93UM7M5Vyl_aOJ7aX2iYIb8If
 
@@ -59,7 +59,7 @@ module load R/3.6.1-foss-2018b
 R
 ```
 
-Install related R packages:
+### Install related R packages:
 ```
 if (!requireNamespace("BiocManager", quietly = TRUE)) 
      install.packages("BiocManager")
@@ -77,7 +77,7 @@ BiocManager::install("karyoploteR")
 BiocManager::install("annotatr")
 BiocManager::install("org.Hs.eg.db")
 ```
-Download tapestri R package:
+### Download tapestri R package:
 
 ```
 #Open a new Terminal window
@@ -94,8 +94,8 @@ Install tapestri R package (~10mins)
 ```
 devtools::install_local(path = "tapestri_1.1.0.tar.gz", repos='http://cran.us.r-project.org', upgrade="never")
 ```
-
-Extract SNV data
+***
+### Extract SNV data
 ```
 setwd("/gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV")
 options(stringsAsFactors = FALSE)
