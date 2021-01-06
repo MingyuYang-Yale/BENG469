@@ -139,3 +139,14 @@ for(i in names(sample_set)){
 + Remove variants that are mutated in <2 cells 
 + Remove remaining cells with any unknown genotypes 
 + Remove variants that are mutated in <2 cells again now that we have removed cells that were low quality
+
+```
+processed_SNV_files <-grep("MSK",list.files("./analysis/",full.names = TRUE),value=TRUE)
+names(processed_SNV_files)<-do.call(rbind,strsplit(grep("MSK",list.files("./analysis/"),value=TRUE),split="\\."))[,1]
+
+SNV<-setNames(lapply(names(processed_SNV_files),function(x){
+  y<-readRDS(processed_SNV_files[x])
+  data.frame("Cell"=rownames(y), # moving the cell name into data.frame prevents some errors later
+             y$data) # extracts the genotype matrix from the analyte object
+}), names(processed_SNV_files))
+```
