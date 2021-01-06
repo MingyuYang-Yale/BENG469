@@ -19,15 +19,20 @@ change the first line:
 cp /gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV/download.sh ./
 sh download.sh
 
+mkdir data
+mkdir analysis
+
+mv MSK* data
+
+cd data
+
 for i in MSK15 MSK18 MSK71 MSK91 MSK103 MSK130;do mkdir $i; mv $i* $i;done
+
+cd ../
 
 module load R/3.6.1-foss-2018b
 
 R
-
-setwd("/gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV/datasets")
-
-options(stringsAsFactors = FALSE)
 
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
@@ -36,21 +41,23 @@ BiocManager::install("VariantAnnotation")
 BiocManager::install("plyranges")
 BiocManager::install("BSgenome.Hsapiens.UCSC.hg19")
 BiocManager::install("TxDb.Hsapiens.UCSC.hg19.knownGene")
-
-devtools::install_github("r-lib/usethis")
-install.packages(c("devtools", "hdf5r", "digest"))
-
-
-devtools::install_github("mojaveazure/loomR")
-devtools::install_github("jokergoo/ComplexHeatmap")
 BiocManager::install("karyoploteR")
 BiocManager::install("annotatr")
 BiocManager::install("org.Hs.eg.db")
 
+#devtools::install_github("r-lib/usethis")
+#install.packages(c("devtools", "hdf5r", "digest"))
+
+install.packages("devtools")
+devtools::install_github("mojaveazure/loomR")
+devtools::install_github("jokergoo/ComplexHeatmap")
+devtools::install_local(path = "tapestri_1.1.0.tar.gz", repos='http://cran.us.r-project.org', upgrade="never")
+
 https://portal.missionbio.com/. 
 https://support.missionbio.com/hc/en-us/articles/360045899834-Installation-instructions-for-tapestri-R
 
-devtools::install_local(path = "tapestri_1.1.0.tar.gz", repos='http://cran.us.r-project.org', upgrade="never")
+setwd("/gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV")
+options(stringsAsFactors = FALSE)
 
 library(plyranges)
 library(VariantAnnotation)
@@ -59,3 +66,6 @@ library(TxDb.Hsapiens.UCSC.hg19.knownGene)
 library(dplyr)
 library(tidyr)
 library(purrr)
+library(tapestri)
+
+
