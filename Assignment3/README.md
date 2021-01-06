@@ -48,8 +48,10 @@ module load R/3.6.1-foss-2018b
 R
 ```
 ```
-if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
+if (!requireNamespace("BiocManager", quietly = TRUE)) 
+     install.packages("BiocManager")
+     
+```
 
 BiocManager::install("VariantAnnotation")
 BiocManager::install("plyranges")
