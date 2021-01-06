@@ -282,3 +282,17 @@ clone_filtered_NGTs <- setNames(lapply(names(clonal_abundance_boot_CI),function(
     }
 }),names(clonal_abundance_boot_CI))
 ```
+```
+clonal_architecture <- setNames(lapply(names(clonal_abundance_boot_CI),function(test_sample){
+
+  clonal_architecture<-clone_filtered_NGTs[[test_sample]]%>%
+                                            select(!Cell)%>% 
+                                            distinct()%>%
+                                            pivot_longer(cols=!Clone,
+                                                         names_to="Mutant",
+                                                         values_to="Genotype") %>%
+                                            mutate(Genotype=ifelse(Genotype==3,NA,
+                                                             ifelse(Genotype==0,"WT",
+                                                              ifelse(Genotype==1,"Heterozygous",                                                                          ifelse(Genotype==2,"Homozygous",NA)))))
+}), names(clonal_abundance_boot_CI))
+```
