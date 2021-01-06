@@ -52,6 +52,7 @@ mkdir analysis
 ```
 module load R/3.6.1-foss-2018b
 ```
+open R
 ```
 R
 ```
