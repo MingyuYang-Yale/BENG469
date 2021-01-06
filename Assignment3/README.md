@@ -5,6 +5,7 @@ In this tutorial, we will learn how to analyze data from this Nature paper:https
 
 They used a commercial platform from Mission Bio called Tapestri.
 <p><img width="600" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Pipeline.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 ***
 Login HPC:(need to connect to Yale's **VPN** if off campus)
 
