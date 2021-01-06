@@ -133,3 +133,9 @@ for(i in names(sample_set)){
   saveRDS(snv,paste0("./analysis/",i,".rds"))
 }
 ```
+### Post processing
++ Filter variants through a blacklist removing recurrent variants that we think are likely sequencing errors 
++ Annotating SNVS for protein encoding functions, and removing synonymous and splice variants 
++ Remove variants that are mutated in <2 cells 
++ Remove remaining cells with any unknown genotypes 
++ Remove variants that are mutated in <2 cells again now that we have removed cells that were low quality
