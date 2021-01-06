@@ -74,7 +74,12 @@ BiocManager::install("annotatr")
 BiocManager::install("org.Hs.eg.db")
 ```
 Download tapestri R package:
+
 ```
+#Open a new Terminal window
+
+cd /gpfs/ysm/project/beng469/beng469_my393
+
 https://portal.missionbio.com/
 
 (https://support.missionbio.com/hc/en-us/articles/360045899834-Installation-instructions-for-tapestri-R)
