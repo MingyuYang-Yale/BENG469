@@ -1,7 +1,6 @@
+In this tutorial, we will learn how to analyze data from this Nature paper:https://www.nature.com/articles/s41586-020-2864-x
+
 <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Nature%20paper.png" alt="foo bar" title="train &amp; tracks" /></p>
-
-https://www.nature.com/articles/s41586-020-2864-x
-
 Login HPC:(need to connect to Yale's **VPN** if off campus)
 
 ```
