@@ -296,3 +296,12 @@ clonal_architecture <- setNames(lapply(names(clonal_abundance_boot_CI),function(
                                                               ifelse(Genotype==1,"Heterozygous",                                                                          ifelse(Genotype==2,"Homozygous",NA)))))
 }), names(clonal_abundance_boot_CI))
 ```
+```
+final_sample_summary<-setNames(lapply(names(clonal_architecture),function(sample){
+   return(list("Clones"=clonal_abundance_boot_CI[[sample]],
+               "NGT"=clone_filtered_NGTs[[sample]],
+               "Architecture"=clonal_architecture[[sample]]))
+}),names(clonal_abundance_boot_CI))
+
+saveRDS(final_sample_summary,file="./analysis/final_sample_summary.rds")
+```
