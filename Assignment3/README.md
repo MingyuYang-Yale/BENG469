@@ -180,3 +180,17 @@ variants[["MSK15"]]<-variants[["MSK15"]] %>% filter(!AA%in%c("DNMT3A.R693C","DNM
 variants[["MSK18"]]<-variants[["MSK18"]] %>% filter(!AA%in%c("DNMT3A.R693C"))
 variants[["MSK71"]]<-variants[["MSK71"]] %>% filter(!AA%in%c("DNMT3A.Y685C"))
 variants[["MSK91"]]<-variants[["MSK91"]] %>% filter(!AA%in%c("IDH2.R88Q","IDH2.R10Q"))
+```
+```
+filtered_NGT<-setNames(lapply(names(SNV),function(sample){
+  setNames(data.frame(SNV[[sample]][,c("Cell",as.character(variants[[sample]]$SNV))]),
+           c("Cell",variants[[sample]]$AA))
+}),names(SNV))
+
+final_NGTs<-setNames(lapply(names(filtered_NGT),function(x){
+    filtered_NGT[[x]] %>% 
+                    select_if(~ !is.numeric(.) || sum(.%in%c(1,2))>=2) %>%
+                    filter_all(all_vars(.!=3)) %>%
+                    select_if(~ !is.numeric(.) || sum(.%in%c(1,2))>=2) 
+}),names(filtered_NGT))
+```
