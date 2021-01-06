@@ -86,7 +86,7 @@ https://portal.missionbio.com/
 
 #cp /gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV/tapestri_1.1.0.tar.gz ./
 ```
-Install tapestri R package
+Install tapestri R package (~10mins)
 ```
 devtools::install_local(path = "tapestri_1.1.0.tar.gz", repos='http://cran.us.r-project.org', upgrade="never")
 ```
