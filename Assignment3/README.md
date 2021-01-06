@@ -65,9 +65,7 @@ BiocManager::install("VariantAnnotation"). # will take ~10 minutes
 BiocManager::install("plyranges")
 BiocManager::install("BSgenome.Hsapiens.UCSC.hg19")
 BiocManager::install("TxDb.Hsapiens.UCSC.hg19.knownGene")
-BiocManager::install("karyoploteR")
-BiocManager::install("annotatr")
-BiocManager::install("org.Hs.eg.db")
+
 
 #devtools::install_github("r-lib/usethis")
 #install.packages(c("devtools", "hdf5r", "digest"))
@@ -75,6 +73,9 @@ BiocManager::install("org.Hs.eg.db")
 install.packages("devtools")
 devtools::install_github("mojaveazure/loomR")
 devtools::install_github("jokergoo/ComplexHeatmap")
+BiocManager::install("karyoploteR")
+BiocManager::install("annotatr")
+BiocManager::install("org.Hs.eg.db")
 devtools::install_local(path = "tapestri_1.1.0.tar.gz", repos='http://cran.us.r-project.org', upgrade="never")
 
 https://portal.missionbio.com/. 
