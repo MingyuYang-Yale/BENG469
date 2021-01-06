@@ -66,9 +66,7 @@ BiocManager::install("plyranges")
 BiocManager::install("BSgenome.Hsapiens.UCSC.hg19")
 BiocManager::install("TxDb.Hsapiens.UCSC.hg19.knownGene")
 
-
-#devtools::install_github("r-lib/usethis")
-#install.packages(c("devtools", "hdf5r", "digest"))
+install.packages(c("devtools", "hdf5r", "digest"))
 
 install.packages("devtools")
 devtools::install_github("mojaveazure/loomR")
