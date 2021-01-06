@@ -150,3 +150,34 @@ SNV<-setNames(lapply(names(processed_SNV_files),function(x){
              y$data) # extracts the genotype matrix from the analyte object
 }), names(processed_SNV_files))
 ```
+```
+txdb <- TxDb.Hsapiens.UCSC.hg19.knownGene
+blacklist <-read.delim("./blacklist.txt",sep="\t")
+
+variants <- lapply(SNV,function(x){
+  experimental_variants <- colnames(x)[ !grepl("Cell",colnames(x))& #remove the Cell column
+                                        !grepl("^chr",colnames(x))& #remove control loci
+                                        !colnames(x)%in%blacklist[,1]] #remove blacklsited SNVs
+  variants_matrix<-data.frame(experimental_variants,
+                                do.call(rbind,strsplit(experimental_variants,split="\\.")))
+  colnames(variants_matrix) <- c("SNV","gene","chr","start","ref","alt")
+  variants_matrix$ref<-as(variants_matrix$ref, "DNAStringSet")
+  variants_matrix$alt<-as(variants_matrix$alt, "DNAStringSet")
+  variant_gRange<-makeGRangesFromDataFrame(variants_matrix,
+                                           seqnames.field = "chr",
+                                           start.field="start",
+                                           end.field="start",
+                                           keep.extra.columns=TRUE)
+  out<-  predictCoding(variant_gRange, txdb, seqSource=Hsapiens,varAllele=variant_gRange$alt)
+  out2<-out%>%filter(CONSEQUENCE=="nonsynonymous")%>%
+              mutate(AA=paste0(gene,".",REFAA,PROTEINLOC,VARAA))%>%
+              select(SNV,AA)
+  return(data.frame(out2)%>%distinct(SNV,AA))
+  })
+  
+# Select the correct variants, this is an example. 
+# Probably better off coming up with a list of TXIDs or CDSIDs you want for each gene.
+variants[["MSK15"]]<-variants[["MSK15"]] %>% filter(!AA%in%c("DNMT3A.R693C","DNMT3A.R446Q"))
+variants[["MSK18"]]<-variants[["MSK18"]] %>% filter(!AA%in%c("DNMT3A.R693C"))
+variants[["MSK71"]]<-variants[["MSK71"]] %>% filter(!AA%in%c("DNMT3A.Y685C"))
+variants[["MSK91"]]<-variants[["MSK91"]] %>% filter(!AA%in%c("IDH2.R88Q","IDH2.R10Q"))
