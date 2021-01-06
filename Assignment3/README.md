@@ -75,9 +75,9 @@ BiocManager::install("org.Hs.eg.db")
 ```
 Download tapestri R package:
 ```
-https://portal.missionbio.com/. 
+https://portal.missionbio.com/
 
-https://support.missionbio.com/hc/en-us/articles/360045899834-Installation-instructions-for-tapestri-R
+(https://support.missionbio.com/hc/en-us/articles/360045899834-Installation-instructions-for-tapestri-R)
 
 #cp /gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV/tapestri_1.1.0.tar.gz ./
 ```
