@@ -55,7 +55,7 @@ module load R/3.6.1-foss-2018b
 R
 ```
 
-Install R packages:
+Install related R packages:
 ```
 if (!requireNamespace("BiocManager", quietly = TRUE)) 
      install.packages("BiocManager")
@@ -81,6 +81,7 @@ https://portal.missionbio.com/
 
 #cp /gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV/tapestri_1.1.0.tar.gz ./
 ```
+Install tapestri R package
 ```
 devtools::install_local(path = "tapestri_1.1.0.tar.gz", repos='http://cran.us.r-project.org', upgrade="never")
 ```
