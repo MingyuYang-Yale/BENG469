@@ -73,13 +73,13 @@ BiocManager::install("karyoploteR")
 BiocManager::install("annotatr")
 BiocManager::install("org.Hs.eg.db")
 ```
-Install tapestri R package:
+Download tapestri R package:
 ```
 https://portal.missionbio.com/. 
 
 https://support.missionbio.com/hc/en-us/articles/360045899834-Installation-instructions-for-tapestri-R
 
-cp /gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV/tapestri_1.1.0.tar.gz ./
+#cp /gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV/tapestri_1.1.0.tar.gz ./
 ```
 ```
 devtools::install_local(path = "tapestri_1.1.0.tar.gz", repos='http://cran.us.r-project.org', upgrade="never")
