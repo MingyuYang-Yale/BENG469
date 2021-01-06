@@ -39,10 +39,11 @@ mkdir data
 ```
 mv MSK* data
 ```
+***
+open R
 ```
 module load R/3.6.1-foss-2018b
 ```
-open R
 ```
 R
 ```
