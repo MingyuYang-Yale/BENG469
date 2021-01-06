@@ -193,3 +193,51 @@ final_NGTs<-setNames(lapply(names(filtered_NGT),function(x){
                     select_if(~ !is.numeric(.) || sum(.%in%c(1,2))>=2) 
 }),names(filtered_NGT))
 ```
+### Assessing clonal abundance
+```
+# Select samples with at least 2 mutations 
+clonal_sample_set <- names(final_NGTs)[do.call(rbind,lapply(final_NGTs,dim))[,2]>2]
+
+# Order columns based on computed_VAF, and assign a clone to each cell
+NGT_to_clone<-lapply(final_NGTs[clonal_sample_set],function(y){
+  bulk_VAF_order <-names(sort(colSums(y[,-1]),decreasing=TRUE))
+  y[,c("Cell",bulk_VAF_order)] %>%unite("Clone",all_of(`bulk_VAF_order`),sep="_", remove = FALSE)
+ })
+
+# Tally clones
+clonal_abundance<- lapply(NGT_to_clone,function(x){
+  x%>%count(Clone,name="Count")%>%arrange(Count)
+ })
+
+# Setup a resampling function to generate multiple clonal abundance tallies
+resample_fun<-function(data){
+  x <- data[sample(x=1:nrow(data),replace=TRUE),]
+  return(as.matrix(x%>%count(Clone,name="Count")%>%arrange(Count)))
+}
+
+replicates <- 100 # we did 10,000. Keeping it low here for run time.
+clone_cutoff <- 10 # minimum number of cells in order to retain a clone
+clonal_abundance_boot_CI <- lapply(names(NGT_to_clone),function(sample_to_test){
+    test<-replicate(n=replicates,resample_fun(NGT_to_clone[[sample_to_test]]),simplify = "array")
+    if(class(test)=="list"){
+      y <- setNames(lapply(test,data.frame),1:replicates) %>%
+           imap(.x = ., ~ set_names(.x, c("Clone", .y))) %>% 
+           purrr::reduce(full_join, by = "Clone")%>%
+           mutate_if(names(.)!="Clone",as.numeric)%>%
+           mutate_each(funs(replace(., is.na(.), 0)))
+      }
+    if(class(test)=="array"){
+      y <- setNames(apply(test,3,data.frame),1:replicates) %>%
+           imap(.x = ., ~ set_names(.x, c("Clone", .y))) %>% 
+           purrr::reduce(full_join, by = "Clone")%>%
+           mutate_if(names(.)!="Clone",as.numeric)%>%
+           mutate_each(funs(replace(., is.na(.), 0)))
+      }
+    z <- data.frame(t(apply(y%>%select(-Clone),1,function(p){
+            quantile(p,probs=c(0.025,0.975))
+         })),"Clone"=y$Clone)
+    set <- setNames(data.frame(inner_join(data.frame(clonal_abundance[[sample_to_test]]),z,by="Clone")),
+                  c("Clone","Count","LCI","UCI"))%>%filter(LCI>=clone_cutoff)
+})
+names(clonal_abundance_boot_CI) <-names(clonal_abundance)
+```
