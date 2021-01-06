@@ -31,3 +31,22 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 
 BiocManager::install("VariantAnnotation")
+BiocManager::install("plyranges")
+BiocManager::install("BSgenome.Hsapiens.UCSC.hg19")
+BiocManager::install("TxDb.Hsapiens.UCSC.hg19.knownGene")
+
+devtools::install_github("r-lib/usethis")
+install.packages(c("devtools", "hdf5r", "digest"))
+
+
+devtools::install_github("mojaveazure/loomR")
+devtools::install_github("jokergoo/ComplexHeatmap")
+BiocManager::install("karyoploteR")
+
+library(plyranges)
+library(VariantAnnotation)
+library(BSgenome.Hsapiens.UCSC.hg19)
+library(TxDb.Hsapiens.UCSC.hg19.knownGene)
+library(dplyr)
+library(tidyr)
+library(purrr)
