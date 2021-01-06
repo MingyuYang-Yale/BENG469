@@ -241,3 +241,44 @@ clonal_abundance_boot_CI <- lapply(names(NGT_to_clone),function(sample_to_test){
 })
 names(clonal_abundance_boot_CI) <-names(clonal_abundance)
 ```
+```
+clone_filtered_NGTs <- setNames(lapply(names(clonal_abundance_boot_CI),function(sample_to_test){
+
+  # Determine if there are any clones left to process
+  if(nrow(clonal_abundance_boot_CI[[sample_to_test]])==0) {
+    return("No clones after boostrapping")
+  }
+  
+  # Determine if there are any mutations that are no longer found in a stable clone
+  clone_matrix<-as.matrix(do.call(rbind,
+                                strsplit(clonal_abundance_boot_CI[[sample_to_test]][,"Clone"],split="_")))
+  mode(clone_matrix) <- "numeric"
+  colnames(clone_matrix) <-colnames(NGT_to_clone[[sample_to_test]])[-c(1,2)]
+  variants_to_remove<-names(which(colSums(clone_matrix)==0))
+
+  # Check other conditions of interest that might remove sample from further processing
+  if(nrow(clone_matrix)==1) {
+    return("Only 1 clone left")
+  }else  if(length(setdiff(colnames(clone_matrix),c(variants_to_remove)))<=1){
+    return("Removed all but 1 variant")
+  }else {
+      # Select only clones that survive the bootstrapping, and remove variants that fall out
+      NGT_to_clone_subset <- NGT_to_clone[[sample_to_test]]%>%
+                                filter(Clone%in%clonal_abundance_boot_CI[[sample_to_test]]$Clone)%>%
+                                select(!all_of(variants_to_remove))
+        
+      # Create a key for the new and old clone names after removing variants that are no longer present
+      clone_key <- data.frame("New"=apply(data.frame(clone_matrix)%>%select(!all_of(variants_to_remove)),MARGIN=1,
+                                            function(x){ paste(x,sep="_",collapse="_")}),
+                                "Old"=apply(data.frame(clone_matrix),MARGIN=1,
+                                            function(x){ paste(x,sep="_",collapse="_")}))
+        
+      # If there are any variants to remove and clones that need to be renamed
+      if(any(clone_key$New!=clone_key$Old)){
+            NGT_to_clone_subset$Clone <- sapply(NGT_to_clone_subset$Clone,function(x){
+                                              clone_key$New[match(x,clone_key$Old)]})
+      }
+      return(NGT_to_clone_subset)
+    }
+}),names(clonal_abundance_boot_CI))
+```
