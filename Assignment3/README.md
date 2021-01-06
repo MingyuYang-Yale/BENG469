@@ -7,6 +7,9 @@ In this tutorial, we will learn how to analyze data from this Nature paper:https
 They used a commercial platform from **Mission Bio** called **Tapestri**. The methodology uses single cell droplet encapsulation and barcoded beads to perform amplicon next generation sequencing. 
 <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Pipeline.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+Much of the upfront analysis is performed on the Tapestri Pipeline produced by Mission Bio available on the Bluebee platform. 
+
+Here we will primarily with how the data was processed downstream in R and to the right of the red dashed line. Our primary output from Bluebee as the .loom file which contained a useful formating of the multi sample VCF file produced by GATK. For the publication, this .loom file was loaded into Tapestri Insights, a GUI from Mission Bio that allowed for sample filtering based on parameters described in the manuscript. From there a filtered set of cells were exported from Tapestri Insights, and matrices for each column of the VCF file were produced. I will include some of this code and decription of why we did it this way in an Appendix A, but since then, MissionBio has releassed a convenient R package and I find all future analyses will go from there. So, instead, this guide will use their package, I anticipate some of the data might change from our publication, but I guess we’ll see.
 ***
 Login HPC:(need to connect to Yale's **VPN** if off campus)
 
