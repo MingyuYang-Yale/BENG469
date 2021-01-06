@@ -19,6 +19,8 @@ change the first line:
 cp /gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV/download.sh ./
 sh download.sh
 
+for i in MSK15 MSK18 MSK71 MSK91 MSK103 MSK130;do mkdir $i; mv $i* $i;done
+
 module load R/3.6.1-foss-2018b
 
 R
