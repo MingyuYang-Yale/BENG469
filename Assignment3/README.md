@@ -8,7 +8,8 @@ They used a commercial platform from **Mission Bio** called **Tapestri**. The me
 <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Pipeline.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ***
-Login HPC:(need to connect to Yale's **VPN** if off campus)
+### Login HPC:
+(need to connect to Yale's **VPN** if off campus)
 
 ```
 ssh -Y beng469_my393@farnam.hpc.yale.edu
@@ -77,7 +78,7 @@ BiocManager::install("karyoploteR")
 BiocManager::install("annotatr")
 BiocManager::install("org.Hs.eg.db")
 ```
-### Download tapestri R package:
+### Install tapestri R package:
 
 ```
 #Open a new Terminal window
@@ -90,12 +91,12 @@ https://portal.missionbio.com/
 
 #cp /gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV/tapestri_1.1.0.tar.gz ./
 ```
-Install tapestri R package (~10mins)
+#### Install tapestri R package (~10mins)
 ```
 devtools::install_local(path = "tapestri_1.1.0.tar.gz", repos='http://cran.us.r-project.org', upgrade="never")
 ```
 ***
-### Extract SNV data
+### Extract SNV data (~10mins)
 ```
 setwd("/gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV")
 options(stringsAsFactors = FALSE)
