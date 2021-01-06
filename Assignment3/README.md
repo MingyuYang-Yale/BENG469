@@ -27,7 +27,7 @@ wget https://raw.githubusercontent.com/circulosmeos/gdown.pl/master/gdown.pl
 chmod +x gdown.pl
 ```
 
-change the first line to : #!/usr/bin/perl
+change the first line to : **#!/usr/bin/perl**
 ```
 vi gdown.pl
 ```
