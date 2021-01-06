@@ -138,7 +138,6 @@ for(i in names(sample_set)){
 + Annotating SNVS for protein encoding functions, and removing synonymous and splice variants 
 + Remove variants that are mutated in <2 cells 
 + Remove remaining cells with any unknown genotypes 
-+ Remove variants that are mutated in <2 cells again now that we have removed cells that were low quality
 
 ```
 processed_SNV_files <-grep("MSK",list.files("./analysis/",full.names = TRUE),value=TRUE)
