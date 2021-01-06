@@ -152,12 +152,12 @@ SNV<-setNames(lapply(names(processed_SNV_files),function(x){
 ```
 ```
 txdb <- TxDb.Hsapiens.UCSC.hg19.knownGene
-blacklist <-read.delim("./blacklist.txt",sep="\t")
+#blacklist <-read.delim("./blacklist.txt",sep="\t")
 
 variants <- lapply(SNV,function(x){
   experimental_variants <- colnames(x)[ !grepl("Cell",colnames(x))& #remove the Cell column
                                         !grepl("^chr",colnames(x))& #remove control loci
-                                        !colnames(x)%in%blacklist[,1]] #remove blacklsited SNVs
+                                     #   !colnames(x)%in%blacklist[,1]] #remove blacklsited SNVs
   variants_matrix<-data.frame(experimental_variants,
                                 do.call(rbind,strsplit(experimental_variants,split="\\.")))
   colnames(variants_matrix) <- c("SNV","gene","chr","start","ref","alt")
