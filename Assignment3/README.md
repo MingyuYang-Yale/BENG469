@@ -61,7 +61,7 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
      install.packages("BiocManager")
 ```
 ```
-BiocManager::install("VariantAnnotation"). # will take ~10 minutes
+BiocManager::install("VariantAnnotation") # will take ~10 minutes
 BiocManager::install("plyranges")
 BiocManager::install("BSgenome.Hsapiens.UCSC.hg19")
 BiocManager::install("TxDb.Hsapiens.UCSC.hg19.knownGene")
