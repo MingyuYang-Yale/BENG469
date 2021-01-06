@@ -54,6 +54,8 @@ module load R/3.6.1-foss-2018b
 ```
 R
 ```
+
+Install R packages:
 ```
 if (!requireNamespace("BiocManager", quietly = TRUE)) 
      install.packages("BiocManager")
