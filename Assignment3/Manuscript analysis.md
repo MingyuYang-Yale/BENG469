@@ -164,7 +164,8 @@ gg_mut_count<-ggplot(final_mut_melt,aes(x=Gene))+
                               plot.title=element_text(hjust=0.5))+
                         scale_y_continuous(expand=c(0,0))
 ggsave("SFig1c.pdf",width=6,height=5)
-
+```
+```
 ## tally of how many mutations per patient
 melted_mut_mat<- final_mut_melt%>%count(Gene, Sample)
 
