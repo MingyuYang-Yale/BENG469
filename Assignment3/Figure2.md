@@ -1,6 +1,5 @@
+```
 install.packages("Cairo")
-
-
 library(tidyr)
 library(dplyr)
 library(RColorBrewer)
@@ -102,3 +101,146 @@ spacer <- plot_grid(NULL) # plot looks better with a little spacer
 gg=plot_grid(ggA,spacer,ggB,align="h",axis="tb",
           ncol=3,rel_widths=c(1,0.05,1))
 ggsave("Fig2a.pdf",width=5,height=5)
+```
+```
+library(magrittr)
+# Incorporate Diagnosis and disease state
+clone_size_by_gene_Dx<-inner_join(clone_size_by_gene,pheno)
+
+# We focused on a subset of genes
+genes_of_interest <- c("DNMT3A","TET2","ASXL1","IDH1","IDH2",
+                       "JAK2","NRAS","KRAS","FLT3","NPM1")
+
+# We had an interest in DNMT3A R882 point mutants, so we can extract those out
+clone_size_by_gene_Dx%<>%mutate(Gene=case_when(
+                          grepl("DNMT3A.p.R882",Variant)~"DNMT3A.p.R882",
+                          TRUE~as.character(Gene)))
+
+clone_size_by_gene_Dx$Dx <- factor(clone_size_by_gene_Dx$Dx,
+                                   levels=c("CH","MPN","Other","sAML","tAML","AML"))
+
+mutation_dominance_by_dx<-ggplot(tally(clone_size_by_gene_Dx%>%
+                        filter(Gene%in%c("DNMT3A","TET2","ASXL1",
+                                         "DNMT3A.p.R882","IDH1","IDH2"))%>%                   
+                        group_by(Gene,Dx,Clonality)) ,
+                        aes(x=Dx,fill=Clonality,y=n)) +
+                        facet_wrap(~factor(Gene,
+                                            levels=c("DNMT3A","TET2","ASXL1",
+                                                     "DNMT3A.p.R882","IDH1","IDH2")),ncol=3)+
+                        geom_col(position="fill")+
+                        xlab("")+
+                        scale_fill_manual(values=c("Dominant"=color_red,
+                                                 "Subclone"="grey80"))+
+                        ylab("Number of samples")+
+                        theme_bw(base_size=10)+
+                        theme(legend.position = "right",
+                            axis.text.x =element_text(angle=30,hjust=1))
+ggsave("mutation_dominance_by_dx.pdf",width=5,height=5)
+```
+```
+mutants_in_each_sample<-do.call(rbind,lapply(names(final_sample_summary),function(x){
+  y<-colnames(final_sample_summary[[x]]$NGT)
+  z <- list()
+  z$Sample <- x
+  z$DNMT3A <- ifelse(any(grepl("DNMT3A",y)),1,0)
+  z$TET2 <- ifelse(any(grepl("TET2",y)),1,0)
+  z$ASXL1 <- ifelse(any(grepl("ASXL1",y)),1,0)
+  z$IDH <- ifelse(any(grepl("IDH",y)),1,0)
+  z$FLT3 <- ifelse(any(grepl("FLT3",y)),1,0)
+  z$KIT <- ifelse(any(grepl("KIT",y)),1,0) # n=1 sample, we put it in the "signalling category"
+  z$RAS <- ifelse(any(grepl("RAS",y)),1,0)
+  z$JAK2 <- ifelse(any(grepl("JAK2",y)),1,0)
+  z$PTPN11 <- ifelse(any(grepl("PTPN11",y)),1,0)
+  data.frame(t(do.call(rbind,z)))
+}))
+
+# Bin into groups based on mutations and disease type
+mutants_in_each_sample%<>%mutate(Group=case_when(
+                          (TET2==1|DNMT3A==1|IDH==1|ASXL1==1)&(RAS==0&FLT3==0)~'DTAI',
+                          (TET2==1|DNMT3A==1|IDH==1|ASXL1==1)&((RAS==1&FLT3==0)|
+                                                                   (PTPN11==1&FLT3==0))~'DTAI-RAS',
+                          (TET2==1|DNMT3A==1|IDH==1|ASXL1==1)&(RAS==0&FLT3==1)~'DTAI-FLT3',
+                          (TET2==1|DNMT3A==1|IDH==1|ASXL1==1)&((RAS==1&FLT3==1)|
+                                                               (PTPN11==1&FLT3==1))~'DTAI-FLT3-RAS',
+                          (TET2==0&DNMT3A==0&IDH==0&ASXL1==0)&(RAS==1|FLT3==1|JAK2==1|KIT==1)~'Signaling'))%>%
+                          left_join(pheno,by="Sample")%>%
+                          mutate(Final_group=case_when(
+                                          grepl("AML|Other",Dx)~Group,
+                                          !grepl("AML|Other",Dx)~Dx
+                                        ))
+
+# Order the groups to match how we have them in the paper
+mutants_in_each_sample$Final_group <- factor(mutants_in_each_sample$Final_group,
+                                              levels=c("CH","MPN","Signaling","DTAI",
+                                                       "DTAI-RAS","DTAI-FLT3","DTAI-FLT3-RAS"))
+
+# Now merge this with our new data frame defined above
+
+clone_size_by_gene_DTAI<-left_join(clone_size_by_gene_Dx,mutants_in_each_sample,by="Sample")
+
+mutation_dominance_by_DTAI<-ggplot(tally(clone_size_by_gene_DTAI%>%
+                                    filter(Gene%in%c("DNMT3A","TET2","ASXL1",
+                                                     "DNMT3A.p.R882","IDH1","IDH2"))%>%
+                                    group_by(Gene,Final_group,Clonality)) ,
+                        aes(x=Final_group,fill=Clonality,y=n)) +
+                        facet_wrap(~factor(Gene,
+                                            levels=c("DNMT3A","TET2","ASXL1",
+                                                     "DNMT3A.p.R882","IDH1","IDH2")),ncol=3)+
+                        geom_col()+
+                        xlab("")+
+                        scale_fill_manual(values=c("Dominant"=color_red,
+                                                 "Subclone"="grey80"))+
+                        ylab("Number of samples")+
+                        theme_bw(base_size=10)+
+                        theme(legend.position = "right",
+                            axis.text.x =element_text(angle=30,hjust=1))
+ggsave("mutation_dominance_by_DTAI.pdf",width=5,height=5)                            
+```      
+```
+library(ggbeeswarm)
+pheno<-readRDS(file="./data/pheno.rds")
+
+data_to_plot<-inner_join(clone_size_by_gene,pheno)%>%
+                          filter(as.character(Gene)%in%genes_of_interest &
+                                !Dx%in%c("CH"))%>%
+                          group_by(Gene,Clonality)
+
+summarized_data <-data_to_plot%>%summarise(mean=mean(VAF),            
+                                           sd = sd(VAF),
+                                           sem = sd(VAF)/sqrt(length(VAF)))
+
+
+clonality_VAF<-ggplot(data_to_plot,aes(x=Clonality,y=VAF,color=Clonality))+
+                    facet_wrap(~factor(Gene,levels=genes_of_interest),
+                                scale="free_x",ncol=5)+
+                    ggbeeswarm::geom_beeswarm()+
+                    geom_errorbar(data=summarized_data,aes(x=Clonality,
+                                                           y=mean,
+                                                           ymin=mean-sem,
+                                                           ymax=mean+sem),
+                                                           color="black")+
+                    scale_color_manual(values=c("Dominant"=color_red,
+                                                "Subclone"="grey50"))+
+                    xlab("")+        ylab("Computed VAF")+
+                    theme_classic()+guides(fill=FALSE)+
+                    theme(axis.ticks.x = element_blank(),
+                          axis.text.x = element_blank())+
+                    scale_y_continuous(limits=c(0,1.1),
+                                       breaks=c(0,.25,.5,.75,1),
+                                   labels=c("0","0.25","0.50","0.75","1.0"))
+
+ggsave("clonality_VAF.pdf",width=5,height=5)
+```
+```
+library(broom)
+clonality_VAF_pvalues<-data.frame(data_to_plot)%>% 
+                                filter(as.character(Clonality)%in%c("Dominant","Subclone")&
+                                         Gene!="IDH2")%>%
+                                group_by(Gene)%>%
+                                select(VAF,Clonality)%>%
+                                do(tidy(t.test(VAF ~ Clonality, data = .)))%>%
+                                select(Gene,Dominant_VAF=estimate2,Subclone_VAF=estimate1,
+                                       p.value)%>%
+                                mutate_if(is.numeric, funs(as.character(signif(., 3))))
+clonality_VAF_pvalues
+```
