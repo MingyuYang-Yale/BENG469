@@ -247,6 +247,8 @@ gg_number_of_mutations<-ggplot(test%>%group_by(Final_group)%>%
                                     scale_y_continuous(limits = c(0,9), expand = c(0, 0)) +
                                     theme(axis.text.x = element_text(angle=30,hjust=1)) +
                                     scale_fill_brewer(type="seq",palette = "Reds",aesthetics = "fill",guide=FALSE)
+
+ggsave("number_of_mutations.pdf",width=5,height=5)
 ```
 ```
 # Number of clones
@@ -258,6 +260,8 @@ gg_number_of_clones<-ggplot(test,aes(y=Number_of_clones,x=Final_group,fill=Final
                                   xlab("")+
                                   theme(axis.text.x = element_text(angle=30,hjust=1)) +
                                   scale_fill_brewer(type="seq",palette = "Reds",aesthetics = "fill",guide=FALSE)
+ggsave("number_of_clones.pdf",width=5,height=5)
 
-plot_grid(gg_number_of_mutations,gg_number_of_clones,ncol=2,align="hv",axis="ltrb",labels=c("C","E"))
+## merge=plot_grid(gg_number_of_mutations,gg_number_of_clones,ncol=2,align="hv",axis="ltrb",labels=c("C","E"))
+ggsave("Figure1.pdf",width=8,height=5)
 ```
