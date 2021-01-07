@@ -9,7 +9,7 @@ cd /gpfs/ysm/project/beng469/beng469_my393
 cd Assignment3-SNV
 ```
 
-### open R
+#### open R
 ```
 module load R/3.6.1-foss-2018b
 ```
