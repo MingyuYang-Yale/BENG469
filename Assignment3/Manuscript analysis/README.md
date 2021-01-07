@@ -2,7 +2,6 @@
 ```
 cp /gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV/data/*.rds ./data
 ```
-### Figure 1: Cohort characterization
 
 #### Open R:
 ```
@@ -52,7 +51,7 @@ final_mut_melt<-do.call(rbind,lapply(names(final_NGTs),function(x){
       }))
 ```
 ***
-#### Extended Figure 1a 
+### Extended Figure 1a 
 ```
 library(pals) # great package with color palettes in R
 library(ComplexHeatmap) #used for making the oncoprint
@@ -147,7 +146,7 @@ dev.off()
 
 ***
 
-#### Extended Figure 1 c-f 
+### Extended Figure 1 c-f 
 ```
 # Set the levels of the Gene column from most to least prevalent for plotting purposes
 
