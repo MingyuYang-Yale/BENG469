@@ -11,10 +11,18 @@ cp /gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV/data/*.rds ./data
 R
 ```
 ```
+install.packages('farver')
+install.packages('cooccur')
+```
+
+```
 # load R packages
+
+library('farver')
 library(dplyr)
 library(tidyr)
 library(ggplot2)
+library(cooccur)
 ```
 ```
 setwd("/gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV")
@@ -52,6 +60,7 @@ gg_mut_count<-ggplot(final_mut_melt,aes(x=Gene))+
                               plot.title=element_text(hjust=0.5))+
                         scale_y_continuous(expand=c(0,0))
                         
+ggsave("mut_count.pdf",width=6,height=5)
 ```
 ```
 # Total number of patients mutated for each gene
@@ -68,6 +77,7 @@ gg_mut_patient<-ggplot(melted_mut_mat,aes(x=Gene))+
                       theme(axis.text.x = element_text(angle=45,hjust=1,vjust=1),
                             plot.title=element_text(hjust=0.5))+
                           scale_y_continuous(expand=c(0,0))
+ggsave("mut_patient.pdf",width=6,height=5)
 ```
 ```
 # Number of mutated genes per patient
@@ -82,7 +92,8 @@ gg_mutated_genes_per_patient<-final_mut_melt%>%
                                           theme_classic(base_size = 10)+
                                           theme(plot.title=element_text(hjust=0.5))+
                                           scale_y_continuous(expand=c(0,0))+
-                                          scale_x_continuous(expand=c(0,0),n.breaks=8)
+                                          scale_x_continuous(expand=c(0,0))
+ggsave("mutated_genes_per_patient.pdf",width=6,height=5)
 ```
 ```
 # Total number of mutations per patient
@@ -94,12 +105,14 @@ gg_mutations_per_patient<- final_mut_melt%>%
                                         theme(plot.title=element_text(hjust=0.5))+
                                         ylab("Count")+ggtitle("Variants per patient")+xlab("Number of variants")+                              
                                         scale_y_continuous(expand=c(0,0))+
-                                        scale_x_continuous(expand=c(0,0),n.breaks=6)
+                                        scale_x_continuous(expand=c(0,0))
+ggsave("mutations_per_patient.pdf",width=6,height=5)
 ```
 ```
-library(cowplot)
-plot_grid(gg_mut_count,gg_mut_patient,
-          gg_mutated_genes_per_patient,gg_mutations_per_patient,
-          ncol=2,align="hv",axis="ltrb",
-          labels = "AUTO")
+# library(cowplot)
+# merge=plot_grid(gg_mut_count,gg_mut_patient,
+#           gg_mutated_genes_per_patient,gg_mutations_per_patient,
+#           ncol=2,align="hv",axis="ltrb",
+#           labels = "AUTO")
+# ggsave("mutations_stats.pdf",width=8,height=5)
 ```
