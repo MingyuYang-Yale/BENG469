@@ -9,3 +9,8 @@ wget https://github.com/bowmanr/scDNA_myeloid/blob/master/data/pheno.rds
 ```
 
 Figure 1: Cohort characterization
+
+#### Open R:
+```
+R
+```
