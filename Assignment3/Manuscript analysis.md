@@ -1,6 +1,8 @@
 ## Manuscript analysis
 
-```mkdir Manuscript_analysis```
+```
+mkdir Manuscript_analysis && cd Manuscript_analysis
+```
 
 (https://github.com/bowmanr/scDNA_myeloid/tree/master/data)
 
@@ -17,8 +19,9 @@ wget https://github.com/bowmanr/scDNA_myeloid/blob/master/data/pheno.rds
 R
 ```
 ```
-# loading R packages
+# load R packages
 library(dplyr)
 library(tidyr)
 library(ggplot2)
 ```
+setwd("/gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV")
