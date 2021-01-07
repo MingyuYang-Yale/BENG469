@@ -1,4 +1,4 @@
-### Manuscript analysis
+## Manuscript analysis
 
 ```mkdir Manuscript_analysis```
 
@@ -10,7 +10,7 @@ wget https://github.com/bowmanr/scDNA_myeloid/blob/master/data/final_sample_summ
 wget https://github.com/bowmanr/scDNA_myeloid/blob/master/data/pheno.rds
 ```
 
-Figure 1: Cohort characterization
+### Figure 1: Cohort characterization
 
 #### Open R:
 ```
