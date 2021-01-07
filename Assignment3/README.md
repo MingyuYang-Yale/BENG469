@@ -38,6 +38,8 @@ library(purrr)
 library(tapestri)
 ```
 ```
+#extract_genotypes
+
 sample_set <- list.files("./data/",full.names = TRUE)
 names(sample_set) <-list.files("./data/")
 system("mkdir ./analysis")
