@@ -263,5 +263,5 @@ gg_number_of_clones<-ggplot(test,aes(y=Number_of_clones,x=Final_group,fill=Final
 ggsave("number_of_clones.pdf",width=5,height=5)
 
 ## merge=plot_grid(gg_number_of_mutations,gg_number_of_clones,ncol=2,align="hv",axis="ltrb",labels=c("C","E"))
-ggsave("Figure1.pdf",width=8,height=5)
+## ggsave("Figure1.pdf",width=8,height=5)
 ```
