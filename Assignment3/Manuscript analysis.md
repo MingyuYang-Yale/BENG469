@@ -54,7 +54,7 @@ final_mut_melt<-do.call(rbind,lapply(names(final_NGTs),function(x){
       }))
 ```
 ***
-#### Extended Figure 1a.
+#### Extended Figure 1a 
 ```
 library(pals) # great package with color palettes in R
 library(ComplexHeatmap) #used for making the oncoprint
@@ -136,7 +136,7 @@ heatmap_legend_param <- list(title  = "Alternations",
 
 # Make the oncoprint
 
-pdf("SFig1a.pdf")
+pdf("SFig1a.pdf",width=15,height=5)
 
 oncoPrint(final_mat,
           alter_fun            = alter_functions, 
