@@ -63,7 +63,7 @@ for(i in names(sample_set)){
 
 ```
 #### Post processing
-+ Filter variants through a blacklist removing recurrent variants that we think are likely sequencing errors 
++ Filter variants through a ??? blacklist removing recurrent variants that we think are likely sequencing errors 
 + Annotating SNVS for protein encoding functions, and removing synonymous and splice variants 
 + Remove variants that are mutated in <2 cells 
 + Remove remaining cells with any unknown genotypes 
@@ -106,7 +106,7 @@ variants <- lapply(SNV,function(x){
   })
   
 # Select the correct variants, this is an example. 
-# Probably better off coming up with a list of TXIDs or CDSIDs you want for each gene.
+
 variants[["MSK15"]]<-variants[["MSK15"]] %>% filter(!AA%in%c("DNMT3A.R693C","DNMT3A.R446Q"))
 variants[["MSK18"]]<-variants[["MSK18"]] %>% filter(!AA%in%c("DNMT3A.R693C"))
 variants[["MSK71"]]<-variants[["MSK71"]] %>% filter(!AA%in%c("DNMT3A.Y685C"))
@@ -114,7 +114,6 @@ variants[["MSK91"]]<-variants[["MSK91"]] %>% filter(!AA%in%c("IDH2.R88Q","IDH2.R
 
 # Remove variants that are mutated in <2 cells 
 # Remove remaining cells with any unknown genotypes 
-# Remove variants that are mutated in <2 cells again now that we have removed cells that were low quality
 
 filtered_NGT<-setNames(lapply(names(SNV),function(sample){
   setNames(data.frame(SNV[[sample]][,c("Cell",as.character(variants[[sample]]$SNV))]),
