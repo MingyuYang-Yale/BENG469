@@ -23,7 +23,8 @@ R
 # make a project folder and set the working directory to that folder:
 setwd("/gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV")
 options(stringsAsFactors = FALSE)
-
+```
+```
 # Load in the relevant packages we will use later.
 library(plyranges)
 library(VariantAnnotation)
@@ -33,12 +34,13 @@ library(dplyr)
 library(tidyr)
 library(purrr)
 library(tapestri)
-
+```
+```
 sample_set <- list.files("./data/",full.names = TRUE)
 names(sample_set) <-list.files("./data/")
 
 system("mkdir ./analysis")
-
+```
 for(i in names(sample_set)){
   barcode_files<-grep("barcode",list.files(sample_set[i],full.names=TRUE),value=TRUE)
   loom_files<-grep("loom$",list.files(sample_set[i],full.names=TRUE),value=TRUE)
@@ -53,7 +55,7 @@ for(i in names(sample_set)){
                              type='snv',
                              name=i)
   saveRDS(snv,paste0("./analysis/",i,".rds"))
-  write.table(snv,file=sprintf("%s.xls",i),sep="\t")
+  write.table(snv,file=sprintf("./analysis/%s.xls",i),sep="\t")
 }
 
 ```
