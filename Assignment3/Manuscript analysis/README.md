@@ -221,7 +221,7 @@ dev.off()
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig1c-f.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
-### Figure 1a,c
+### Figure 1a
 
 ```
 mutants_in_each_sample<-do.call(rbind,lapply(names(final_sample_summary),function(x){
@@ -306,26 +306,6 @@ pvalues_Number_of_mutations
 ```
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Fig1a.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-```
-# Number of clones
-pdf("Fig1c.pdf",width=3,height=3)
-ggplot(test,aes(y=Number_of_clones,x=Final_group,fill=Final_group))+
-                                  geom_boxplot(outlier.shape = NA)+  
-                                  geom_jitter(width = 0.1,size=0.5)+
-                                  theme_classic(base_size = 8)+
-                                  ylab("Number of clones")+
-                                  xlab("")+
-                                  theme(axis.text.x = element_text(angle=30,hjust=1)) +
-                                  scale_fill_brewer(type="seq",palette = "Reds",aesthetics = "fill",guide=FALSE)
-dev.off()
-
-pvalues_Number_of_clones<-test%>%{melt(pairwise.t.test(.$Number_of_clones,g=.$Final_group,
-                                                     data=.,p.adjust.method="fdr")$p.value)}%>%
-                                     filter(!is.na(value))%>%filter(value<0.1)
-pvalues_Number_of_clones                                     
-
-```
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Fig1c.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ### Figure 1b
 ```
@@ -382,6 +362,29 @@ plot_grid(gg_clonal_barplot,gg_heatmap,ncol=1,align="v",axis="lr",rel_heights = 
 dev.off()
 ```
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Fig1b.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+### Figure 1c
+```
+# Number of clones
+pdf("Fig1c.pdf",width=3,height=3)
+ggplot(test,aes(y=Number_of_clones,x=Final_group,fill=Final_group))+
+                                  geom_boxplot(outlier.shape = NA)+  
+                                  geom_jitter(width = 0.1,size=0.5)+
+                                  theme_classic(base_size = 8)+
+                                  ylab("Number of clones")+
+                                  xlab("")+
+                                  theme(axis.text.x = element_text(angle=30,hjust=1)) +
+                                  scale_fill_brewer(type="seq",palette = "Reds",aesthetics = "fill",guide=FALSE)
+dev.off()
+
+pvalues_Number_of_clones<-test%>%{melt(pairwise.t.test(.$Number_of_clones,g=.$Final_group,
+                                                     data=.,p.adjust.method="fdr")$p.value)}%>%
+                                     filter(!is.na(value))%>%filter(value<0.1)
+pvalues_Number_of_clones                                     
+
+```
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Fig1c.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 
 ```
 pdf("Fig1d.pdf",width=3,height=3)
