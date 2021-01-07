@@ -149,7 +149,7 @@ dev.off()
 
 ***
 
-#### Extended Figure 1c.
+#### Extended Figure 1c : Total number of patients mutated for each gene
 
 ```
 # Set the levels of the Gene column from most to least prevalent for plotting purposes
@@ -164,10 +164,8 @@ gg_mut_count<-ggplot(final_mut_melt,aes(x=Gene))+
                         theme(axis.text.x = element_text(angle=45, hjust=1,vjust=1),
                               plot.title=element_text(hjust=0.5))+
                         scale_y_continuous(expand=c(0,0))
-```
 
-Total number of patients mutated for each gene
-```
+
 ## tally of how many mutations per patient
 melted_mut_mat<- final_mut_melt%>%count(Gene, Sample)
 
@@ -181,7 +179,7 @@ gg_mut_patient<-ggplot(melted_mut_mat,aes(x=Gene))+
                       theme(axis.text.x = element_text(angle=45,hjust=1,vjust=1),
                             plot.title=element_text(hjust=0.5))+
                           scale_y_continuous(expand=c(0,0))
-ggsave("mut_patient.pdf",width=6,height=5)
+ggsave("SFig1c.pdf",width=6,height=5)
 ```
 ***
 
