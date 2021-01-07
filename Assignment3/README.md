@@ -58,7 +58,7 @@ for(i in names(sample_set)){
                              type='snv',
                              name=i)
   saveRDS(snv,paste0("./analysis/",i,".rds"))
-  write.table(snv,file=sprintf("./analysis/%s.xls",i),sep="\t")
+  #write.table(snv,file=sprintf("./analysis/%s.xls",i),sep="\t")
 }
 
 ```
