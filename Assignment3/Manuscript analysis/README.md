@@ -218,6 +218,9 @@ plot_grid(gg_mut_count,gg_mut_patient,
            labels = c('c', 'd','e','f'))
 dev.off()
 ```
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig1c-f.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+
 ***
 ### Mutation Co-occurence
 ```
