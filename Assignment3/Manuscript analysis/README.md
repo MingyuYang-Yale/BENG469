@@ -425,6 +425,7 @@ pvalues_Dominant_clone_size<-test%>%{melt(pairwise.t.test(.$Dominant_clone_size,
 pvalues_Dominant_clone_size
 ```
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Fig1e.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 ***
 
 ### Extended Figure 2b
@@ -487,10 +488,6 @@ ggplot(clone_size_by_genetic_density,
 dev.off()                                                                
 ##ggsave("clone_size_by_genetic_density.pdf",width=7,height=5)
 
-pvalues_Dominant_clone_size<-test%>%{melt(pairwise.t.test(.$Dominant_clone_size,g=.$Final_group,
-                                                     data=.,p.adjust.method="fdr")$p.value)}%>%
-                                     filter(!is.na(value))%>%filter(value<0.1)
-pvalues_Dominant_clone_size
 ```
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig2b.png" alt="foo bar" title="train &amp; tracks" /></p>
 
