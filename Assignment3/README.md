@@ -20,9 +20,11 @@ R
 
 #### Extract SNV data (~10mins)
 ```
+# make a project folder and set the working directory to that folder:
 setwd("/gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV")
 options(stringsAsFactors = FALSE)
 
+# Load in the relevant packages we will use later.
 library(plyranges)
 library(VariantAnnotation)
 library(BSgenome.Hsapiens.UCSC.hg19)
@@ -52,9 +54,10 @@ for(i in names(sample_set)){
                              name=i)
   saveRDS(snv,paste0("./analysis/",i,".rds"))
 }
+
 ```
 #### Post processing
-+ Filter variants through a blacklist removing recurrent variants that we think are likely sequencing errors 
+??? + Filter variants through a blacklist removing recurrent variants that we think are likely sequencing errors 
 + Annotating SNVS for protein encoding functions, and removing synonymous and splice variants 
 + Remove variants that are mutated in <2 cells 
 + Remove remaining cells with any unknown genotypes 
