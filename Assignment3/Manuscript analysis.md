@@ -37,3 +37,19 @@ final_mut_melt<-do.call(rbind,lapply(names(final_NGTs),function(x){
              "Gene"=do.call(rbind,strsplit(colnames(final_NGTs[[x]]),split="[:_]"))[,1])
       }))
 ```
+```
+# Extended Figure 1.
+# Set the levels of the Gene column from most to least prevalent for plotting purposes
+
+final_mut_melt$Gene<- factor(final_mut_melt$Gene,levels=names(sort(table(final_mut_melt$Gene), decreasing=TRUE)))
+
+gg_mut_count<-ggplot(final_mut_melt,aes(x=Gene))+
+                        geom_bar(stat="count")+
+                        theme_classic(base_size = 10)+
+                        ylab("Count")+
+                        ggtitle("Number of mutations")+
+                        theme(axis.text.x = element_text(angle=45, hjust=1,vjust=1),
+                              plot.title=element_text(hjust=0.5))+
+                        scale_y_continuous(expand=c(0,0))
+                        
+```
