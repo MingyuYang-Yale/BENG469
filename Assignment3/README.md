@@ -79,6 +79,8 @@ SNV<-setNames(lapply(names(processed_SNV_files),function(x){
 }), names(processed_SNV_files))
 ```
 ```
+#focus only on protein encoding SNVs
+
 txdb <- TxDb.Hsapiens.UCSC.hg19.knownGene
 #blacklist <-read.delim("./blacklist.txt",sep="\t")
 
