@@ -491,58 +491,7 @@ dev.off()
 ```
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig2c.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-### Extended Figure 2f : Mutation Co-occurence
-```
-library(cooccur)
-### create matrix for oncoprint
-mut_mat <- table(melted_mut_mat$Sample,melted_mut_mat$Gene)
 
-### Prepare matrix for co occurence map
-cooccur_mat <- cooccur(mat=t(mut_mat), type="spp_site",
-                       only_effects = FALSE,eff_matrix=TRUE,
-                       thresh=FALSE, eff_standard=FALSE,spp_names=TRUE)$results
-
-
-## Denote which interactions are significantly inclusive or exclusive 
-# The 'add_row' function generates a new line, but it gets removed later.
-# This is helpful for setting the order of the gene labels below. 
-cooccur_data_mat <- cooccur_mat%>%
-                        mutate(score=ifelse(p_lt<=0.05,-1,
-                                            ifelse(p_gt<=0.05,1,0))) %>%
-                        select(sp1_name,sp2_name,score)%>%
-                        add_row(sp2_name=setdiff(.$sp1_name,.$sp2_name),
-                                sp1_name=setdiff(.$sp2_name,.$sp1_name),
-                                score=0)
-
-# Order the genes in a coherent pattern for triangle strucutre of graph.
-cooccur_data_mat$sp1_name<-factor(cooccur_data_mat$sp1_name,
-                                  levels=unique(cooccur_data_mat$sp1_name))
-cooccur_data_mat$sp2_name<-factor(cooccur_data_mat$sp2_name,
-                                  levels=rev(levels(cooccur_data_mat$sp1_name)))
-
-# Triangle heatmap to compare cohorts
-pdf("SFig2f.pdf",width=5,height=5)
-ggplot(cooccur_data_mat%>%filter(sp1_name!="BRAF"),aes(x=sp1_name,y=sp2_name))+
-                      geom_tile(aes(fill = factor(score)), color='grey90') +
-                      scale_fill_manual(name="Correlation",
-                                        values=c("-1"="firebrick3",
-                                                 "0"="white",
-                                                 "1"="steelblue2"),
-                                        labels=c("Mutually Exclusive",
-                                                 "Not Significant",
-                                                 "Mutually Inclusive"))+
-                      theme_classic(base_size=10)+
-                      xlab("")+ylab("")+
-                      theme(axis.text.x=element_text(angle=45,hjust=1,vjust=1),
-                            axis.line = element_blank(),
-                            legend.position = c(0.8,1), 
-                            legend.justification = c(1, 1),
-                            legend.direction = "vertical")+
-                      theme(legend.key.size = unit(0.5,"line"))
-dev.off()                      
-##ggsave("corrplot.pdf",width=5,height=5)
-```
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig2f.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ### Figure 2a : Mutation Co-occurence
 ```
@@ -668,7 +617,7 @@ clone_size_by_gene_Dx%<>%mutate(Gene=case_when(
                                    
 clone_size_by_gene_DTAI<-left_join(clone_size_by_gene_Dx,mutants_in_each_sample,by="Sample")
 
-pdf("SFig2d.pdf",width=12,height=4)
+pdf("SFig2d.pdf",width=10,height=4)
 
 ggplot(tally(clone_size_by_gene_DTAI%>%
                                     filter(Gene%in%c("DNMT3A","TET2","ASXL1","DNMT3A.p.R882","IDH1","IDH2",
@@ -689,3 +638,111 @@ ggplot(tally(clone_size_by_gene_DTAI%>%
 
 dev.off()
 ```
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig2d.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+### Extended Figure 2e
+```
+library(ggbeeswarm)
+
+# We focused on a subset of genes
+genes_of_interest <- c("DNMT3A","TET2","ASXL1","IDH1","IDH2",
+                       "JAK2","NRAS","KRAS","FLT3","NPM1")
+
+data_to_plot<-inner_join(clone_size_by_gene,pheno)%>%
+                          filter(as.character(Gene)%in%genes_of_interest &
+                                !Dx%in%c("CH"))%>%
+                          group_by(Gene,Clonality)
+
+summarized_data <-data_to_plot%>%summarise(mean=mean(VAF),            
+                                           sd = sd(VAF),
+                                           sem = sd(VAF)/sqrt(length(VAF)))
+
+pdf("SFig2e.pdf",width=5,height=3)
+ggplot(data_to_plot,aes(x=Clonality,y=VAF,color=Clonality))+
+                    facet_wrap(~factor(Gene,levels=genes_of_interest),
+                                scale="free_x",ncol=5)+
+                    ggbeeswarm::geom_beeswarm()+
+                    geom_errorbar(data=summarized_data,aes(x=Clonality,
+                                                           y=mean,
+                                                           ymin=mean-sem,
+                                                           ymax=mean+sem),
+                                                           color="black")+
+                    scale_color_manual(values=c("Dominant"=color_red,
+                                                "Subclone"="grey50"))+
+                    xlab("")+        ylab("Computed VAF")+
+                    theme_classic()+guides(fill=FALSE)+
+                    theme(axis.ticks.x = element_blank(),
+                          axis.text.x = element_blank())+
+                    scale_y_continuous(limits=c(0,1.1),
+                                       breaks=c(0,.25,.5,.75,1),
+                                   labels=c("0","0.25","0.50","0.75","1.0"))
+dev.off()
+## ggsave("clonality_VAF.pdf",width=5,height=4)
+
+
+library(broom)
+clonality_VAF_pvalues<-data.frame(data_to_plot)%>% 
+                                filter(as.character(Clonality)%in%c("Dominant","Subclone")&
+                                         Gene!="IDH2")%>%
+                                group_by(Gene)%>%
+                                select(VAF,Clonality)%>%
+                                do(tidy(t.test(VAF ~ Clonality, data = .)))%>%
+                                select(Gene,Dominant_VAF=estimate2,Subclone_VAF=estimate1,
+                                       p.value)%>%
+                                mutate_if(is.numeric, funs(as.character(signif(., 3))))
+clonality_VAF_pvalues
+```
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig2e.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+### Extended Figure 2f : Mutation Co-occurence
+```
+library(cooccur)
+### create matrix for oncoprint
+mut_mat <- table(melted_mut_mat$Sample,melted_mut_mat$Gene)
+
+### Prepare matrix for co occurence map
+cooccur_mat <- cooccur(mat=t(mut_mat), type="spp_site",
+                       only_effects = FALSE,eff_matrix=TRUE,
+                       thresh=FALSE, eff_standard=FALSE,spp_names=TRUE)$results
+
+
+## Denote which interactions are significantly inclusive or exclusive 
+# The 'add_row' function generates a new line, but it gets removed later.
+# This is helpful for setting the order of the gene labels below. 
+cooccur_data_mat <- cooccur_mat%>%
+                        mutate(score=ifelse(p_lt<=0.05,-1,
+                                            ifelse(p_gt<=0.05,1,0))) %>%
+                        select(sp1_name,sp2_name,score)%>%
+                        add_row(sp2_name=setdiff(.$sp1_name,.$sp2_name),
+                                sp1_name=setdiff(.$sp2_name,.$sp1_name),
+                                score=0)
+
+# Order the genes in a coherent pattern for triangle strucutre of graph.
+cooccur_data_mat$sp1_name<-factor(cooccur_data_mat$sp1_name,
+                                  levels=unique(cooccur_data_mat$sp1_name))
+cooccur_data_mat$sp2_name<-factor(cooccur_data_mat$sp2_name,
+                                  levels=rev(levels(cooccur_data_mat$sp1_name)))
+
+# Triangle heatmap to compare cohorts
+pdf("SFig2f.pdf",width=5,height=5)
+ggplot(cooccur_data_mat%>%filter(sp1_name!="BRAF"),aes(x=sp1_name,y=sp2_name))+
+                      geom_tile(aes(fill = factor(score)), color='grey90') +
+                      scale_fill_manual(name="Correlation",
+                                        values=c("-1"="firebrick3",
+                                                 "0"="white",
+                                                 "1"="steelblue2"),
+                                        labels=c("Mutually Exclusive",
+                                                 "Not Significant",
+                                                 "Mutually Inclusive"))+
+                      theme_classic(base_size=10)+
+                      xlab("")+ylab("")+
+                      theme(axis.text.x=element_text(angle=45,hjust=1,vjust=1),
+                            axis.line = element_blank(),
+                            legend.position = c(0.8,1), 
+                            legend.justification = c(1, 1),
+                            legend.direction = "vertical")+
+                      theme(legend.key.size = unit(0.5,"line"))
+dev.off()                      
+##ggsave("corrplot.pdf",width=5,height=5)
+```
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig2f.png" alt="foo bar" title="train &amp; tracks" /></p>
