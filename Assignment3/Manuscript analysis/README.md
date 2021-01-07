@@ -221,7 +221,7 @@ dev.off()
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig1c-f.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
-### Sample clonality: Figure 1C,E Figure 2A,B
+### Sample clonality: Figure 1a,c Figure 2A,B
 
 ```
 mutants_in_each_sample<-do.call(rbind,lapply(names(final_sample_summary),function(x){
@@ -323,10 +323,8 @@ pvalues_Number_of_clones<-test%>%{melt(pairwise.t.test(.$Number_of_clones,g=.$Fi
                                                      data=.,p.adjust.method="fdr")$p.value)}%>%
                                      filter(!is.na(value))%>%filter(value<0.1)
                                      
-## merge=plot_grid(gg_number_of_mutations,gg_number_of_clones,ncol=2,align="hv",axis="ltrb",labels=c("C","E"))
-## ggsave("Figure1.pdf",width=8,height=5)
 ```
-
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Fig1c.png" alt="foo bar" title="train &amp; tracks" /></p>
 ***
 ### Mutation Co-occurence
 ```
