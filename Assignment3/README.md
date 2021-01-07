@@ -15,6 +15,7 @@ They used a commercial platform from **Mission Bio** called **Tapestri**. The me
 ssh -Y beng469_my393@farnam.hpc.yale.edu
 srun --pty --x11 -p interactive --mem=50g bash
 cd /gpfs/ysm/project/beng469/beng469_my393
+cd Assignment3-SNV
 ```
 ```
 mkdir Assignment3-SNV && cd Assignment3-SNV
