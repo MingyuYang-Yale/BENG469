@@ -221,7 +221,7 @@ dev.off()
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig1c-f.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
-### Sample clonality: Figure 1a,c
+### Figure 1a,c
 
 ```
 mutants_in_each_sample<-do.call(rbind,lapply(names(final_sample_summary),function(x){
@@ -326,6 +326,64 @@ pvalues_Number_of_clones
 
 ```
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Fig1c.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+### Figure 1b
+```
+library(RColorBrewer)
+
+sample <-"MSK45"
+sample_list <-final_sample_summary
+
+# Extract out the sample of interest    
+clonal_abundance <-sample_list[[sample]]$Clones 
+clonal_architecture <-sample_list[[sample]]$Architecture 
+
+# Ensure the order of the clone abundance and clone architecture are the same.
+clonal_architecture$Clone <- factor(clonal_architecture$Clone, levels=rev(clonal_abundance$Clone))
+clonal_abundance$Clone <- factor(clonal_abundance$Clone, levels=levels(clonal_architecture$Clone))
+
+# Generate clonal abundance barplot
+gg_clonal_barplot <- ggplot(data=clonal_abundance, aes(x=Clone, y=Count,fill=Count)) + 
+                              geom_col()+ 
+                              theme_classic(base_size=7)+
+                              scale_y_continuous(expand=c(0.01,0))+
+                              #ylim() + 
+                              ylab("Cell Count")+
+                              geom_errorbar(aes(ymin = LCI, ymax = UCI), width = 0.2)+
+                              scale_fill_distiller(name = "Value", palette = "Reds", direction = 1) +
+                              theme(axis.title.x = element_blank(), 
+                                    axis.text.x = element_blank(), 
+                                    axis.ticks.x = element_blank(),
+                                    axis.line.x =element_blank(),
+                                    legend.position = "none",
+                                    plot.margin=unit(c(0,0,0,0),"cm"))
+
+# Generate mutation heatmap
+gg_heatmap <- ggplot(data=clonal_architecture,
+                     aes(x=Clone, y=Mutant, fill=Genotype))+
+                     geom_tile() +
+                     scale_fill_manual(values=c("WT"=brewer.pal(7,"Reds")[1],
+                                                "Heterozygous"=brewer.pal(7,"Reds")[3],
+                                                "Homozygous"=brewer.pal(7,"Reds")[6],
+                                                "Unknown"="grey50"),name="Genotype")+
+                    theme_classic(base_size=7) +
+                    ylab("Mutation")+
+                    scale_y_discrete(limits = rev(levels(clonal_architecture$Mutant)))+
+                          theme(legend.position = "right", legend.direction = "vertical",
+                          axis.text.x = element_blank(), 
+                          axis.line=element_blank(),
+                          axis.title.x=element_blank(),
+                          axis.ticks.x = element_blank(),
+                          plot.margin=unit(c(0,0,0,0),"cm"))
+
+# Put it all together
+pdf("Fig1b.pdf",width=4,height=3)
+plot_grid(gg_clonal_barplot,gg_heatmap,ncol=1,align="v",axis="lr",rel_heights = c(1,0.75))
+dev.off()
+```
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Fig1b.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+
 ***
 ### Mutation Co-occurence
 ```
@@ -479,57 +537,3 @@ pvalues_Dominant_clone_size<-test%>%{melt(pairwise.t.test(.$Dominant_clone_size,
                                      filter(!is.na(value))%>%filter(value<0.1)
 pvalues_Dominant_clone_size
 ```
-```
-library(RColorBrewer)
-final_sample_summary<-readRDS(file="./data/final_sample_summary.rds")
-
-sample <-"MSK45"
-sample_list <-final_sample_summary
-
-# Extract out the sample of interest    
-clonal_abundance <-sample_list[[sample]]$Clones 
-clonal_architecture <-sample_list[[sample]]$Architecture 
-
-# Ensure the order of the clone abundance and clone architecture are the same.
-clonal_architecture$Clone <- factor(clonal_architecture$Clone, levels=rev(clonal_abundance$Clone))
-clonal_abundance$Clone <- factor(clonal_abundance$Clone, levels=levels(clonal_architecture$Clone))
-
-# Generate clonal abundance barplot
-gg_clonal_barplot <- ggplot(data=clonal_abundance, aes(x=Clone, y=Count,fill=Count)) + 
-                              geom_col()+ 
-                              theme_classic(base_size=7)+
-                              scale_y_continuous(expand=c(0.01,0))+
-                              #ylim() + 
-                              ylab("Cell Count")+
-                              geom_errorbar(aes(ymin = LCI, ymax = UCI), width = 0.2)+
-                              scale_fill_distiller(name = "Value", palette = "Reds", direction = 1) +
-                              theme(axis.title.x = element_blank(), 
-                                    axis.text.x = element_blank(), 
-                                    axis.ticks.x = element_blank(),
-                                    axis.line.x =element_blank(),
-                                    legend.position = "none",
-                                    plot.margin=unit(c(0,0,0,0),"cm"))
-
-# Generate mutation heatmap
-gg_heatmap <- ggplot(data=clonal_architecture,
-                     aes(x=Clone, y=Mutant, fill=Genotype))+
-                     geom_tile() +
-                     scale_fill_manual(values=c("WT"=brewer.pal(7,"Reds")[1],
-                                                "Heterozygous"=brewer.pal(7,"Reds")[3],
-                                                "Homozygous"=brewer.pal(7,"Reds")[6],
-                                                "Unknown"="grey50"),name="Genotype")+
-                    theme_classic(base_size=7) +
-                    ylab("Mutation")+
-                    scale_y_discrete(limits = rev(levels(clonal_architecture$Mutant)))+
-                          theme(legend.position = "right", legend.direction = "vertical",
-                          axis.text.x = element_blank(), 
-                          axis.line=element_blank(),
-                          axis.title.x=element_blank(),
-                          axis.ticks.x = element_blank(),
-                          plot.margin=unit(c(0,0,0,0),"cm"))
-
-# Put it all together
-gg=plot_grid(gg_clonal_barplot,gg_heatmap,ncol=1,align="v",axis="lr",rel_heights = c(1,0.75))
-ggsave("Fig1b.pdf",width=5,height=5)
-```
-
