@@ -180,3 +180,411 @@ AML_signaling_genes<-upset(test_set%>%filter(grepl("AML",Dx)),
 
 AML_signaling_genes
 ```
+
+```
+library(igraph)
+
+# identify sample with at least 2 DTAI mutationss
+multi_DTAI<-test_set%>%filter(grepl("AML",Dx))%>%
+                filter((ASXL1+DNMT3A+TET2+IDH1+IDH2)>=2)%>%
+                distinct(Sample)%>%pull(Sample)
+
+# Identify dominant clones 
+DTAI_dominant_clones<-clone_mutations%>%filter(Sample%in%multi_DTAI)%>%
+                              filter(Clonality=="Dominant")%>%
+                              select(Clone,Clone_size,Sample,DNMT3A,TET2,ASXL1,IDH1,IDH2)%>%
+                              pivot_longer(cols=c(DNMT3A,TET2,ASXL1,IDH1,IDH2),
+                                           names_to="Gene",values_to="Mutated")%>%
+                              filter(Mutated==1)
+
+# Now we want to know which variants are in the dominant clone, and the size of that clone. 
+# I'm sure there is a nice way to do this in dplyr, grouping on sample, but I couldn't figure it out
+# so we will use lapply.
+genes_in_each_dominant_clone<- do.call(rbind,setNames(lapply(multi_DTAI,function(x){
+    
+    # Extract the genes
+    dominant_variants<- DTAI_dominant_clones%>%filter(Sample==x)%>%pull(Gene)
+    
+    # Extract the clone size
+    dominant_clone_size<- DTAI_dominant_clones%>%filter(Sample==x)%>%pull(Clone_size)
+  
+    # if there are more than two DTAI variants in the dominant clone make a combinatorial edgelist
+    if(length(dominant_variants)>=2){
+      return(setNames(data.frame(t(combn(dominant_variants,2)),dominant_clone_size,"Dominant"),c("to","from","size","Clonality")))} 
+    # if there is only 1 mutant in the dominant clone, list it for now so we can count the mutation, 
+    # but we will eventually filter it out
+  else if(length(dominant_variants)==1){
+      return(setNames(data.frame(t(c(dominant_variants,dominant_variants)),dominant_clone_size,"Subclone"),c("to","from","size","Clonality")))} 
+    # if no DTAI mutants in the dominant clone, ignore.
+  else if(length(dominant_variants)==0){
+      NULL
+  }
+}),multi_DTAI))%>%distinct()
+
+# Now we will go for a similar process with subclones.
+DTAI_sub_clones<-clone_mutations%>%filter(Sample%in%multi_DTAI)%>%
+                              filter(Clonality!="Dominant")%>%
+                              select(Clone,Clone_size,Sample,DNMT3A,TET2,ASXL1,IDH1,IDH2)%>%
+                              pivot_longer(cols=c(DNMT3A,TET2,ASXL1,IDH1,IDH2),
+                                           names_to="Gene",values_to="Mutated")%>%
+                              filter(Mutated==1)%>%
+# This is how we specifically select multi mutant subclone
+                              group_by(Clone,Sample)%>%
+                              add_tally()%>%filter(n>1)%>%
+                              ungroup()
+
+# Same process as above, but note that we decided to only plot the largest multi mutant clone.
+# Try getting rid of this and seeing how it looks.
+genes_in_each_subclone <- do.call(rbind,setNames(lapply(multi_DTAI,function(x){
+    subclone_variants <- DTAI_sub_clones%>%filter(Sample==x)%>%
+                                  filter(Clone_size==max(Clone_size))%>%
+                                  pull(Gene)
+    subclone_size <- DTAI_sub_clones%>%filter(Sample==x)%>%
+                                  filter(Clone_size==max(Clone_size))%>%
+                                  pull(Clone_size)
+  
+    if(length(subclone_variants)>=2){
+      return(setNames(data.frame(t(combn(rev(subclone_variants),2)),subclone_size,"Subclone"),c("to","from","size","Clonality")))} 
+  else if(length(subclone_variants)==1){
+      return(setNames(data.frame(t(c(subclone_variants,subclone_variants)),subclone_size,"Subclone"),c("to","from","size","Clonality")))} 
+  else if(length(subclone_variants)==0){
+      NULL
+  }
+}),multi_DTAI))%>%distinct()
+
+# Now bind these two dataframe together
+final_set<- rbind(genes_in_each_dominant_clone,genes_in_each_subclone)
+
+# And remove the edges that are self referencing. We preserve the input variable so we can represent
+# the vertex size in relation to total mutation burden in this subset of patients.
+final_set_filtered <-final_set%>%filter(to!=from)
+
+graph<-graph_from_data_frame(final_set_filtered,directed=F)%>%
+                    set_edge_attr("weight", value = as.numeric(final_set_filtered%>%pull(size))*3) %>%
+                    set_edge_attr("color", value = ifelse(final_set_filtered%>% 
+                                                          pull(Clonality)=="Dominant",
+                                                          brewer.pal(5,"Reds")[5],"grey20"))
+
+mutant_counts<-table(c(as.character(final_set$to),as.character(final_set$from)))[names(V(graph))]
+scaled_mutant_counts <-mutant_counts/sum(mutant_counts)*50
+
+radian.rescale <- function(x, start=0, direction=1) {
+  c.rotate <- function(x) (x + start) %% (2 * pi) * direction
+  c.rotate(scales::rescale(x, c(0, 2 * pi), range(x)))
+}
+
+lab.locs <- radian.rescale(x=1:5, direction=-1, start=5)
+lab.locs[3]<- -2.5
+```
+```
+reordered_graph<-igraph::permute(graph,c(4,3,2,1,5))
+plot.igraph(reordered_graph,
+            edge.width = E(reordered_graph)$weight,
+            vertex.color=brewer.pal(5,"Reds")[5],
+            vertex.frame.color=brewer.pal(5,"Reds")[5],
+            vertex.size=scaled_mutant_counts[names(V(reordered_graph))], 
+            vertex.label.family="Helvetica",
+            vertex.label.color="black",
+            vertex.label.degree=lab.locs,
+            vertex.label.dist=c(3,4,3,7,3),
+            layout=layout_in_circle)
+```
+```
+multi_signaling<-test_set%>%filter(grepl("AML",Dx))%>%
+                filter((FLT3+JAK2+NRAS+KRAS+PTPN11)>=2)%>%
+                distinct(Sample)%>%pull(Sample)
+
+signaling_dominant_clones<-clone_mutations%>%filter(Sample%in%multi_signaling)%>%
+                              filter(Clonality=="Dominant")%>%
+                              select(Clone_size,Sample,FLT3,JAK2,NRAS,KRAS,PTPN11)%>%
+                              pivot_longer(cols=c(FLT3,JAK2,NRAS,KRAS,PTPN11),
+                                           names_to="Gene",values_to="Mutated")%>%
+                              filter(Mutated==1)
+
+genes_in_each_dominant_clone<- do.call(rbind,setNames(lapply(multi_signaling,function(x){
+    dominant_variants<- signaling_dominant_clones%>%filter(Sample==x)%>%pull(Gene)
+    dominant_clone_size<- signaling_dominant_clones%>%filter(Sample==x)%>%pull(Clone_size)
+  
+    if(length(dominant_variants)>=2){
+      return(setNames(data.frame(t(combn((dominant_variants),2)),dominant_clone_size,"Dominant"),c("to","from","size","Clonality")))} 
+  else if(length(dominant_variants)==1){
+      return(setNames(data.frame(t(c(dominant_variants,dominant_variants)),dominant_clone_size,"Subclone"),c("to","from","size","Clonality")))} 
+  else if(length(dominant_variants)==0){
+      NULL
+  }
+}),multi_signaling))%>%distinct()
+
+signaling_sub_clones<-clone_mutations%>%filter(Sample%in%multi_signaling)%>%
+                              filter(Clonality!="Dominant")%>%
+                              select(Clone,Clone_size,Sample,FLT3,JAK2,NRAS,KRAS,PTPN11)%>%
+                              pivot_longer(cols=c(FLT3,JAK2,NRAS,KRAS,PTPN11),
+                                           names_to="Gene",values_to="Mutated")%>%
+                              filter(Mutated==1)%>%
+                              group_by(Clone,Sample)%>%
+                              add_tally()%>%filter(n>1)%>%
+                              ungroup()
+
+genes_in_each_subclone<- do.call(rbind,setNames(lapply(multi_signaling,function(x){
+    subclone_variants<- signaling_sub_clones%>%filter(Sample==x)%>%
+                                  filter(Clone_size==max(Clone_size))%>%pull(Gene)
+    subclone_size<- signaling_sub_clones%>%filter(Sample==x)%>%
+                                  filter(Clone_size==max(Clone_size))%>%pull(Clone_size)
+  
+    if(length(subclone_variants)>=2){
+      return(setNames(data.frame(t(combn((subclone_variants),2)),subclone_size,"Subclone"),c("to","from","size","Clonality")))} 
+  else if(length(subclone_variants)==1){
+      return(setNames(data.frame(t(c(subclone_variants,subclone_variants)),subclone_size,"Subclone"),c("to","from","size","Clonality")))} 
+  else if(length(subclone_variants)==0){
+      NULL
+  }
+}),multi_signaling))%>%distinct()
+
+
+final_set<- rbind(genes_in_each_dominant_clone,genes_in_each_subclone)
+
+final_set_filtered <-final_set%>%filter(to!=from)
+
+graph<-graph_from_data_frame(final_set_filtered,directed=F)%>%
+                    set_edge_attr("weight", value = as.numeric(final_set_filtered%>%pull(size))*3) %>%
+                    set_edge_attr("color", value = ifelse(final_set_filtered%>% 
+                                                          pull(Clonality)=="Dominant",
+                                                          brewer.pal(5,"Reds")[5],"grey20"))
+
+mutant_counts<-table(c(as.character(final_set$to),as.character(final_set$from)))[names(V(graph))]
+scaled_mutant_counts <-mutant_counts/sum(mutant_counts)*50
+radian.rescale <- function(x, start=0, direction=1) {
+  c.rotate <- function(x) (x + start) %% (2 * pi) * direction
+  c.rotate(scales::rescale(x, c(0, 2 * pi), range(x)))
+}
+
+lab.locs <- radian.rescale(x=1:5, direction=-1, start=5)
+lab.locs[3]<- -2.5
+```
+```
+reordered_graph<-igraph::permute(graph,c(5,2,4,1,3))
+plot.igraph(reordered_graph,
+            edge.width = E(reordered_graph)$weight,
+            vertex.color=brewer.pal(5,"Reds")[5],
+            vertex.frame.color=brewer.pal(5,"Reds")[5],
+            vertex.size=scaled_mutant_counts[names(V(reordered_graph))], 
+            vertex.label.family="Helvetica",
+            vertex.label.color="black",
+            vertex.label.degree=lab.locs,
+            vertex.label.dist=c(3,4,3,7,3),
+            layout=layout_in_circle)
+```
+```
+# Add a column for whether a clone contains 2 signaling mutations (as demonstrated above)
+clone_mutations_added<-clone_mutations%>%inner_join(pheno,by="Sample")%>%
+          rowwise()%>%
+          add_column(signal2=ifelse(c(.$FLT3+.$JAK2+.$NRAS+.$KRAS+.$PTPN11)>=2,1,0))%>%
+          ungroup()
+
+gene_sets<-list("DNMT3A"="DNMT3A",
+                "DNMT3A IDH1"=c("DNMT3A","IDH1"),
+                "DNMT3A IDH2"=c("DNMT3A","IDH2"),
+                "IDH1"="IDH1",
+                "IDH2"="IDH2")
+
+comutant_status<-do.call(rbind,setNames(lapply(gene_sets, function(genes){
+  epi_to_exclude <- setdiff(c("DNMT3A","TET2","ASXL1","IDH1","IDH2"),genes)
+  clone_subset<- clone_mutations_added%>%filter(Dx=="AML")%>%
+                          filter_at(vars(all_of(epi_to_exclude)),all_vars(.==0))%>%
+                          filter_at(vars(all_of(genes)), all_vars(.==1))%>%
+                          select(c(Sample,all_of(genes),FLT3,JAK2,NRAS,KRAS,PTPN11,signal2))
+  
+  data.frame("Group"  =paste(genes,sep=" ",collapse = " "),
+             "Total"  =clone_subset%>%summarise(Count=n())%>%pull(Count),
+             "FLT3"   =clone_subset%>%filter(signal2==0)%>%tally(FLT3)  %>%pull(n),
+             "PTPN11" =clone_subset%>%filter(signal2==0)%>%tally(PTPN11)%>%pull(n),
+             "JAK2"   =clone_subset%>%filter(signal2==0)%>%tally(JAK2)  %>%pull(n),
+             "KRAS"   =clone_subset%>%filter(signal2==0)%>%tally(KRAS)  %>%pull(n),
+             "NRAS"   =clone_subset%>%filter(signal2==0)%>%tally(NRAS)  %>%pull(n),
+             "Multiple mutants"=clone_subset%>%tally(signal2)%>%pull(n),
+             "None"   =clone_subset%>%
+                              add_column(None=ifelse(c(.$FLT3+.$JAK2+
+                                                            .$NRAS+.$KRAS+
+                                                            .$PTPN11)==0,1,0))%>%
+                                                      tally(None)%>%pull(n))
+
+}),names(gene_sets)))
+
+final<-comutant_status%>%select(!Total)%>%
+                pivot_longer(cols=c(FLT3,PTPN11,JAK2,KRAS,NRAS,Multiple.mutants,None),
+                             names_to="Mutation",
+                             values_to="Count")
+      
+final$Mutation <- gsub("Multiple.mutants","Multiple mutants",final$Mutation)
+final$Mutation <- factor(final$Mutation, 
+                         levels=rev(c("JAK2","PTPN11","NRAS","KRAS","FLT3","Multiple mutants","None")))
+final$Group <- factor(final$Group, 
+                      levels=rev(c("IDH1","DNMT3A IDH1","DNMT3A","DNMT3A IDH2","IDH2")))
+
+color_set<-rev(brewer.pal(9,"Set1")[c(1,8,2,3,4,5,9)])
+
+gg_co_mutants<-ggplot(final, aes(x=Group,fill=Mutation,y=Count))+
+                geom_col(position="fill")+theme_classic(base_size=12)+
+                ylab("Fraction of clones")+ xlab("")+coord_flip()+
+                scale_y_continuous(expand=c(0,0))+
+                ggtitle("Clone level data")+
+                theme(plot.title = element_text(hjust=0.5))+
+                scale_fill_manual(values=color_set,"Co mutation",
+                                  guide = guide_legend(reverse = TRUE))
+```
+```
+# Add a column for whether a clone contains 2 signaling mutations (as demonstrated above)
+sample_mutations_added<-sample_mutations%>%inner_join(pheno,by="Sample")%>%
+          rowwise()%>%
+          add_column(signal2=ifelse(c(.$FLT3+.$JAK2+.$NRAS+.$KRAS+.$PTPN11)>=2,1,0))%>%
+          ungroup()
+
+gene_sets<-list("DNMT3A"="DNMT3A",
+                "DNMT3A IDH1"=c("DNMT3A","IDH1"),
+                "DNMT3A IDH2"=c("DNMT3A","IDH2"),
+                "IDH1"="IDH1",
+                "IDH2"="IDH2")
+
+comutant_sample_status<-do.call(rbind,setNames(lapply(gene_sets, function(genes){
+  epi_to_exclude <- setdiff(c("DNMT3A","TET2","ASXL1","IDH1","IDH2"),genes)
+  sample_subset<- sample_mutations_added%>%filter(Dx=="AML")%>%
+                          filter_at(vars(all_of(epi_to_exclude)),all_vars(.==0))%>%
+                          filter_at(vars(all_of(genes)), all_vars(.==1))%>%
+                          select(c(Sample,all_of(genes),FLT3,JAK2,NRAS,KRAS,PTPN11,signal2))
+  
+  data.frame("Group"  =paste(genes,sep=" ",collapse = " "),
+             "Total"  =sample_subset%>%summarise(Count=n())%>%pull(Count),
+             "FLT3"   =sample_subset%>%filter(signal2==0)%>%tally(FLT3)  %>%pull(n),
+             "PTPN11" =sample_subset%>%filter(signal2==0)%>%tally(PTPN11)%>%pull(n),
+             "JAK2"   =sample_subset%>%filter(signal2==0)%>%tally(JAK2)  %>%pull(n),
+             "KRAS"   =sample_subset%>%filter(signal2==0)%>%tally(KRAS)  %>%pull(n),
+             "NRAS"   =sample_subset%>%filter(signal2==0)%>%tally(NRAS)  %>%pull(n),
+             "Multiple mutants"=sample_subset%>%tally(signal2)%>%pull(n),
+             "None"   =sample_subset%>%
+                              add_column(None=ifelse(c(.$FLT3+.$JAK2+
+                                                            .$NRAS+.$KRAS+
+                                                            .$PTPN11)==0,1,0))%>%
+                                                      tally(None)%>%pull(n))
+
+}),names(gene_sets)))
+
+final<-comutant_sample_status%>%select(!Total)%>%
+                pivot_longer(cols=c(FLT3,PTPN11,JAK2,KRAS,NRAS,Multiple.mutants,None),
+                             names_to="Mutation",
+                             values_to="Count")
+      
+final$Mutation <- gsub("Multiple.mutants","Multiple mutants",final$Mutation)
+final$Mutation <- factor(final$Mutation, 
+                         levels=rev(c("JAK2","PTPN11","NRAS","KRAS","FLT3","Multiple mutants","None")))
+final$Group <- factor(final$Group, 
+                      levels=rev(c("IDH1","DNMT3A IDH1","DNMT3A","DNMT3A IDH2","IDH2")))
+
+color_set<-rev(brewer.pal(9,"Set1")[c(1,8,2,3,4,5,9)])
+
+gg_co_mutants_sample<-ggplot(final, aes(x=Group,fill=Mutation,y=Count))+
+                geom_col(position="fill")+theme_classic(base_size=12)+
+                ylab("Fraction of Samples")+ xlab("")+coord_flip()+
+                scale_y_continuous(expand=c(0,0))+
+                ggtitle("Sample level data")+
+                theme(plot.title = element_text(hjust=0.5))+
+                scale_fill_manual(values=color_set,"Co mutation",
+                                  guide = guide_legend(reverse = TRUE))
+```
+```
+# Add a column for whether a clone contains 2 signaling mutations (as demonstrated above)
+sample_mutations_added<-sample_mutations%>%inner_join(pheno,by="Sample")%>%
+          rowwise()%>%
+          add_column(signal2=ifelse(c(.$FLT3+.$JAK2+.$NRAS+.$KRAS+.$PTPN11)>=2,1,0))%>%
+          ungroup()
+
+gene_sets<-list("DNMT3A"="DNMT3A",
+                "DNMT3A IDH1"=c("DNMT3A","IDH1"),
+                "DNMT3A IDH2"=c("DNMT3A","IDH2"),
+                "IDH1"="IDH1",
+                "IDH2"="IDH2")
+
+comutant_sample_status<-do.call(rbind,setNames(lapply(gene_sets, function(genes){
+  epi_to_exclude <- setdiff(c("DNMT3A","TET2","ASXL1","IDH1","IDH2"),genes)
+  sample_subset<- sample_mutations_added%>%filter(Dx=="AML")%>%
+                          filter_at(vars(all_of(epi_to_exclude)),all_vars(.==0))%>%
+                          filter_at(vars(all_of(genes)), all_vars(.==1))%>%
+                          select(c(Sample,all_of(genes),FLT3,JAK2,NRAS,KRAS,PTPN11,signal2))
+  
+  data.frame("Group"  =paste(genes,sep=" ",collapse = " "),
+             "Total"  =sample_subset%>%summarise(Count=n())%>%pull(Count),
+             "FLT3"   =sample_subset%>%filter(signal2==0)%>%tally(FLT3)  %>%pull(n),
+             "PTPN11" =sample_subset%>%filter(signal2==0)%>%tally(PTPN11)%>%pull(n),
+             "JAK2"   =sample_subset%>%filter(signal2==0)%>%tally(JAK2)  %>%pull(n),
+             "KRAS"   =sample_subset%>%filter(signal2==0)%>%tally(KRAS)  %>%pull(n),
+             "NRAS"   =sample_subset%>%filter(signal2==0)%>%tally(NRAS)  %>%pull(n),
+             "Multiple mutants"=sample_subset%>%tally(signal2)%>%pull(n),
+             "None"   =sample_subset%>%
+                              add_column(None=ifelse(c(.$FLT3+.$JAK2+
+                                                            .$NRAS+.$KRAS+
+                                                            .$PTPN11)==0,1,0))%>%
+                                                      tally(None)%>%pull(n))
+
+}),names(gene_sets)))
+
+final<-comutant_sample_status%>%select(!Total)%>%
+                pivot_longer(cols=c(FLT3,PTPN11,JAK2,KRAS,NRAS,Multiple.mutants,None),
+                             names_to="Mutation",
+                             values_to="Count")
+      
+final$Mutation <- gsub("Multiple.mutants","Multiple mutants",final$Mutation)
+final$Mutation <- factor(final$Mutation, 
+                         levels=rev(c("JAK2","PTPN11","NRAS","KRAS","FLT3","Multiple mutants","None")))
+final$Group <- factor(final$Group, 
+                      levels=rev(c("IDH1","DNMT3A IDH1","DNMT3A","DNMT3A IDH2","IDH2")))
+
+color_set<-rev(brewer.pal(9,"Set1")[c(1,8,2,3,4,5,9)])
+
+gg_co_mutants_sample<-ggplot(final, aes(x=Group,fill=Mutation,y=Count))+
+                geom_col(position="fill")+theme_classic(base_size=12)+
+                ylab("Fraction of Samples")+ xlab("")+coord_flip()+
+                scale_y_continuous(expand=c(0,0))+
+                ggtitle("Sample level data")+
+                theme(plot.title = element_text(hjust=0.5))+
+                scale_fill_manual(values=color_set,"Co mutation",
+                                  guide = guide_legend(reverse = TRUE))
+plot_grid(gg_co_mutants,gg_co_mutants_sample,ncol=1)
+```
+```
+# Run back the patients we looked at in the network plots
+patients_of_interest <- sample_mutations_added%>%filter(DNMT3A==1&signal2==1&
+                                                          (IDH1==1|IDH2==1))%>%
+                                                  pull(Sample)
+
+dual_mutation_fractions<-do.call(rbind,setNames(lapply(patients_of_interest,function(sample){
+  # Extract the genotype matrix for each patient
+    NGT<-final_sample_summary[[sample]]$NGT%>%select(!Clone)
+  # Simplfy the matrix to mutant vs non mutant cells.
+    NGT[NGT>0] <-1
+  # Extract the mutations of interest
+    data.frame("Sample"=sample,
+               "Epigenetic"=NGT%>%select_if(grepl("DNMT3A|IDH",names(.)))%>%
+                              mutate(dual_epi=rowSums(.))%>%
+                              summarise(Epigenetic=sum(dual_epi>=2)/n()),
+               "Signaling"=NGT%>%select_if(grepl("FLT3|RAS|JAK2|PTPN11",names(.)))%>%
+                              mutate(dual_signaling=rowSums(.))%>%
+                              summarise(Signaling=sum(dual_signaling>=2)/n()))
+}),patients_of_interest))
+
+# Plot the data
+gg_fraction_comutated_cells<-ggplot(dual_mutation_fractions%>%pivot_longer(cols=!Sample,
+                                                                      names_to="Group",
+                                                                      values_to = "Fraction"),
+                                    aes(x=Group,y=Fraction,fill=Group))+
+                                        geom_boxplot()+
+                                        geom_jitter(width=0.1)+
+                                        theme_classic(base_size=12)+
+                                        scale_fill_brewer(type="qual",palette = "Set1","Mutation pairs")+
+                                        xlab("")+ylab("Fraction of co-mutated cells")
+
+gg_fraction_comutated_cells
+```
+```
+dual_mutation_fractions_melted<-dual_mutation_fractions%>%pivot_longer(cols=!Sample,
+                          names_to="Group",
+                          values_to = "Fraction")
+t.test(dual_mutation_fractions_melted$Fraction~factor(dual_mutation_fractions_melted$Group))
+```
