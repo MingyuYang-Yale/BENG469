@@ -121,8 +121,62 @@ AML<-upset(test_set%>%filter(grepl("AML",Dx)),
            mb.ratio = c(0.6, 0.4),
            queries=list(list(query = Myfunc, 
                              params = list("Match"), 
+                             color = brewer.pal(5,"Reds")[5])))
+
+ggsave("AML.pdf",width=6,height=5)
+```
+```
+CH<-upset(test_set%>%filter(Dx=="CH"), sets=DTAI_genes,order.by = c("degree"),
+           main.bar.color = "grey60",decreasing=FALSE,
+           mainbar.y.label = "Number of samples",
+           sets.x.label = "Number of \n mutant samples",
+           text.scale=1.25,
+           shade.alpha = 0.75,
+           show.numbers=FALSE,
+           queries=list(list(query = Myfunc, params = list("Match"), color = brewer.pal(5,"Reds")[5], active = TRUE )))
+
+CH
+```
+```
+# Identify genes of interest
+genes<- c("FLT3","NRAS","JAK2","KRAS","PTPN11")
+
+# Subset data.frame above to only the dominant clones
+dominant_clone_mutations <- clone_mutations%>%filter(Clonality=="Dominant")
+
+# For each sample, determine if the dominant clone
+sample_mutations$Match<-ifelse(sapply(sample_mutations$Sample,function(sample) {
+                                                all(sample_mutations%>%
+                                                        filter(Sample==sample)%>%
+                                                        select(all_of(genes))==
+                                                    dominant_clone_mutations%>%
+                                                        filter(Sample==sample)%>%
+                                                        select(all_of(genes)))
+                          }) ,"Match","Absent")
+
+# Join this match with the phenotype data to pick a disease state of interest
+test_set<-left_join(sample_mutations,pheno,by="Sample")
+
+# Necessary little function to 
+Myfunc <- function(row,feature) {
+  data <- (row[feature]=="Match")
+}
+
+# Slight difference from BioRxiv paper due to a misclassification of one TET2 mutant CMML sample as AML.
+AML_signaling_genes<-upset(test_set%>%filter(grepl("AML",Dx)), 
+           sets=genes,
+           order.by = c("degree"),
+           main.bar.color = "grey60",decreasing=FALSE,
+           mainbar.y.label = "Number of samples",
+           sets.x.label = "Number of \n mutant samples",
+           text.scale=1.25,
+           shade.alpha = 0.75,
+           show.numbers=FALSE,
+           mb.ratio = c(0.6, 0.4),
+           queries=list(list(query = Myfunc, 
+                             params = list("Match"), 
                              color = brewer.pal(5,"Reds")[5], 
                              active = TRUE )))
 
-ggsave("AML.pdf",width=6,height=5)
+AML_signaling_genes
 ```
