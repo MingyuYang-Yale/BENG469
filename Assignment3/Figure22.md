@@ -2,7 +2,7 @@
 ```
 options(stringsAsFactors = FALSE)
 
-install.packages('UpSetR')
+# install.packages('UpSetR')
 library(UpSetR)
 library(tidyr)
 library(dplyr)
