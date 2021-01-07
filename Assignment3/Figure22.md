@@ -13,6 +13,7 @@ library(cowplot)
 library(tibble)
 
 setwd("/gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV")
+final_sample_summary<-readRDS(file="./data/final_sample_summary.rds")
 final_NGTs<-readRDS(file="./data/final_NGTs.rds")
 pheno<-readRDS(file="./data/pheno.rds")
 
