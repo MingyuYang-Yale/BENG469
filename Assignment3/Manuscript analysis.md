@@ -16,3 +16,9 @@ wget https://github.com/bowmanr/scDNA_myeloid/blob/master/data/pheno.rds
 ```
 R
 ```
+```
+# loading R packages
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+```
