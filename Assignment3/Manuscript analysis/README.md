@@ -385,7 +385,7 @@ pvalues_Number_of_clones
 ```
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Fig1c.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-
+### Figure 1d
 ```
 pdf("Fig1d.pdf",width=3,height=3)
 ggplot(test,aes(y=Shannon,x=Final_group,fill=Final_group))+
@@ -405,6 +405,7 @@ pvalues_Shannon
 ```
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Fig1d.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+### Figure 1e
 ```
 pdf("Fig1e.pdf",width=3,height=3)
 ggplot(test,
