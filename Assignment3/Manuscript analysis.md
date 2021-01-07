@@ -145,7 +145,7 @@ oncoPrint(final_mat,
           heatmap_legend_param = heatmap_legend_param)
 dev.off()
 ```
-<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/SFig1a.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/SFig1a.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ***
 
