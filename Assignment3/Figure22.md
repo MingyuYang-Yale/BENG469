@@ -1,6 +1,8 @@
 ## Co-mutation and clonality
 ```
 options(stringsAsFactors = FALSE)
+
+install.packages('UpSetR')
 library(UpSetR)
 library(tidyr)
 library(dplyr)
