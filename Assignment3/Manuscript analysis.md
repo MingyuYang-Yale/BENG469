@@ -28,6 +28,7 @@ library(pals)
 library(ComplexHeatmap)
 library(magrittr)
 library(vegan)
+library(reshape2)
 ```
 ```
 setwd("/gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV")
@@ -264,4 +265,42 @@ ggsave("number_of_clones.pdf",width=5,height=5)
 
 ## merge=plot_grid(gg_number_of_mutations,gg_number_of_clones,ncol=2,align="hv",axis="ltrb",labels=c("C","E"))
 ## ggsave("Figure1.pdf",width=8,height=5)
+```
+```
+library(reshape2) #for melt, I need to come up with a better way to do this, if anyone has ideas let me know!
+pvalues_Number_of_clones<-test%>%{melt(pairwise.t.test(.$Number_of_clones,g=.$Final_group,
+                                                     data=.,p.adjust.method="fdr")$p.value)}%>%
+                                     filter(!is.na(value))%>%filter(value<0.1)
+
+pvalues_Number_of_mutations<-test%>%{melt(pairwise.t.test(.$Number_of_mutations,g=.$Final_group,
+                                                     data=.,p.adjust.method="fdr")$p.value)}%>%
+                                     filter(!is.na(value))%>%filter(value<0.1)
+```
+```
+gg_shannon<-ggplot(test,aes(y=Shannon,x=Final_group,fill=Final_group))+
+                        geom_boxplot(outlier.shape = NA)+  
+                        geom_jitter(width = 0.1,size=0.5)+
+                        theme_classic(base_size = 8)+
+                        ylab("Shannon diveristy index")+
+                        xlab("")+
+                        theme(axis.text.x = element_text(angle=30,hjust=1)) +
+                        scale_fill_brewer(type="seq",palette = "Reds",aesthetics = "fill",guide=FALSE)
+ggsave("shannon.pdf",width=5,height=5)
+```
+```
+gg_Number_of_mutations_in_Dclone<-ggplot(test%>%group_by(Final_group)%>%
+                                       summarise(mean=mean(Number_of_mutations_in_dominant_clone),
+                                                 sd = sd(Number_of_mutations_in_dominant_clone),
+                                                 sem = sd(Number_of_mutations_in_dominant_clone)/
+                                                       sqrt(length(Number_of_mutations_in_dominant_clone))),
+                                       aes(x=Final_group,y=mean,fill=Final_group))+
+                                          geom_bar(stat="identity",color="black")+
+                                          geom_errorbar(aes(ymin = mean-sem, ymax = mean+sem),width=0.5,lwd=0.5)+
+                                          theme_classic(base_size = 8)+
+                                          ylab("Number of mutations \n in dominant clone")+xlab("")+ggtitle("")+
+                                          scale_y_continuous(limits = c(0,4.5), expand = c(0, 0)) +
+                                          theme(axis.text.x = element_text(angle=30,hjust=1)) +
+                                          scale_fill_brewer(type="seq",palette = "Reds",
+                                                            aesthetics = "fill",guide=FALSE)
+ggsave("Number_of_mutations_in_Dclone.pdf",width=5,height=5)
 ```
