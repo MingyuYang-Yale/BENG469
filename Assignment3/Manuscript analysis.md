@@ -29,6 +29,8 @@ library(ComplexHeatmap)
 library(magrittr)
 library(vegan)
 library(reshape2)
+library(RColorBrewer)
+
 ```
 ```
 setwd("/gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV")
@@ -271,10 +273,11 @@ library(reshape2) #for melt, I need to come up with a better way to do this, if 
 pvalues_Number_of_clones<-test%>%{melt(pairwise.t.test(.$Number_of_clones,g=.$Final_group,
                                                      data=.,p.adjust.method="fdr")$p.value)}%>%
                                      filter(!is.na(value))%>%filter(value<0.1)
-
+pvalues_Number_of_clones
 pvalues_Number_of_mutations<-test%>%{melt(pairwise.t.test(.$Number_of_mutations,g=.$Final_group,
                                                      data=.,p.adjust.method="fdr")$p.value)}%>%
                                      filter(!is.na(value))%>%filter(value<0.1)
+pvalues_Number_of_mutations
 ```
 ```
 gg_shannon<-ggplot(test,aes(y=Shannon,x=Final_group,fill=Final_group))+
@@ -303,4 +306,115 @@ gg_Number_of_mutations_in_Dclone<-ggplot(test%>%group_by(Final_group)%>%
                                           scale_fill_brewer(type="seq",palette = "Reds",
                                                             aesthetics = "fill",guide=FALSE)
 ggsave("Number_of_mutations_in_Dclone.pdf",width=5,height=5)
+```
+```
+pvalues_Shannon<-test%>%{melt(pairwise.t.test(.$Shannon,g=.$Final_group,
+                                                        data=.,p.adjust.method="fdr")$p.value)}%>%
+                                              filter(!is.na(value))%>%filter(value<0.1)
+```
+```
+pvalues_Number_of_mutations_in_dominant_clone<-test%>%{melt(pairwise.t.test(
+                                                        .$Number_of_mutations_in_dominant_clone,
+                                                        g=.$Final_group,
+                                                        data=.,p.adjust.method="fdr")$p.value)}%>%
+                                              filter(!is.na(value))%>%filter(value<0.1)
+```
+```
+gg_dominant_clone_size<-ggplot(test,
+                            aes(y=Dominant_clone_size,x=Final_group,fill=Final_group))+
+                            geom_boxplot(outlier.shape = NA)+  
+                            geom_jitter(width = 0.1,size=0.5)+
+                            theme_classic(base_size = 8)+
+                            ylab("Fraction of sample \n in dominant clone")+
+                            xlab("")+
+                            theme(axis.text.x = element_text(angle=30,hjust=1)) +
+                            scale_fill_brewer(type="seq",palette = "Reds",aesthetics = "fill",guide=FALSE)
+
+ggsave("dominant_clone_size.pdf",width=7,height=5)
+```
+```
+# determine the number of mutants alleles in each clone
+clone_size_by_genetic_density<- do.call(rbind,lapply(final_sample_summary,function(x){
+                                    possible_clones_subset <-x$Clones%>%filter(Clone%in% x$Clones[,"Clone"] )
+                                    clones<-possible_clones_subset[,"Clone"]
+                                    dedup<-x$NGT[!duplicated(x$NGT)&x$NGT[,"Clone"]%in%clones,]
+                                    set_mat<-full_join(possible_clones_subset[,1:2],dedup)
+                                    counts <-set_mat[,"Count"]
+                                    weights<-set_mat[,"Count"]/sum(set_mat[,"Count"])
+                                    genetic_complexity <- rowSums(set_mat[,-c(1:2)])
+                                    return(data.frame("Clone_size"=weights,
+                                                      "Genetic_density"=genetic_complexity))
+}))
+```
+```
+gg_clone_size_by_genetic_density<-ggplot(clone_size_by_genetic_density,
+                                              aes(y=Clone_size,x=factor(Genetic_density),
+                                                  fill=factor(Genetic_density)))+
+                                              geom_jitter(width = 0.1,size=0.5)+
+                                              geom_boxplot(outlier.shape = NA)+  
+                                              theme_bw(base_size = 8)+
+                                              ylab("Fraction of sample in clone")+
+                                              xlab("Number of mutant alleles")+
+                                              scale_fill_brewer(type="seq",palette = "Greens",
+                                                                aesthetics = "fill",guide=FALSE)
+ggsave("clone_size_by_genetic_density.pdf",width=7,height=5)
+```
+```
+pvalues_Dominant_clone_size<-test%>%{melt(pairwise.t.test(.$Dominant_clone_size,g=.$Final_group,
+                                                     data=.,p.adjust.method="fdr")$p.value)}%>%
+                                     filter(!is.na(value))%>%filter(value<0.1)
+pvalues_Dominant_clone_size
+```
+```
+library(RColorBrewer)
+final_sample_summary<-readRDS(file="./data/final_sample_summary.rds")
+
+sample <-"MSK45"
+sample_list <-final_sample_summary
+
+# Extract out the sample of interest    
+clonal_abundance <-sample_list[[sample]]$Clones 
+clonal_architecture <-sample_list[[sample]]$Architecture 
+
+# Ensure the order of the clone abundance and clone architecture are the same.
+clonal_architecture$Clone <- factor(clonal_architecture$Clone, levels=rev(clonal_abundance$Clone))
+clonal_abundance$Clone <- factor(clonal_abundance$Clone, levels=levels(clonal_architecture$Clone))
+
+# Generate clonal abundance barplot
+gg_clonal_barplot <- ggplot(data=clonal_abundance, aes(x=Clone, y=Count,fill=Count)) + 
+                              geom_col()+ 
+                              theme_classic(base_size=7)+
+                              scale_y_continuous(expand=c(0.01,0))+
+                              #ylim() + 
+                              ylab("Cell Count")+
+                              geom_errorbar(aes(ymin = LCI, ymax = UCI), width = 0.2)+
+                              scale_fill_distiller(name = "Value", palette = "Reds", direction = 1) +
+                              theme(axis.title.x = element_blank(), 
+                                    axis.text.x = element_blank(), 
+                                    axis.ticks.x = element_blank(),
+                                    axis.line.x =element_blank(),
+                                    legend.position = "none",
+                                    plot.margin=unit(c(0,0,0,0),"cm"))
+
+# Generate mutation heatmap
+gg_heatmap <- ggplot(data=clonal_architecture,
+                     aes(x=Clone, y=Mutant, fill=Genotype))+
+                     geom_tile() +
+                     scale_fill_manual(values=c("WT"=brewer.pal(7,"Reds")[1],
+                                                "Heterozygous"=brewer.pal(7,"Reds")[3],
+                                                "Homozygous"=brewer.pal(7,"Reds")[6],
+                                                "Unknown"="grey50"),name="Genotype")+
+                    theme_classic(base_size=7) +
+                    ylab("Mutation")+
+                    scale_y_discrete(limits = rev(levels(clonal_architecture$Mutant)))+
+                          theme(legend.position = "right", legend.direction = "vertical",
+                          axis.text.x = element_blank(), 
+                          axis.line=element_blank(),
+                          axis.title.x=element_blank(),
+                          axis.ticks.x = element_blank(),
+                          plot.margin=unit(c(0,0,0,0),"cm"))
+
+# Put it all together
+gg=plot_grid(gg_clonal_barplot,gg_heatmap,ncol=1,align="v",axis="lr",rel_heights = c(1,0.75))
+ggsave("Fig1b.pdf",width=5,height=5)
 ```
