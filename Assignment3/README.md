@@ -1,5 +1,5 @@
 ***
-### Login HPC:
+#### Login HPC:
 (need to connect to Yale's **VPN** if off campus)
 
 ```
@@ -9,7 +9,6 @@ cd /gpfs/ysm/project/beng469/beng469_my393
 cd Assignment3-SNV
 ```
 
-***
 ### open R
 ```
 module load R/3.6.1-foss-2018b
@@ -17,7 +16,7 @@ module load R/3.6.1-foss-2018b
 ```
 R
 ```
-
+***
 #### Extract SNV data (~10mins)
 ```
 # make a project folder and set the working directory to that folder:
@@ -246,4 +245,4 @@ final_sample_summary<-setNames(lapply(names(clonal_architecture),function(sample
 
 saveRDS(final_sample_summary,file="./analysis/final_sample_summary.rds")
 ```
-
+***
