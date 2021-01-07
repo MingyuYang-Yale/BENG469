@@ -53,6 +53,7 @@ final_mut_melt<-do.call(rbind,lapply(names(final_NGTs),function(x){
              "Gene"=do.call(rbind,strsplit(colnames(final_NGTs[[x]]),split="[:_]"))[,1])
       }))
 ```
+***
 #### Extended Figure 1a.
 ```
 library(pals) # great package with color palettes in R
