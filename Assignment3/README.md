@@ -18,9 +18,6 @@ module load R/3.6.1-foss-2018b
 R
 ```
 
-For reproducibility purposes, We are going to use a limited example on 6 samples for preprocessing, and later we will load an rds object with all the data in the paper.
-
-
 #### Extract SNV data (~10mins)
 ```
 setwd("/gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV")
