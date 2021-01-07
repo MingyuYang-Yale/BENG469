@@ -221,7 +221,7 @@ dev.off()
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig1c-f.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
-### Sample clonality: Figure 1a,c Figure 2A,B
+### Sample clonality: Figure 1a,c
 
 ```
 mutants_in_each_sample<-do.call(rbind,lapply(names(final_sample_summary),function(x){
@@ -302,7 +302,7 @@ dev.off()
 pvalues_Number_of_mutations<-test%>%{melt(pairwise.t.test(.$Number_of_mutations,g=.$Final_group,
                                                      data=.,p.adjust.method="fdr")$p.value)}%>%
                                      filter(!is.na(value))%>%filter(value<0.1)
-write.table(pvalues_Number_of_mutations,file="pvalues_Number_of_mutations.xls",sep="\t")
+pvalues_Number_of_mutations
 ```
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Fig1a.png" alt="foo bar" title="train &amp; tracks" /></p>
 
@@ -322,7 +322,8 @@ dev.off()
 pvalues_Number_of_clones<-test%>%{melt(pairwise.t.test(.$Number_of_clones,g=.$Final_group,
                                                      data=.,p.adjust.method="fdr")$p.value)}%>%
                                      filter(!is.na(value))%>%filter(value<0.1)
-                                     
+pvalues_Number_of_clones                                     
+
 ```
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Fig1c.png" alt="foo bar" title="train &amp; tracks" /></p>
 ***
