@@ -425,8 +425,75 @@ pvalues_Dominant_clone_size<-test%>%{melt(pairwise.t.test(.$Dominant_clone_size,
 pvalues_Dominant_clone_size
 ```
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Fig1e.png" alt="foo bar" title="train &amp; tracks" /></p>
-
 ***
+
+### Extended Figure 2b
+```
+pdf("SFig2b.pdf",width=3,height=3)
+ggplot(test%>%group_by(Final_group)%>%
+                                       summarise(mean=mean(Number_of_mutations_in_dominant_clone),
+                                                 sd = sd(Number_of_mutations_in_dominant_clone),
+                                                 sem = sd(Number_of_mutations_in_dominant_clone)/
+                                                       sqrt(length(Number_of_mutations_in_dominant_clone))),
+                                       aes(x=Final_group,y=mean,fill=Final_group))+
+                                          geom_bar(stat="identity",color="black")+
+                                          geom_errorbar(aes(ymin = mean-sem, ymax = mean+sem),width=0.5,lwd=0.5)+
+                                          theme_classic(base_size = 8)+
+                                          ylab("Number of mutations \n in dominant clone")+xlab("")+ggtitle("")+
+                                          scale_y_continuous(limits = c(0,4.5), expand = c(0, 0)) +
+                                          theme(axis.text.x = element_text(angle=30,hjust=1)) +
+                                          scale_fill_brewer(type="seq",palette = "Reds",
+                                                            aesthetics = "fill",guide=FALSE)
+dev.off()                                                            
+
+#ggsave("Number_of_mutations_in_Dclone.pdf",width=5,height=5)
+
+pvalues_Number_of_mutations_in_dominant_clone<-test%>%{melt(pairwise.t.test(
+                                                        .$Number_of_mutations_in_dominant_clone,
+                                                        g=.$Final_group,
+                                                        data=.,p.adjust.method="fdr")$p.value)}%>%
+                                              filter(!is.na(value))%>%filter(value<0.1)
+pvalues_Number_of_mutations_in_dominant_clone                                             
+```
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig2b.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+
+### Extended Figure 2c
+```
+# determine the number of mutants alleles in each clone
+clone_size_by_genetic_density<- do.call(rbind,lapply(final_sample_summary,function(x){
+                                    possible_clones_subset <-x$Clones%>%filter(Clone%in% x$Clones[,"Clone"] )
+                                    clones<-possible_clones_subset[,"Clone"]
+                                    dedup<-x$NGT[!duplicated(x$NGT)&x$NGT[,"Clone"]%in%clones,]
+                                    set_mat<-full_join(possible_clones_subset[,1:2],dedup)
+                                    counts <-set_mat[,"Count"]
+                                    weights<-set_mat[,"Count"]/sum(set_mat[,"Count"])
+                                    genetic_complexity <- rowSums(set_mat[,-c(1:2)])
+                                    return(data.frame("Clone_size"=weights,
+                                                      "Genetic_density"=genetic_complexity))
+}))
+
+pdf("SFig2c.pdf",width=3,height=2)
+ggplot(clone_size_by_genetic_density,
+                                              aes(y=Clone_size,x=factor(Genetic_density),
+                                                  fill=factor(Genetic_density)))+
+                                              geom_jitter(width = 0.1,size=0.5)+
+                                              geom_boxplot(outlier.shape = NA)+  
+                                              theme_bw(base_size = 8)+
+                                              ylab("Fraction of sample in clone")+
+                                              xlab("Number of mutant alleles")+
+                                              scale_fill_brewer(type="seq",palette = "Greens",
+                                                                aesthetics = "fill",guide=FALSE)
+dev.off()                                                                
+##ggsave("clone_size_by_genetic_density.pdf",width=7,height=5)
+
+pvalues_Dominant_clone_size<-test%>%{melt(pairwise.t.test(.$Dominant_clone_size,g=.$Final_group,
+                                                     data=.,p.adjust.method="fdr")$p.value)}%>%
+                                     filter(!is.na(value))%>%filter(value<0.1)
+pvalues_Dominant_clone_size
+```
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig2b.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 ### Mutation Co-occurence
 ```
 ### create matrix for oncoprint
@@ -494,23 +561,7 @@ pvalues_Number_of_mutations<-test%>%{melt(pairwise.t.test(.$Number_of_mutations,
 pvalues_Number_of_mutations
 ```
 
-```
-gg_Number_of_mutations_in_Dclone<-ggplot(test%>%group_by(Final_group)%>%
-                                       summarise(mean=mean(Number_of_mutations_in_dominant_clone),
-                                                 sd = sd(Number_of_mutations_in_dominant_clone),
-                                                 sem = sd(Number_of_mutations_in_dominant_clone)/
-                                                       sqrt(length(Number_of_mutations_in_dominant_clone))),
-                                       aes(x=Final_group,y=mean,fill=Final_group))+
-                                          geom_bar(stat="identity",color="black")+
-                                          geom_errorbar(aes(ymin = mean-sem, ymax = mean+sem),width=0.5,lwd=0.5)+
-                                          theme_classic(base_size = 8)+
-                                          ylab("Number of mutations \n in dominant clone")+xlab("")+ggtitle("")+
-                                          scale_y_continuous(limits = c(0,4.5), expand = c(0, 0)) +
-                                          theme(axis.text.x = element_text(angle=30,hjust=1)) +
-                                          scale_fill_brewer(type="seq",palette = "Reds",
-                                                            aesthetics = "fill",guide=FALSE)
-ggsave("Number_of_mutations_in_Dclone.pdf",width=5,height=5)
-```
+
 ```
 pvalues_Shannon<-test%>%{melt(pairwise.t.test(.$Shannon,g=.$Final_group,
                                                         data=.,p.adjust.method="fdr")$p.value)}%>%
@@ -522,38 +573,4 @@ pvalues_Number_of_mutations_in_dominant_clone<-test%>%{melt(pairwise.t.test(
                                                         g=.$Final_group,
                                                         data=.,p.adjust.method="fdr")$p.value)}%>%
                                               filter(!is.na(value))%>%filter(value<0.1)
-```
-
-```
-# determine the number of mutants alleles in each clone
-clone_size_by_genetic_density<- do.call(rbind,lapply(final_sample_summary,function(x){
-                                    possible_clones_subset <-x$Clones%>%filter(Clone%in% x$Clones[,"Clone"] )
-                                    clones<-possible_clones_subset[,"Clone"]
-                                    dedup<-x$NGT[!duplicated(x$NGT)&x$NGT[,"Clone"]%in%clones,]
-                                    set_mat<-full_join(possible_clones_subset[,1:2],dedup)
-                                    counts <-set_mat[,"Count"]
-                                    weights<-set_mat[,"Count"]/sum(set_mat[,"Count"])
-                                    genetic_complexity <- rowSums(set_mat[,-c(1:2)])
-                                    return(data.frame("Clone_size"=weights,
-                                                      "Genetic_density"=genetic_complexity))
-}))
-```
-```
-gg_clone_size_by_genetic_density<-ggplot(clone_size_by_genetic_density,
-                                              aes(y=Clone_size,x=factor(Genetic_density),
-                                                  fill=factor(Genetic_density)))+
-                                              geom_jitter(width = 0.1,size=0.5)+
-                                              geom_boxplot(outlier.shape = NA)+  
-                                              theme_bw(base_size = 8)+
-                                              ylab("Fraction of sample in clone")+
-                                              xlab("Number of mutant alleles")+
-                                              scale_fill_brewer(type="seq",palette = "Greens",
-                                                                aesthetics = "fill",guide=FALSE)
-ggsave("clone_size_by_genetic_density.pdf",width=7,height=5)
-```
-```
-pvalues_Dominant_clone_size<-test%>%{melt(pairwise.t.test(.$Dominant_clone_size,g=.$Final_group,
-                                                     data=.,p.adjust.method="fdr")$p.value)}%>%
-                                     filter(!is.na(value))%>%filter(value<0.1)
-pvalues_Dominant_clone_size
 ```
