@@ -112,6 +112,10 @@ variants[["MSK18"]]<-variants[["MSK18"]] %>% filter(!AA%in%c("DNMT3A.R693C"))
 variants[["MSK71"]]<-variants[["MSK71"]] %>% filter(!AA%in%c("DNMT3A.Y685C"))
 variants[["MSK91"]]<-variants[["MSK91"]] %>% filter(!AA%in%c("IDH2.R88Q","IDH2.R10Q"))
 
+# Remove variants that are mutated in <2 cells 
+# Remove remaining cells with any unknown genotypes 
+# Remove variants that are mutated in <2 cells again now that we have removed cells that were low quality
+
 filtered_NGT<-setNames(lapply(names(SNV),function(sample){
   setNames(data.frame(SNV[[sample]][,c("Cell",as.character(variants[[sample]]$SNV))]),
            c("Cell",variants[[sample]]$AA))
