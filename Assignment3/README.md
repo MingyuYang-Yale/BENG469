@@ -247,6 +247,3 @@ final_sample_summary<-setNames(lapply(names(clonal_architecture),function(sample
 saveRDS(final_sample_summary,file="./analysis/final_sample_summary.rds")
 ```
 
-
-.loom file which contained a useful formating of the multi sample VCF file produced by GATK
-this .loom file was loaded into Tapestri Insights, a GUI from Mission Bio that allowed for sample filtering based on parameters described in the manuscript.
