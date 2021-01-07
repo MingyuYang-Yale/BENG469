@@ -383,6 +383,44 @@ dev.off()
 ```
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Fig1b.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+```
+pdf("Fig1d.pdf",width=3,height=3)
+ggplot(test,aes(y=Shannon,x=Final_group,fill=Final_group))+
+                        geom_boxplot(outlier.shape = NA)+  
+                        geom_jitter(width = 0.1,size=0.5)+
+                        theme_classic(base_size = 8)+
+                        ylab("Shannon diveristy index")+
+                        xlab("")+
+                        theme(axis.text.x = element_text(angle=30,hjust=1)) +
+                        scale_fill_brewer(type="seq",palette = "Reds",aesthetics = "fill",guide=FALSE)
+dev.off()
+
+pvalues_Shannon<-test%>%{melt(pairwise.t.test(.$Shannon,g=.$Final_group,
+                                                        data=.,p.adjust.method="fdr")$p.value)}%>%
+                                              filter(!is.na(value))%>%filter(value<0.1)
+pvalues_Shannon
+```
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Fig1d.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+```
+pdf("Fig1e.pdf",width=3,height=3)
+ggplot(test,
+                            aes(y=Dominant_clone_size,x=Final_group,fill=Final_group))+
+                            geom_boxplot(outlier.shape = NA)+  
+                            geom_jitter(width = 0.1,size=0.5)+
+                            theme_classic(base_size = 8)+
+                            ylab("Fraction of sample \n in dominant clone")+
+                            xlab("")+
+                            theme(axis.text.x = element_text(angle=30,hjust=1)) +
+                            scale_fill_brewer(type="seq",palette = "Reds",aesthetics = "fill",guide=FALSE)
+dev.off()
+
+pvalues_Dominant_clone_size<-test%>%{melt(pairwise.t.test(.$Dominant_clone_size,g=.$Final_group,
+                                                     data=.,p.adjust.method="fdr")$p.value)}%>%
+                                     filter(!is.na(value))%>%filter(value<0.1)
+pvalues_Dominant_clone_size
+```
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Fig1e.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ***
 ### Mutation Co-occurence
@@ -451,17 +489,7 @@ pvalues_Number_of_mutations<-test%>%{melt(pairwise.t.test(.$Number_of_mutations,
                                      filter(!is.na(value))%>%filter(value<0.1)
 pvalues_Number_of_mutations
 ```
-```
-gg_shannon<-ggplot(test,aes(y=Shannon,x=Final_group,fill=Final_group))+
-                        geom_boxplot(outlier.shape = NA)+  
-                        geom_jitter(width = 0.1,size=0.5)+
-                        theme_classic(base_size = 8)+
-                        ylab("Shannon diveristy index")+
-                        xlab("")+
-                        theme(axis.text.x = element_text(angle=30,hjust=1)) +
-                        scale_fill_brewer(type="seq",palette = "Reds",aesthetics = "fill",guide=FALSE)
-ggsave("shannon.pdf",width=5,height=5)
-```
+
 ```
 gg_Number_of_mutations_in_Dclone<-ggplot(test%>%group_by(Final_group)%>%
                                        summarise(mean=mean(Number_of_mutations_in_dominant_clone),
@@ -491,19 +519,7 @@ pvalues_Number_of_mutations_in_dominant_clone<-test%>%{melt(pairwise.t.test(
                                                         data=.,p.adjust.method="fdr")$p.value)}%>%
                                               filter(!is.na(value))%>%filter(value<0.1)
 ```
-```
-gg_dominant_clone_size<-ggplot(test,
-                            aes(y=Dominant_clone_size,x=Final_group,fill=Final_group))+
-                            geom_boxplot(outlier.shape = NA)+  
-                            geom_jitter(width = 0.1,size=0.5)+
-                            theme_classic(base_size = 8)+
-                            ylab("Fraction of sample \n in dominant clone")+
-                            xlab("")+
-                            theme(axis.text.x = element_text(angle=30,hjust=1)) +
-                            scale_fill_brewer(type="seq",palette = "Reds",aesthetics = "fill",guide=FALSE)
 
-ggsave("dominant_clone_size.pdf",width=7,height=5)
-```
 ```
 # determine the number of mutants alleles in each clone
 clone_size_by_genetic_density<- do.call(rbind,lapply(final_sample_summary,function(x){
