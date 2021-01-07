@@ -328,4 +328,8 @@ final_sample_summary<-setNames(lapply(names(clonal_architecture),function(sample
 
 saveRDS(final_sample_summary,file="./analysis/final_sample_summary.rds")
 ```
+```
+quit()
+```
+
 ***
