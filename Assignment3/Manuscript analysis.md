@@ -149,8 +149,7 @@ dev.off()
 
 ***
 
-#### Extended Figure 1c : Total number of patients mutated for each gene
-
+#### Extended Figure 1c-f 
 ```
 # Set the levels of the Gene column from most to least prevalent for plotting purposes
 
@@ -164,7 +163,7 @@ gg_mut_count<-ggplot(final_mut_melt,aes(x=Gene))+
                         theme(axis.text.x = element_text(angle=45, hjust=1,vjust=1),
                               plot.title=element_text(hjust=0.5))+
                         scale_y_continuous(expand=c(0,0))
-
+ggsave("SFig1c.pdf",width=6,height=5)
 
 ## tally of how many mutations per patient
 melted_mut_mat<- final_mut_melt%>%count(Gene, Sample)
@@ -179,7 +178,7 @@ gg_mut_patient<-ggplot(melted_mut_mat,aes(x=Gene))+
                       theme(axis.text.x = element_text(angle=45,hjust=1,vjust=1),
                             plot.title=element_text(hjust=0.5))+
                           scale_y_continuous(expand=c(0,0))
-ggsave("SFig1c.pdf",width=6,height=5)
+ggsave("SFig1d.pdf",width=6,height=5)
 ```
 ***
 
@@ -197,7 +196,7 @@ gg_mutated_genes_per_patient<-final_mut_melt%>%
                                           theme(plot.title=element_text(hjust=0.5))+
                                           scale_y_continuous(expand=c(0,0))+
                                           scale_x_continuous(expand=c(0,0))
-ggsave("mutated_genes_per_patient.pdf",width=6,height=5)
+ggsave("SFig1e.pdf",width=6,height=5)
 ```
 ```
 # Total number of mutations per patient
@@ -210,15 +209,15 @@ gg_mutations_per_patient<- final_mut_melt%>%
                                         ylab("Count")+ggtitle("Variants per patient")+xlab("Number of variants")+                              
                                         scale_y_continuous(expand=c(0,0))+
                                         scale_x_continuous(expand=c(0,0))
-ggsave("mutations_per_patient.pdf",width=6,height=5)
+ggsave("SFig1f.pdf",width=6,height=5)
 ```
 ```
-# library(cowplot)
-# merge=plot_grid(gg_mut_count,gg_mut_patient,
-#           gg_mutated_genes_per_patient,gg_mutations_per_patient,
-#           ncol=2,align="hv",axis="ltrb",
-#           labels = "AUTO")
-# ggsave("mutations_stats.pdf",width=8,height=5)
+library(cowplot)
+merge=plot_grid(gg_mut_count,gg_mut_patient,
+           gg_mutated_genes_per_patient,gg_mutations_per_patient,
+           ncol=2,align="hv",axis="ltrb",
+           labels = "AUTO")
+ggsave("mutations_stats.pdf",width=8,height=5)
 ```
 
 ### Mutation Co-occurence
