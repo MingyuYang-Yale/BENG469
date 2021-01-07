@@ -53,8 +53,11 @@ final_mut_melt<-do.call(rbind,lapply(names(final_NGTs),function(x){
              "Gene"=do.call(rbind,strsplit(colnames(final_NGTs[[x]]),split="[:_]"))[,1])
       }))
 ```
-# Extended Figure 1a.
+#### Extended Figure 1a.
 ```
+library(pals) # great package with color palettes in R
+library(ComplexHeatmap) #used for making the oncoprint
+
 fill_values <-setNames(as.list(rep(0,length(levels(final_mut_melt$Gene)))),levels(final_mut_melt$Gene))
 
 mut_mat_wide<-final_mut_melt%>%
@@ -92,6 +95,7 @@ colnames(final_mat) <- colnames(mut_mat_wide)
 rownames(final_mat) <- final_mat[,1]
 final_mat <- t(final_mat[,-1])
 
+#Now we set up the color schemes for the variants on each row
 variant_type_colors = c("Indel" = "darkorchid2", "Nonsense" = "black", "Missense" = "darkgreen")
 alter_functions = list(
   background = function(x, y, w, h) {
@@ -129,6 +133,8 @@ heatmap_legend_param <- list(title  = "Alternations",
                              at     = c("Indel", "Nonsense", "Missense"), 
                              labels = c("Indel", "Nonsense", "Missense"))
 
+# Make the oncoprint
+
 pdf("SFig1a.pdf")
 
 oncoPrint(final_mat,
@@ -138,9 +144,11 @@ oncoPrint(final_mat,
           heatmap_legend_param = heatmap_legend_param)
 dev.off()
 ```
+***
+
+#### Extended Figure 1c.
 
 ```
-
 # Set the levels of the Gene column from most to least prevalent for plotting purposes
 
 final_mut_melt$Gene<- factor(final_mut_melt$Gene,levels=names(sort(table(final_mut_melt$Gene), decreasing=TRUE)))
@@ -153,11 +161,10 @@ gg_mut_count<-ggplot(final_mut_melt,aes(x=Gene))+
                         theme(axis.text.x = element_text(angle=45, hjust=1,vjust=1),
                               plot.title=element_text(hjust=0.5))+
                         scale_y_continuous(expand=c(0,0))
-                        
-ggsave("mut_count.pdf",width=6,height=5)
 ```
+
+Total number of patients mutated for each gene
 ```
-# Total number of patients mutated for each gene
 ## tally of how many mutations per patient
 melted_mut_mat<- final_mut_melt%>%count(Gene, Sample)
 
@@ -173,6 +180,8 @@ gg_mut_patient<-ggplot(melted_mut_mat,aes(x=Gene))+
                           scale_y_continuous(expand=c(0,0))
 ggsave("mut_patient.pdf",width=6,height=5)
 ```
+***
+
 ```
 # Number of mutated genes per patient
 gg_mutated_genes_per_patient<-final_mut_melt%>%
