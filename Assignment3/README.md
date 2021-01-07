@@ -176,7 +176,9 @@ clonal_abundance_boot_CI <- lapply(names(NGT_to_clone),function(sample_to_test){
 names(clonal_abundance_boot_CI) <-names(clonal_abundance)
 ```
 ```
-#Now that we have a set of clones that we believe reproducibily have at least 10 cells, we remove cells and variants that are no longer represented at sufficient coverage.
+#Now that we have a set of clones that we believe reproducibily have at least 10 cells
+#we remove cells and variants that are no longer represented at sufficient coverage.
+
 clone_filtered_NGTs <- setNames(lapply(names(clonal_abundance_boot_CI),function(sample_to_test){
 
   # Determine if there are any clones left to process
