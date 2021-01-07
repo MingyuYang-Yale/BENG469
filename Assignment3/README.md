@@ -38,8 +38,8 @@ library(tapestri)
 ```
 sample_set <- list.files("./data/",full.names = TRUE)
 names(sample_set) <-list.files("./data/")
-
 system("mkdir ./analysis")
+```
 ```
 for(i in names(sample_set)){
   barcode_files<-grep("barcode",list.files(sample_set[i],full.names=TRUE),value=TRUE)
