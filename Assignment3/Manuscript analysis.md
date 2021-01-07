@@ -149,7 +149,7 @@ dev.off()
 
 ***
 
-#### Extended Figure 1c-f 
+#### Extended Figure 1 c-f 
 ```
 # Set the levels of the Gene column from most to least prevalent for plotting purposes
 
@@ -217,7 +217,7 @@ pdf("SFig1c-f.pdf",width=8,height=5)
 plot_grid(gg_mut_count,gg_mut_patient,
            gg_mutated_genes_per_patient,gg_mutations_per_patient,
            ncol=2,align="hv",axis="ltrb",
-           labels = "AUTO")
+           labels = c('c', 'd','e','f'))
 dev.off()
 ```
 ***
