@@ -213,11 +213,12 @@ ggsave("SFig1f.pdf",width=6,height=5)
 ```
 ```
 library(cowplot)
-merge=plot_grid(gg_mut_count,gg_mut_patient,
+pdf("SFig1c-f.pdf",width=8,height=5)
+plot_grid(gg_mut_count,gg_mut_patient,
            gg_mutated_genes_per_patient,gg_mutations_per_patient,
            ncol=2,align="hv",axis="ltrb",
            labels = "AUTO")
-ggsave("mutations_stats.pdf",width=8,height=5)
+dev.off()
 ```
 ***
 ### Mutation Co-occurence
