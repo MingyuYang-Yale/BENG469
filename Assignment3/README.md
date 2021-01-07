@@ -53,18 +53,8 @@ for(i in names(sample_set)){
                              type='snv',
                              name=i)
   saveRDS(snv,paste0("./analysis/",i,".rds"))
+  write.table(snv,file=sprintf("%s.xls",i),sep="\t")
 }
-
-# Display the number of variants. 
-head(ngt_file[,1:5])
-#
-
-# gt.gqc: Cell-specific genotype quality
-# gt.dpc: Cell-specific read depth
-# gt.afc: Cell-specific alternate allele frequency
-# gt.mv: Variants genotyped in < X percent of cells
-# gt.mc: Cells with genotypes in < X percent of variants
-# gt.mm: Variants mutated in < X percent of cells
 
 ```
 #### Post processing
