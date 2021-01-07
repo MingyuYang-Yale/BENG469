@@ -542,31 +542,4 @@ ggplot(cooccur_data_mat%>%filter(sp1_name!="BRAF"),aes(x=sp1_name,y=sp2_name))+
 dev.off()                      
 ##ggsave("corrplot.pdf",width=5,height=5)
 ```
-
-
-
-```
-library(reshape2) #for melt, I need to come up with a better way to do this, if anyone has ideas let me know!
-pvalues_Number_of_clones<-test%>%{melt(pairwise.t.test(.$Number_of_clones,g=.$Final_group,
-                                                     data=.,p.adjust.method="fdr")$p.value)}%>%
-                                     filter(!is.na(value))%>%filter(value<0.1)
-pvalues_Number_of_clones
-pvalues_Number_of_mutations<-test%>%{melt(pairwise.t.test(.$Number_of_mutations,g=.$Final_group,
-                                                     data=.,p.adjust.method="fdr")$p.value)}%>%
-                                     filter(!is.na(value))%>%filter(value<0.1)
-pvalues_Number_of_mutations
-```
-
-
-```
-pvalues_Shannon<-test%>%{melt(pairwise.t.test(.$Shannon,g=.$Final_group,
-                                                        data=.,p.adjust.method="fdr")$p.value)}%>%
-                                              filter(!is.na(value))%>%filter(value<0.1)
-```
-```
-pvalues_Number_of_mutations_in_dominant_clone<-test%>%{melt(pairwise.t.test(
-                                                        .$Number_of_mutations_in_dominant_clone,
-                                                        g=.$Final_group,
-                                                        data=.,p.adjust.method="fdr")$p.value)}%>%
-                                              filter(!is.na(value))%>%filter(value<0.1)
-```
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig2f.png" alt="foo bar" title="train &amp; tracks" /></p>
