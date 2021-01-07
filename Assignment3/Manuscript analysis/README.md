@@ -491,18 +491,18 @@ dev.off()
 ```
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig2c.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-### Mutation Co-occurence
+### Extended Figure 2f : Mutation Co-occurence
 ```
+library(cooccur)
 ### create matrix for oncoprint
 mut_mat <- table(melted_mut_mat$Sample,melted_mut_mat$Gene)
-```
-```
+
 ### Prepare matrix for co occurence map
 cooccur_mat <- cooccur(mat=t(mut_mat), type="spp_site",
                        only_effects = FALSE,eff_matrix=TRUE,
                        thresh=FALSE, eff_standard=FALSE,spp_names=TRUE)$results
-```
-```
+
+
 ## Denote which interactions are significantly inclusive or exclusive 
 # The 'add_row' function generates a new line, but it gets removed later.
 # This is helpful for setting the order of the gene labels below. 
@@ -513,17 +513,16 @@ cooccur_data_mat <- cooccur_mat%>%
                         add_row(sp2_name=setdiff(.$sp1_name,.$sp2_name),
                                 sp1_name=setdiff(.$sp2_name,.$sp1_name),
                                 score=0)
-```
-```
+
 # Order the genes in a coherent pattern for triangle strucutre of graph.
 cooccur_data_mat$sp1_name<-factor(cooccur_data_mat$sp1_name,
                                   levels=unique(cooccur_data_mat$sp1_name))
 cooccur_data_mat$sp2_name<-factor(cooccur_data_mat$sp2_name,
                                   levels=rev(levels(cooccur_data_mat$sp1_name)))
-```
-```
+
 # Triangle heatmap to compare cohorts
-grob_corrplot<-ggplot(cooccur_data_mat%>%filter(sp1_name!="BRAF"),aes(x=sp1_name,y=sp2_name))+
+pdf("SFig2f.pdf",width=5,height=5)
+ggplot(cooccur_data_mat%>%filter(sp1_name!="BRAF"),aes(x=sp1_name,y=sp2_name))+
                       geom_tile(aes(fill = factor(score)), color='grey90') +
                       scale_fill_manual(name="Correlation",
                                         values=c("-1"="firebrick3",
@@ -540,8 +539,8 @@ grob_corrplot<-ggplot(cooccur_data_mat%>%filter(sp1_name!="BRAF"),aes(x=sp1_name
                             legend.justification = c(1, 1),
                             legend.direction = "vertical")+
                       theme(legend.key.size = unit(0.5,"line"))
-                      
-ggsave("corrplot.pdf",width=5,height=5)
+dev.off()                      
+##ggsave("corrplot.pdf",width=5,height=5)
 ```
 
 
