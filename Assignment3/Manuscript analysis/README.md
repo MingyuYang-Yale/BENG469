@@ -650,3 +650,42 @@ plot_grid(ggB,ggA,align="v",axis="tb",
 dev.off()
 ```
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Fig2a.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+### Extended Figure 2d 
+```
+library(magrittr)
+# Incorporate Diagnosis and disease state
+clone_size_by_gene_Dx<-inner_join(clone_size_by_gene,pheno)
+
+# We focused on a subset of genes
+genes_of_interest <- c("DNMT3A","TET2","ASXL1","IDH1","IDH2",
+                       "JAK2","NRAS","KRAS","FLT3","NPM1","RUNX1")
+
+# We had an interest in DNMT3A R882 point mutants, so we can extract those out
+clone_size_by_gene_Dx%<>%mutate(Gene=case_when(
+                          grepl("DNMT3A.p.R882",Variant)~"DNMT3A.p.R882",
+                          TRUE~as.character(Gene)))
+                                   
+clone_size_by_gene_DTAI<-left_join(clone_size_by_gene_Dx,mutants_in_each_sample,by="Sample")
+
+pdf("SFig2d.pdf",width=12,height=4)
+
+ggplot(tally(clone_size_by_gene_DTAI%>%
+                                    filter(Gene%in%c("DNMT3A","TET2","ASXL1","DNMT3A.p.R882","IDH1","IDH2",
+                                    "FLT3","NRAS","KRAS","JAK2","NPM1","RUNX1"))%>%
+                                    group_by(Gene,Final_group,Clonality)) ,
+                        aes(x=Final_group,fill=Clonality,y=n)) +
+                        facet_wrap(~factor(Gene,
+                                            levels=c("DNMT3A","TET2","ASXL1","DNMT3A.p.R882","IDH1","IDH2",
+                                            "FLT3","NRAS","KRAS","JAK2","NPM1","RUNX1")),ncol=6)+
+                        geom_col()+
+                        xlab("")+
+                        scale_fill_manual(values=c("Dominant"=color_red,
+                                                 "Subclone"="grey80"))+
+                        ylab("Number of samples")+
+                        theme_bw(base_size=10)+
+                        theme(legend.position = "right",
+                            axis.text.x =element_text(angle=30,hjust=1))
+
+dev.off()
+```
