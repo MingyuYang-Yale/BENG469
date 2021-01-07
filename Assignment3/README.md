@@ -10,7 +10,7 @@ cd Assignment3-SNV
 ```
 
 ***
-open R
+### open R
 ```
 module load R/3.6.1-foss-2018b
 ```
@@ -19,7 +19,7 @@ R
 ```
 
 
-### Extract SNV data (~10mins)
+#### Extract SNV data (~10mins)
 ```
 setwd("/gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV")
 options(stringsAsFactors = FALSE)
@@ -54,7 +54,7 @@ for(i in names(sample_set)){
   saveRDS(snv,paste0("./analysis/",i,".rds"))
 }
 ```
-### Post processing
+#### Post processing
 + Filter variants through a blacklist removing recurrent variants that we think are likely sequencing errors 
 + Annotating SNVS for protein encoding functions, and removing synonymous and splice variants 
 + Remove variants that are mutated in <2 cells 
