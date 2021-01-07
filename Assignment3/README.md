@@ -220,6 +220,8 @@ clone_filtered_NGTs <- setNames(lapply(names(clonal_abundance_boot_CI),function(
 }),names(clonal_abundance_boot_CI))
 ```
 ```
+#explicitly state the genotype of each mutation in each clone
+
 clonal_architecture <- setNames(lapply(names(clonal_abundance_boot_CI),function(test_sample){
 
   clonal_architecture<-clone_filtered_NGTs[[test_sample]]%>%
@@ -234,6 +236,8 @@ clonal_architecture <- setNames(lapply(names(clonal_abundance_boot_CI),function(
 }), names(clonal_abundance_boot_CI))
 ```
 ```
+#package everything together into a list format for easy access later
+
 final_sample_summary<-setNames(lapply(names(clonal_architecture),function(sample){
    return(list("Clones"=clonal_abundance_boot_CI[[sample]],
                "NGT"=clone_filtered_NGTs[[sample]],
