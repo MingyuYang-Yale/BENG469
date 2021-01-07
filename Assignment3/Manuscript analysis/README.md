@@ -263,6 +263,7 @@ mutants_in_each_sample$Final_group <- factor(mutants_in_each_sample$Final_group,
 ```
 ```
 library(vegan)
+library(reshape2)
 clonal_level_info<-data.frame(do.call(rbind,lapply(names(final_sample_summary),function(y){
   x <- final_sample_summary[[y]]$Clones
   data.frame("Sample"=y,
@@ -297,9 +298,34 @@ ggplot(test%>%group_by(Final_group)%>%
                                     scale_fill_brewer(type="seq",palette = "Reds",aesthetics = "fill",guide=FALSE)
 
 dev.off()
+
+pvalues_Number_of_mutations<-test%>%{melt(pairwise.t.test(.$Number_of_mutations,g=.$Final_group,
+                                                     data=.,p.adjust.method="fdr")$p.value)}%>%
+                                     filter(!is.na(value))%>%filter(value<0.1)
+write.table(pvalues_Number_of_mutations,file="pvalues_Number_of_mutations.xls",sep="\t")
 ```
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Fig1a.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+```
+# Number of clones
+pdf("Fig1c.pdf",width=3,height=3)
+ggplot(test,aes(y=Number_of_clones,x=Final_group,fill=Final_group))+
+                                  geom_boxplot(outlier.shape = NA)+  
+                                  geom_jitter(width = 0.1,size=0.5)+
+                                  theme_classic(base_size = 8)+
+                                  ylab("Number of clones")+
+                                  xlab("")+
+                                  theme(axis.text.x = element_text(angle=30,hjust=1)) +
+                                  scale_fill_brewer(type="seq",palette = "Reds",aesthetics = "fill",guide=FALSE)
+dev.off()
+
+pvalues_Number_of_clones<-test%>%{melt(pairwise.t.test(.$Number_of_clones,g=.$Final_group,
+                                                     data=.,p.adjust.method="fdr")$p.value)}%>%
+                                     filter(!is.na(value))%>%filter(value<0.1)
+                                     
+## merge=plot_grid(gg_number_of_mutations,gg_number_of_clones,ncol=2,align="hv",axis="ltrb",labels=c("C","E"))
+## ggsave("Figure1.pdf",width=8,height=5)
+```
 
 ***
 ### Mutation Co-occurence
@@ -356,21 +382,7 @@ ggsave("corrplot.pdf",width=5,height=5)
 ```
 
 
-```
-# Number of clones
-gg_number_of_clones<-ggplot(test,aes(y=Number_of_clones,x=Final_group,fill=Final_group))+
-                                  geom_boxplot(outlier.shape = NA)+  
-                                  geom_jitter(width = 0.1,size=0.5)+
-                                  theme_classic(base_size = 8)+
-                                  ylab("Number of clones")+
-                                  xlab("")+
-                                  theme(axis.text.x = element_text(angle=30,hjust=1)) +
-                                  scale_fill_brewer(type="seq",palette = "Reds",aesthetics = "fill",guide=FALSE)
-ggsave("number_of_clones.pdf",width=5,height=5)
 
-## merge=plot_grid(gg_number_of_mutations,gg_number_of_clones,ncol=2,align="hv",axis="ltrb",labels=c("C","E"))
-## ggsave("Figure1.pdf",width=8,height=5)
-```
 ```
 library(reshape2) #for melt, I need to come up with a better way to do this, if anyone has ideas let me know!
 pvalues_Number_of_clones<-test%>%{melt(pairwise.t.test(.$Number_of_clones,g=.$Final_group,
