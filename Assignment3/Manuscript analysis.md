@@ -181,7 +181,6 @@ gg_mut_patient<-ggplot(melted_mut_mat,aes(x=Gene))+
                           scale_y_continuous(expand=c(0,0))
 ggsave("SFig1d.pdf",width=6,height=5)
 ```
-***
 
 ```
 # Number of mutated genes per patient
@@ -220,7 +219,7 @@ merge=plot_grid(gg_mut_count,gg_mut_patient,
            labels = "AUTO")
 ggsave("mutations_stats.pdf",width=8,height=5)
 ```
-
+***
 ### Mutation Co-occurence
 ```
 ### create matrix for oncoprint
