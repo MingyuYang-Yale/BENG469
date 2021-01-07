@@ -489,7 +489,7 @@ dev.off()
 ##ggsave("clone_size_by_genetic_density.pdf",width=7,height=5)
 
 ```
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig2b.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig2c.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ### Mutation Co-occurence
 ```
