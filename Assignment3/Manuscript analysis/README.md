@@ -1079,3 +1079,105 @@ plot.igraph(reordered_graph,
             layout=layout_in_circle)
 dev.off()
 ```
+### Figure 2e
+
+```
+# Add a column for whether a clone contains 2 signaling mutations (as demonstrated above)
+clone_mutations_added<-clone_mutations%>%inner_join(pheno,by="Sample")%>%
+          rowwise()%>%
+          add_column(signal2=ifelse(c(.$FLT3+.$JAK2+.$NRAS+.$KRAS+.$PTPN11)>=2,1,0))%>%
+          ungroup()
+
+gene_sets<-list("DNMT3A"="DNMT3A",
+                "DNMT3A IDH1"=c("DNMT3A","IDH1"),
+                "DNMT3A IDH2"=c("DNMT3A","IDH2"),
+                "IDH1"="IDH1",
+                "IDH2"="IDH2")
+
+comutant_status<-do.call(rbind,setNames(lapply(gene_sets, function(genes){
+  epi_to_exclude <- setdiff(c("DNMT3A","TET2","ASXL1","IDH1","IDH2"),genes)
+  clone_subset<- clone_mutations_added%>%filter(Dx=="AML")%>%
+                          filter_at(vars(all_of(epi_to_exclude)),all_vars(.==0))%>%
+                          filter_at(vars(all_of(genes)), all_vars(.==1))%>%
+                          select(c(Sample,all_of(genes),FLT3,JAK2,NRAS,KRAS,PTPN11,signal2))
+  
+  data.frame("Group"  =paste(genes,sep=" ",collapse = " "),
+             "Total"  =clone_subset%>%summarise(Count=n())%>%pull(Count),
+             "FLT3"   =clone_subset%>%filter(signal2==0)%>%tally(FLT3)  %>%pull(n),
+             "PTPN11" =clone_subset%>%filter(signal2==0)%>%tally(PTPN11)%>%pull(n),
+             "JAK2"   =clone_subset%>%filter(signal2==0)%>%tally(JAK2)  %>%pull(n),
+             "KRAS"   =clone_subset%>%filter(signal2==0)%>%tally(KRAS)  %>%pull(n),
+             "NRAS"   =clone_subset%>%filter(signal2==0)%>%tally(NRAS)  %>%pull(n),
+             "Multiple mutants"=clone_subset%>%tally(signal2)%>%pull(n),
+             "None"   =clone_subset%>%
+                              add_column(None=ifelse(c(.$FLT3+.$JAK2+
+                                                            .$NRAS+.$KRAS+
+                                                            .$PTPN11)==0,1,0))%>%
+                                                      tally(None)%>%pull(n))
+
+}),names(gene_sets)))
+
+final<-comutant_status%>%select(!Total)%>%
+                pivot_longer(cols=c(FLT3,PTPN11,JAK2,KRAS,NRAS,Multiple.mutants,None),
+                             names_to="Mutation",
+                             values_to="Count")
+      
+final$Mutation <- gsub("Multiple.mutants","Multiple mutants",final$Mutation)
+final$Mutation <- factor(final$Mutation, 
+                         levels=rev(c("JAK2","PTPN11","NRAS","KRAS","FLT3","Multiple mutants","None")))
+final$Group <- factor(final$Group, 
+                      levels=rev(c("IDH1","DNMT3A IDH1","DNMT3A","DNMT3A IDH2","IDH2")))
+
+color_set<-rev(brewer.pal(9,"Set1")[c(1,8,2,3,4,5,9)])
+
+pdf("Fig2e.pdf",height=3,width=5)
+ggplot(final, aes(x=Group,fill=Mutation,y=Count))+
+                geom_col(position="fill")+theme_classic(base_size=12)+
+                ylab("Fraction of clones")+ xlab("")+coord_flip()+
+                scale_y_continuous(expand=c(0,0))+
+                theme(plot.title = element_text(hjust=0.5))+
+                scale_fill_manual(values=color_set,
+                                  guide = guide_legend(reverse = TRUE))
+dev.off()
+```
+### Extended Figure 3b
+```
+# Run back the patients we looked at in the network plots
+patients_of_interest <- sample_mutations_added%>%filter(DNMT3A==1&signal2==1&
+                                                          (IDH1==1|IDH2==1))%>%
+                                                  pull(Sample)
+
+dual_mutation_fractions<-do.call(rbind,setNames(lapply(patients_of_interest,function(sample){
+  # Extract the genotype matrix for each patient
+    NGT<-final_sample_summary[[sample]]$NGT%>%select(!Clone)
+  # Simplfy the matrix to mutant vs non mutant cells.
+    NGT[NGT>0] <-1
+  # Extract the mutations of interest
+    data.frame("Sample"=sample,
+               "Epigenetic"=NGT%>%select_if(grepl("DNMT3A|IDH",names(.)))%>%
+                              mutate(dual_epi=rowSums(.))%>%
+                              summarise(Epigenetic=sum(dual_epi>=2)/n()),
+               "Signaling"=NGT%>%select_if(grepl("FLT3|RAS|JAK2|PTPN11",names(.)))%>%
+                              mutate(dual_signaling=rowSums(.))%>%
+                              summarise(Signaling=sum(dual_signaling>=2)/n()))
+}),patients_of_interest))
+
+# Plot the data
+gg_fraction_comutated_cells<-ggplot(dual_mutation_fractions%>%pivot_longer(cols=!Sample,
+                                                                      names_to="Group",
+                                                                      values_to = "Fraction"),
+                                    aes(x=Group,y=Fraction,fill=Group))+
+                                        geom_boxplot()+
+                                        geom_jitter(width=0.1)+
+                                        theme_classic(base_size=12)+
+                                        scale_fill_brewer(type="qual",palette = "Set1","Mutation pairs")+
+                                        xlab("")+ylab("Fraction of co-mutated cells")
+
+gg_fraction_comutated_cells
+
+### need to clean this up with tidy at some point
+dual_mutation_fractions_melted<-dual_mutation_fractions%>%pivot_longer(cols=!Sample,
+                          names_to="Group",
+                          values_to = "Fraction")
+t.test(dual_mutation_fractions_melted$Fraction~factor(dual_mutation_fractions_melted$Group))
+```
