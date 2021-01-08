@@ -608,7 +608,7 @@ ggB <-   ggplot(clone_size_by_gene,
   
 spacer <- plot_grid(NULL) # plot looks better with a little spacer
 
-pdf("Fig2a.pdf",width=5,heigth=3)
+pdf("Fig2a.pdf",width=5,height=3)
 plot_grid(ggB,ggA,align="v",axis="tb",
           nrow=2,rel_heights =c(1,1)) #+ coord_flip()
 dev.off()
