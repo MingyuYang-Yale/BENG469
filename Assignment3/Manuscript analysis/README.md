@@ -1173,7 +1173,7 @@ dual_mutation_fractions<-do.call(rbind,setNames(lapply(patients_of_interest,func
 
 # Plot the data
 
-pdf("SFig3b.pdf",width=5,height=4)
+pdf("SFig3b.pdf",width=4,height=3)
 ggplot(dual_mutation_fractions%>%pivot_longer(cols=!Sample,
                                                                       names_to="Group",
                                                                       values_to = "Fraction"),
