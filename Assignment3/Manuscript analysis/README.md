@@ -637,14 +637,14 @@ ggplot(tally(clone_size_by_gene_DTAI%>%
                         aes(x=Final_group,fill=Clonality,y=n)) +
                         facet_wrap(~factor(Gene,
                                             levels=c("DNMT3A","TET2","ASXL1","DNMT3A.p.R882","IDH1","IDH2",
-                                            "FLT3","NRAS","KRAS","JAK2","NPM1","RUNX1")),ncol=6)+
+                                            "FLT3","NRAS","KRAS","JAK2","NPM1","RUNX1")),ncol=6, scales = 'free_y')+
                         geom_col()+
                         xlab("")+
                         scale_fill_manual(values=c("Dominant"=color_red,
                                                  "Subclone"="grey80"))+
                         ylab("Number of samples")+
                         theme_bw(base_size=10)+
-                        theme(legend.position = "right",
+                        theme(legend.position = "top",
                             axis.text.x =element_text(angle=30,hjust=1))
 
 dev.off()
