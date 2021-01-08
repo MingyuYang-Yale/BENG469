@@ -1173,6 +1173,12 @@ dev.off()
 
 ### Extended Figure 3b
 ```
+sample_mutations_added<-sample_mutations%>%inner_join(pheno,by="Sample")%>%
+          rowwise()%>%
+          add_column(signal2=ifelse(c(.$FLT3+.$JAK2+.$NRAS+.$KRAS+.$PTPN11)>=2,1,0))%>%
+          ungroup()
+
+
 # Run back the patients we looked at in the network plots
 patients_of_interest <- sample_mutations_added%>%filter(DNMT3A==1&signal2==1&
                                                           (IDH1==1|IDH2==1))%>%
