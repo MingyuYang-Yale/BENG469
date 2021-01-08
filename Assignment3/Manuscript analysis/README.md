@@ -866,6 +866,8 @@ AML<-upset(test_set%>%filter(grepl("AML",Dx)),
 
 ggsave("Fig2b.pdf",width=6,height=5)
 ```
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Fig2b.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 ### Extended Figure 3a
 ```
 CH<-upset(test_set%>%filter(Dx=="CH"), sets=DTAI_genes,order.by = c("degree"),
@@ -879,6 +881,7 @@ CH<-upset(test_set%>%filter(Dx=="CH"), sets=DTAI_genes,order.by = c("degree"),
 
 ggsave("SFig3a.pdf",width=6,height=5)
 ```
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig3a.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ### Figure 2c
 ```
@@ -991,6 +994,8 @@ plot.igraph(reordered_graph,
             layout=layout_in_circle)
 dev.off()
 ```
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Fig2c.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 ### Figure 2d
 
 ```
@@ -1079,6 +1084,8 @@ plot.igraph(reordered_graph,
             layout=layout_in_circle)
 dev.off()
 ```
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Fig2d.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 ### Figure 2e
 
 ```
@@ -1140,6 +1147,8 @@ ggplot(final, aes(x=Group,fill=Mutation,y=Count))+
                                   guide = guide_legend(reverse = TRUE))
 dev.off()
 ```
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Fig2e.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 ### Extended Figure 3b
 ```
 # Run back the patients we looked at in the network plots
@@ -1181,3 +1190,4 @@ dual_mutation_fractions_melted<-dual_mutation_fractions%>%pivot_longer(cols=!Sam
                           values_to = "Fraction")
 t.test(dual_mutation_fractions_melted$Fraction~factor(dual_mutation_fractions_melted$Group))
 ```
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig3b.png" alt="foo bar" title="train &amp; tracks" /></p
