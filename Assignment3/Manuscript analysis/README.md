@@ -1172,7 +1172,9 @@ dual_mutation_fractions<-do.call(rbind,setNames(lapply(patients_of_interest,func
 }),patients_of_interest))
 
 # Plot the data
-gg_fraction_comutated_cells<-ggplot(dual_mutation_fractions%>%pivot_longer(cols=!Sample,
+
+pdf("SFig3b.pdf",width=5,height=4)
+ggplot(dual_mutation_fractions%>%pivot_longer(cols=!Sample,
                                                                       names_to="Group",
                                                                       values_to = "Fraction"),
                                     aes(x=Group,y=Fraction,fill=Group))+
@@ -1181,8 +1183,7 @@ gg_fraction_comutated_cells<-ggplot(dual_mutation_fractions%>%pivot_longer(cols=
                                         theme_classic(base_size=12)+
                                         scale_fill_brewer(type="qual",palette = "Set1","Mutation pairs")+
                                         xlab("")+ylab("Fraction of co-mutated cells")
-
-gg_fraction_comutated_cells
+dev.off()
 
 ### need to clean this up with tidy at some point
 dual_mutation_fractions_melted<-dual_mutation_fractions%>%pivot_longer(cols=!Sample,
