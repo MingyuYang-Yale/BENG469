@@ -649,7 +649,7 @@ ggplot(tally(clone_size_by_gene_DTAI%>%
 
 dev.off()
 ```
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig2d.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig2d.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ### Extended Figure 2e
 ```
@@ -703,7 +703,7 @@ clonality_VAF_pvalues<-data.frame(data_to_plot)%>%
                                 mutate_if(is.numeric, funs(as.character(signif(., 3))))
 clonality_VAF_pvalues
 ```
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig2e.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="600" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig2e.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ### Extended Figure 2f : Mutation Co-occurence
 ```
