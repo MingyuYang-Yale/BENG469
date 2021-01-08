@@ -166,6 +166,7 @@ gg_mut_count<-ggplot(final_mut_melt,aes(x=Gene))+
                         theme(axis.text.x = element_text(angle=45, hjust=1,vjust=1),
                               plot.title=element_text(hjust=0.5))+
                         scale_y_continuous(expand=c(0,0))
+                        
 ggsave("SFig1c.pdf",width=6,height=5)
 ```
 ```
