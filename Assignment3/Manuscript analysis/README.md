@@ -379,9 +379,14 @@ ggplot(test,aes(y=Number_of_clones,x=Final_group,fill=Final_group))+
                                   scale_fill_brewer(type="seq",palette = "Reds",aesthetics = "fill",guide=FALSE)
 dev.off()
 
-pvalues_Number_of_clones<-test%>%{melt(pairwise.t.test(.$Number_of_clones,g=.$Final_group,
-                                                     data=.,p.adjust.method="fdr")$p.value)}%>%
-                                     filter(!is.na(value))%>%filter(value<0.1)
+
+pvalues_Number_of_clones <- test%>%{melt(pairwise.t.test(.$Number_of_clones,g=.$Final_group,
+                                                       data=.,p.adjust.method="fdr")$p.value)}%>%
+  filter(!is.na(value)) %>% filter(value<0.1) %>% 
+    set_colnames(c('Group 1', 'Group 2', 'FDR')) %T>% 
+    write.table( 'pvalues_Number_of_clones.xls',row.names = F , sep='\t', quote = F)
+
+
 pvalues_Number_of_clones                                     
 
 ```
@@ -451,11 +456,15 @@ dev.off()
 
 #ggsave("Number_of_mutations_in_Dclone.pdf",width=5,height=5)
 
+
 pvalues_Number_of_mutations_in_dominant_clone<-test%>%{melt(pairwise.t.test(
                                                         .$Number_of_mutations_in_dominant_clone,
                                                         g=.$Final_group,
                                                         data=.,p.adjust.method="fdr")$p.value)}%>%
-                                              filter(!is.na(value))%>%filter(value<0.1)
+                                              filter(!is.na(value))%>%filter(value<0.1) %>% 
+                                              set_colnames(c('Group 1', 'Group 2', 'FDR')) %T>%
+                                              write.table( 'pvalues_Number_of_mutations_in_dominant_clone.xls',row.names = F , sep='\t', quote = F)
+                                              
 pvalues_Number_of_mutations_in_dominant_clone                                             
 ```
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig2b.png" alt="foo bar" title="train &amp; tracks" /></p>
