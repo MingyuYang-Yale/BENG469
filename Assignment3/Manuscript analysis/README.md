@@ -7,6 +7,8 @@ cp /gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV/data/*.rds ./data
 ```
 R / Rstudio
 ```
+
+R
 ```
 install.packages('farver')
 install.packages('cooccur')
@@ -31,6 +33,35 @@ library(RColorBrewer)
 library(UpSetR)
 
 ```
+Rstudio
+
+```
+install.packages('farver')
+install.packages('cooccur')
+install.packages('pals')
+install.packages('UpSetR')
+install.packages('dplyr')
+install.packages('tidyr')
+install.packages('ggplot2')
+install.packages('cooccur')
+install.packages('pals')
+install.packages('magrittr')
+install.packages('vegan')
+install.packages('reshape2')
+install.packages('RColorBrewer')
+install.packages('UpSetR')
+install.packages('cowplot')
+install.packages('ggbeeswarm’')
+install.packages('broom')
+install.packages("igraph")
+
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+BiocManager::install("ComplexHeatmap")
+
+```
+
 ```
 setwd("/gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV")
 final_sample_summary<-readRDS(file="./data/final_sample_summary.rds")
