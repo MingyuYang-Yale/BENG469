@@ -864,7 +864,130 @@ AML<-upset(test_set%>%filter(grepl("AML",Dx)),
                              params = list("Match"), 
                              color = brewer.pal(5,"Reds")[5])))
 
-ggsave("AML.pdf",width=6,height=5)
+ggsave("Fig2b.pdf",width=6,height=5)
+```
+### Extended Figure 3a
+```
+CH<-upset(test_set%>%filter(Dx=="CH"), sets=DTAI_genes,order.by = c("degree"),
+           main.bar.color = "grey60",decreasing=FALSE,
+           mainbar.y.label = "Number of samples",
+           sets.x.label = "Number of \n mutant samples",
+           text.scale=1.25,
+           shade.alpha = 0.75,
+           show.numbers=FALSE,
+           queries=list(list(query = Myfunc, params = list("Match"), color = brewer.pal(5,"Reds")[5], active = TRUE )))
+
+ggsave("SFig3a.pdf",width=6,height=5)
 ```
 
+### Figure 2c
+```
+library(igraph)
 
+# identify sample with at least 2 DTAI mutationss
+multi_DTAI<-test_set%>%filter(grepl("AML",Dx))%>%
+                filter((ASXL1+DNMT3A+TET2+IDH1+IDH2)>=2)%>%
+                distinct(Sample)%>%pull(Sample)
+
+# Identify dominant clones 
+DTAI_dominant_clones<-clone_mutations%>%filter(Sample%in%multi_DTAI)%>%
+                              filter(Clonality=="Dominant")%>%
+                              select(Clone,Clone_size,Sample,DNMT3A,TET2,ASXL1,IDH1,IDH2)%>%
+                              pivot_longer(cols=c(DNMT3A,TET2,ASXL1,IDH1,IDH2),
+                                           names_to="Gene",values_to="Mutated")%>%
+                              filter(Mutated==1)
+
+# Now we want to know which variants are in the dominant clone, and the size of that clone. 
+# I'm sure there is a nice way to do this in dplyr, grouping on sample, but I couldn't figure it out
+# so we will use lapply.
+genes_in_each_dominant_clone<- do.call(rbind,setNames(lapply(multi_DTAI,function(x){
+    
+    # Extract the genes
+    dominant_variants<- DTAI_dominant_clones%>%filter(Sample==x)%>%pull(Gene)
+    
+    # Extract the clone size
+    dominant_clone_size<- DTAI_dominant_clones%>%filter(Sample==x)%>%pull(Clone_size)
+  
+    # if there are more than two DTAI variants in the dominant clone make a combinatorial edgelist
+    if(length(dominant_variants)>=2){
+      return(setNames(data.frame(t(combn(dominant_variants,2)),dominant_clone_size,"Dominant"),c("to","from","size","Clonality")))} 
+    # if there is only 1 mutant in the dominant clone, list it for now so we can count the mutation, 
+    # but we will eventually filter it out
+  else if(length(dominant_variants)==1){
+      return(setNames(data.frame(t(c(dominant_variants,dominant_variants)),dominant_clone_size,"Subclone"),c("to","from","size","Clonality")))} 
+    # if no DTAI mutants in the dominant clone, ignore.
+  else if(length(dominant_variants)==0){
+      NULL
+  }
+}),multi_DTAI))%>%distinct()
+
+# Now we will go for a similar process with subclones.
+DTAI_sub_clones<-clone_mutations%>%filter(Sample%in%multi_DTAI)%>%
+                              filter(Clonality!="Dominant")%>%
+                              select(Clone,Clone_size,Sample,DNMT3A,TET2,ASXL1,IDH1,IDH2)%>%
+                              pivot_longer(cols=c(DNMT3A,TET2,ASXL1,IDH1,IDH2),
+                                           names_to="Gene",values_to="Mutated")%>%
+                              filter(Mutated==1)%>%
+# This is how we specifically select multi mutant subclone
+                              group_by(Clone,Sample)%>%
+                              add_tally()%>%filter(n>1)%>%
+                              ungroup()
+
+# Same process as above, but note that we decided to only plot the largest multi mutant clone.
+# Try getting rid of this and seeing how it looks.
+genes_in_each_subclone <- do.call(rbind,setNames(lapply(multi_DTAI,function(x){
+    subclone_variants <- DTAI_sub_clones%>%filter(Sample==x)%>%
+                                  filter(Clone_size==max(Clone_size))%>%
+                                  pull(Gene)
+    subclone_size <- DTAI_sub_clones%>%filter(Sample==x)%>%
+                                  filter(Clone_size==max(Clone_size))%>%
+                                  pull(Clone_size)
+  
+    if(length(subclone_variants)>=2){
+      return(setNames(data.frame(t(combn(rev(subclone_variants),2)),subclone_size,"Subclone"),c("to","from","size","Clonality")))} 
+  else if(length(subclone_variants)==1){
+      return(setNames(data.frame(t(c(subclone_variants,subclone_variants)),subclone_size,"Subclone"),c("to","from","size","Clonality")))} 
+  else if(length(subclone_variants)==0){
+      NULL
+  }
+}),multi_DTAI))%>%distinct()
+
+# Now bind these two dataframe together
+final_set<- rbind(genes_in_each_dominant_clone,genes_in_each_subclone)
+
+# And remove the edges that are self referencing. We preserve the input variable so we can represent
+# the vertex size in relation to total mutation burden in this subset of patients.
+final_set_filtered <-final_set%>%filter(to!=from)
+
+graph<-graph_from_data_frame(final_set_filtered,directed=F)%>%
+                    set_edge_attr("weight", value = as.numeric(final_set_filtered%>%pull(size))*3) %>%
+                    set_edge_attr("color", value = ifelse(final_set_filtered%>% 
+                                                          pull(Clonality)=="Dominant",
+                                                          brewer.pal(5,"Reds")[5],"grey20"))
+
+mutant_counts<-table(c(as.character(final_set$to),as.character(final_set$from)))[names(V(graph))]
+scaled_mutant_counts <-mutant_counts/sum(mutant_counts)*50
+
+radian.rescale <- function(x, start=0, direction=1) {
+  c.rotate <- function(x) (x + start) %% (2 * pi) * direction
+  c.rotate(scales::rescale(x, c(0, 2 * pi), range(x)))
+}
+
+lab.locs <- radian.rescale(x=1:5, direction=-1, start=5)
+lab.locs[3]<- -2.5
+
+reordered_graph<-igraph::permute(graph,c(4,3,2,1,5))
+
+pdf("Fig2c.pdf",width=5,height=5)
+plot.igraph(reordered_graph,
+            edge.width = E(reordered_graph)$weight,
+            vertex.color=brewer.pal(5,"Reds")[5],
+            vertex.frame.color=brewer.pal(5,"Reds")[5],
+            vertex.size=scaled_mutant_counts[names(V(reordered_graph))], 
+            vertex.label.family="Helvetica",
+            vertex.label.color="black",
+            vertex.label.degree=lab.locs,
+            vertex.label.dist=c(3,4,3,7,3),
+            layout=layout_in_circle)
+dev.off()
+```
