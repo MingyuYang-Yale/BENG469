@@ -874,7 +874,7 @@ AML<-upset(test_set%>%filter(grepl("AML",Dx)),
                              color = brewer.pal(5,"Reds")[5],
                              active = TRUE)))
 
-pdf("Fig2b.pdf",width=6,height=5)
+pdf("Fig2b.pdf",width=5,height=4)
 AML
 dev.off()
 
@@ -893,7 +893,11 @@ CH<-upset(test_set%>%filter(Dx=="CH"), sets=DTAI_genes,order.by = c("degree"),
            show.numbers=FALSE,
            queries=list(list(query = Myfunc, params = list("Match"), color = brewer.pal(5,"Reds")[5], active = TRUE )))
 
-ggsave("SFig3a.pdf",width=6,height=5)
+pdf("SFig3a.pdf",width=5,height=4.5)
+CH
+dev.off()
+
+##ggsave("SFig3a.pdf",width=6,height=5)
 ```
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/SFig3a.png" alt="foo bar" title="train &amp; tracks" /></p>
 
