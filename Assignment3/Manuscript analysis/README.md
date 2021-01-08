@@ -991,3 +991,91 @@ plot.igraph(reordered_graph,
             layout=layout_in_circle)
 dev.off()
 ```
+### Figure 2d
+
+```
+multi_signaling<-test_set%>%filter(grepl("AML",Dx))%>%
+                filter((FLT3+JAK2+NRAS+KRAS+PTPN11)>=2)%>%
+                distinct(Sample)%>%pull(Sample)
+
+signaling_dominant_clones<-clone_mutations%>%filter(Sample%in%multi_signaling)%>%
+                              filter(Clonality=="Dominant")%>%
+                              select(Clone_size,Sample,FLT3,JAK2,NRAS,KRAS,PTPN11)%>%
+                              pivot_longer(cols=c(FLT3,JAK2,NRAS,KRAS,PTPN11),
+                                           names_to="Gene",values_to="Mutated")%>%
+                              filter(Mutated==1)
+
+genes_in_each_dominant_clone<- do.call(rbind,setNames(lapply(multi_signaling,function(x){
+    dominant_variants<- signaling_dominant_clones%>%filter(Sample==x)%>%pull(Gene)
+    dominant_clone_size<- signaling_dominant_clones%>%filter(Sample==x)%>%pull(Clone_size)
+  
+    if(length(dominant_variants)>=2){
+      return(setNames(data.frame(t(combn((dominant_variants),2)),dominant_clone_size,"Dominant"),c("to","from","size","Clonality")))} 
+  else if(length(dominant_variants)==1){
+      return(setNames(data.frame(t(c(dominant_variants,dominant_variants)),dominant_clone_size,"Subclone"),c("to","from","size","Clonality")))} 
+  else if(length(dominant_variants)==0){
+      NULL
+  }
+}),multi_signaling))%>%distinct()
+
+signaling_sub_clones<-clone_mutations%>%filter(Sample%in%multi_signaling)%>%
+                              filter(Clonality!="Dominant")%>%
+                              select(Clone,Clone_size,Sample,FLT3,JAK2,NRAS,KRAS,PTPN11)%>%
+                              pivot_longer(cols=c(FLT3,JAK2,NRAS,KRAS,PTPN11),
+                                           names_to="Gene",values_to="Mutated")%>%
+                              filter(Mutated==1)%>%
+                              group_by(Clone,Sample)%>%
+                              add_tally()%>%filter(n>1)%>%
+                              ungroup()
+
+genes_in_each_subclone<- do.call(rbind,setNames(lapply(multi_signaling,function(x){
+    subclone_variants<- signaling_sub_clones%>%filter(Sample==x)%>%
+                                  filter(Clone_size==max(Clone_size))%>%pull(Gene)
+    subclone_size<- signaling_sub_clones%>%filter(Sample==x)%>%
+                                  filter(Clone_size==max(Clone_size))%>%pull(Clone_size)
+  
+    if(length(subclone_variants)>=2){
+      return(setNames(data.frame(t(combn((subclone_variants),2)),subclone_size,"Subclone"),c("to","from","size","Clonality")))} 
+  else if(length(subclone_variants)==1){
+      return(setNames(data.frame(t(c(subclone_variants,subclone_variants)),subclone_size,"Subclone"),c("to","from","size","Clonality")))} 
+  else if(length(subclone_variants)==0){
+      NULL
+  }
+}),multi_signaling))%>%distinct()
+
+
+final_set<- rbind(genes_in_each_dominant_clone,genes_in_each_subclone)
+
+final_set_filtered <-final_set%>%filter(to!=from)
+
+graph<-graph_from_data_frame(final_set_filtered,directed=F)%>%
+                    set_edge_attr("weight", value = as.numeric(final_set_filtered%>%pull(size))*3) %>%
+                    set_edge_attr("color", value = ifelse(final_set_filtered%>% 
+                                                          pull(Clonality)=="Dominant",
+                                                          brewer.pal(5,"Reds")[5],"grey20"))
+
+mutant_counts<-table(c(as.character(final_set$to),as.character(final_set$from)))[names(V(graph))]
+scaled_mutant_counts <-mutant_counts/sum(mutant_counts)*50
+radian.rescale <- function(x, start=0, direction=1) {
+  c.rotate <- function(x) (x + start) %% (2 * pi) * direction
+  c.rotate(scales::rescale(x, c(0, 2 * pi), range(x)))
+}
+
+lab.locs <- radian.rescale(x=1:5, direction=-1, start=5)
+lab.locs[3]<- -2.5
+
+reordered_graph<-igraph::permute(graph,c(5,2,4,1,3))
+
+pdf("Fig2d.pdf",width=5,height=5)
+plot.igraph(reordered_graph,
+            edge.width = E(reordered_graph)$weight,
+            vertex.color=brewer.pal(5,"Reds")[5],
+            vertex.frame.color=brewer.pal(5,"Reds")[5],
+            vertex.size=scaled_mutant_counts[names(V(reordered_graph))], 
+            vertex.label.family="Helvetica",
+            vertex.label.color="black",
+            vertex.label.degree=lab.locs,
+            vertex.label.dist=c(3,4,3,7,3),
+            layout=layout_in_circle)
+dev.off()
+```
