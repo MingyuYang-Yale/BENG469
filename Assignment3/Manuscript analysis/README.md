@@ -871,9 +871,14 @@ AML<-upset(test_set%>%filter(grepl("AML",Dx)),
            mb.ratio = c(0.6, 0.4),
            queries=list(list(query = Myfunc, 
                              params = list("Match"), 
-                             color = brewer.pal(5,"Reds")[5])))
+                             color = brewer.pal(5,"Reds")[5],
+                             active = TRUE)))
 
-ggsave("Fig2b.pdf",width=6,height=5)
+pdf("Fig2b.pdf",width=6,height=5)
+AML
+dev.off()
+
+## ggsave("Fig2b.pdf",width=6,height=5)
 ```
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Fig2b.png" alt="foo bar" title="train &amp; tracks" /></p>
 
