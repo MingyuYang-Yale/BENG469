@@ -5,7 +5,7 @@ cp /gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV/data/*.rds ./data
 
 #### Open R:
 ```
-R
+R / Rstudio
 ```
 ```
 install.packages('farver')
@@ -58,6 +58,9 @@ final_mut_melt<-do.call(rbind,lapply(names(final_NGTs),function(x){
 ```
 library(pals) # great package with color palettes in R
 library(ComplexHeatmap) #used for making the oncoprint
+
+# Here we will identify whether a variant is an indel, Nonsense or Missense mutation
+# Next we group samples together and pivot the matrix into wide format
 
 fill_values <-setNames(as.list(rep(0,length(levels(final_mut_melt$Gene)))),levels(final_mut_melt$Gene))
 
