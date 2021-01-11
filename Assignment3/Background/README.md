@@ -1,6 +1,4 @@
-MPL
-
-http://gepia.cancer-pku.cn/detail.php?gene=MPL###
+MPL （http://gepia.cancer-pku.cn/detail.php?gene=MPL###）
 
 NRAS
 DNMT3A
