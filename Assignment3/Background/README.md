@@ -10,6 +10,14 @@ Alias: C-MPL, CD110, MPLV, THCYT2, TPOR
 
 
 NRAS （http://gepia.cancer-pku.cn/detail.php?gene=NRAS）
+Ensembl ID: ENSG00000213281.4
+
+Description: neuroblastoma RAS viral (v-ras) oncogene homolog
+
+Alias: ALPS4, CMNS, N-ras, NCMS, NRAS1, NS6
+
+Summary: This is an N-ras oncogene encoding a membrane protein that shuttles between the Golgi apparatus and the plasma membrane. This shuttling is regulated through palmitoylation and depalmitoylation by the ZDHHC9-GOLGA7 complex. The encoded protein, which has intrinsic GTPase activity, is activated by a guanine nucleotide-exchange factor and inactivated by a GTPase activating protein. Mutations in this gene have been associated with somatic rectal cancer, follicular thyroid cancer, autoimmune lymphoproliferative syndrome, Noonan syndrome, and juvenile myelomonocytic leukemia. [provided by RefSeq, Jun 2011]
+
 
 DNMT3A （http://gepia.cancer-pku.cn/detail.php?gene=DNMT3A）
 
