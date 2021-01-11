@@ -6,7 +6,7 @@ Alias: C-MPL, CD110, MPLV, THCYT2, TPOR
 
 Summary: In 1990 an oncogene, v-mpl, was identified from the murine myeloproliferative leukemia virus that was capable of immortalizing bone marrow hematopoietic cells from different lineages. In 1992 the human homologue, named, c-mpl, was cloned. Sequence data revealed that c-mpl encoded a protein that was homologous with members of the hematopoietic receptor superfamily. Presence of anti-sense oligodeoxynucleotides of c-mpl inhibited megakaryocyte colony formation. The ligand for c-mpl, thrombopoietin, was cloned in 1994. Thrombopoietin was shown to be the major regulator of megakaryocytopoiesis and platelet formation. The protein encoded by the c-mpl gene, CD110, is a 635 amino acid transmembrane domain, with two extracellular cytokine receptor domains and two intracellular cytokine receptor box motifs . TPO-R deficient mice were severely thrombocytopenic, emphasizing the important role of CD110 and thrombopoietin in megakaryocyte and platelet formation. Upon binding of thrombopoietin CD110 is dimerized and the JAK family of non-receptor tyrosine kinases, as well as the STAT family, the MAPK family, the adaptor protein Shc and the receptors themselves become tyrosine phosphorylated. [provided by RefSeq, Jul 2008]
 
-<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Background/MPL.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Background/MPL.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
 NRAS （http://gepia.cancer-pku.cn/detail.php?gene=NRAS）
