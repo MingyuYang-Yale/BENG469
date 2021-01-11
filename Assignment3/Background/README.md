@@ -1,6 +1,6 @@
 ### MPL （http://gepia.cancer-pku.cn/detail.php?gene=MPL###）
 
-Description: MPL proto-oncogene, thrombopoietin receptor
+Description: MPL ***proto-oncogene***, thrombopoietin receptor
 
 Alias: C-MPL, CD110, MPLV, THCYT2, TPOR
 
