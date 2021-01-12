@@ -10,6 +10,11 @@ Subdividing AML into samples with:
 **3. DTAI and co-mutated signalling effectors**. 
 
 
+**Allele and Genotype**: every human gene inherit two alleles: one from your biological father and one from your biological mother. Together, these alleles are called a genotype.
+
+**Clones** defined as cells with identical protein-encoding single-nucleotide variants (SNVs), and applied a bootstrapping approach to identify clones that included at least ten cells
+
+
 ### MPL （http://gepia.cancer-pku.cn/detail.php?gene=MPL### ）
 
 Description: MPL ***proto-oncogene***, thrombopoietin receptor
