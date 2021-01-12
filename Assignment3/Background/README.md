@@ -2,12 +2,12 @@ MPL, NRAS, DNMT3A, SF3B1, IDH1, GATA2, KIT, TET2, NPM1, BRAF, EZH2, RAD21, JAK2,
 
 Subdividing AML into samples with:
 
-***DTAI mutations***：epigenetic mutations (DNMT3A, TET2, ASXL1 and/or IDH1/2）
+**1. DTAI mutations**：epigenetic mutations (DNMT3A, TET2, ASXL1 and/or IDH1/2）
 
-***Signalling mutation***s (JAK2, RAS family of genes, FLT3) without DTAI mutations. 
+**2. Signalling mutation**s (JAK2, RAS family of genes, FLT3) without DTAI mutations. 
  ( RAS family of genes: NRAS, BRAF, KRAS )
 
-***DTAI and co-mutated signalling effectors***. 
+**3. DTAI and co-mutated signalling effectors**. 
 
 
 ### MPL （http://gepia.cancer-pku.cn/detail.php?gene=MPL### ）
