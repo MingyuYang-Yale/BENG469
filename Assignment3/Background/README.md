@@ -3,6 +3,10 @@
 **Germline mutation**: A gene change in a body's reproductive cell (egg or sperm) that becomes incorporated into the DNA of every cell in the body of the offspring. Germline mutations are passed on from parents to offspring. Also called germline variant.
 
 -----------
+**Missense mutation**: This type of mutation is a change in one DNA base pair that results in the substitution of one amino acid for another in the protein made by a gene.
+
+**Nonsense mutation**: A nonsense mutation is also a change in one DNA base pair. Instead of substituting one amino acid for another, however, the altered DNA sequence prematurely signals the cell to stop building a protein. This type of mutation results in a shortened protein that may function improperly or not at all.
+-----------
 
 #### 31 genes: 
 ***MPL, NRAS, DNMT3A, SF3B1, IDH1, GATA2, KIT, TET2, NPM1, BRAF, EZH2, RAD21, JAK2, WT1, ATM, CBL, KRAS, PTPN11, FLT3, IDH2, TP53, PPM1D, SRSF2, SETBP1, CALR, ASXL1, RUNX1, U2AF1, CHEK2, STAG2, PHF6***
