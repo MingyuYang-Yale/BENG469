@@ -6,6 +6,7 @@
 **Missense mutation**: This type of mutation is a change in one DNA base pair that results in the substitution of one amino acid for another in the protein made by a gene.
 
 **Nonsense mutation**: A nonsense mutation is also a change in one DNA base pair. Instead of substituting one amino acid for another, however, the altered DNA sequence prematurely signals the cell to stop building a protein. This type of mutation results in a shortened protein that may function improperly or not at all.
+
 -----------
 
 #### 31 genes: 
