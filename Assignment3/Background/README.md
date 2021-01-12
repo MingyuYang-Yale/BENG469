@@ -12,10 +12,13 @@ Subdividing AML into samples with:
 
 
 
-**Allele and Genotype**: every human gene inherit two alleles: one from your biological father and one from your biological mother. Together, these alleles are called a genotype.
+
 
 **Clones** defined as cells with identical protein-encoding single-nucleotide variants (SNVs), and applied a bootstrapping approach to identify clones that included at least ten cells
 
+**Allele and Genotype**: every human gene inherit two alleles: one from your biological father and one from your biological mother. Together, these alleles are called a genotype.
+
+A diploid organism is heterozygous at a gene locus when its cells contain two different alleles (one wild-type allele and one mutant allele) of a gene
 
 ### MPL （http://gepia.cancer-pku.cn/detail.php?gene=MPL### ）
 
