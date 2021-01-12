@@ -1,3 +1,14 @@
+MPL, NRAS, DNMT3A, SF3B1, IDH1, GATA2, KIT, TET2, NPM1, BRAF, EZH2, RAD21, JAK2, WT1, ATM, CBL, KRAS, PTPN11, FLT3, IDH2, TP53, PPM1D, SRSF2, SETBP1, CALR, ASXL1, RUNX1, U2AF1, CHEK2, STAG2, PHF6
+
+subdividing AML into samples with:
+
+DTAI mutations：epigenetic mutations (DNMT3A, TET2, ASXL1 and/or IDH1/2）
+
+Signalling mutations (JAK2, RAS family of genes, FLT3) without DTAI mutations. ( RAS family of genes: NRAS, BRAF, KRAS )
+
+DTAI and co-mutated signalling effectors. 
+
+
 ### MPL （http://gepia.cancer-pku.cn/detail.php?gene=MPL### ）
 
 Description: MPL ***proto-oncogene***, thrombopoietin receptor
