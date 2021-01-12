@@ -20,6 +20,11 @@ Subdividing AML into samples with:
 
 A diploid organism is heterozygous at a gene locus when its cells contain two different alleles (one wild-type allele and one mutant allele) of a gene
 
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Background/Heterozygous.jpg" alt="foo bar" title="train &amp; tracks" /></p>
+
+
+
+
 ### MPL （http://gepia.cancer-pku.cn/detail.php?gene=MPL### ）
 
 Description: MPL ***proto-oncogene***, thrombopoietin receptor
