@@ -51,7 +51,7 @@ install.packages('reshape2')
 install.packages('RColorBrewer')
 install.packages('UpSetR')
 install.packages('cowplot')
-install.packages('ggbeeswarm’')
+install.packages('ggbeeswarm')
 install.packages('broom')
 install.packages("igraph")
 
