@@ -16,7 +16,7 @@ Subdividing AML into samples with:
 
 **Oncogene** :A gene involved in normal cell growth. Mutations (changes) in a proto-oncogene may cause it to become an oncogene, which can cause the growth of cancer cells.
 
-**Tumor suppressor gene(TSG)**: A type of gene that makes a protein called a tumor suppressor protein that helps control cell growth. Mutations (changes in DNA) in tumor suppressor genes may lead to cancer. Also called antioncogene.
+**Tumor suppressor gene(TSG)**: A type of gene that makes a protein called a tumor suppressor protein that helps control cell growth. Mutations (changes in DNA) in tumor suppressor genes may lead to cancer.
 
 
 ------------
