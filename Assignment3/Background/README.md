@@ -23,8 +23,7 @@ Subdividing AML into samples with:
 
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Background/Heterozygous.jpg" alt="foo bar" title="train &amp; tracks" /></p>
 
-
-
+-----------
 
 ### MPL （http://gepia.cancer-pku.cn/detail.php?gene=MPL### ）
 
