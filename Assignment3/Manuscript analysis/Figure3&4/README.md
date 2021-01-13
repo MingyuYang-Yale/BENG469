@@ -1,6 +1,7 @@
 ```
 install.packages('knitr')
 install.packages('kableExtra')
+install.packages('ReinforcementLearning')
 
 #install.packages('dplyr')
 #install.packages('tidyr')
@@ -13,6 +14,7 @@ library(knitr)
 library(kableExtra)
 library(dplyr)
 library(tidyr)
+library(ReinforcementLearning)
 ```
 
 ```
