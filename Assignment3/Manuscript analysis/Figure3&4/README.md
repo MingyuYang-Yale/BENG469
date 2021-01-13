@@ -146,3 +146,29 @@ create_reward_matrix_retrain<-function(Known_mat,weights){
   return(set)
   }
 ```
+
+```
+graph_results<-list()
+graph_results  <- lapply(DTAI_AML_samples[1:5], function(i){
+  print(i)
+  mutations <-setdiff(colnames(final_sample_summary[[i]]$NGT),"Clone")
+  Known_mat <-final_sample_summary[[i]]$Clones%>%
+                                        separate(col=Clone,
+                                                 remove = FALSE,
+                                                 into=`mutations`)%>%
+                                        select(c(all_of(mutations),Clone))%>%
+                                        pivot_longer(cols=`mutations`,
+                                                     names_to="Genes",
+                                                     values_to="Genotype")%>%
+                                        pivot_wider(names_from=Clone,
+                                                    values_from = Genotype)%>%
+                                        mutate_at(vars(-Genes), 
+                                                  funs(as.numeric))
+                                              
+  weights <-final_sample_summary[[i]]$Clones$Count/sum(final_sample_summary[[i]]$Clones$Count)*100
+  names(weights)<- final_sample_summary[[i]]$Clones$Clone
+  graph_results[[i]]<-create_reward_matrix_retrain(Known_mat,weights)
+})
+
+names(graph_results) <-DTAI_AML_samples[1:5]
+```
