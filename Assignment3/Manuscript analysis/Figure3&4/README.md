@@ -1,20 +1,24 @@
+```
 install.packages('knitr')
 install.packages('kableExtra')
 
 #install.packages('dplyr')
-install.packages('tidyr')
+#install.packages('tidyr')
+```
 
 
 
-
-
+```
 library(knitr)
 library(kableExtra)
-
 library(dplyr)
 library(tidyr)
+```
+
+```
 final_sample_summary<-readRDS(file="/cloud/project/data/final_sample_summary.rds")
 pheno<-readRDS(file="/cloud/project/data/pheno.rds")
+```
 
 ```
 DTAI_genes <- c("ASXL1","DNMT3A","TET2","IDH1","IDH2")
