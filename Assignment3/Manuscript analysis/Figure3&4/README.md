@@ -1,5 +1,9 @@
 #### Open Terminal: downloand R markdown file
+
+
 ```
+cp /gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV/Figure3ab.Rmd ./
+
 scp beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV/Figure3ab.Rmd ./
 ```
 
