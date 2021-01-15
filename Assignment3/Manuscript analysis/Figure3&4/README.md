@@ -28,7 +28,7 @@ module load R/3.6.1-foss-2018b
 ```
 R
 ```
-```
+```R
 install.packages('knitr')
 install.packages('kableExtra')
 install.packages('ReinforcementLearning')
