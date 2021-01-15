@@ -103,6 +103,8 @@ create_reward_matrix_retrain<-function(Known_mat,weights){
 
 
 ```{r}
+## Markov decision process 
+
 graph_results <-list()
 graph_results  <- lapply(c('MSK68','MSK129'), function(i){
   print(i)
