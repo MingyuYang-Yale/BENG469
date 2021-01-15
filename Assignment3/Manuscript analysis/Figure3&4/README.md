@@ -5,6 +5,7 @@ scp beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/project/beng469/beng469_my393/As
 ```
 
 #### Open Rstudio Cloud (https://rstudio.cloud/projects)
+***
 
 ```
 ssh -Y beng469_**my393**@farnam.hpc.yale.edu
