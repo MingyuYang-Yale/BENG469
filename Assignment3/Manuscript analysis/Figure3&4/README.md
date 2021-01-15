@@ -42,7 +42,7 @@ install.packages('igraph')
 vi Figure3.r
 ```
 
-```
+```R
 #install.packages('knitr')
 #install.packages('kableExtra')
 #install.packages('ReinforcementLearning')
