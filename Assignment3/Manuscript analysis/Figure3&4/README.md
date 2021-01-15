@@ -5,10 +5,7 @@ scp beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/project/beng469/beng469_my393/As
 
 #### Open Rstudio Cloud (https://rstudio.cloud/projects)
 
-New Project and upload:
-
-**Figure3ab.Rmd** 
-**final_sample_summary.rds** 
+New Project and upload: **Figure3ab.Rmd** ; **final_sample_summary.rds** 
 
 ***
 
