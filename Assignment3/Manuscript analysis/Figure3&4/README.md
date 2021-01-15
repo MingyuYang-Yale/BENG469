@@ -10,7 +10,7 @@ New Project and upload: **Figure3ab.Rmd** , **final_sample_summary.rds**
 ***
 
 ```
-ssh -Y beng469_**my393**@farnam.hpc.yale.edu
+ssh -Y beng469_my393@farnam.hpc.yale.edu
 srun --pty --x11 -p interactive --mem=50g bash
 ```
 
