@@ -18,13 +18,13 @@ module load R/3.6.1-foss-2018b
 R
 ```
 ```
-#install.packages('knitr')
-#install.packages('kableExtra')
-#install.packages('ReinforcementLearning')
-#install.packages('dplyr')
-#install.packages('tidyr')
-#install.packages('reshape2')
-#install.packages('igraph')
+install.packages('knitr')
+install.packages('kableExtra')
+install.packages('ReinforcementLearning')
+install.packages('dplyr')
+install.packages('tidyr')
+install.packages('reshape2')
+install.packages('igraph')
 ```
 
 ```
