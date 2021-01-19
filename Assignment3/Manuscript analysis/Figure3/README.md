@@ -21,7 +21,7 @@ sbatch Figure3.sh
 ```
 #### Open a new terminal window and download these files to your computer.
 ```
-scp beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV/Figure3abxxxxx.Rmd ./
+scp beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV/Fig3ab-20210118B.Rmd ./
 
 scp beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV/MDP_allsamples_results.rds ./
 
