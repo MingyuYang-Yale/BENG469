@@ -1,4 +1,7 @@
+#### Submit task to compute node 
+
 (connect to Yale's VPN if off campus)
+
 ```
 ssh -Y beng469_my393@farnam.hpc.yale.edu
 
@@ -14,7 +17,7 @@ module load R/3.6.1-foss-2018b
 
 sbatch Figure3.sh
 ```
-
+#### Open a new terminal window:
 ```
 scp beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV/Figure3abxxxxx.Rmd ./
 
