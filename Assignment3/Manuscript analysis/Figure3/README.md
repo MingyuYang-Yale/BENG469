@@ -40,7 +40,7 @@ Open a New Project and upload:
 
 1. final_sample_summary.rds 
 2. pheno.rds
-3. Fig3ab-20210118A.Rmd  
+3. Fig3ab-20210118B.Rmd  
 4. MDP_allsamples_results.rds
 5. MDP_trajectory_allsamples_for_each_gene.rds
 
