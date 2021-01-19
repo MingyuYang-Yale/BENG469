@@ -37,10 +37,3 @@ Open a New Project and upload:
 3. Fig3ab-20210118A.Rmd  
 4. MDP_allsamples_results.rds
 5. MDP_trajectory_allsamples_for_each_gene.rds
-
-```
-ssh -Y beng469_my393@farnam.hpc.yale.edu
-srun --pty --x11 -p interactive --mem=50g bash
-```
-
-
