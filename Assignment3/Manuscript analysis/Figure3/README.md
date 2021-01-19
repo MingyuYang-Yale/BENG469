@@ -1,4 +1,4 @@
-#### Submit task to compute node 
+####  
 
 (connect to Yale's VPN if off campus)
 
