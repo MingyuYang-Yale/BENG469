@@ -30,7 +30,10 @@ scp beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/project/beng469/beng469_my393/As
 
 #### Open Rstudio Cloud (https://rstudio.cloud/projects)
 
-https://cran.rstudio.com/
+or
+
+https://cran.rstudio.com/ 
+
 https://rstudio.com/products/rstudio/download/#download
 
 Open a New Project and upload: 
