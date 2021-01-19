@@ -9,7 +9,7 @@ scp beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/project/beng469/beng469_my393/As
 
 #### Open Rstudio Cloud (https://rstudio.cloud/projects)
 
-New Project and upload: 
+Open a New Project and upload these following files: 
 1. **Fig3ab-20210118A.Rmd** , 
 2. **final_sample_summary.rds** 
 3. **MDP_allsamples_results.rds**
