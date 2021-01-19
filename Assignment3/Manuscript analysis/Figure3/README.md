@@ -1,6 +1,6 @@
 ####  
 
-(connect to Yale's VPN if off campus)
+**(connect to Yale's VPN if off campus)**
 
 ```
 ssh -Y beng469_my393@farnam.hpc.yale.edu
