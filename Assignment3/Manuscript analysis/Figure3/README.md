@@ -25,5 +25,7 @@ srun --pty --x11 -p interactive --mem=50g bash
 ```
 cd /gpfs/ysm/project/beng469/beng469_my393
 cd Assignment3-SNV
+cp /gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV/Figure3.r ./
+module load R/3.6.1-foss-2018b
+sbatch Figure3.sh
 ```
-
