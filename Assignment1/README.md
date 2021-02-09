@@ -152,4 +152,4 @@ The command to change locations is cd followed by a directory name to change o
 ```
 cd /gpfs/ysm/project/beng469/beng469_my393
 ```
-
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/cd.png" alt="foo bar" title="train &amp; tracks" /></p>
