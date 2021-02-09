@@ -54,7 +54,7 @@ You should have received a email from Yale Center for Research Computing:
 
 #### Generate Your Key Pair 
 
-To generate a new key pair, first open a terminal/xterm session. If you are on macOS, open Applications -> Utilities -> Terminal. Generate your public and private ssh keys. Type the following into the terminal window:
+To generate a new key pair, first open a terminal window. If you are on macOS, open Applications -> Utilities -> Terminal. Generate your public and private ssh keys. Type the following into the terminal window:
    ```
    ssh-keygen
 ```
