@@ -60,7 +60,8 @@ To generate a new key pair, first open a terminal window. (search Terminal). Gen
 ```
 Your terminal should respond:
 
-    Generating public/private rsa key pair. Enter file in which to save the key (/home/yourusername/.ssh/id_rsa):
+    Generating public/private rsa key pair. 
+    Enter file in which to save the key (/home/yourusername/.ssh/id_rsa):
 
 Press Enter to accept the default value. Your terminal should respond:
 
