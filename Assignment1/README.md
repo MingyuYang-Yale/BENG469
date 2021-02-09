@@ -17,6 +17,7 @@ High Performance Computing (HPC) cluster is a collection of networked computers 
 *  Want to access data stored on the cluster 
 *  Want to use GPUs 
 
+***
 
 ## Yale Clusters
 
