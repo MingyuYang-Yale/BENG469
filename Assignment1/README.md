@@ -19,6 +19,7 @@ High Performance Computing (HPC) cluster is a collection of networked computers 
 ## Yale Clusters
 
 |Cluster|CPUs|Login Address|Purpose|
+|------|-------|------|-------|
 |Grace|20,000|grace.hpc.yale.edu|general|
 |Farnam|5,100|farnam.hpc.yale.edu|medical/life science|
 |Ruddle|3,100|ruddle.hpc.yale.edu|Yale Center for Genome Analysis|
