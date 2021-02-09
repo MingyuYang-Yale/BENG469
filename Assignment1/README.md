@@ -133,3 +133,10 @@ pwd
 ```
 (which stands for “print working directory”). 
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/pwd.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+### List Your Files and Directories
+
+Now let’s learn the command that will let us see the contents of our own file system. We can see what’s in our home directory by running ls, which stands for “listing”:
+
+
+
