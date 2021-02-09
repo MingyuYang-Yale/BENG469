@@ -157,3 +157,8 @@ The command to change locations is cd followed by a directory name to change o
 cd /gpfs/ysm/project/beng469/beng469_my393
 ```
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/cd.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+These commands will move us from our home directory into the SCB-course-data directory. cd doesn’t print anything, but if we run pwd(print work directory) after it
+
+we can see that we are now in ```/gpfs/ysm/project/beng469/beng469_my393```
+
