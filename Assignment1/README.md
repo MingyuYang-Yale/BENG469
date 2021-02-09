@@ -81,7 +81,7 @@ Next, upload your public SSH key on the cluster. Run the following command in a 
 
 Copy and paste the output to https://sshkeys.hpc.yale.edu/  (Note: It can take a few minutes for newly uploaded keys to sync out to the clusters so your login may not work immediately.)
 
-***
+
 #### Connect on macOS and Linux
 
 Once your key has been copied to the appropriate places on the clusters, you can log in with the command:
@@ -107,7 +107,7 @@ We recommend using MobaXterm to connect to the clusters. You can download, ext
 * Copy the text of your public key and paste it into the text box to https://sshkeys.hpc.yale.edu/.
 * Your key will be synced out to the clusters in a few minutes.
 
-***
+
 #### Connect with Windows
 
 * Open MobaXterm.
