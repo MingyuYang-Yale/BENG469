@@ -1,6 +1,9 @@
 
 # Introduction to HPC
 
+High Performance Computing (HPC) cluster is a collection of networked computers and data storage.
+
+
 ## Log on to the Clusters
 
 Yale's clusters can only be accessed on the Yale network. Therefore, in order to access a cluster from off campus, you will need to first connect to Yale's VPN (https://software.yale.edu/software/cisco-vpn-anyconnect). 
