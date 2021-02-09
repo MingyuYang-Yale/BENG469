@@ -176,6 +176,6 @@ This is a very efficient way of moving back and forth between directories
 ```
 cd ~ 
 ```
-```cd ~``` is equivalent to cd /home/beng469_my393
+```cd ~``` is equivalent to ```cd /home/beng469_my393```
 
 
