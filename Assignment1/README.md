@@ -88,7 +88,7 @@ Once your key has been copied to the appropriate places on the clusters, you can
 
 ### Log on to the Clusters (Windows)
 We recommend using MobaXterm to connect to the clusters. You can download, extract & install MobaXterm from 
-(https://mobaxterm.mobatek.net/download-home-edition.html). 
+(https://mobaxterm.mobatek.net/). 
 
 #### Generate Your Key Pair
 
