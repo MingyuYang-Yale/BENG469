@@ -28,7 +28,7 @@ High Performance Computing (HPC) cluster is a collection of networked computers 
 ## Setting up an account
 
 You should have received a email from Yale Center for Research Computing:
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/mail-from-ycrc.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/mail-from-ycrc.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ## Log on to the Clusters
 
