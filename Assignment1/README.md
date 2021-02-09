@@ -32,9 +32,7 @@ You should have received a email from Yale Center for Research Computing:
 
 ## Log on to the Clusters
 
-Yale's clusters can only be accessed on the Yale network. Therefore, in order to access a cluster from off campus, you will need to first connect to Yale's VPN (https://software.yale.edu/software/cisco-vpn-anyconnect). 
-
-* You must be on the campus network to access the clusters. For **off-campus** access you need to use the Yale **VPN**.
+Yale's clusters can only be accessed on the Yale network. For **off campus** access, you will need to first connect to Yale's **VPN**(https://software.yale.edu/software/cisco-vpn-anyconnect). 
 
 * Use SSH with SSH key pairs to log in to the clusters. 
 
