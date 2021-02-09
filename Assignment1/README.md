@@ -85,3 +85,29 @@ Once your key has been copied to the appropriate places on the clusters, you can
     ssh beng469_my393@farnam.hpc.yale.edu (change my393 to your NETID)
 ```    
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/login-mac.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+### Log on to the Clusters (Windows)
+We recommend using MobaXterm to connect to the clusters. You can download, extract & install MobaXterm from 
+(https://mobaxterm.mobatek.net/download-home-edition.html). 
+
+#### Generate Your Key Pair
+
+* Open MobaXterm.
+* From the top menu choose Tools -> MobaKeyGen (SSH key generator).
+* Leave all defaults and click the "Generate" button.
+* Wiggle your mouse.
+* Click "Save public key" and save your public key as id_rsa.pub.
+* Choose a secure passphrase and enter into the two relevant fields. Your passphrase will prevent access to your account in the event your private key is stolen.
+* Click "Save private key" and save your private key as id_rsa.ppk (this one is secret, don't give it to other people).
+* Copy the text of your public key and paste it into the text box to https://sshkeys.hpc.yale.edu/.
+* Your key will be synced out to the clusters in a few minutes.
+
+#### Connect with Windows
+
+* Open MobaXterm.
+* From the top menu select Sessions -> New Session.
+* Click the SSH icon in the top left.
+* Enter the cluster login node address (e.g. farnam.hpc.yale.edu) as the Remote Host.
+* Check "Specify Username" and Enter your netID as the the username.
+* Click the "Advanced SSH Settings" tab and check the "Use private key box", then click the file icon / magnifying glass to choose where you saved your private key (id_rsa.ppk).
+* Click OK.
