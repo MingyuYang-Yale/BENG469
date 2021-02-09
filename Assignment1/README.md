@@ -118,3 +118,8 @@ We recommend using MobaXterm to connect to the clusters. You can download, ext
 * How can I see what files and directories I have?
 * How can I specify the location of a file or directory on HPC?
 
+#### Who Are You?
+Type the command **whoami**, then press the ENTER key (sometimes marked Return) to send the command to the shell. The command’s output is the ID of the current user:
+
+
+
