@@ -50,6 +50,7 @@ You should have received a email from Yale Center for Research Computing:
 
 * (More information: https://docs.ycrc.yale.edu/clusters-at-yale/access/) 
 
+***
 
 ### Log on to the Clusters (macOS and Linux)
 
@@ -80,7 +81,7 @@ Next, upload your public SSH key on the cluster. Run the following command in a 
 
 Copy and paste the output to https://sshkeys.hpc.yale.edu/  (Note: It can take a few minutes for newly uploaded keys to sync out to the clusters so your login may not work immediately.)
 
-
+***
 #### Connect on macOS and Linux
 
 Once your key has been copied to the appropriate places on the clusters, you can log in with the command:
@@ -89,6 +90,7 @@ Once your key has been copied to the appropriate places on the clusters, you can
 ```    
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/login-mac.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+***
 ### Log on to the Clusters (Windows)
 We recommend using MobaXterm to connect to the clusters. You can download, extract & install MobaXterm from 
 ( https://mobaxterm.mobatek.net/ ). 
@@ -105,6 +107,7 @@ We recommend using MobaXterm to connect to the clusters. You can download, ext
 * Copy the text of your public key and paste it into the text box to https://sshkeys.hpc.yale.edu/.
 * Your key will be synced out to the clusters in a few minutes.
 
+***
 #### Connect with Windows
 
 * Open MobaXterm.
@@ -139,6 +142,7 @@ pwd
 (which stands for “print working directory”). 
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/pwd.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+***
 ### List Your Files and Directories
 
 Now let’s learn the command that will let us see the contents of our own file system. We can see what’s in our home directory by running ls, which stands for “listing”:
@@ -155,7 +159,7 @@ ls --help
 
 
 (Many bash commands, and programs that people have written that can be run from within bash, support a --help flag to display more information on how to use the commands or programs.)
-
+***
 ### Move Around
 The command to change locations is cd followed by a directory name to change our working directory. cd stands for “change directory”.
 ```
