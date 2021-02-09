@@ -149,6 +149,7 @@ ls has lots of options. To find out what they are, we can type:
 
 ### Move Around
 The command to change locations is cd followed by a directory name to change our working directory. cd stands for “change directory”.
-
-```cd /gpfs/ysm/project/beng469/beng469_my393/SCB-course-data```
+```
+cd /gpfs/ysm/project/beng469/beng469_my393
+```
 
