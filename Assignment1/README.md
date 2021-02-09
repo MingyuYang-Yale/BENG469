@@ -170,7 +170,7 @@ cd ..
 ```
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/cd-up.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-(bring you to the previous directory you was in 
+(bring you to the previous directory you was in) 
 ```
 cd – 
 ```
