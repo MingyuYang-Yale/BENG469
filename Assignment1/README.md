@@ -120,7 +120,9 @@ We recommend using MobaXterm to connect to the clusters. You can download, ext
 
 #####  Who Are You?
 Type the command 
-```whoami```
+```
+whoami
+```
 then press the ENTER key (sometimes marked Return) to send the command to the shell. The command’s output is the ID of the current user:
 
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/whoami.png" alt="foo bar" title="train &amp; tracks" /></p>
