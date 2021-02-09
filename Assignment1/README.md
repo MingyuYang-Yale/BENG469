@@ -166,6 +166,7 @@ we can see that we are now in ```/gpfs/ysm/project/beng469/beng469_my393```
 ```
 cd .. 
 ```
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/cd-up.png" alt="foo bar" title="train &amp; tracks" /></p>
 (bring you to the previous directory you was in)
 ```
 cd – 
