@@ -6,7 +6,7 @@ High Performance Computing (HPC) cluster is a collection of networked computers 
 
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/clusters.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-
+***
 ## Why Use a HPC? 
 *  Don’t want to tie up your own machine 
 *  Have many long running jobs to run
@@ -28,13 +28,13 @@ High Performance Computing (HPC) cluster is a collection of networked computers 
 |Ruddle|3,100|ruddle.hpc.yale.edu|Yale Center for Genome Analysis|
 |Milgram|1,600|milgram.hpc.yale.edu|HIPAA|
 
-
+***
 ## Setting up an account
 
 You should have received a email from Yale Center for Research Computing:
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/mail-from-ycrc.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-
+***
 ## Log on to the Clusters
 
 * Yale's clusters can only be accessed on the Yale network. For **off campus** access, you will need to first connect to Yale's **VPN**(https://software.yale.edu/software/cisco-vpn-anyconnect). 
@@ -80,6 +80,7 @@ Next, upload your public SSH key on the cluster. Run the following command in a 
 
 Copy and paste the output to https://sshkeys.hpc.yale.edu/  (Note: It can take a few minutes for newly uploaded keys to sync out to the clusters so your login may not work immediately.)
 
+
 #### Connect on macOS and Linux
 
 Once your key has been copied to the appropriate places on the clusters, you can log in with the command:
@@ -113,6 +114,8 @@ We recommend using MobaXterm to connect to the clusters. You can download, ext
 * Check "Specify Username" and Enter your netID as the the username.
 * Click the "Advanced SSH Settings" tab and check the "Use private key box", then click the file icon / magnifying glass to choose where you saved your private key (id_rsa.ppk).
 * Click OK.
+
+***
 
 ## Navigating Files and Directories
 #### Questions
