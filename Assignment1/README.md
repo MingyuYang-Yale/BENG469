@@ -7,6 +7,7 @@ High Performance Computing (HPC) cluster is a collection of networked computers 
 <p><img width="400" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/clusters.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ### Why Use a HPC? 
+    
 * Don’t want to tie up your own machine 
 * Have many long running jobs to run
 * Want to run in parallel to get results quicker 
