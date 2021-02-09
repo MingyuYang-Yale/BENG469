@@ -6,6 +6,7 @@ High Performance Computing (HPC) cluster is a collection of networked computers 
 
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/clusters.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+
 ## Why Use a HPC? 
 * Don’t want to tie up your own machine 
 *  Have many long running jobs to run
@@ -16,6 +17,7 @@ High Performance Computing (HPC) cluster is a collection of networked computers 
 *  Want to access data stored on the cluster 
 *  Want to use GPUs 
 
+
 ## Yale Clusters
 
 |Cluster|CPUs|Login Address|Purpose|
@@ -25,10 +27,12 @@ High Performance Computing (HPC) cluster is a collection of networked computers 
 |Ruddle|3,100|ruddle.hpc.yale.edu|Yale Center for Genome Analysis|
 |Milgram|1,600|milgram.hpc.yale.edu|HIPAA|
 
+
 ## Setting up an account
 
 You should have received a email from Yale Center for Research Computing:
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/mail-from-ycrc.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 
 ## Log on to the Clusters
 
@@ -36,7 +40,7 @@ You should have received a email from Yale Center for Research Computing:
 
 * Use SSH with SSH key pairs to log in to the clusters. 
 
-    SSH (Secure Shell) keys are a set of two pieces of information that you use to identify yourself and encrypt communication to and from a server. Usually this   takes the form of two files: a public key (often saved as id_rsa.pub) and a private key (id_rsa or id_rsa.ppk). To use an analogy, your public key is like a lock and your private key is what unlocks it. It is ok for others to see the lock (public key), but anyone who knows the private key can open your lock (and impersonate you)
+    SSH (Secure Shell) keys are a set of two pieces of information that you use to identify yourself and encrypt communication to and from a server. Usually this       takes the form of two files: a public key (often saved as id_rsa.pub) and a private key (id_rsa or id_rsa.ppk). To use an analogy, your public key is like a        lock and your private key is what unlocks it. It is ok for others to see the lock (public key), but anyone who knows the private key can open your lock (and        impersonate you)
 
 
 
