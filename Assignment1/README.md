@@ -142,7 +142,11 @@ Now let’s learn the command that will let us see the contents of our own file 
 
 ls prints the names of the files and directories in the current directory in alphabetical order, arranged neatly into columns. 
 
-ls has lots of options. To find out what they are, we can type:
+ls has lots of options. To find out what they are, we can type:
+
+```
+ls --help
+```
 
 
 (Many bash commands, and programs that people have written that can be run from within bash, support a --help flag to display more information on how to use the commands or programs.)
