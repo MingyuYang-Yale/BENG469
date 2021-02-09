@@ -139,3 +139,18 @@ pwd
 Now let’s learn the command that will let us see the contents of our own file system. We can see what’s in our home directory by running ls, which stands for “listing”:
 
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/ls.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+ls prints the names of the files and directories in the current directory in alphabetical order, arranged neatly into columns. 
+
+ls has lots of options. To find out what they are, we can type:
+
+
+(Many bash commands, and programs that people have written that can be run from within bash, support a --help flag to display more information on how to use the commands or programs.)
+
+### Move Around
+The command to change locations is :
+```
+cd 
+```
+followed by a directory name to change our working directory. cd stands for “change directory”.
+
