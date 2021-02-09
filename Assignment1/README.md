@@ -148,9 +148,7 @@ ls has lots of options. To find out what they are, we can type:
 (Many bash commands, and programs that people have written that can be run from within bash, support a --help flag to display more information on how to use the commands or programs.)
 
 ### Move Around
-The command to change locations is :
-```
-cd 
-```
-followed by a directory name to change our working directory. cd stands for “change directory”.
+The command to change locations is cd followed by a directory name to change our working directory. cd stands for “change directory”.
+
+```cd /gpfs/ysm/project/beng469/beng469_my393/SCB-course-data```
 
