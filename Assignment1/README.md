@@ -84,4 +84,4 @@ Once your key has been copied to the appropriate places on the clusters, you can
 ```
     ssh beng469_my393@farnam.hpc.yale.edu (change my393 to your NETID)
 ```    
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/login-mac.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/login-mac.png" alt="foo bar" title="train &amp; tracks" /></p>
