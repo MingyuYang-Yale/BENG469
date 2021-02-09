@@ -81,4 +81,6 @@ Copy and paste the output to https://sshkeys.hpc.yale.edu/  (Note: It can take 
 Connect on macOS and Linux
 
 Once your key has been copied to the appropriate places on the clusters, you can log in with the command:
+  ```
     ssh beng469_my393@farnam.hpc.yale.edu (change my393 to your NETID)
+      ```
