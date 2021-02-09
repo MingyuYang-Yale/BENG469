@@ -111,3 +111,10 @@ We recommend using MobaXterm to connect to the clusters. You can download, ext
 * Check "Specify Username" and Enter your netID as the the username.
 * Click the "Advanced SSH Settings" tab and check the "Use private key box", then click the file icon / magnifying glass to choose where you saved your private key (id_rsa.ppk).
 * Click OK.
+
+## Navigating Files and Directories
+#### Questions
+* How can I move around on HPC?
+* How can I see what files and directories I have?
+* How can I specify the location of a file or directory on HPC?
+
