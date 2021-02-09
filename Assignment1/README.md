@@ -118,8 +118,7 @@ We recommend using MobaXterm to connect to the clusters. You can download, ext
 * How can I see what files and directories I have?
 * How can I specify the location of a file or directory on HPC?
 
-#####  Who Are You?
-Type the command 
+1. Who Are You? Type the command 
 ```
 whoami
 ```
