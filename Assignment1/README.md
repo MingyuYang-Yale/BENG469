@@ -132,4 +132,4 @@ Next, let’s find out where we are by running a command called 
 pwd
 ```
 (which stands for “print working directory”). 
-
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/pwd.png" alt="foo bar" title="train &amp; tracks" /></p>
