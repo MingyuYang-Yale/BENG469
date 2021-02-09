@@ -159,7 +159,7 @@ cd /gpfs/ysm/project/beng469/beng469_my393
 
 These commands will move us from our home directory into the SCB-course-data directory. cd doesn’t print anything, but if we run pwd(print work directory) after it
 
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/cd.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/cd.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 we can see that we are now in ```/gpfs/ysm/project/beng469/beng469_my393```
 (brings you up)
