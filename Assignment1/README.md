@@ -211,25 +211,6 @@ mkdir testdata
 
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/mkdir.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-### Create/Edit Text
-
-Let’s run a text editor called Vim to create a file called draft.txt.
-
-#### Opening a New File
-
-* Step 1: type ```vim draft.txt``` (create a file named filename)
-* Step 2: type ```i``` ( switch to insert mode)
-* Step 3: enter text ```Hello World```
-* Step 4: hit ```Esc``` key (switch back to command mode)
-* Step 5: type ```:wq``` (write file and exit vim)
-
-#### Some useful commands for VIM
-* From command mode to insert mode type ```i```
-* From insert mode to command mode type ```Esc``` (escape key)
-* ```dd``` Delete line
-* ```u```  Undo last change
-* ```:wq``` Write file to disk and quit the editor
-
 
 ### Delete a File
 
@@ -298,12 +279,43 @@ cp thesis.txt thesis-v2.0.txt
 ```
 ssh beng469_my393@farnam.hpc.yale.edu (change my393 to your own NETID)
 ```
+
 ```
 cd project
 ```
+
+```
+ls 
+```
+
 ```
 mkdir testdata 
 ```
+
+```
+cd testdata 
+```
+
+### Create/Edit Text
+
+Let’s run a text editor called Vim to create a file called draft.txt.
+
+#### Opening a New File
+
+* Step 1: type ```vim draft.txt``` (create a file named filename)
+* Step 2: type ```i``` ( switch to insert mode)
+* Step 3: enter text ```Hello World```
+* Step 4: hit ```Esc``` key (switch back to command mode)
+* Step 5: type ```:wq``` (write file and exit vim)
+
+#### Some useful commands for VIM
+* From command mode to insert mode type ```i```
+* From insert mode to command mode type ```Esc``` (escape key)
+* ```:wq``` Write file to disk and quit the editor
+* ```dd``` Delete line
+* ```u```  Undo last change
+
+
 wc: word count. 
 ```
 wc -l thesis.txt 
@@ -320,7 +332,16 @@ tail: output the last part of files.
 ```
 tail -10 test.txt  
 ```
+
+```
+cp xxx ./
+```
 less: displays the contents of a file, one page at a time. 
+
+```
+less xxx
+```
+
 
 
 
