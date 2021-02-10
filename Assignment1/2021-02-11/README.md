@@ -1,4 +1,6 @@
-Open a terminal and login to HPC: (need to connect to Yale's VPN if off campus)
+### Open a terminal and login to HPC: 
+
+(need to connect to Yale's VPN if off campus)
 ```
 ssh beng469_my393@farnam.hpc.yale.edu (change my393 to your own NETID)
 ```
@@ -24,7 +26,7 @@ cd testdata
 
 Let’s run a text editor called Vim to create a file called draft.txt.
 
-#### Opening a New File
+Opening a New File:
 
 * type ```vim slist.txt``` (create a file named slist.txt)
 * type ```i``` ( From command mode to insert mode type)
@@ -46,6 +48,7 @@ student-L    jy568
 * Step 4: hit ```Esc``` key (From insert mode to command mode type)
 * Step 5: type ```:wq``` (write file and exit vim)
 
+### Count lines, Words and Characters 
 
 Next let's see how many lines/words/characters in **slist.txt**, run the command:
 ```
