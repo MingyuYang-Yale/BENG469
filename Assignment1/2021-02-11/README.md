@@ -1,4 +1,4 @@
-Open a terminal and login to Farnam:(need to connect to Yale's VPN if off campus)
+Open a terminal and login to HPC:(need to connect to Yale's VPN if off campus)
 ```
 ssh beng469_my393@farnam.hpc.yale.edu (change my393 to your own NETID)
 ```
