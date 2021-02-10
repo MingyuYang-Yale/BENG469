@@ -46,10 +46,16 @@ student-L    jy568
 * Step 4: hit ```Esc``` key (From insert mode to command mode type)
 * Step 5: type ```:wq``` (write file and exit vim)
 
-wc: word count. 
+Next let's see how many lines/words/characters in **slist.txt**, run the command:
 ```
-wc -l slist.txt 
+wc slist.txt 
 ```
+wc is the “word count” command, it counts the number of lines, words, and characters in files
+If we run wc -l instead of just wc, the output shows only the number of lines per file:
+```
+wc -l slist.txt
+```
+
 cat: concatenate files and print on the standard output.  
 ```
 cat slist.txt
