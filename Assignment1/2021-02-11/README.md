@@ -26,7 +26,7 @@ Let’s run a text editor called Vim to create a file called draft.txt.
 
 #### Opening a New File
 
-* Step 1: type ```vim slist.txt``` (create a file named filename)
+* Step 1: type ```vim slist.txt``` (create a file named slist.txt)
 * Step 2: type ```i``` ( switch to insert mode)
 * Step 3: enter the text below:  
 ```
