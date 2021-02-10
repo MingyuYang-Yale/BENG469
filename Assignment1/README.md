@@ -191,4 +191,22 @@ cd ~ 
 ```
 ```cd ~``` is equivalent to ```cd /home/beng469_my393```
 
+## Working Files and Directories
+#### Questions
+* How can I create, copy, and delete files and directories?
+* How can I edit files?
 
+---
+### Make a Directory
+We now know how to explore files and directories, but how do we create them in the first place? 
+
+First go to project directory, then create a new directory called testdata using the command : 
+```
+cd project
+```
+```
+mkdir testdata
+```
+(mkdir means “make directory”)
+
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/mkdir.png" alt="foo bar" title="train &amp; tracks" /></p>
