@@ -61,7 +61,8 @@ wc -l slist.txt
 ```
 You can also use -w to get only the number of words, or -c to get only the number of characters.
 
-You can use cat to see the content of this file on HPC.
+### Look inside files: cat, less, head, tail
+
 cat: print on the standard output.  
 ```
 cat slist.txt
