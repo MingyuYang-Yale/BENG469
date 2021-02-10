@@ -46,6 +46,7 @@ student-L    jy568
 * Step 4: hit ```Esc``` key (From insert mode to command mode type)
 * Step 5: type ```:wq``` (write file and exit vim)
 
+
 Next let's see how many lines/words/characters in **slist.txt**, run the command:
 ```
 wc slist.txt 
@@ -55,19 +56,22 @@ If we run wc -l instead of just wc, the output shows only the number of lines pe
 ```
 wc -l slist.txt
 ```
+You can also use -w to get only the number of words, or -c to get only the number of characters.
 
-cat: concatenate files and print on the standard output.  
+You can use cat to see the content of this file on HPC.
+cat: print on the standard output.  
 ```
 cat slist.txt
 ```
-head: output the first part of files. 
+head: output the first n lines of files. 
 ```
 head -5 test.txt 
 ```
-tail: output the last part of files. 
+tail: output the last n lines of files. 
 ```
-tail -10 test.txt  
+tail -3 test.txt  
 ```
+
 
 ```
 cp xxx ./
