@@ -216,18 +216,18 @@ Let’s run a text editor called Vim to create a file called draft.txt.
 ```
 vim draft.txt
 ```
+
+#### Opening a New File
+
+* Step 1: type ```vim draft.txt``` (create a file named filename)
+* Step 2: type ```i``` ( switch to insert mode)
+* Step 3: enter text ```Hello World```
+* Step 4: hit ```Esc``` key (switch back to command mode)
+* Step 5: type ```:wq``` (write file and exit vim)
+
 #### Some useful commands for VIM
 * From command mode to insert mode type ```i```
 * From insert mode to command mode type ```Esc``` (escape key)
 * ```dd``` Delete line
 * ```u```  Undo last change
 * ```:wq``` Write file to disk and quit the editor
-
-#### Opening a New File
-
-* Step 1: type ```vim``` filename (create a file named filename)
-* Step 2: type ```i``` ( switch to insert mode)
-* Step 3: enter text
-* Step 4: hit ```Esc``` key (switch back to command mode)
-* Step 5: type ```:wq``` (write file and exit vim)
-
