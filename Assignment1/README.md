@@ -210,3 +210,12 @@ mkdir testdata
 (mkdir means “make directory”)
 
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/mkdir.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+### Create/Edit Text
+Let’s run a text editor called Vim to create a file called draft.txt.
+```
+vim draft.txt
+```
+Some useful commands for VIM
+From command mode to insert mode type ```i```
+From insert mode to command mode type ```Esc``` (escape key)
