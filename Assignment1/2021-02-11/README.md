@@ -27,7 +27,7 @@ Let’s run a text editor called Vim to create a file called draft.txt.
 #### Opening a New File
 
 * Step 1: type ```vim slist.txt``` (create a file named slist.txt)
-* Step 2: type ```i``` ( switch to insert mode)
+* Step 2: type ```i``` ( From command mode to insert mode type)
 * Step 3: enter the text below:  
 ```
 student-A    sb2723
@@ -43,16 +43,8 @@ student-G    svp26
 student-K    wt263
 student-L    jy568
 ```
-* Step 4: hit ```Esc``` key (switch back to command mode)
+* Step 4: hit ```Esc``` key (From insert mode to command mode type)
 * Step 5: type ```:wq``` (write file and exit vim)
-
-#### Some useful commands for VIM
-* From command mode to insert mode type ```i```
-* From insert mode to command mode type ```Esc``` (escape key)
-* ```:wq``` Write file to disk and quit the editor
-* ```dd``` Delete line
-* ```u```  Undo last change
-
 
 wc: word count. 
 ```
