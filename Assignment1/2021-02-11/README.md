@@ -10,13 +10,13 @@ list what’s in your project directory by running ```ls```
 ```
 ls 
 ```
-
-```
-mkdir testdata 
-```
-
+if you already have testdata directory, run :
 ```
 cd testdata 
+```
+Otherwise, run:
+```
+mkdir testdata && cd testdata
 ```
 
 ### Create/Edit Text
