@@ -378,5 +378,9 @@ ls
 rm -r -i testdata 
 ```
 
+### Permission
 
+* chmod change file access permissions (eg. chmod 777/755)
+
+#### .bashrc
 
