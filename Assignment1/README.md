@@ -229,3 +229,11 @@ Let’s run a text editor called Vim to create a file called draft.txt.
 * ```dd``` Delete line
 * ```u```  Undo last change
 * ```:wq``` Write file to disk and quit the editor
+
+
+### Delete a File
+```
+rm draft.txt
+```
+This command removes files (rm is short for “remove”). If we run ls again, its output is empty
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/rm-file.png" alt="foo bar" title="train &amp; tracks" /></p>
