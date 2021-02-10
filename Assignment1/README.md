@@ -295,6 +295,15 @@ cp thesis.txt thesis-v2.0.txt
 
 ### *** 02/11/2021 *** 
 
+```
+ssh beng469_my393@farnam.hpc.yale.edu (change my393 to your own NETID)
+```
+```
+cd project
+```
+```
+mkdir testdata 
+```
 wc: word count. 
 ```
 wc -l thesis.txt 
