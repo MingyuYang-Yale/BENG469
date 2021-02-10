@@ -26,9 +26,9 @@ Let’s run a text editor called Vim to create a file called draft.txt.
 
 #### Opening a New File
 
-* Step 1: type ```vim slist.txt``` (create a file named slist.txt)
-* Step 2: type ```i``` ( From command mode to insert mode type)
-* Step 3: enter the text below:  
+* type ```vim slist.txt``` (create a file named slist.txt)
+* type ```i``` ( From command mode to insert mode type)
+* copy and paste the follwing texts to slist.txt:  
 ```
 student-A    sb2723
 student-B    mb2823
