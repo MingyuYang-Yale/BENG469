@@ -28,7 +28,21 @@ Let’s run a text editor called Vim to create a file called draft.txt.
 
 * Step 1: type ```vim draft.txt``` (create a file named filename)
 * Step 2: type ```i``` ( switch to insert mode)
-* Step 3: enter text ```Hello World```
+* Step 3: enter text 
+```
+student-A    sb2723
+student-B    mb2823
+student-C    bmb62
+student-D    snd35
+student-E    nee6
+student-F    al2342
+student-G    kl646
+student-H    am2975
+student-I    dfm42
+student-G    svp26
+student-K    wt263
+student-L    jy568
+```
 * Step 4: hit ```Esc``` key (switch back to command mode)
 * Step 5: type ```:wq``` (write file and exit vim)
 
