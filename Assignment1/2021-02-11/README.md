@@ -28,7 +28,7 @@ Let’s run a text editor called Vim to create a file called draft.txt.
 
 * Step 1: type ```vim draft.txt``` (create a file named filename)
 * Step 2: type ```i``` ( switch to insert mode)
-* Step 3: enter text 
+* Step 3: enter the text below:  
 ```
 student-A    sb2723
 student-B    mb2823
