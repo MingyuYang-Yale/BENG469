@@ -280,15 +280,16 @@ mv draft.txt thesis.txt
 
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/rm-file.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-```
-mv testdata data
-```
 
 ### Copy a File
 The cp command works very much like mv, except it copies a file instead of moving it. 
 
 ```
 cp thesis.txt thesis-v2.0.txt
+```
+### Copy a directory
+```
+cp -r testdata
 ```
 
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/rm-file.png" alt="foo bar" title="train &amp; tracks" /></p>
