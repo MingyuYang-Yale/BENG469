@@ -251,6 +251,9 @@ rm -r -i testdata
 ```
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/rm-file.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+
+```
+### Move (rename) a File/Directory
 Let’s create that directory and file one more time. 
 
 ```
@@ -261,8 +264,7 @@ cd testdata
 ```
 ```
 vim draft.txt
-```
-### Move (rename) a File/Directory
+
 draft.txt isn’t a particularly informative name, so let’s change the file’s name using mv, which is short for “move”:
 ```
 mv draft.txt thesis.txt
