@@ -291,7 +291,9 @@ cp thesis.txt thesis-v2.0.txt
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/rm-file.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ---
-*** 02/11/2021 *** 
+
+
+### *** 02/11/2021 *** 
 
 wc: word count. 
 ```
