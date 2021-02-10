@@ -342,6 +342,41 @@ less: displays the contents of a file, one page at a time.
 less xxx
 ```
 
+```
+cp test.txt test2.txt
+```
+
+```
+mv test2.txt work.txt 
+```
+
+```
+ls
+```
+
+```
+rm test.txt 
+```
+
+```
+cd ..
+```
+
+```
+cp -r testdata testdata2
+```
+
+```
+mv testdata2 Assignment1
+```
+
+```
+ls 
+```
+
+```
+rm -r -i testdata 
+```
 
 
 
