@@ -14,7 +14,7 @@ if you already have **testdata** directory, just run :
 ```
 cd testdata 
 ```
-Otherwise, run:
+Otherwise, make directory first and then change directory to **testdata**:
 ```
 mkdir testdata && cd testdata
 ```
