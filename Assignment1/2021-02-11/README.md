@@ -16,7 +16,8 @@ cd testdata
 ```
 Otherwise, make directory first and then change directory to **testdata**:
 ```
-mkdir testdata && cd testdata
+mkdir testdata
+cd testdata
 ```
 
 ### Create/Edit Text
