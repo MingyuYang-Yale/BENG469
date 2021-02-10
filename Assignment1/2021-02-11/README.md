@@ -64,7 +64,7 @@ You can also use -w to get only the number of words, or -c to get only the numbe
 ### Look inside files: cat, head, tail, less
 
 cat has nothing to do with cats. 
-<p><img width="100" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/real-cat.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="300" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/real-cat.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 It's short for catenate
 
