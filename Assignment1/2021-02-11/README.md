@@ -26,7 +26,7 @@ Let’s run a text editor called Vim to create a file called draft.txt.
 
 #### Opening a New File
 
-* Step 1: type ```vim draft.txt``` (create a file named filename)
+* Step 1: type ```vim slist.txt``` (create a file named filename)
 * Step 2: type ```i``` ( switch to insert mode)
 * Step 3: enter the text below:  
 ```
@@ -56,11 +56,11 @@ student-L    jy568
 
 wc: word count. 
 ```
-wc -l thesis.txt 
+wc -l slist.txt 
 ```
 cat: concatenate files and print on the standard output.  
 ```
-cat thesis.txt
+cat slist.txt
 ```
 head: output the first part of files. 
 ```
