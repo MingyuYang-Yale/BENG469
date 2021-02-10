@@ -396,3 +396,8 @@ Storage Types
 
 Cluster Software
 
+scp 
+wget
+git clone
+
+tar 
