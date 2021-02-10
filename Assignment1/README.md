@@ -287,12 +287,11 @@ The cp command works very much like mv, except it copies a file instead of mo
 ```
 cp thesis.txt thesis-v2.0.txt
 ```
-### Copy a directory
-```
-cp -r testdata
-```
 
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/rm-file.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+---
+*** 02/11/2021 *** 
 
 wc: word count. 
 ```
