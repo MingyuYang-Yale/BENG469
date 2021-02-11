@@ -183,7 +183,7 @@ For transfer data, you can either use scp or rsync
 
 the source or the destination can be remote or local
 ```
-scp -r netid@transfer-farnam.hpc.yale.edu:sourcedir ~/destdir
+scp -r beng469_my393@farnam.hpc.yale.edu:/home/beng469_my393/project/testdata/student-list.txt ./
 ```
 ```
 rsync -av ~/sourcedir netid@transfer-grace.hpc.yale.edu:destdir
