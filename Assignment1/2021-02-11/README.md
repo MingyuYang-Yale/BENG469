@@ -120,6 +120,34 @@ You can also use -w to get only the number of words, or -c to get only the numbe
 
 ---
 
+### Permissions
+<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/permissions-1.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/permissions-2.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/permissions-3.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+#### .bashrc
+
+history
+
+Storage Types
+|Name|Location|Good for|Quota|
+|------|-------|------|-------|
+|Home|~/|Scripts|125GiB/Person|
+|Project|~/project|Larger datasets (keep a copy elsewhere)|4TiB/Group|
+|Scratch60|~/scratch60|Temporary, shared files, purged every 60 days|20TiB/Group|
+|PI|/gpfs/fs/pi/group|Additional group-owned storage|Varies|
+
+Cluster Software
+
+scp 
+wget
+git clone
+
+tar 
+
+
 
 ```
 cp test.txt test2.txt
@@ -156,30 +184,3 @@ ls
 ```
 rm -r -i testdata 
 ```
-
-### Permissions
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/permissions-1.png" alt="foo bar" title="train &amp; tracks" /></p>
-
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/permissions-2.png" alt="foo bar" title="train &amp; tracks" /></p>
-
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/permissions-3.png" alt="foo bar" title="train &amp; tracks" /></p>
-
-#### .bashrc
-
-history
-
-Storage Types
-|Name|Location|Good for|Quota|
-|------|-------|------|-------|
-|Home|~/|Scripts|125GiB/Person|
-|Project|~/project|Larger datasets (keep a copy elsewhere)|4TiB/Group|
-|Scratch60|~/scratch60|Temporary, shared files, purged every 60 days|20TiB/Group|
-|PI|/gpfs/fs/pi/group|Additional group-owned storage|Varies|
-
-Cluster Software
-
-scp 
-wget
-git clone
-
-tar 
