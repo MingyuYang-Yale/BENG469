@@ -190,6 +190,9 @@ scp beng469_my393@farnam.hpc.yale.edu:/home/beng469_my393/project/testdata/stude
 ```
 * If you want to upload a file from your own compter to cluster. 
 ```
+mv student-list.txt student-list-v2.txt 
+```
+```
 scp ./student-list-v2.txt beng469_my393@farnam.hpc.yale.edu:/home/beng469_my393/project/testdata
 ```
 
