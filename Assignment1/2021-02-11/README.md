@@ -4,6 +4,7 @@
 ```
 ssh beng469_my393@farnam.hpc.yale.edu (change my393 to your own NETID)
 ```
+---
 change directory to **project**.
 ```
 cd project
@@ -21,7 +22,7 @@ Otherwise, make directory first and then change directory to **testdata**:
 mkdir testdata
 cd testdata
 ```
-
+---
 ### Create/Edit Text
 
 Run Vim to create a file called student-list.txt.
@@ -47,7 +48,7 @@ student-L    jy568
 ```
 * hit ```Esc``` key (From insert mode to command mode type)
 * type ```:wq``` (write file and exit vim)
-
+---
 ### Look inside files: 
 
 ### ```cat```
@@ -61,7 +62,7 @@ Let's use ```cat``` to display contents of student-list.txt :
 ```
 cat student-list.txt
 ```
-
+---
 ### ```head/tail```
 Sometimes you just want a quick look at the beginning or end of a file. This is useful for getting a sense of the contents of very large files.
 
