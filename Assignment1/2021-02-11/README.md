@@ -166,7 +166,10 @@ chmod 754 student-list.txt
 
 ---
 ## Quotas
-* To check our course’s cluster quotas, run ```getquota```
+* To check our course’s cluster quotas, run:
+```
+getquota
+```
 * All storage areas have quotas, both size and file count
 * If you hit your limit, jobs fail
 * Home quota is per user, small
