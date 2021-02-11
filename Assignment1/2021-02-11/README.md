@@ -278,6 +278,7 @@ module avail
 ```
 module avail Python
 ```
+#### Module commands
 |Command|Function|
 |------|-------|
 |module avail|Browse all modules|
