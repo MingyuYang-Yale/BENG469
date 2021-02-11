@@ -48,17 +48,19 @@ student-L    jy568
 * hit ```Esc``` key (From insert mode to command mode type)
 * type ```:wq``` (write file and exit vim)
 
-### Look inside files: (cat, head, tail, less)
+### Look inside files: 
+
+#### cat
 
 cat has nothing to do with cats. 
 <p><img width="300" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/real-cat.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-The cat (short for “concatenate“) command is one of the most frequently used command in Linux. cat command allows us view contents of a file, concatenate files and redirect output in terminal or files.
-
-here we just show use ```cat``` to display contents of student-list.txt :  
+use ```cat``` to display contents of student-list.txt :  
 ```
 cat student-list.txt
 ```
+The cat (short for “concatenate“) command is one of the most frequently used command in Linux. cat command allows us view contents of a file, concatenate files and redirect output in terminal or files.
+
 
 Sometimes you just want a quick look at the beginning or end of a file. This is useful for getting a sense of the contents of very large files.
 
