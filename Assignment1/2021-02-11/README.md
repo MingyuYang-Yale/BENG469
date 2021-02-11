@@ -93,7 +93,7 @@ tail cancer-gene.txt
 ---
 ### ```less```
 less: to view a text file one page at a time, press ```space bar``` to go to the next page, ```b``` move up one page
-use ```arrow key``` to go down:arrow_down: or go up:arrow_up: just one line at a time. use ```q``` key to quit out ```less```.
+use ```arrow key```:arrow_down: :arrow_up: to go down or go up just one line at a time. use ```q``` key to quit out ```less```.
 ```
 less cancer-gene.txt
 ```
