@@ -143,9 +143,8 @@ or
 chmod a+x student-list.txt
 ```
 
-```
-chmod -R u=wrx,g=rx,o=r testdata
-```
+Setting the permission this way called alpha-beta notation. We can also change permissions in numeric code in Linux
+
 
 <p><img width="750" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/permissions-3.png" alt="foo bar" title="train &amp; tracks" /></p>
 
