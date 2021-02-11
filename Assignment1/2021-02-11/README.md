@@ -299,7 +299,7 @@ To use a graphical interface on the clusters, your connection needs to be set up
 ```
 launchctl load -w /Library/LaunchAgents/org.macosforge.xquartz.startx.plist
 ```
-* Log out and log back in to your Mac to reset some variables.
+* Log out(```quit```) and log back in to your Mac to reset some variables.
 **(quit and reopen terminal window)**
 ```
 echo $DISPLAY
