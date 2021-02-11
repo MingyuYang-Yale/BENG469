@@ -62,7 +62,7 @@ Let's use ```cat``` to display contents of student-list.txt :
 cat student-list.txt
 ```
 
-
+### ```head/tail```
 Sometimes you just want a quick look at the beginning or end of a file. This is useful for getting a sense of the contents of very large files.
 
 head: output the first n lines of a file. 
