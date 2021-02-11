@@ -211,13 +211,13 @@ scp -r testdata-v2 beng469_my393@farnam.hpc.yale.edu:/home/beng469_my393/project
 ```
 ---
 ## Slurm Overview
-Slurm manages all the details of compute node usage:
+#### Slurm manages all the details of compute node usage:
 * Prioritizing and scheduling jobs
 * Listing running and pending jobs
 * Canceling jobs
 * Checking job resource usage
 
-### General workflow for jobs
+#### General workflow for jobs
 * You request an allocation
 * Slurm finds then grants you compute resources
 * You run commands or execute a script on those resources
