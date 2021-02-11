@@ -51,7 +51,7 @@ student-L    jy568
 ---
 ### Look inside files: 
 
-### ```cat```
+#### ```cat```
 
 cat has nothing to do with cats. 
 <p><img width="300" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/real-cat.png" alt="foo bar" title="train &amp; tracks" /></p>
@@ -67,7 +67,7 @@ when you add ```-n``` flag can show us the line number
 cat -n student-list.txt
 ```
 ---
-### ```head/tail```
+#### ```head/tail```
 
 head: output the first n lines of a file. 
 
@@ -91,7 +91,7 @@ head cancer-gene.txt
 tail cancer-gene.txt
 ```
 ---
-### ```less```
+#### ```less```
 * Use ```space bar``` to go to the next page, ```b``` move up one page.
 * Use ```arrow key```:arrow_down: :arrow_up: to go down or go up just one line at a time. 
 * Use ```q``` key to quit out less.
