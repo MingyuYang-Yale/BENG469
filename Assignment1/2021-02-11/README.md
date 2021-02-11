@@ -110,7 +110,8 @@ wc student-list.txt
 wc cancer-gene.txt
 ```
 
-wc is the “word count” command, it counts the number of lines, words, and characters in files
+wc is the “word count” command, it counts the number of lines, words, and characters in files.
+
 If we run wc -l instead of just wc, the output shows only the number of lines per file:
 ```
 wc -l slist.txt
