@@ -62,6 +62,10 @@ Let's use ```cat``` to display contents of student-list.txt :
 ```
 cat student-list.txt
 ```
+when you add ```-n``` flag can show us the line number
+```
+cat -n student-list.txt
+```
 ---
 ### ```head/tail```
 
