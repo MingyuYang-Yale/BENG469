@@ -114,7 +114,7 @@ wc is the “word count” command, it counts the number of lines, words, and ch
 
 If we run wc -l instead of just wc, the output shows only the number of lines per file:
 ```
-wc -l slist.txt
+wc -l student-list.txt
 ```
 You can also use -w to get only the number of words, or -c to get only the number of characters.
 
