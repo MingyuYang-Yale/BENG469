@@ -158,11 +158,11 @@ rm -r -i testdata
 ```
 
 ### Permissions
-<p><img width="300" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/permissions-1.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/permissions-1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-<p><img width="300" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/permissions-2.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/permissions-2.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-<p><img width="300" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/permissions-3.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/permissions-3.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 #### .bashrc
 
