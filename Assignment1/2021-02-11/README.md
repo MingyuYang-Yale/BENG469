@@ -222,7 +222,7 @@ Slurm manages all the details of compute node usage:
 * Slurm finds then grants you compute resources
 * You run commands or execute a script on those resources
 * You or your script exits and system automatically releases resources
-
+---
 ### Partitions
 #### General Purpose: 
 * interactive for interactive jobs (srun)
@@ -236,7 +236,7 @@ Slurm manages all the details of compute node usage:
 #### Scavenge: (very useful for short or well-checkpointed jobs)
 * scavenge uses idle nodes from other partitions (can be preempted)
 
-
+---
 ### Interactive vs. Batch
 
 #### Interactive jobs:
@@ -247,6 +247,7 @@ Slurm manages all the details of compute node usage:
 * Can run many jobs simultaneously
 * Usually your best choice for production computing
 
+---
 ### Interactive Allocation
 ```
 srun --pty -p interactive --mem=8g bash
@@ -261,7 +262,7 @@ Use Exit to close the interactive node.
 ```
 exit
 ```
-
+---
 Cluster Software
 
 scp 
