@@ -180,6 +180,7 @@ getquota
 
 For transfer data, you can either use scp or rsync
 * command + source+ destination
+
 the source or the destination can be remote or local
 ```
 scp -r netid@transfer-farnam.hpc.yale.edu:sourcedir ~/destdir
