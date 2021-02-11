@@ -326,6 +326,6 @@ cp /gpfs/ysm/project/beng469/beng469_my393/00.database/test.sh ./
 ```
 sbatch test.sh
 ```
-*email
+(check email)
 
 * https://rstudio.cloud/
