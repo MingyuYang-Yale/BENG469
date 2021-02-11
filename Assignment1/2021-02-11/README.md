@@ -162,7 +162,6 @@ chmod 754 student-list.txt
 |Home|~/|Scripts|125GiB/Person|
 |Project|~/project|Larger datasets (keep a copy elsewhere)|4TiB/Group|
 |Scratch60|~/scratch60|Temporary, shared files, purged every 60 days|20TiB/Group|
-|PI|/gpfs/fs/pi/group|Additional group-owned storage|Varies|
 
 ---
 ## Quotas
