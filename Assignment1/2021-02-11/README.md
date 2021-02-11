@@ -211,7 +211,7 @@ scp -r testdata-v2 beng469_my393@farnam.hpc.yale.edu:/home/beng469_my393/project
 ```
 
 ```
-rsync -av ~/sourcedir netid@transfer-farnam.hpc.yale.edu:destdir
+rsync -av ~/sourcedir netid@farnam.hpc.yale.edu:destdir
 ```
 Cluster Software
 
