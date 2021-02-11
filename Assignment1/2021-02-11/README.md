@@ -278,3 +278,11 @@ module avail
 ```
 module avail Python
 ```
+|Command|Function|
+|------|-------|
+|module avail|Browse all modules|
+|module avail string|Find module with string in name|
+|module load name|Make a module available for use|
+|module list|show loaded modules|
+|module unload name|unload a module|
+|module purge|unload all modules|
