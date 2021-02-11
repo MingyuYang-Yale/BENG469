@@ -181,9 +181,17 @@ For transfer data, you can either use scp or rsync
 * command + source+ destination
 
 the source or the destination can be remote or local
+
+open a new terminal window on your local computer: (command + T)
+
 ```
-scp -r beng469_my393@farnam.hpc.yale.edu:/home/beng469_my393/project/testdata/student-list.txt ./
+scp beng469_my393@farnam.hpc.yale.edu:/home/beng469_my393/project/testdata/student-list.txt ./
 ```
+Now if you want to upload a file from your own compter to the cluster. 
+```
+scp ./student-list-v2.txt beng469_my393@farnam.hpc.yale.edu:/home/beng469_my393/project/testdata
+```
+
 ```
 rsync -av ~/sourcedir netid@transfer-grace.hpc.yale.edu:destdir
 ```
