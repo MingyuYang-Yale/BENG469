@@ -129,6 +129,20 @@ ls -lrt
 
 A file owner can change the permisson with ```chmod``` command, short for "change mode".
 
+```
+chmod u=rwx,g=rx,o=r student-list.txt
+```
+```
+chmod ugo=r student-list.txt
+```
+```
+chmod ugo+x student-list.txt 
+```
+or
+```
+chmod a+x student-list.txt
+```
+
 <p><img width="750" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/permissions-3.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 #### .bashrc
