@@ -219,7 +219,7 @@ mkdir testdata
 rm draft.txt
 ```
 This command removes files (rm is short for “remove”). If we run ls again, its output is empty
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/rm-file.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 
 Deleting Is Forever! The Linux shell doesn’t have a trash bin that we can recover deleted files. Instead, when we delete files, they are unhooked from the file system so that their storage space on disk can be recycled. 
 
@@ -229,7 +229,7 @@ rm by default only works on files, not directories, to remove directories, use:
 rm -r testdata
 ```
 
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/rm-file.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 
 Removing the files in a directory recursively can be a very dangerous operation. If we’re concerned about what we might be 
 deleting we can add the “interactive” flag -i to rm which will ask us for confirmation before each step.
@@ -238,7 +238,7 @@ deleting we can add the “interactive” flag -i to rm which will ask us fo
 rm -r -i testdata
 ```
 
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/rm-file.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 
 ### Move (rename) a File/Directory
 Let’s create that directory and file one more time. 
