@@ -164,6 +164,15 @@ chmod 754 student-list.txt
 |Scratch60|~/scratch60|Temporary, shared files, purged every 60 days|20TiB/Group|
 |PI|/gpfs/fs/pi/group|Additional group-owned storage|Varies|
 
+## Quotas
+
+* All storage areas have quotas, both size and file count
+* If you hit your limit, jobs fail
+* To check your group’s cluster quotas, run getquota
+* Home quota is per user, small
+* Project, scratch60 has a group quota shared with your group, large
+
+
 Cluster Software
 
 scp 
