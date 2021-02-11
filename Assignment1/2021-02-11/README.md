@@ -288,4 +288,28 @@ module avail Python
 |module unload name|unload a module|
 |module purge|unload all modules|
 
-Beware of omitting module versions. The default versions change over time.
+## Graphical Environments for Clusters
+To use a graphical interface on the clusters, your connection needs to be set up for X11 forwarding, which will transmit the graphical window from the cluster back to your local machine. A simple test to see if your setup is working is to run the command xclock . You should see a simple analog clock window pop up.
+
+#### Setup X11 (On macOS)
+* Download and install XQuartz(https://www.xquartz.org)
+* Log out and log back in to your Mac to reset some variables.
+quit and reopen terminal 
+```
+launchctl load -w /Library/LaunchAgents/org.macosforge.xquartz.startx.plist
+```
+
+```
+echo $DISPLAY
+```
+the terminal should respond : " /private/tmp/com.apple.launchd.y8vzcm7AMF/org.macosforge.xquartz:0 "
+
+#### Test X11
+When using ssh to log in to the clusters, use the ```-Y``` option to enable X11 forwarding. Example: ssh -Y
+```
+ssh -Y beng469_my393@farnam.hpc.yale.edu
+```
+```
+srun --pty --x11 -p interactive --mem=20g bash
+```
+
