@@ -53,9 +53,9 @@ student-L    jy568
 cat has nothing to do with cats. 
 <p><img width="300" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/real-cat.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-The cat (short for “concatenate“) command is one of the most frequently used command in Linux. cat command allows us view contain of file, concatenate files and redirect output in terminal or files.
+The cat (short for “concatenate“) command is one of the most frequently used command in Linux. cat command allows us view contents of a file, concatenate files and redirect output in terminal or files.
 
-you can use ```cat``` to display contents of student-list.txt :  
+here we just show use ```cat``` to display contents of student-list.txt :  
 ```
 cat student-list.txt
 ```
