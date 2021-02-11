@@ -141,7 +141,7 @@ chmod ugo+x student-list.txt
 ```
 or
 ```
-chmod a+x student-list.txt
+chmod u+w,go-rx student-list.txt
 ```
 
 Setting the permission this way called alpha-beta notation. We can also change permissions in numeric code in Linux
