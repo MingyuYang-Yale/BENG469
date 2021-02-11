@@ -68,11 +68,11 @@ cat student-list.txt
 head: output the first n lines of a file. 
 
 ```
-head -5 student-list.txt 
+head -n 5 student-list.txt 
 ```
 tail: output the last n lines of a file. 
 ```
-tail -3 student-list.txt  
+tail -n 3 student-list.txt  
 ```
 
 Copy a cancer gene list file to your own directory:
