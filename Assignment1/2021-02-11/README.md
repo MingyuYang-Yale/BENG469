@@ -317,3 +317,15 @@ srun --pty --x11 -p interactive --mem=20g bash
 #### Setup X11 (On Ubuntu)
 http://laptops.eng.uci.edu/software-installation/using-linux/configure-ubuntu-for-x11-forwarding
 (???)
+
+
+---
+```
+cp /gpfs/ysm/project/beng469/beng469_my393/00.database/test.sh ./
+```
+```
+sbatch test.sh
+```
+*email
+&
+https://rstudio.cloud/
