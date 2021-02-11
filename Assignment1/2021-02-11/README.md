@@ -196,8 +196,22 @@ mv student-list.txt student-list-v2.txt
 scp ./student-list-v2.txt beng469_my393@farnam.hpc.yale.edu:/home/beng469_my393/project/testdata
 ```
 
+if you want tranfer directory, just add ```-r``` for recursive grasp not just a file, but all contents of the directory.
+
+for download: 
 ```
-rsync -av ~/sourcedir netid@transfer-grace.hpc.yale.edu:destdir
+scp -r beng469_my393@farnam.hpc.yale.edu:/home/beng469_my393/project/testdata/ ./
+```
+for upload:
+```
+mv testdata testdata-v2
+```
+```
+scp -r testdata-v2 beng469_my393@farnam.hpc.yale.edu:/home/beng469_my393/project/
+```
+
+```
+rsync -av ~/sourcedir netid@transfer-farnam.hpc.yale.edu:destdir
 ```
 Cluster Software
 
