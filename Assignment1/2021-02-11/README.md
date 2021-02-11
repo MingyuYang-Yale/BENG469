@@ -289,7 +289,7 @@ module avail Python
 |module purge|unload all modules|
 
 ## Graphical Environments for Clusters
-To use a graphical interface on the clusters, your connection needs to be set up for X11 forwarding, which will transmit the graphical window from the cluster back to your local machine. A simple test to see if your setup is working is to run the command xclock . You should see a simple analog clock window pop up.
+To use a graphical interface on the clusters, your connection needs to be set up for X11 forwarding, which will transmit the graphical window from the cluster back to your local machine. .
 
 #### Setup X11 (On macOS)
 * Download and install XQuartz(https://www.xquartz.org)
@@ -312,4 +312,6 @@ ssh -Y beng469_my393@farnam.hpc.yale.edu
 ```
 srun --pty --x11 -p interactive --mem=20g bash
 ```
-
+#### Setup X11 (On Ubuntu)
+http://laptops.eng.uci.edu/software-installation/using-linux/configure-ubuntu-for-x11-forwarding
+(???)
