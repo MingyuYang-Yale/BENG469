@@ -94,7 +94,7 @@ tail cancer-gene.txt
 ### ```less```
 * Use ```space bar``` to go to the next page, ```b``` move up one page.
 * Use ```arrow key```:arrow_down: :arrow_up: to go down or go up just one line at a time. 
-* Use ```q``` key to quit out ```less```.
+* Use ```q``` key to quit out less.
 ```
 less cancer-gene.txt
 ```
