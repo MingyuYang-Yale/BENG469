@@ -184,10 +184,11 @@ the source or the destination can be remote or local
 
 open a new terminal window on your local computer: (command + T)
 
+* If you have some data that on the cluster, and want to download it to your own computer
 ```
 scp beng469_my393@farnam.hpc.yale.edu:/home/beng469_my393/project/testdata/student-list.txt ./
 ```
-Now if you want to upload a file from your own compter to the cluster. 
+* If you want to upload a file from your own compter to cluster. 
 ```
 scp ./student-list-v2.txt beng469_my393@farnam.hpc.yale.edu:/home/beng469_my393/project/testdata
 ```
