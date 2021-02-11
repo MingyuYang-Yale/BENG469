@@ -80,6 +80,12 @@ Copy a cancer gene list file to your own directory:
 ```
 cp /gpfs/ysm/project/beng469/beng469_my393/00.database/cancer-gene.txt ./
 ```
+```
+head cancer-gene.txt
+```
+```
+tail cancer-gene.txt
+```
 
 less: to view a text file one page at a time, press ```space bar``` to go to the next page, ```b``` move up one page
 
