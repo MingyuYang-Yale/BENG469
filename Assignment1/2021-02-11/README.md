@@ -209,10 +209,59 @@ mv testdata testdata-v2
 ```
 scp -r testdata-v2 beng469_my393@farnam.hpc.yale.edu:/home/beng469_my393/project/
 ```
+---
+## Slurm Overview
+Slurm manages all the details of compute node usage:
+* Prioritizing and scheduling jobs
+* Listing running and pending jobs
+* Canceling jobs
+* Checking job resource usage
 
+### General workflow for jobs
+* You request an allocation
+* Slurm finds then grants you compute resources
+* You run commands or execute a script on those resources
+* You or your script exits and system automatically releases resources
+
+### Partitions
+#### General Purpose: 
+* interactive for interactive jobs (srun)
+* general default on Farnam/Ruddle
+ 
+#### Special Use Cases:
+* gpu nodes with gpus
+* bigmem nodes with large RAM (for jobs requiring >= 100G)
+* pi_name reserved for specific groups
+
+#### Scavenge: (very useful for short or well-checkpointed jobs)
+* scavenge uses idle nodes from other partitions (can be preempted)
+
+
+### Interactive vs. Batch
+
+#### Interactive jobs:
+* For development, debugging, or interactive environments like R and Matlab
+* One or a few jobs at a time
+#### Batch jobs:
+* Non-interactive
+* Can run many jobs simultaneously
+* Usually your best choice for production computing
+
+### Interactive Allocation
 ```
-rsync -av ~/sourcedir netid@farnam.hpc.yale.edu:destdir
+srun --pty -p interactive --mem=8g bash
 ```
+```
+squeue
+```
+```
+squeue -u beng469_my393
+```
+Use Exit to close the interactive node.
+```
+exit
+```
+
 Cluster Software
 
 scp 
