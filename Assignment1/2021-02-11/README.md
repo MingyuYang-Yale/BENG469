@@ -174,8 +174,18 @@ getquota
 * If you hit your limit, jobs fail
 * Home quota is per user, small
 * Project, scratch60 has a group quota shared with your group, large
-
 ---
+
+## Transfer Data
+
+command + source+ destination
+
+```
+scp -r netid@transfer-farnam.hpc.yale.edu:sourcedir ~/destdir
+```
+```
+rsync -av ~/sourcedir netid@transfer-grace.hpc.yale.edu:destdir
+```
 Cluster Software
 
 scp 
