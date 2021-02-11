@@ -45,8 +45,8 @@ student-G    svp26
 student-K    wt263
 student-L    jy568
 ```
-* Step 4: hit ```Esc``` key (From insert mode to command mode type)
-* Step 5: type ```:wq``` (write file and exit vim)
+* hit ```Esc``` key (From insert mode to command mode type)
+* type ```:wq``` (write file and exit vim)
 
 ### Look inside files: (cat, head, tail, less)
 
