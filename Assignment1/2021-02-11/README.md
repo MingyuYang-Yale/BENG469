@@ -143,6 +143,10 @@ or
 chmod a+x student-list.txt
 ```
 
+```
+chmod -R u=wrx,g=rx,o=r testdata
+```
+
 <p><img width="750" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/permissions-3.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 #### .bashrc
