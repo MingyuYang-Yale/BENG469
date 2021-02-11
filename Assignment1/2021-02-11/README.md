@@ -151,11 +151,12 @@ Setting the permission this way called alpha-beta notation. We can also change p
 
 <p><img width="750" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/permissions-3.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-#### .bashrc
+```
+chmod 754 student-list.txt
+```
+---
 
-history
-
-Storage Types
+## Storage Types
 |Name|Location|Good for|Quota|
 |------|-------|------|-------|
 |Home|~/|Scripts|125GiB/Person|
@@ -208,3 +209,8 @@ ls
 ```
 rm -r -i testdata 
 ```
+
+
+#### .bashrc
+
+history
