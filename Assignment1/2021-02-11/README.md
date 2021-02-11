@@ -24,7 +24,7 @@ cd testdata
 
 ### Create/Edit Text
 
-Let’s run a text editor called Vim to create a file called draft.txt.
+Let’s run Vim to create a file called draft.txt.
 
 Opening a New File:
 
