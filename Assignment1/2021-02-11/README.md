@@ -24,13 +24,13 @@ cd testdata
 
 ### Create/Edit Text
 
-Let’s run Vim to create a file called draft.txt.
+Let’s run Vim to create a file called student-list.txt.
 
 Opening a New File:
 
-* type ```vim slist.txt``` (create a file named slist.txt)
+* type ```vim student-list.txt``` (create a file named slist.txt)
 * type ```i``` ( From command mode to insert mode type)
-* copy and paste the follwing texts to slist.txt:  
+* copy and paste the follwing texts to student-list.txt:  
 ```
 student-A    sb2723
 student-B    mb2823
