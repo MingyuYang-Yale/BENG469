@@ -90,7 +90,8 @@ head cancer-gene.txt
 ```
 tail cancer-gene.txt
 ```
-
+---
+### ```less```
 less: to view a text file one page at a time, press ```space bar``` to go to the next page, ```b``` move up one page
 
 ```
