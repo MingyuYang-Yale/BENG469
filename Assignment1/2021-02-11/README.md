@@ -24,7 +24,7 @@ cd testdata
 
 ### Create/Edit Text
 
-Let’s run Vim to create a file called student-list.txt.
+Run Vim to create a file called student-list.txt.
 
 Opening a New File:
 
