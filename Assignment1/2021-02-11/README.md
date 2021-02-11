@@ -295,7 +295,7 @@ To use a graphical interface on the clusters, your connection needs to be set up
 
 #### Setup X11 (On macOS)
 * Download and install XQuartz(https://www.xquartz.org)
-
+* open a termianl window, and run:
 ```
 launchctl load -w /Library/LaunchAgents/org.macosforge.xquartz.startx.plist
 ```
