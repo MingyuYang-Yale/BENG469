@@ -50,7 +50,7 @@ student-L    jy568
 
 ### Look inside files: 
 
-#### cat
+### ```cat```
 
 cat has nothing to do with cats. 
 <p><img width="300" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/real-cat.png" alt="foo bar" title="train &amp; tracks" /></p>
