@@ -53,22 +53,35 @@ student-L    jy568
 cat has nothing to do with cats. 
 <p><img width="300" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/real-cat.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-In linux, cat is short for concatenate,and concatenate means join together, so we can cat or join multiple files together and print out the contents.
+The cat (short for “concatenate“) command is one of the most frequently used command in Linux. cat command allows us view contain of file, concatenate files and redirect output in terminal or files.
 
-cat: print on the standard output.  
+you can use ```cat``` to display contents of student-list.txt :  
 ```
-cat slist.txt
+cat student-list.txt
 ```
 
 Sometimes you just want a quick look at the beginning or end of a file. This is useful for getting a sense of the contents of very large files.
 
-head: output the first n lines of files. 
+head: output the first n lines of a file. 
+
 ```
-head -5 test.txt 
+head -5 student-list.txt 
 ```
-tail: output the last n lines of files. 
+tail: output the last n lines of a file. 
 ```
-tail -3 test.txt  
+tail -3 student-list.txt  
+```
+
+Copy a cancer gene list file to your own directory:
+
+```
+cp /gpfs/ysm/project/beng469/beng469_my393/00.database/cancer-gene.txt ./
+```
+
+less: to view a text file one page at a time, press ```space bar``` to go to the next page, ```b``` move up one page
+
+```
+less cancer-gene.txt
 ```
 
 ### Count lines, Words and Characters 
@@ -85,14 +98,6 @@ wc -l slist.txt
 You can also use -w to get only the number of words, or -c to get only the number of characters.
 
 
-```
-cp xxx ./
-```
-less: displays the contents of a file, one page at a time. 
-
-```
-less xxx
-```
 
 ```
 cp test.txt test2.txt
