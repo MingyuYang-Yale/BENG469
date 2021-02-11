@@ -48,25 +48,12 @@ student-L    jy568
 * Step 4: hit ```Esc``` key (From insert mode to command mode type)
 * Step 5: type ```:wq``` (write file and exit vim)
 
-### Count lines, Words and Characters 
-
-Next let's see how many lines/words/characters in **slist.txt**, run the command:
-```
-wc slist.txt 
-```
-wc is the “word count” command, it counts the number of lines, words, and characters in files
-If we run wc -l instead of just wc, the output shows only the number of lines per file:
-```
-wc -l slist.txt
-```
-You can also use -w to get only the number of words, or -c to get only the number of characters.
-
-### Look inside files: cat, head, tail, less
+### Look inside files: (cat, head, tail, less)
 
 cat has nothing to do with cats. 
 <p><img width="300" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment1/real-cat.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-It's short for catenate
+In linux, cat is short for concatenate,and concatenate means join together, so we can cat or join multiple files together and print out the contents.
 
 cat: print on the standard output.  
 ```
@@ -83,6 +70,19 @@ tail: output the last n lines of files.
 ```
 tail -3 test.txt  
 ```
+
+### Count lines, Words and Characters 
+
+Next let's see how many lines/words/characters in **slist.txt**, run the command:
+```
+wc slist.txt 
+```
+wc is the “word count” command, it counts the number of lines, words, and characters in files
+If we run wc -l instead of just wc, the output shows only the number of lines per file:
+```
+wc -l slist.txt
+```
+You can also use -w to get only the number of words, or -c to get only the number of characters.
 
 
 ```
