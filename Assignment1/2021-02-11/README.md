@@ -287,3 +287,5 @@ module avail Python
 |module list|show loaded modules|
 |module unload name|unload a module|
 |module purge|unload all modules|
+
+Beware of omitting module versions. The default versions change over time.
