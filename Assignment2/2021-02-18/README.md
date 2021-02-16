@@ -36,11 +36,6 @@ wget https://raw.githubusercontent.com/circulosmeos/gdown.pl/master/gdown.pl
 ```
 chmod +x gdown.pl
 ```
-
-change the first line to : **#!/usr/bin/perl**
-```
-vi gdown.pl
-```
 ```
 cp /gpfs/ysm/project/beng469/beng469_my393/00.sh/download.sh ./
 ```
