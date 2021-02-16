@@ -90,13 +90,13 @@ BiocManager::install("org.Hs.eg.db")
 ```
 ### Install tapestri R package:
 
-Download the tapestriR package from the **Tapestri Portal**(https://portal.missionbio.com/), and then install it as a local package.
+Download the tapestriR package from the **Tapestri Portal**(https://portal.missionbio.com/)
 
-Download:
+#### Open a new Terminal window
 
 ```
-#Open a new Terminal window
-
+scp /Users/Mingyu/Downloads/tapestri_1.1.0.tar.gz beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/project/beng469/beng469_my393/Assignment2-SNV
+```
 cd /gpfs/ysm/project/beng469/beng469_my393
 
 https://portal.missionbio.com/
