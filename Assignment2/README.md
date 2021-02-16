@@ -1,11 +1,11 @@
 ***
 Nature paper:https://www.nature.com/articles/s41586-020-2864-x
 
-<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Nature-paper.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Nature-paper.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ***
 They used a commercial platform from **Mission Bio** called **Tapestri**. The methodology uses single cell droplet encapsulation and barcoded beads to perform amplicon next generation sequencing. 
-<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Pipeline.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Pipeline.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ***
 ### Login HPC:
@@ -15,10 +15,10 @@ They used a commercial platform from **Mission Bio** called **Tapestri**. The me
 ssh -Y beng469_my393@farnam.hpc.yale.edu
 srun --pty --x11 -p interactive --mem=50g bash
 cd /gpfs/ysm/project/beng469/beng469_my393
-cd Assignment3-SNV
+cd Assignment2-SNV
 ```
 ```
-mkdir Assignment3-SNV && cd Assignment3-SNV
+mkdir Assignment2-SNV && cd Assignment2-SNV
 ```
 
 ***
@@ -38,7 +38,7 @@ change the first line to : **#!/usr/bin/perl**
 vi gdown.pl
 ```
 ```
-cp /gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV/download.sh ./
+cp /gpfs/ysm/project/beng469/beng469_my393/Assignment2-SNV/download.sh ./
 ```
 ```
 sh download.sh
@@ -92,7 +92,7 @@ https://portal.missionbio.com/
 
 (https://support.missionbio.com/hc/en-us/articles/360045899834-Installation-instructions-for-tapestri-R)
 
-#cp /gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV/tapestri_1.1.0.tar.gz ./
+#cp /gpfs/ysm/project/beng469/beng469_my393/Assignment2-SNV/tapestri_1.1.0.tar.gz ./
 ```
 Install (~10mins)
 ```
@@ -104,7 +104,7 @@ devtools::install_local(path = "tapestri_1.1.0.tar.gz", repos='http://cran.us.r-
 ```
 # make a project folder and set the working directory to that folder:
 
-setwd("/gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV")
+setwd("/gpfs/ysm/project/beng469/beng469_my393/Assignment2-SNV")
 options(stringsAsFactors = FALSE)
 ```
 ```
@@ -164,7 +164,7 @@ SNV<-setNames(lapply(names(processed_SNV_files),function(x){
 #focus only on protein encoding SNVs
 
 txdb <- TxDb.Hsapiens.UCSC.hg19.knownGene
-blacklist <-read.csv("/gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV/scDNA_myeloid_data/banned_list.csv")
+blacklist <-read.csv("/gpfs/ysm/project/beng469/beng469_my393/Assignment2-SNV/scDNA_myeloid_data/banned_list.csv")
 
 variants <- lapply(SNV,function(x){
   experimental_variants <- colnames(x)[ !grepl("Cell",colnames(x))& #remove the Cell column
