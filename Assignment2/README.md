@@ -38,7 +38,7 @@ change the first line to : **#!/usr/bin/perl**
 vi gdown.pl
 ```
 ```
-cp /gpfs/ysm/project/beng469/beng469_my393/Assignment2-SNV/download.sh ./
+cp /gpfs/ysm/project/beng469/beng469_my393/00.sh/download.sh ./
 ```
 ```
 sh download.sh
