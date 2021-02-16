@@ -1,4 +1,4 @@
-Today we will see how to perform the analysis and what results and software produce using data from a recent Nature publication “Single-cell mutation analysis of clonal evolution in myeloid malignancies” (Published online: 28 October 2020) (https://www.nature.com/articles/s41586-020-2864-x).
+Today we will see how to perform the analysis using data from a recent Nature publication “Single-cell mutation analysis of clonal evolution in myeloid malignancies” (Published online: 28 October 2020) (https://www.nature.com/articles/s41586-020-2864-x).
 ***
 <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Nature-paper.png" alt="foo bar" title="train &amp; tracks" /></p>
 
