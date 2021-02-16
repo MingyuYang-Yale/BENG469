@@ -54,7 +54,7 @@ mv MSK* data
 
 ### Download tapestri R package:
 
-Download the tapestriR package from the **Tapestri Portal**(https://portal.missionbio.com/)
+**Tapestri Portal**(https://portal.missionbio.com/)
 
 #### Open a new Terminal window
 
