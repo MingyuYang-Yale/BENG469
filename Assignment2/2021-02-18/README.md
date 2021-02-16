@@ -90,6 +90,8 @@ BiocManager::install("org.Hs.eg.db")
 ```
 ### Install tapestri R package:
 
+Download the tapestriR package from the **Tapestri Portal**, and then install it as a local package.
+
 Download:
 
 ```
