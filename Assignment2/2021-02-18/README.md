@@ -79,24 +79,29 @@ R
 ```
 if (!requireNamespace("BiocManager", quietly = TRUE)) 
      install.packages("BiocManager")
+     
 ```
 ```
 BiocManager::install("VariantAnnotation") # will take ~10 minutes
 BiocManager::install("plyranges")
 BiocManager::install("BSgenome.Hsapiens.UCSC.hg19")
 BiocManager::install("TxDb.Hsapiens.UCSC.hg19.knownGene")
+
 ```
 ```
 install.packages(c("devtools", "hdf5r", "digest"))
+
 ```
 ```
 devtools::install_github("mojaveazure/loomR")
 devtools::install_github("jokergoo/ComplexHeatmap")
+
 ```
 ```
 BiocManager::install("karyoploteR")
 BiocManager::install("annotatr")
 BiocManager::install("org.Hs.eg.db")
+
 ```
 ```
 devtools::install_local(path = "tapestri_1.1.0.tar.gz", repos='http://cran.us.r-project.org', upgrade="never")
@@ -121,6 +126,7 @@ library(dplyr)
 library(tidyr)
 library(purrr)
 library(tapestri)
+
 ```
 ```
 #extract_genotypes
