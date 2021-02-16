@@ -63,7 +63,7 @@ BiocManager::install("ComplexHeatmap")
 ```
 
 ```
-setwd("/gpfs/ysm/project/beng469/beng469_my393/Assignment3-SNV")
+setwd("/gpfs/ysm/project/beng469/beng469_my393/Assignment2-SNV")
 final_sample_summary<-readRDS(file="./data/final_sample_summary.rds")
 final_NGTs<-readRDS(file="./data/final_NGTs.rds")
 pheno<-readRDS(file="./data/pheno.rds")
@@ -179,7 +179,7 @@ oncoPrint(final_mat,
           heatmap_legend_param = heatmap_legend_param)
 dev.off()
 ```
-<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Figure1%262/SFig1a.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Manuscript%20analysis/Figure1%262/SFig1a.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ***
 
@@ -255,7 +255,7 @@ plot_grid(gg_mut_count,gg_mut_patient,
            labels = c('c', 'd','e','f'))
 dev.off()
 ```
-<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Figure1%262/SFig1c-f.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Manuscript%20analysis/Figure1%262/SFig1c-f.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
 ### Figure 1a
@@ -341,7 +341,7 @@ pvalues_Number_of_mutations<-test%>%{melt(pairwise.t.test(.$Number_of_mutations,
                                      filter(!is.na(value))%>%filter(value<0.1)
 pvalues_Number_of_mutations
 ```
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Figure1%262/Fig1a.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Manuscript%20analysis/Figure1%262/Fig1a.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
 ### Figure 1b
@@ -398,7 +398,7 @@ pdf("Fig1b.pdf",width=4,height=3)
 plot_grid(gg_clonal_barplot,gg_heatmap,ncol=1,align="v",axis="lr",rel_heights = c(1,0.75))
 dev.off()
 ```
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Figure1%262/Fig1b.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Manuscript%20analysis/Figure1%262/Fig1b.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ### Figure 1c
 ```
@@ -425,7 +425,7 @@ pvalues_Number_of_clones <- test%>%{melt(pairwise.t.test(.$Number_of_clones,g=.$
 pvalues_Number_of_clones                                     
 
 ```
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Figure1%262/Fig1c.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Manuscript%20analysis/Figure1%262/Fig1c.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ### Figure 1d
 ```
@@ -445,7 +445,7 @@ pvalues_Shannon<-test%>%{melt(pairwise.t.test(.$Shannon,g=.$Final_group,
                                               filter(!is.na(value))%>%filter(value<0.1)
 pvalues_Shannon
 ```
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Figure1%262/Fig1d.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Manuscript%20analysis/Figure1%262/Fig1d.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ### Figure 1e
 ```
@@ -466,7 +466,7 @@ pvalues_Dominant_clone_size<-test%>%{melt(pairwise.t.test(.$Dominant_clone_size,
                                      filter(!is.na(value))%>%filter(value<0.1)
 pvalues_Dominant_clone_size
 ```
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Figure1%262/Fig1e.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Manuscript%20analysis/Figure1%262/Fig1e.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ***
 
@@ -502,7 +502,7 @@ pvalues_Number_of_mutations_in_dominant_clone<-test%>%{melt(pairwise.t.test(
                                               
 pvalues_Number_of_mutations_in_dominant_clone                                             
 ```
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Figure1%262/SFig2b.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Manuscript%20analysis/Figure1%262/SFig2b.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
 ### Extended Figure 2c
@@ -535,7 +535,7 @@ dev.off()
 ##ggsave("clone_size_by_genetic_density.pdf",width=7,height=5)
 
 ```
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Figure1%262/SFig2c.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Manuscript%20analysis/Figure1%262/SFig2c.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
 
@@ -644,7 +644,7 @@ plot_grid(ggB,ggA,align="v",axis="tb",
           nrow=2,rel_heights =c(1,1)) #+ coord_flip()
 dev.off()
 ```
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Figure1%262/Fig2a.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Manuscript%20analysis/Figure1%262/Fig2a.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ### Extended Figure 2d 
 ```
@@ -684,7 +684,7 @@ ggplot(tally(clone_size_by_gene_DTAI%>%
 
 dev.off()
 ```
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Figure1%262/SFig2d.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Manuscript%20analysis/Figure1%262/SFig2d.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ### Extended Figure 2e
 ```
@@ -738,7 +738,7 @@ clonality_VAF_pvalues<-data.frame(data_to_plot)%>%
                                 mutate_if(is.numeric, funs(as.character(signif(., 3))))
 clonality_VAF_pvalues
 ```
-<p><img width="600" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Figure1%262/SFig2e.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="600" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Manuscript%20analysis/Figure1%262/SFig2e.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ### Extended Figure 2f : Mutation Co-occurence
 ```
@@ -791,7 +791,7 @@ ggplot(cooccur_data_mat%>%filter(sp1_name!="BRAF"),aes(x=sp1_name,y=sp2_name))+
 dev.off()                      
 ##ggsave("corrplot.pdf",width=5,height=5)
 ```
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Figure1%262/SFig2f.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Manuscript%20analysis/Figure1%262/SFig2f.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ### Figure 2b 
 
@@ -915,7 +915,7 @@ dev.off()
 
 ## ggsave("Fig2b.pdf",width=6,height=5)
 ```
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Figure1%262/Fig2b.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Manuscript%20analysis/Figure1%262/Fig2b.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ### Extended Figure 3a
 ```
@@ -934,7 +934,7 @@ dev.off()
 
 ##ggsave("SFig3a.pdf",width=6,height=5)
 ```
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Figure1%262/SFig3a.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Manuscript%20analysis/Figure1%262/SFig3a.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ### Figure 2c
 ```
@@ -1047,7 +1047,7 @@ plot.igraph(reordered_graph,
             layout=layout_in_circle)
 dev.off()
 ```
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Figure1%262/Fig2c.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Manuscript%20analysis/Figure1%262/Fig2c.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ### Figure 2d
 
@@ -1137,7 +1137,7 @@ plot.igraph(reordered_graph,
             layout=layout_in_circle)
 dev.off()
 ```
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Figure1%262/Fig2d.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Manuscript%20analysis/Figure1%262/Fig2d.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ### Figure 2e
 
@@ -1200,7 +1200,7 @@ ggplot(final, aes(x=Group,fill=Mutation,y=Count))+
                                   guide = guide_legend(reverse = TRUE))
 dev.off()
 ```
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Figure1%262/Fig2e.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Manuscript%20analysis/Figure1%262/Fig2e.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ### Extended Figure 3b
 ```
@@ -1250,4 +1250,4 @@ dual_mutation_fractions_melted<-dual_mutation_fractions%>%pivot_longer(cols=!Sam
                           values_to = "Fraction")
 t.test(dual_mutation_fractions_melted$Fraction~factor(dual_mutation_fractions_melted$Group))
 ```
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/Manuscript%20analysis/Figure1%262/SFig3b.png" alt="foo bar" title="train &amp; tracks" /></p
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Manuscript%20analysis/Figure1%262/SFig3b.png" alt="foo bar" title="train &amp; tracks" /></p
