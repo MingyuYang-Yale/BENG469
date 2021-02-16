@@ -57,7 +57,7 @@ mkdir data
 mv MSK* data
 ```
 
-### Install tapestri R package:
+### Download tapestri R package:
 
 Download the tapestriR package from the **Tapestri Portal**(https://portal.missionbio.com/)
 
@@ -69,13 +69,6 @@ scp /Users/Mingyu/Downloads/tapestri_1.1.0.tar.gz beng469_my393@farnam.hpc.yale.
 ```
 #cp /gpfs/ysm/project/beng469/beng469_my393/Assignment2-SNV/tapestri_1.1.0.tar.gz ./
 ```
-Install (~10mins)
-```
-devtools::install_local(path = "tapestri_1.1.0.tar.gz", repos='http://cran.us.r-project.org', upgrade="never")
-```
-***
-
-
 
 ***
 open R
@@ -108,6 +101,9 @@ devtools::install_github("jokergoo/ComplexHeatmap")
 BiocManager::install("karyoploteR")
 BiocManager::install("annotatr")
 BiocManager::install("org.Hs.eg.db")
+```
+```
+devtools::install_local(path = "tapestri_1.1.0.tar.gz", repos='http://cran.us.r-project.org', upgrade="never")
 ```
 
 #### Extract SNV data (~10mins)
