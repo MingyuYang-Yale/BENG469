@@ -172,7 +172,7 @@ SNV<-setNames(lapply(names(processed_SNV_files),function(x){
 #focus only on protein encoding SNVs
 
 txdb <- TxDb.Hsapiens.UCSC.hg19.knownGene
-blacklist <-read.csv("/gpfs/ysm/project/beng469/beng469_my393/Assignment2-SNV/scDNA_myeloid_data/banned_list.csv")
+blacklist <-read.csv("/gpfs/ysm/project/beng469/beng469_my393/Assignment2-SNV/banned_list.csv")
 
 variants <- lapply(SNV,function(x){
   experimental_variants <- colnames(x)[ !grepl("Cell",colnames(x))& #remove the Cell column
