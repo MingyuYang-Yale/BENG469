@@ -380,4 +380,5 @@ srun --pty --x11 -p interactive --mem=20g bash
 ```
 xclock
 ```
-
+***
+Rstudio ( https://rstudio.cloud/ )
