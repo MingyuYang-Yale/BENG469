@@ -164,31 +164,6 @@ for(i in names(sample_set)){
 
 ```
 
-```
-**Allele and Genotype**: every human gene inherit two alleles: one from your biological father and one from your biological mother. Together, these alleles are called a genotype.
-
-**Heterozygous**: A diploid organism is heterozygous at a gene locus when its cells contain two different alleles (one wild-type allele and one mutant allele) of a gene
-
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Background/Heterozygous.jpg" alt="foo bar" title="train &amp; tracks" /></p>
-
-
-
-### Classification based on type of alteration:
-
-#### Single nucleotide variant (SNV)
-
-
-If a SNV occurs in a protein coding region, then this could result in either:
-
-- A nucleotide substitution that does not result in a change in amino acid (**synonymous mutation**). This is possible because multiple codons (sets of three nucleotides) code for the same amino acid. 
-
-- A nucleotide substitution leads to an amino acid substitution. This may or may not result in a pathogenic variant depending on the effect of the amino acid substitution on protein function and structure. This is called a **nonsynonymous** change or a **missense mutation**.   
-
-- A nucleotide substitution results in a stop codon and consequently premature truncation of the protein. This protein is generally non-functional. This is known as a **stop gain** change or a **nonsense mutation**. 
-
-**Clones** defined as cells with identical protein-encoding single-nucleotide variants (SNVs), and applied a bootstrapping approach to identify clones that included at least ten cells
-```
-
 #### Post processing
 + Filter variants through a blacklist removing recurrent variants that we think are likely sequencing errors 
 + Annotating SNVS for protein encoding functions, and removing synonymous and splice variants 
