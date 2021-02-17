@@ -348,7 +348,6 @@ saveRDS(final_sample_summary,file="./analysis/final_sample_summary.rds")
 quit()
 ```
 
-***
 ---
 ## Graphical Environments for Clusters
 To use a graphical interface on the clusters, your connection needs to be set up for X11 forwarding, which will transmit the graphical window from the cluster back to your local machine. .
