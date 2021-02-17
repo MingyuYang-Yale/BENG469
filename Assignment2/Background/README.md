@@ -4,7 +4,9 @@ homozygous mutation/heterozygous mutation/allele
 
 **Allele and Genotype**: every human gene inherit two alleles: one from your biological father and one from your biological mother. Together, these alleles are called a genotype.
 
-**Heterozygous**: A diploid organism is heterozygous at a gene locus when its cells contain two different alleles (one wild-type allele and one mutant allele) of a gene
+**Homozygous**: made up of two the same alleles.
+
+**Heterozygous**: made up of two different alleles. A diploid organism is heterozygous at a gene locus when its cells contain two different alleles (one wild-type allele and one mutant allele) of a gene
 
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Background/Heterozygous.jpg" alt="foo bar" title="train &amp; tracks" /></p>
 
