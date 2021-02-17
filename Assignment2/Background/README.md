@@ -1,7 +1,3 @@
-Genotype
-synonymos/non-synonymos /splice site/ somatic/germline mutation
-homozygous mutation/heterozygous mutation/allele
-
 **Allele and Genotype**: every human gene inherit two alleles: one from your biological father and one from your biological mother. Together, these alleles are called a genotype.
 
 **Homozygous**: made up of two the same alleles.
