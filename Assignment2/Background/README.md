@@ -13,26 +13,11 @@
 
 If a SNV occurs in a protein coding region, then this could result in either:
 
-- A nucleotide substitution that does not result in a change in amino acid (**synonymous change**). This is possible because multiple codons (sets of three nucleotides) code for the same amino acid. 
+- A nucleotide substitution that does not result in a change in amino acid (**synonymous mutation**). This is possible because multiple codons (sets of three nucleotides) code for the same amino acid. 
 
 - A nucleotide substitution leads to an amino acid substitution. This may or may not result in a pathogenic variant depending on the effect of the amino acid substitution on protein function and structure. This is called a **nonsynonymous** change or a **missense mutation**.   
 
 - A nucleotide substitution results in a stop codon and consequently premature truncation of the protein. This protein is generally non-functional. This is known as a **stop gain** change or a **nonsense mutation**. 
-
----
-#### 31 genes: 
-***MPL, NRAS, DNMT3A, SF3B1, IDH1, GATA2, KIT, TET2, NPM1, BRAF, EZH2, RAD21, JAK2, WT1, ATM, CBL, KRAS, PTPN11, FLT3, IDH2, TP53, PPM1D, SRSF2, SETBP1, CALR, ASXL1, RUNX1, U2AF1, CHEK2, STAG2, PHF6***
-
-Subdividing AML into samples with:
-
-**1. DTAI mutations**：epigenetic mutations (DNMT3A, TET2, ASXL1 and/or IDH1/2）
-
-**2. Signalling mutation**s (JAK2, RAS family of genes, FLT3) without DTAI mutations. 
- ( RAS family of genes: NRAS, BRAF, KRAS )
-
-**3. DTAI and co-mutated signalling effectors**. 
-
-
 
 -----------
 
@@ -52,6 +37,18 @@ Subdividing AML into samples with:
 
 ---------------
 
+---
+#### 31 genes: 
+***MPL, NRAS, DNMT3A, SF3B1, IDH1, GATA2, KIT, TET2, NPM1, BRAF, EZH2, RAD21, JAK2, WT1, ATM, CBL, KRAS, PTPN11, FLT3, IDH2, TP53, PPM1D, SRSF2, SETBP1, CALR, ASXL1, RUNX1, U2AF1, CHEK2, STAG2, PHF6***
+
+Subdividing AML into samples with:
+
+**1. DTAI mutations**：epigenetic mutations (DNMT3A, TET2, ASXL1 and/or IDH1/2）
+
+**2. Signalling mutation**s (JAK2, RAS family of genes, FLT3) without DTAI mutations. 
+ ( RAS family of genes: NRAS, BRAF, KRAS )
+
+**3. DTAI and co-mutated signalling effectors**. 
 
 ### MPL （http://gepia.cancer-pku.cn/detail.php?gene=MPL### ）
 
