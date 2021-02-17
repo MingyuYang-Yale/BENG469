@@ -1,14 +1,14 @@
-# Type of mutations.
+## Type of mutations.
 
-## Classfication based on cell type.
+### Classfication based on cell type.
 
 **Somatic mutation**: are present only in specific cells and are generally not hereditary. Somatic variants are acquired at some point during a person’s lifetime, often due to environmental factors or errors in cell division. Some somatic variants will lead to the development of diseases such as cancer. 
 
 **Germline mutation**: are mutations in egg or sperm cells, and are able to be passed from parent to offspring.
 
-## Classification based on type of alteration:
+### Classification based on type of alteration:
 
-### Single nucleotide variant (SNV)
+#### Single nucleotide variant (SNV)
 
 
 If a SNV occurs in a protein coding region, then this could result in either:
@@ -19,7 +19,7 @@ If a SNV occurs in a protein coding region, then this could result in either:
 
 - A nucleotide substitution results in a stop codon and consequently premature truncation of the protein. This protein is generally non-functional. This is known as a **stop gain** change or a **nonsense mutation**. 
 
-
+---
 #### 31 genes: 
 ***MPL, NRAS, DNMT3A, SF3B1, IDH1, GATA2, KIT, TET2, NPM1, BRAF, EZH2, RAD21, JAK2, WT1, ATM, CBL, KRAS, PTPN11, FLT3, IDH2, TP53, PPM1D, SRSF2, SETBP1, CALR, ASXL1, RUNX1, U2AF1, CHEK2, STAG2, PHF6***
 
