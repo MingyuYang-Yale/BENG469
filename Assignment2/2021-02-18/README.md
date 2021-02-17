@@ -169,13 +169,7 @@ for(i in names(sample_set)){
 
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Background/Heterozygous.jpg" alt="foo bar" title="train &amp; tracks" /></p>
 
-## Type of mutations.
 
-### Classfication based on cell type.
-
-**Somatic mutation**: are present only in specific cells and are generally not hereditary. Somatic variants are acquired at some point during a person’s lifetime, often due to environmental factors or errors in cell division. Some somatic variants will lead to the development of diseases such as cancer. 
-
-**Germline mutation**: are mutations in egg or sperm cells, and are able to be passed from parent to offspring.
 
 ### Classification based on type of alteration:
 
@@ -191,7 +185,6 @@ If a SNV occurs in a protein coding region, then this could result in either:
 - A nucleotide substitution results in a stop codon and consequently premature truncation of the protein. This protein is generally non-functional. This is known as a **stop gain** change or a **nonsense mutation**. 
 
 **Clones** defined as cells with identical protein-encoding single-nucleotide variants (SNVs), and applied a bootstrapping approach to identify clones that included at least ten cells
-
 ```
 
 
