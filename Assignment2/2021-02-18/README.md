@@ -40,7 +40,7 @@ cp /gpfs/ysm/project/beng469/beng469_my393/00.sh/download.sh ./
 sh download.sh
 ```
 
-*.loom file which contained a useful formating of the multi sample VCF file produced by GATK.
+*.loom file which contained a useful formating VCF file produced by GATK.
 
 ```
 for i in MSK15 MSK18 MSK71 MSK91 MSK103 MSK130;do mkdir $i; mv $i* $i;done
