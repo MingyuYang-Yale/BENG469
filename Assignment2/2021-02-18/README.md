@@ -107,15 +107,14 @@ devtools::install_local(path = "tapestri_1.1.0.tar.gz", repos='http://cran.us.r-
 ***
 
 #### Extract SNV data (~10mins)
-```
-# make a project folder and set the working directory to that folder:
 
+make a project folder and set the working directory to that folder:
+```
 setwd("/gpfs/ysm/project/beng469/beng469_my393/Assignment2-SNV")
 options(stringsAsFactors = FALSE)
 ```
+Load in the relevant packages we will use later.
 ```
-# Load in the relevant packages we will use later.
-
 library(plyranges)
 library(VariantAnnotation)
 library(BSgenome.Hsapiens.UCSC.hg19)
@@ -126,16 +125,15 @@ library(purrr)
 library(tapestri)
 
 ```
-```
 #extract_genotypes
 
-# gt.gqc: Cell-specific genotype quality
-# gt.dpc: Cell-specific read depth
-# gt.afc: Cell-specific alternate allele frequency
-# gt.mv: Variants genotyped in < X percent of cells
-# gt.mc: Cells with genotypes in < X percent of variants
-# gt.mm: Variants mutated in < X percent of cells
-
+#gt.gqc: Cell-specific genotype quality
+#gt.dpc: Cell-specific read depth
+#gt.afc: Cell-specific alternate allele frequency
+#gt.mv: Variants genotyped in < X percent of cells
+#gt.mc: Cells with genotypes in < X percent of variants
+#gt.mm: Variants mutated in < X percent of cells
+```
 sample_set <- list.files("./data/",full.names = TRUE)
 names(sample_set) <-list.files("./data/")
 system("mkdir ./analysis")
