@@ -83,7 +83,7 @@ R
 ```
 
 ### Install related R packages:
-```
+```{r}
 if (!requireNamespace("BiocManager", quietly = TRUE)) 
      install.packages("BiocManager")    
 ```
