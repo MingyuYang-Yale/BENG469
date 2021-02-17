@@ -163,6 +163,8 @@ for(i in names(sample_set)){
 }
 
 ```
+
+```
 **Allele and Genotype**: every human gene inherit two alleles: one from your biological father and one from your biological mother. Together, these alleles are called a genotype.
 
 **Heterozygous**: A diploid organism is heterozygous at a gene locus when its cells contain two different alleles (one wild-type allele and one mutant allele) of a gene
@@ -185,7 +187,6 @@ If a SNV occurs in a protein coding region, then this could result in either:
 - A nucleotide substitution results in a stop codon and consequently premature truncation of the protein. This protein is generally non-functional. This is known as a **stop gain** change or a **nonsense mutation**. 
 
 **Clones** defined as cells with identical protein-encoding single-nucleotide variants (SNVs), and applied a bootstrapping approach to identify clones that included at least ten cells
-
 ```
 
 #### Post processing
