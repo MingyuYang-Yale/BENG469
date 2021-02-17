@@ -64,8 +64,9 @@ mv MSK* data
 ```
 scp ~/Downloads/tapestri_1.1.0.tar.gz beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/project/beng469/beng469_my393/Assignment2-SNV
 ```
+### or 
 ```
-#cp /gpfs/ysm/project/beng469/beng469_my393/Assignment2-SNV/tapestri_1.1.0.tar.gz ./
+cp /gpfs/ysm/project/beng469/beng469_my393/00.software/tapestri_1.1.0.tar.gz ./
 ```
 
 ***
