@@ -87,7 +87,7 @@ R
 if (!requireNamespace("BiocManager", quietly = TRUE)) 
      install.packages("BiocManager")    
 ```
-```
+```r
 BiocManager::install("VariantAnnotation")
 BiocManager::install("plyranges")
 BiocManager::install("BSgenome.Hsapiens.UCSC.hg19")
@@ -97,7 +97,7 @@ install.packages(c("devtools", "hdf5r", "digest"))
 devtools::install_github("mojaveazure/loomR")
 devtools::install_github("jokergoo/ComplexHeatmap")
 ```
-```
+```r
 BiocManager::install("karyoploteR")
 BiocManager::install("annotatr")
 BiocManager::install("org.Hs.eg.db")
@@ -109,14 +109,14 @@ devtools::install_local(path = "tapestri_1.1.0.tar.gz", repos='http://cran.us.r-
 #### Extract SNV data (~10mins)
 
 
-```
+```r
 # make a project folder and set the working directory to that folder:
 
 setwd("/gpfs/ysm/project/beng469/beng469_my393/Assignment2-SNV")
 options(stringsAsFactors = FALSE)
 ```
 
-```
+```r
 # Load in the relevant packages we will use later.
 
 library(plyranges)
@@ -129,7 +129,7 @@ library(purrr)
 library(tapestri)
 
 ```
-```
+```r
 # extract_genotypes
 
 # gt.gqc: Cell-specific genotype quality
@@ -168,7 +168,7 @@ for(i in names(sample_set)){
 + Remove variants that are mutated in <2 cells 
 + Remove remaining cells with any unknown genotypes 
 
-```
+```r
 processed_SNV_files <-grep("MSK",list.files("./analysis/",full.names = TRUE),value=TRUE)
 names(processed_SNV_files)<-do.call(rbind,strsplit(grep("MSK",list.files("./analysis/"),value=TRUE),split="\\."))[,1]
 
@@ -178,7 +178,7 @@ SNV<-setNames(lapply(names(processed_SNV_files),function(x){
              y$data) # extracts the genotype matrix from the analyte object
 }), names(processed_SNV_files))
 ```
-```
+```r
 #focus only on protein encoding SNVs
 
 txdb <- TxDb.Hsapiens.UCSC.hg19.knownGene
@@ -229,7 +229,7 @@ final_NGTs<-setNames(lapply(names(filtered_NGT),function(x){
 }),names(filtered_NGT))
 ```
 ### Assessing clonal abundance
-```
+```r
 # Select samples with at least 2 mutations 
 clonal_sample_set <- names(final_NGTs)[do.call(rbind,lapply(final_NGTs,dim))[,2]>2]
 
@@ -276,7 +276,7 @@ clonal_abundance_boot_CI <- lapply(names(NGT_to_clone),function(sample_to_test){
 })
 names(clonal_abundance_boot_CI) <-names(clonal_abundance)
 ```
-```
+```r
 #Now that we have a set of clones that we believe reproducibily have at least 10 cells
 #we remove cells and variants that are no longer represented at sufficient coverage.
 
@@ -320,7 +320,7 @@ clone_filtered_NGTs <- setNames(lapply(names(clonal_abundance_boot_CI),function(
     }
 }),names(clonal_abundance_boot_CI))
 ```
-```
+```r
 #explicitly state the genotype of each mutation in each clone
 
 clonal_architecture <- setNames(lapply(names(clonal_abundance_boot_CI),function(test_sample){
@@ -336,7 +336,7 @@ clonal_architecture <- setNames(lapply(names(clonal_abundance_boot_CI),function(
                                                               ifelse(Genotype==1,"Heterozygous",                                                                          ifelse(Genotype==2,"Homozygous",NA)))))
 }), names(clonal_abundance_boot_CI))
 ```
-```
+```r
 #package everything together into a list format for easy access later
 
 final_sample_summary<-setNames(lapply(names(clonal_architecture),function(sample){
@@ -347,7 +347,7 @@ final_sample_summary<-setNames(lapply(names(clonal_architecture),function(sample
 
 saveRDS(final_sample_summary,file="./analysis/final_sample_summary.rds")
 ```
-```
+```r
 quit()
 ```
 
