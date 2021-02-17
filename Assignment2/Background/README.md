@@ -1,7 +1,12 @@
-**Somatic mutation**: An alteration in DNA that occurs after conception. Somatic mutations can occur in any of the cells of the body except the germ cells (sperm and egg) and therefore are not passed on to children. These alterations can (but do not always) cause cancer or other diseases.
+# Type of mutations.
 
-**Germline mutation**: A gene change in a body's reproductive cell (egg or sperm) that becomes incorporated into the DNA of every cell in the body of the offspring. Germline mutations are passed on from parents to offspring. Also called germline variant.
+## Classfication based on cell type.
 
+**Somatic mutation**: are present only in specific cells and are generally not hereditary. Somatic variants are acquired at some point during a person’s lifetime, often due to environmental factors or errors in cell division. Some somatic variants will lead to the development of diseases such as cancer. 
+
+**Germline mutation**: are mutations in egg or sperm cells, and are able to be passed from parent to offspring.
+
+## Classification based on type of alteration:
 -----------
 **Missense mutation**: This type of mutation is a change in one DNA base pair that results in the substitution of one amino acid for another in the protein made by a gene.
 
