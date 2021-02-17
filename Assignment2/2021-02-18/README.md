@@ -163,7 +163,7 @@ for(i in names(sample_set)){
 
 ```
 #### Post processing
-+ Filter variants through a ??? blacklist removing recurrent variants that we think are likely sequencing errors 
++ Filter variants through a blacklist removing recurrent variants that we think are likely sequencing errors 
 + Annotating SNVS for protein encoding functions, and removing synonymous and splice variants 
 + Remove variants that are mutated in <2 cells 
 + Remove remaining cells with any unknown genotypes 
