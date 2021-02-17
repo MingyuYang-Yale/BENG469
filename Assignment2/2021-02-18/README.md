@@ -117,7 +117,7 @@ options(stringsAsFactors = FALSE)
 ```
 
 ```
-Load in the relevant packages we will use later.
+# Load in the relevant packages we will use later.
 
 library(plyranges)
 library(VariantAnnotation)
