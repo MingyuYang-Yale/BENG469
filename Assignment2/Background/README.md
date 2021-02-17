@@ -7,12 +7,18 @@
 **Germline mutation**: are mutations in egg or sperm cells, and are able to be passed from parent to offspring.
 
 ## Classification based on type of alteration:
------------
-**Missense mutation**: This type of mutation is a change in one DNA base pair that results in the substitution of one amino acid for another in the protein made by a gene.
 
-**Nonsense mutation**: A nonsense mutation is also a change in one DNA base pair. Instead of substituting one amino acid for another, however, the altered DNA sequence prematurely signals the cell to stop building a protein. This type of mutation results in a shortened protein that may function improperly or not at all.
+### Single nucleotide variant (SNV)
 
------------
+
+If a SNV occurs in a protein coding region, then this could result in either:
+
+- A nucleotide substitution that does not result in a change in amino acid (**synonymous change**). This is possible because multiple codons (sets of three nucleotides) code for the same amino acid. 
+
+- A nucleotide substitution leads to an amino acid substitution. This may or may not result in a pathogenic variant depending on the effect of the amino acid substitution on protein function and structure. This is called a **nonsynonymous** change or a **missense mutation**.   
+
+- A nucleotide substitution results in a stop codon and consequently premature truncation of the protein. This protein is generally non-functional. This is known as a **stop gain** change or a **nonsense mutation**. 
+
 
 #### 31 genes: 
 ***MPL, NRAS, DNMT3A, SF3B1, IDH1, GATA2, KIT, TET2, NPM1, BRAF, EZH2, RAD21, JAK2, WT1, ATM, CBL, KRAS, PTPN11, FLT3, IDH2, TP53, PPM1D, SRSF2, SETBP1, CALR, ASXL1, RUNX1, U2AF1, CHEK2, STAG2, PHF6***
