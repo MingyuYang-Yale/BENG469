@@ -1,3 +1,9 @@
+**Allele and Genotype**: every human gene inherit two alleles: one from your biological father and one from your biological mother. Together, these alleles are called a genotype.
+
+**Heterozygous**: A diploid organism is heterozygous at a gene locus when its cells contain two different alleles (one wild-type allele and one mutant allele) of a gene
+
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Background/Heterozygous.jpg" alt="foo bar" title="train &amp; tracks" /></p>
+
 ## Type of mutations.
 
 ### Classfication based on cell type.
@@ -19,21 +25,8 @@ If a SNV occurs in a protein coding region, then this could result in either:
 
 - A nucleotide substitution results in a stop codon and consequently premature truncation of the protein. This protein is generally non-functional. This is known as a **stop gain** change or a **nonsense mutation**. 
 
------------
-
-**Oncogene** :A gene involved in normal cell growth. Mutations (changes) in a proto-oncogene may cause it to become an oncogene, which can cause the growth of cancer cells.
-
-**Tumor suppressor gene(TSG)**: A type of gene that makes a protein called a tumor suppressor protein that helps control cell growth. Mutations (changes in DNA) in tumor suppressor genes may lead to cancer.
-
-
 ------------
 **Clones** defined as cells with identical protein-encoding single-nucleotide variants (SNVs), and applied a bootstrapping approach to identify clones that included at least ten cells
-
-**Allele and Genotype**: every human gene inherit two alleles: one from your biological father and one from your biological mother. Together, these alleles are called a genotype.
-
-**Heterozygous**: A diploid organism is heterozygous at a gene locus when its cells contain two different alleles (one wild-type allele and one mutant allele) of a gene
-
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/Background/Heterozygous.jpg" alt="foo bar" title="train &amp; tracks" /></p>
 
 ---------------
 
