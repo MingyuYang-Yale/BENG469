@@ -129,6 +129,13 @@ library(tapestri)
 ```
 #extract_genotypes
 
+# gt.gqc: Cell-specific genotype quality
+# gt.dpc: Cell-specific read depth
+# gt.afc: Cell-specific alternate allele frequency
+# gt.mv: Variants genotyped in < X percent of cells
+# gt.mc: Cells with genotypes in < X percent of variants
+# gt.mm: Variants mutated in < X percent of cells
+
 sample_set <- list.files("./data/",full.names = TRUE)
 names(sample_set) <-list.files("./data/")
 system("mkdir ./analysis")
