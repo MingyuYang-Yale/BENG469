@@ -89,7 +89,7 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
      
 ```
 ```
-BiocManager::install("VariantAnnotation") # will take ~10 minutes
+BiocManager::install("VariantAnnotation")
 BiocManager::install("plyranges")
 BiocManager::install("BSgenome.Hsapiens.UCSC.hg19")
 BiocManager::install("TxDb.Hsapiens.UCSC.hg19.knownGene")
