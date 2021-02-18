@@ -131,12 +131,6 @@ devtools::install_local(path = "tapestri_1.1.0.tar.gz", repos='http://cran.us.r-
 ### Extract SNV data (~10mins)
 
 ```r
-# make a project folder and set the working directory to that folder:
-
-setwd("/gpfs/ysm/project/beng469/beng469_my393/Assignment2-SNV")
-```
-
-```r
 # Load in the relevant packages will use later.
 
 options(stringsAsFactors = FALSE)
