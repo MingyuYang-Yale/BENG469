@@ -44,7 +44,7 @@ sh download.sh
 *.loom file which contained a useful formating VCF file produced by GATK.
 
 ```
-for i in MSK15 MSK18 MSK71 MSK91 MSK103 MSK130;do mkdir $i; mv $i* $i;done
+for i in MSK15 MSK18 MSK71 MSK91 MSK103 MSK130;do mkdir $i; mv $i\_* $i;done
 ```
 ```
 mkdir data
