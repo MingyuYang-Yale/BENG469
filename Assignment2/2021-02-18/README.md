@@ -259,9 +259,11 @@ final_NGTs<-setNames(lapply(names(filtered_NGT),function(x){
 ### Assessing clonal abundance
 ```r
 # Select samples with at least 2 mutations 
+
 clonal_sample_set <- names(final_NGTs)[do.call(rbind,lapply(final_NGTs,dim))[,2]>2]
 
 # Order columns based on computed_VAF, and assign a clone to each cell
+
 NGT_to_clone<-lapply(final_NGTs[clonal_sample_set],function(y){
   bulk_VAF_order <-names(sort(colSums(y[,-1]),decreasing=TRUE))
   y[,c("Cell",bulk_VAF_order)] %>%unite("Clone",all_of(`bulk_VAF_order`),sep="_", remove = FALSE)
@@ -304,6 +306,7 @@ clonal_abundance_boot_CI <- lapply(names(NGT_to_clone),function(sample_to_test){
 })
 names(clonal_abundance_boot_CI) <-names(clonal_abundance)
 ```
+
 ```r
 #Now that we have a set of clones that we believe reproducibily have at least 10 cells
 #we remove cells and variants that are no longer represented at sufficient coverage.
@@ -348,6 +351,7 @@ clone_filtered_NGTs <- setNames(lapply(names(clonal_abundance_boot_CI),function(
     }
 }),names(clonal_abundance_boot_CI))
 ```
+
 ```r
 #explicitly state the genotype of each mutation in each clone
 
@@ -364,6 +368,7 @@ clonal_architecture <- setNames(lapply(names(clonal_abundance_boot_CI),function(
                                                               ifelse(Genotype==1,"Heterozygous",                                                                          ifelse(Genotype==2,"Homozygous",NA)))))
 }), names(clonal_abundance_boot_CI))
 ```
+
 ```r
 #package everything together into a list format for easy access later
 
