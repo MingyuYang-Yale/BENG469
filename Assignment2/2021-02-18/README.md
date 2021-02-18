@@ -83,38 +83,48 @@ module load R/3.6.1-foss-2018b
 R
 ```
 
+
 ### Install related R packages（～20mins）
+
+Install each package independently because the install script may prompt you to update previously downloaded packages.
+
 ```r
 if (!requireNamespace("BiocManager", quietly = TRUE)) 
      install.packages("BiocManager")    
 ```
 ```r
 BiocManager::install("VariantAnnotation")
+```
+```r
 BiocManager::install("plyranges")
+```
+```r
 BiocManager::install("BSgenome.Hsapiens.UCSC.hg19")
+```
+```r
 BiocManager::install("TxDb.Hsapiens.UCSC.hg19.knownGene")
-
+```
+```r
 install.packages(c("devtools", "hdf5r", "digest"))
-
-
 ```
 
-```
+```r
 devtools::install_github("mojaveazure/loomR")
 ```
-```
+```r
 devtools::install_github("jokergoo/ComplexHeatmap")
 ```
 ```r
 BiocManager::install("karyoploteR")
+```
+```r
 BiocManager::install("annotatr")
+```
+```r
 BiocManager::install("org.Hs.eg.db")
-
-
 ```
-```
+```r
 devtools::install_local(path = "tapestri_1.1.0.tar.gz", repos='http://cran.us.r-project.org', upgrade="never")
-
 ```
 ***
 
