@@ -120,6 +120,8 @@ devtools::install_local(path = "tapestri_1.1.0.tar.gz", repos='http://cran.us.r-
 # make a project folder and set the working directory to that folder:
 
 setwd("/gpfs/ysm/project/beng469/beng469_my393/Assignment2-SNV")
+```
+```
 options(stringsAsFactors = FALSE)
 ```
 
