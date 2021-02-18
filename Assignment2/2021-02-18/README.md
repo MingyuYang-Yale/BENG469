@@ -263,7 +263,9 @@ NGT_to_clone<-lapply(final_NGTs[clonal_sample_set],function(y){
 clonal_abundance<- lapply(NGT_to_clone,function(x){
   x%>%count(Clone,name="Count")%>%arrange(Count)
  })
+```
 
+```r
 # Setup a resampling function to generate multiple clonal abundance tallies
 resample_fun<-function(data){
   x <- data[sample(x=1:nrow(data),replace=TRUE),]
