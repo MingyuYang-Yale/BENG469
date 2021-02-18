@@ -182,7 +182,7 @@ for(i in names(sample_set)){
 
 
 ```r
-#Read the files back in and put them into a list.
+# Read the files back in and put them into a list.
 
 
 processed_SNV_files <-grep("MSK",list.files("./analysis/",full.names = TRUE),value=TRUE)
@@ -300,8 +300,8 @@ names(clonal_abundance_boot_CI) <-names(clonal_abundance)
 ```
 
 ```r
-#Now that we have a set of clones that we believe reproducibily have at least 10 cells
-#we remove cells and variants that are no longer represented at sufficient coverage.
+# Now that we have a set of clones that we believe reproducibily have at least 10 cells
+# we remove cells and variants that are no longer represented at sufficient coverage.
 
 clone_filtered_NGTs <- setNames(lapply(names(clonal_abundance_boot_CI),function(sample_to_test){
 
@@ -345,7 +345,7 @@ clone_filtered_NGTs <- setNames(lapply(names(clonal_abundance_boot_CI),function(
 ```
 
 ```r
-#explicitly state the genotype of each mutation in each clone
+# explicitly state the genotype of each mutation in each clone
 
 clonal_architecture <- setNames(lapply(names(clonal_abundance_boot_CI),function(test_sample){
 
