@@ -396,4 +396,4 @@ Have both normal account (lab account) and class account on the cluster
 Only one is allowed for OOD
 Normal account is preferred
 
-<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/ood.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/ood.png" alt="foo bar" title="train &amp; tracks" /></p>
