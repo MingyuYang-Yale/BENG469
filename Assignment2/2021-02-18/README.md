@@ -381,6 +381,19 @@ saveRDS(final_sample_summary,file="./analysis/final_sample_summary.rds")
 quit()
 ```
 
+
+***
+Rstudio ( https://rstudio.cloud/ )
+
+***
+#### Open OnDemand and Command-line
+
+Have both normal account (lab account) and class account on the cluster
+Only one is allowed for OOD
+Normal account is preferred
+
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/ood.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 ---
 ## Graphical Environments for Clusters
 To use a graphical interface on the clusters, your connection needs to be set up for X11 forwarding, which will transmit the graphical window from the cluster back to your local machine. .
@@ -409,14 +422,3 @@ srun --pty --x11 -p interactive --mem=20g bash
 ```
 xclock
 ```
-***
-Rstudio ( https://rstudio.cloud/ )
-
-***
-#### Open OnDemand and Command-line
-
-Have both normal account (lab account) and class account on the cluster
-Only one is allowed for OOD
-Normal account is preferred
-
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/ood.png" alt="foo bar" title="train &amp; tracks" /></p>
