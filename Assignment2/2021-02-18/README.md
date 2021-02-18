@@ -388,6 +388,8 @@ Normal account is preferred
 
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/ood.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment2/rstudio.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 ---
 ## Graphical Environments for Clusters
 To use a graphical interface on the clusters, your connection needs to be set up for X11 forwarding, which will transmit the graphical window from the cluster back to your local machine. .
