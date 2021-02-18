@@ -83,7 +83,7 @@ module load R/3.6.1-foss-2018b
 R
 ```
 
-### Install related R packages（～20mins）
+### Install related R packages（20～25mins）
 ```r
 if (!requireNamespace("BiocManager", quietly = TRUE)) 
      install.packages("BiocManager")    
