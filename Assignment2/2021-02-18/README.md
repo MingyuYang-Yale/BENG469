@@ -388,3 +388,11 @@ xclock
 ```
 ***
 Rstudio ( https://rstudio.cloud/ )
+
+***
+#### Open Ondemand and Command-line
+
+Have both normal account (lab account) and class account on the cluster
+Only one is allowed for OOD
+Normal account is preferred
+
