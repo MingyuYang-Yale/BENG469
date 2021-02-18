@@ -372,6 +372,7 @@ final_sample_summary<-setNames(lapply(names(clonal_architecture),function(sample
 }),names(clonal_abundance_boot_CI))
 
 saveRDS(final_sample_summary,file="./analysis/final_sample_summary.rds")
+#final_sample_summary<-readRDS(file="final_sample_summary.rds")
 ```
 ```r
 quit()
