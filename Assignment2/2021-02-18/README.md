@@ -95,7 +95,11 @@ BiocManager::install("BSgenome.Hsapiens.UCSC.hg19")
 BiocManager::install("TxDb.Hsapiens.UCSC.hg19.knownGene")
 
 install.packages(c("devtools", "hdf5r", "digest"))
+```
+```
 devtools::install_github("mojaveazure/loomR")
+```
+```
 devtools::install_github("jokergoo/ComplexHeatmap")
 ```
 ```r
