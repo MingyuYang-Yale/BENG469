@@ -65,7 +65,7 @@ mv MSK* data
 ```
 scp ~/Downloads/tapestri_1.1.0.tar.gz beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/project/beng469/beng469_my393/Assignment2-SNV
 ```
-### or 
+#### or 
 ```
 cp /gpfs/ysm/project/beng469/beng469_my393/00.software/tapestri_1.1.0.tar.gz ./
 ```
@@ -128,21 +128,18 @@ devtools::install_local(path = "tapestri_1.1.0.tar.gz", repos='http://cran.us.r-
 ```
 ***
 
-#### Extract SNV data (~10mins)
-
+### Extract SNV data (~10mins)
 
 ```r
 # make a project folder and set the working directory to that folder:
 
 setwd("/gpfs/ysm/project/beng469/beng469_my393/Assignment2-SNV")
 ```
-```
-options(stringsAsFactors = FALSE)
-```
 
 ```r
-# Load in the relevant packages we will use later.
+# Load in the relevant packages will use later.
 
+options(stringsAsFactors = FALSE)
 library(plyranges)
 library(VariantAnnotation)
 library(BSgenome.Hsapiens.UCSC.hg19)
@@ -157,6 +154,8 @@ library(tapestri)
 ```r
 # extract_genotypes
 
+# Calls are made by GATK/Haplotypecaller
+# genotype call converted to categorical (0-reference, 1-heterozygous mutation, 2-homozygous mutation, 3-unknown). 
 # gt.gqc: Cell-specific genotype quality
 # gt.dpc: Cell-specific read depth
 # gt.afc: Cell-specific alternate allele frequency
@@ -188,12 +187,7 @@ for(i in names(sample_set)){
 
 ```
 
-#### Post processing
-+ Filter variants through a blacklist removing recurrent variants that we think are likely sequencing errors 
-+ Annotating SNVS for protein encoding functions, and removing synonymous and splice variants 
-+ Remove variants that are mutated in <2 cells 
-+ Remove remaining cells with any unknown genotypes 
-
+Read the files back in and put them into a list.
 ```r
 processed_SNV_files <-grep("MSK",list.files("./analysis/",full.names = TRUE),value=TRUE)
 names(processed_SNV_files)<-do.call(rbind,strsplit(grep("MSK",list.files("./analysis/"),value=TRUE),split="\\."))[,1]
@@ -204,9 +198,11 @@ SNV<-setNames(lapply(names(processed_SNV_files),function(x){
              y$data) # extracts the genotype matrix from the analyte object
 }), names(processed_SNV_files))
 ```
-```r
-#focus only on protein encoding SNVs
 
++ Filter variants through a blacklist removing recurrent variants that they think are likely sequencing errors 
++ Annotating SNVS for protein coding functions, and removing synonymous and splice variants 
+
+```r
 txdb <- TxDb.Hsapiens.UCSC.hg19.knownGene
 blacklist <-read.csv("/gpfs/ysm/project/beng469/beng469_my393/00.database/banned_list.csv")
 
@@ -231,17 +227,16 @@ variants <- lapply(SNV,function(x){
   return(data.frame(out2)%>%distinct(SNV,AA))
   })
 
-  
-# Select the correct variants, this is an example. 
-
 variants[["MSK15"]]<-variants[["MSK15"]] %>% filter(!AA%in%c("DNMT3A.R693C","DNMT3A.R446Q"))
 variants[["MSK18"]]<-variants[["MSK18"]] %>% filter(!AA%in%c("DNMT3A.R693C"))
 variants[["MSK71"]]<-variants[["MSK71"]] %>% filter(!AA%in%c("DNMT3A.Y685C"))
 variants[["MSK91"]]<-variants[["MSK91"]] %>% filter(!AA%in%c("IDH2.R88Q","IDH2.R10Q"))
+```
 
-# Remove variants that are mutated in <2 cells 
-# Remove remaining cells with any unknown genotypes 
++ Remove variants that are mutated in <2 cells 
++ Remove remaining cells with any unknown genotypes 
 
+```r
 filtered_NGT<-setNames(lapply(names(SNV),function(sample){
   setNames(data.frame(SNV[[sample]][,c("Cell",as.character(variants[[sample]]$SNV))]),
            c("Cell",variants[[sample]]$AA))
@@ -254,6 +249,7 @@ final_NGTs<-setNames(lapply(names(filtered_NGT),function(x){
                     select_if(~ !is.numeric(.) || sum(.%in%c(1,2))>=2) 
 }),names(filtered_NGT))
 ```
+
 ### Assessing clonal abundance
 ```r
 # Select samples with at least 2 mutations 
