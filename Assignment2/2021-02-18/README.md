@@ -149,7 +149,6 @@ library(tidyr)
 library(purrr)
 library(tapestri)
 
-
 ```
 ```r
 # extract_genotypes
@@ -187,8 +186,11 @@ for(i in names(sample_set)){
 
 ```
 
-Read the files back in and put them into a list.
+
 ```r
+#Read the files back in and put them into a list.
+
+
 processed_SNV_files <-grep("MSK",list.files("./analysis/",full.names = TRUE),value=TRUE)
 names(processed_SNV_files)<-do.call(rbind,strsplit(grep("MSK",list.files("./analysis/"),value=TRUE),split="\\."))[,1]
 
@@ -199,10 +201,12 @@ SNV<-setNames(lapply(names(processed_SNV_files),function(x){
 }), names(processed_SNV_files))
 ```
 
-+ Filter variants through a blacklist removing recurrent variants that they think are likely sequencing errors 
-+ Annotating SNVS for protein coding functions, and removing synonymous and splice variants 
 
 ```r
+# Filter variants through a blacklist removing recurrent variants that they think are likely sequencing errors 
+# Annotating SNVS for protein coding functions, and removing synonymous and splice variants 
+
+
 txdb <- TxDb.Hsapiens.UCSC.hg19.knownGene
 blacklist <-read.csv("/gpfs/ysm/project/beng469/beng469_my393/00.database/banned_list.csv")
 
@@ -233,10 +237,12 @@ variants[["MSK71"]]<-variants[["MSK71"]] %>% filter(!AA%in%c("DNMT3A.Y685C"))
 variants[["MSK91"]]<-variants[["MSK91"]] %>% filter(!AA%in%c("IDH2.R88Q","IDH2.R10Q"))
 ```
 
-+ Remove variants that are mutated in <2 cells 
-+ Remove remaining cells with any unknown genotypes 
 
 ```r
+# Remove variants that are mutated in <2 cells 
+# Remove remaining cells with any unknown genotypes 
+
+
 filtered_NGT<-setNames(lapply(names(SNV),function(sample){
   setNames(data.frame(SNV[[sample]][,c("Cell",as.character(variants[[sample]]$SNV))]),
            c("Cell",variants[[sample]]$AA))
