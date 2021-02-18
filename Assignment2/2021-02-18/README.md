@@ -17,7 +17,7 @@ ssh beng469_my393@farnam.hpc.yale.edu
 srun --pty -p interactive --mem=50g bash
 ```
 ```
-cd /gpfs/ysm/project/beng469/beng469_my393
+cd project
 ```
 ```
 mkdir Assignment2-SNV && cd Assignment2-SNV
