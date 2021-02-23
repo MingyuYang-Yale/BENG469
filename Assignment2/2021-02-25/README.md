@@ -1,5 +1,5 @@
 ***
-### Login HPC:
+#### Login HPC:
 (need to connect to Yale's **VPN** if off campus)
 
 ```
@@ -16,7 +16,7 @@ cd Assignment2-SNV
 ```
 
 ***
-open R
+#### open R
 
 ```
 module load R/3.6.1-foss-2018b
