@@ -1,3 +1,31 @@
+***
+### Login HPC:
+(need to connect to Yale's **VPN** if off campus)
+
+```
+ssh beng469_my393@farnam.hpc.yale.edu
+```
+```
+srun --pty -p interactive --mem=50g bash
+```
+```
+cd project
+```
+```
+cd Assignment2-SNV
+```
+
+***
+open R
+
+```
+module load R/3.6.1-foss-2018b
+```
+```
+R
+```
+***
+
 ### Extract SNV data 
 ```r
 # Load in the relevant packages will use later.
