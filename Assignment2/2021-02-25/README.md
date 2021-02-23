@@ -1,5 +1,4 @@
-### Extract SNV data (~10mins)
-
+### Extract SNV data 
 ```r
 # Load in the relevant packages will use later.
 
