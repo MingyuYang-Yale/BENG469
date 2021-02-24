@@ -67,6 +67,7 @@ for(i in names(sample_set)){
                              name=i)
   saveRDS(snv,paste0("./analysis/",i,".rds"))
   #write.table(snv,file=sprintf("./analysis/%s.xls",i),sep="\t")
+  #readRDS(file="./analysis/MSK71.rds")
 }
 
 ```
