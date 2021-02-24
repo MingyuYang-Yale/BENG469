@@ -65,7 +65,7 @@ for(i in names(sample_set)){
   header_files<-grep("vcf_header.txt$",list.files(sample_set[i],full.names=TRUE),value=TRUE)
   barcodes <- read_barcodes(barcode_files,header_files)
   loom <- connect_to_loom(loom_files)
-  ngt_file <- extract_genotypes(loom, barcodes, 
+  ngt_file <- **extract_genotypes**(loom, barcodes, 
                               gt.filter=TRUE, gt.gqc = 30,
                               gt.dpc = 10, gt.afc = 20,  gt.mv = 50, 
                               gt.mc = 50, gt.mm = 1, gt.mask = TRUE)
