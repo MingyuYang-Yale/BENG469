@@ -92,15 +92,12 @@ SNV<-setNames(lapply(names(processed_SNV_files),function(x){
 # Filter variants through a blacklist removing recurrent variants that they think are likely sequencing errors 
 # Annotating SNVS for protein coding functions, and removing synonymous and splice variants 
 
-
 txdb <- TxDb.Hsapiens.UCSC.hg19.knownGene
 blacklist <-read.csv("/gpfs/ysm/project/beng469/beng469_my393/00.database/banned_list.csv")
-
 
 # names(SNV)
 # x <- SNV[[‘MSK103’]]
 # colnames(x)
-
 
 variants <- lapply(SNV,function(x){
   experimental_variants <- colnames(x)[ !grepl("Cell",colnames(x))& #remove the Cell column
