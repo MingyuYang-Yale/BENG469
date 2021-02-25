@@ -74,7 +74,7 @@ for(i in names(sample_set)){
 
 
 ```r
-# Read the files back in and put them into a list.
+# Read the files back and put them into a list.
 
 
 processed_SNV_files <-grep("MSK",list.files("./analysis/",full.names = TRUE),value=TRUE)
