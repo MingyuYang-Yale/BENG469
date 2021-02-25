@@ -144,6 +144,9 @@ final_NGTs<-setNames(lapply(names(filtered_NGT),function(x){
 ```
 
 ### Assessing clonal abundance
+
+In this paper, **Clones** defined as cells with identical single-nucleotide variants (SNVs), and applied a bootstrapping approach to identify clones that included at least ten cells.
+
 ```r
 # Select samples with at least 2 mutations 
 
