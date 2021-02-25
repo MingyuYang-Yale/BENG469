@@ -279,3 +279,7 @@ quit()
 ***
 Rstudio ( https://rstudio.cloud/ )
 
+```
+scp -r beng469_my393@farnam2.hpc.yale.edu:/gpfs/ysm/project/beng469/beng469_my393/Assignment2-SNV/scDNA_myeloid_data ~/Downloads/
+```
+
