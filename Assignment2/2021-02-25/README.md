@@ -125,7 +125,9 @@ variants <- lapply(SNV,function(x){
 
 ```r
 # Remove variants that are mutated in <2 cells 
-# Remove remaining cells with any unknown genotypes 
+# Remove remaining cells with any unknown genotypes
+# genotype call converted to categorical (0-reference, 1-heterozygous mutation, 2-homozygous mutation, 3-unknown). 
+
 
 
 filtered_NGT<-setNames(lapply(names(SNV),function(sample){
