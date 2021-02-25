@@ -279,12 +279,7 @@ quit()
 ***
 Rstudio ( https://rstudio.cloud/ )
 
-Download the full datasets to your own computer and then upload to rstudio cloud:
+Download the full datasets and R codes to your own computer and then upload to rstudio cloud:
 ```
 scp -r beng469_my393@farnam2.hpc.yale.edu:/gpfs/ysm/project/beng469/beng469_my393/Assignment2-SNV/scDNA_myeloid_data ~/Downloads/
 ```
-Download the R codes for Figure 1&2 to your own computer and then upload to rstudio cloud:
-```
-scp beng469_my393@farnam2.hpc.yale.edu:/gpfs/ysm/project/beng469/beng469_my393/Assignment2-SNV/xxxxx ~/Downloads/
-```
-
