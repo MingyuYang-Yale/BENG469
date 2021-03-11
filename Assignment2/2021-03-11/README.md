@@ -27,14 +27,14 @@ cp /gpfs/ysm/project/beng469/beng469_my393/Assignment2-SNV/Figure3.r ./
 ```
 cp /gpfs/ysm/project/beng469/beng469_my393/Assignment2-SNV/Figure3.sh ./
 ```
-open R
+#### open R
 ```
 module load R/3.6.1-foss-2018b
 ```
 ```
 R
 ```
-Install R packages (about 5 mins, CRAN mirrors choose "1")
+#### Install R packages (about 5 mins, CRAN mirrors choose "1")
 ```
 install.packages('knitr')
 ```
