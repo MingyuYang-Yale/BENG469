@@ -1,0 +1,801 @@
+Figure 3: Genetic Trajectory analysis
+
+Methods : For the genetic trajectory analysis constructed in Fig. 3, we implemented a Markov decision process with reinforcement learning. Technically, for a given sample, we first constructed a reward matrix by enumerating all possible clones given the number of mutations present in a sample, and the maximum zygosity for a given mutant (that is, if we did not observe a homozygous state for a mutant, it was not considered in the reward matrix). 
+
+After construction of the reward matrix, we set permissible decision processes with a value of 0, and impermissible decision processes with a value of −1 (that is, decisions where a mutant was reverted to wild-type or required more than one genetic alteration were penalized). Decisions were considered permissible if a clone was separated by a single genetic event, either a variant changing from wild-type to heterozygous or heterozygous to homozygous. 
+
+For observed clones, the frequency of the clone (ranging from 0 to 100% of cells) was used as the value in the reward matrix, while unobserved clones retained a value of 0. The matrix was then converted to long form and state transitions between clones were associated with the action/mutation causative to that state change. This was then used as input to the ReinforcmentLearning package in R to generate a Q matrix through the experience replay algorithm . 
+
+Custom scripts in R were used to navigate this Q matrix to determine the optimal trajectory from the wild-type clone.
+
+
+```{r}
+## install.packages('knitr')
+## install.packages('kableExtra')
+## install.packages('ReinforcementLearning')
+## install.packages('dplyr')
+## install.packages('tidyr')
+## install.packages('reshape2')
+## install.packages('igraph')
+## install.packages('ggplot2')
+## install.packages('pals')
+## install.packages('cowplot')
+```
+
+```{r}
+library(knitr)
+library(kableExtra)
+library(ReinforcementLearning)
+library(dplyr)
+library(tidyr)
+library(reshape2)
+library(igraph)
+library(RColorBrewer)
+library(ggplot2)
+library(pals)
+library(cowplot)
+```
+
+```{r}
+final_sample_summary<-readRDS(file="final_sample_summary.rds")
+pheno<-readRDS(file="pheno.rds")
+```
+
+```{r  fuction: Markov decision process with reinforcement learning to generate evolutionary trajectories}
+create_reward_matrix_retrain<-function(Known_mat,weights){
+  
+  num_type <- 2
+  num_mutations <- nrow(Known_mat); 
+  mutant_names <- Known_mat$Genes
+  num_clones    <- ncol(Known_mat)
+  num_states    <- num_type^num_mutations
+  
+  possible_mut_list<- unlist(apply(as.matrix(Known_mat),1,function(x){list(0:max(unique(as.numeric(x[-1])))) }),recursive = FALSE)
+  
+  states<-data.frame(expand.grid(possible_mut_list))
+  state_interactions<-data.frame(expand.grid(apply(states[,1:num_mutations],1,function(x){paste(x,collapse="_",sep="_")}),apply(states[,1:num_mutations],1,function(x){paste(x,collapse="_",sep="_")})))
+  
+  state_interactions$possible<-ifelse(apply(state_interactions,1,function(x){
+    A<-as.numeric(do.call(cbind,strsplit(as.character(x[1]),split="_")))
+    B<-as.numeric(do.call(cbind,strsplit(as.character(x[2]),split="_")))
+    sum(abs(A-B))<=1
+  }),0,NA)
+  
+  state_interactions$action<-apply(state_interactions,1,function(x){
+    A<-as.numeric(do.call(cbind,strsplit(as.character(x[1]),split="_")))
+    B<-as.numeric(do.call(cbind,strsplit(as.character(x[2]),split="_")))
+    if(!is.na(x["possible"])){
+      if(sum(abs(B-A))==0){
+        return("stay")
+      } else{
+        return(mutant_names[which((B-A)==1)])
+      }
+    }
+  })
+  
+  dat<-setNames(state_interactions%>%filter(action%in%c(mutant_names,"stay")),
+                c("State","NextState","Reward","Action"))[,c(1,4,2,3)]
+  
+  dat$Reward <- as.numeric(apply(dat,1,function(x){
+    ifelse(x$NextState%in%names(weights),weights[x$NextState],x$Reward)
+  }))
+  
+  dat$Reward <- as.numeric(apply(dat,1,function(x){
+    ifelse(x$Action%in%"stay",0,x$Reward)
+  }))
+  dat$State <- as.character(dat$State)
+  dat$NextState <- as.character(dat$NextState)
+  dat$Action <- as.character(dat$Action)
+  
+  control <- list(alpha = 0.8, gamma = 0.9)
+  model1 <- ReinforcementLearning(data = dat, s = "State", a = "Action", r = "Reward",  s_new = "NextState",  iter =  1,control=control)
+  model <- ReinforcementLearning(data = dat, s = "State", a = "Action", r = "Reward",  s_new = "NextState",  iter =  1000,control=list(alpha = 0.8, gamma = 0.9,epsilon=0.4),model=model1)
+  
+  
+  x<- model$Q
+  rownames(x) <- substring(rownames(x),1)
+  Q_mat <- setNames(melt(x),c("State","Action","Q"))
+  set<-inner_join(dat,Q_mat,by=c("State","Action"))
+  set$Valid <- TRUE
+  return(set)
+}
+```
+
+```{r}
+
+# Get graph results from Reinforcement Learning
+
+graph_results <-list()
+#graph_results  <- lapply(names(final_sample_summary), function(i){
+graph_results  <- lapply(c('MSK68','MSK129'), function(i){
+ # print(i)
+  mutations <-setdiff(colnames(final_sample_summary[[i]]$NGT),"Clone")
+  Known_mat <-final_sample_summary[[i]]$Clones%>%
+    separate(col=Clone,
+             remove = FALSE,
+             into=`mutations`)%>%
+    select(c(all_of(mutations),Clone))%>%
+    pivot_longer(cols=`mutations`,
+                 names_to="Genes",
+                 values_to="Genotype")%>%
+    pivot_wider(names_from=Clone,
+                values_from = Genotype)%>%
+    mutate_at(vars(-Genes), 
+              funs(as.numeric))
+  
+  weights <-final_sample_summary[[i]]$Clones$Count/sum(final_sample_summary[[i]]$Clones$Count)*100
+  names(weights)<- final_sample_summary[[i]]$Clones$Clone
+
+  graph_results[[i]]<-create_reward_matrix_retrain(Known_mat,weights)
+})
+
+#names(graph_results) <- names(final_sample_summary)
+names(graph_results) <-c('MSK68','MSK129')
+
+```
+
+```{r}
+#saveRDS(graph_results,file="MDP_results.rds")
+```
+
+```{r  function: query_initiating_mutations}
+
+query_initiating_mutations<-function(graph_results){
+  start_index<-paste(rep(0,length(strsplit(graph_results$State[1],split="_")[[1]])),sep="_",collapse="_")
+  possible_starting_actions<-graph_results%>%filter(State==start_index&Action!="stay")%>%pull(Action)
+  final_results<-list()
+  initating_action_count<-0
+  for(initating_action in possible_starting_actions){
+    print(initating_action)
+    set <- graph_results
+    initating_action_count<-initating_action_count+1
+    storage_results<- list()
+    branches<-0
+    state_to_kill <- set%>%filter(State==start_index&Action==initating_action)%>%pull(NextState)
+    start_killed <- sum(set%>%filter(State==state_to_kill)%>%pull(Valid))
+    while(start_killed>0){
+
+      branches <- branches +1
+      number_of_mutations<-0
+      state_log<- list()
+      optimal_reward<-list()
+      action_log<-list()
+      current_state<- start_index
+      indicator<-TRUE
+      nextState<-0
+      while(current_state!=nextState)  {
+      
+        number_of_mutations <- number_of_mutations+1
+        if(number_of_mutations==1){
+          state_log[[number_of_mutations]] <- start_index
+        }
+        current_state  <- state_log[[number_of_mutations]]
+        nextState_indicator<- FALSE
+        
+        while(nextState_indicator==FALSE){
+          
+          if(number_of_mutations==1){
+            max_potential_action_index<-  set%>%
+              filter(State==current_state&Action==initating_action)
+          } else {
+            #############fix 0113
+            if (set%>% filter(State==current_state&Valid==TRUE) %>% dim %>% .[1] > 0) {
+              max_potential_action_index <- set%>% filter(State==current_state&Valid==TRUE)%>%
+                filter(Q==max(Q))%>%sample_n(1)
+            }
+            else {max_potential_action_index  <- data.frame()}
+            ######################
+          }
+          if(nrow(max_potential_action_index)==0){
+            break
+          }
+          max_potential_action <- max_potential_action_index%>%pull(NextState)
+          next_valid_action <- any(set%>%filter(State==max_potential_action&Action!="stay")%>%pull(Valid))
+          if(next_valid_action==TRUE){
+            nextState <-max_potential_action
+            current_action <-  max_potential_action_index%>%pull(Action)
+            nextState_indicator==TRUE
+            break
+          } else{
+            set[set$State%in%max_potential_action_index["State"]&
+                  set$Action%in%max_potential_action_index["Action"],"Valid"] <- FALSE
+          }
+        }
+        if(nrow(set%>%filter(State==current_state&Action==current_action))==0){
+          optimal_reward[[number_of_mutations]] <-NA
+        } else {
+          optimal_reward[[number_of_mutations]] <- set%>%
+            filter(State==current_state&Action==current_action)%>%
+            pull(Reward)
+        }
+        state_log[[number_of_mutations+1]]<- nextState
+        action_log[[number_of_mutations]] <- current_action
+        if(current_action==nextState){
+          indicator==FALSE
+          state_log[[number_of_mutations+1]]<-NULL
+          break
+        }
+      }
+      optimal_reward[[number_of_mutations+1]] <- NA
+      action_log[[number_of_mutations+1]] <- NA
+      storage_results[[branches]] <-data.frame("states"=do.call(rbind,state_log),#[1:(length(state_log)-1)]),
+                                               "actions"=do.call(rbind,action_log),
+                                               "reward"=do.call(rbind,optimal_reward),
+                                               "nextState"=do.call(rbind,c(state_log[2:length(state_log)],NA)) )
+      storage_results[[branches]] <- storage_results[[branches]]%>%
+        filter(states!=nextState)
+      storage_results[[branches]]$cumulative_reward <- cumsum(storage_results[[branches]]$reward)
+      
+
+      set[set$State%in%current_state&set$Action%in%current_action,"Valid"] <- FALSE
+      start_killed <- sum(set%>%filter(State==state_to_kill)%>%pull(Valid))
+    }
+    final_results[[initating_action_count]]<-storage_results[!duplicated(storage_results)]
+  }
+  names(final_results)<-possible_starting_actions
+  return(final_results)
+}
+
+```
+
+```{r}
+
+final_results<-list()
+for(i in 1:length(graph_results)){
+  print(names(graph_results)[i])
+  final_results[[i]]<-query_initiating_mutations(graph_results[[i]])
+}
+
+names(final_results) <- names(graph_results)
+
+```
+
+```{r}
+#saveRDS(final_results,file="MDP_trajectory_for_each_gene.rds")
+```
+
+```{r  function: plot optimal trajectory graph}
+
+plot_optimal_graph_for_trajectory<-function(sample, node_label =F, mweight = 50,opt = 0,table_only =F){
+  all_results <-final_results[[sample]]
+
+  all_results_filtered<-lapply(all_results,function(storage_results){
+    storage_results[lapply(storage_results,function(x){sum(x$reward,na.rm = TRUE)})==0]<-NULL
+    storage_results<-lapply(storage_results,function(x){x[1:which.max(x$cumulative_reward),]})
+    final<-do.call(rbind,storage_results)[,c(1,4,3)]
+    nodes_to_remove <- setdiff(setdiff(final$nextState,final$states),final_sample_summary[[sample]]$Clones$Clone)
+    final <- final%>%filter(!nextState%in%nodes_to_remove)
+    nodes_to_remove <- setdiff(setdiff(final$nextState,final$states),final_sample_summary[[sample]]$Clones$Clone)
+    final <- final%>%filter(!nextState%in%nodes_to_remove)
+    final[!duplicated(final),]
+  })
+  
+  all_results_filtered<-setNames(lapply(names(all_results_filtered),function(x){
+    data.frame(all_results_filtered[[x]],
+               "mutation"=x,
+               "edge"=paste(all_results_filtered[[x]]$states,all_results_filtered[[x]]$nextState,sep="->"))
+  }),names(all_results))
+  
+  optimal<-names(which.max(do.call(c,lapply(all_results_filtered,function(x){
+    sum(x$reward)
+  }))))
+
+  final<-do.call(rbind,all_results_filtered)
+  
+  ############# optimal 
+  if (opt == 1 ) {final <- final%>%filter(mutation==optimal)}
+  
+  #final%>%  group_by(mutation)%>%distinct(nextState,reward)%>% summarize(total=sum(reward))
+  
+  ####### trans info
+  graph<-graph_from_data_frame(final,directed=T)
+  if (table_only == 'states_trans'){
+  tmp_final <- final %>% dplyr::select(-mutation, -reward)
+  rownames(tmp_final) <- NULL
+  return (tmp_final)
+  }
+
+  
+  weights<-final_sample_summary[[sample]]$Clones$Count/sum(final_sample_summary[[sample]]$Clones$Count)
+  
+  names(weights) <-final_sample_summary[[sample]]$Clones$Clone
+  weight_subset<-weights[names(weights)%in%names(V(graph))]
+  nodes_to_add_names<-setdiff(names(V(graph)),names(weights))
+  nodes_to_add <- rep(0.1,length(nodes_to_add_names))
+  names(nodes_to_add)<-nodes_to_add_names
+  weight_final <- c(weight_subset,nodes_to_add)[names(V(graph))]
+ 
+  ############## table info
+  if (table_only == 'weight'){return (weight_final *100)}
+
+  
+  mutations<-names(all_results_filtered)
+  
+  clone_colors <-ifelse(names(V(graph))%in%final_sample_summary[[sample]]$Clones$Clone,brewer.pal(5,"Reds")[5],"grey80")
+  
+  
+if (node_label == T){
+  (plot(graph,layout=layout_as_tree,
+        vertex.color=ifelse(names(V(graph))%in%final_sample_summary[[sample]]$Clones$Clone,brewer.pal(5,"Reds")[5],"grey80"),
+        vertex.frame.color=ifelse(names(V(graph))%in%final_sample_summary[[sample]]$Clones$Clone ,brewer.pal(5,"Reds")[5],"grey80"),
+        vertex.size=(weight_final* mweight),
+
+        edge.color="grey30",
+        edge.arrow.size=0.5,arrow.width=0.01))
+}
+  else{
+    (plot(graph,layout=layout_as_tree,
+        vertex.color=ifelse(names(V(graph))%in%final_sample_summary[[sample]]$Clones$Clone,brewer.pal(5,"Reds")[5],"grey80"),
+        vertex.frame.color=ifelse(names(V(graph))%in%final_sample_summary[[sample]]$Clones$Clone ,brewer.pal(5,"Reds")[5],"grey80"),
+        vertex.size=(weight_final* mweight),
+        vertex.label=NA,# label the clones
+        edge.color="grey30",
+        edge.arrow.size=0.5,arrow.width=0.01))
+  }
+}
+
+```
+
+```{r  MSK68}
+final_sample_summary[['MSK68']]$NGT %>% colnames %>% .[1:(length(.)-1)]
+```
+
+```{r}
+plot_optimal_graph_for_trajectory('MSK68' , table_only = 'states_trans')
+```
+
+```{r}
+plot_optimal_graph_for_trajectory('MSK68' , table_only = 'weight') 
+```
+
+```{r}
+plot_optimal_graph_for_trajectory("MSK68",node_label = T)
+```
+
+```{r MSK129}
+final_sample_summary[['MSK129']]$NGT %>% colnames %>% .[1:(length(.)-1)]
+```
+
+```{r}
+plot_optimal_graph_for_trajectory('MSK129' , table_only = 'states_trans', opt = 1) #opt stand for optimal
+
+```
+
+```{r}
+plot_optimal_graph_for_trajectory('MSK129' , table_only = 'weight', opt = 1) 
+```
+
+```{r}
+plot_optimal_graph_for_trajectory("MSK129",node_label = T,100,1)
+```
+
+Samples from patients with CH displayed oligoclonality and clonal outgrowth of distinct clones with one or two mutations (Fig. 3a).
+
+In AML, we observed complex evolutionary trajectories, with progressive clonal dominance and subsequent subclonal propagation (Fig. 3b)
+
+```{r load all samples trajectory data}
+graph_results<-readRDS(file="MDP_allsamples_results.rds")
+```
+
+```{r}
+final_results<-readRDS(file="MDP_trajectory_allsamples_for_each_gene.rds")
+```
+
+```{r}
+################# Fig3c : trajectory_summarization #######################
+```
+
+We next assessed the fraction of the clonal architecture explained by a particular genetic trajectory to predict the disease-initiating mutation in samples with DTAI mutations (Fig. 3c). 
+
+```{r sample selection}
+
+DTAI_genes <- c("ASXL1","DNMT3A","TET2","IDH1","IDH2")
+
+DTAI_samples<-names(final_sample_summary)[do.call(c,lapply(names(final_sample_summary),function(sample){
+  any(grepl(paste(DTAI_genes,sep="|",collapse="|"),colnames(final_sample_summary[[sample]]$NGT)))
+}))]
+
+DTAI_AML_samples <- pheno%>%filter(Sample%in%DTAI_samples&grepl("AML",Dx))%>%pull(Sample)
+```
+
+```{r}
+#######
+
+#output<-lapply(names(final_results),function(sample){
+output<-lapply(DTAI_AML_samples,function(sample){
+##  print(sample)
+all_results <-final_results[[sample]]
+
+all_results_filtered<-lapply(all_results,function(storage_results){
+  storage_results[lapply(storage_results,function(x){sum(x$reward,na.rm = TRUE)})==0]<-NULL
+  if(length(storage_results)==0){
+    return(NULL)
+  }
+  storage_results<-lapply(storage_results,function(x){x[1:which.max(x$cumulative_reward),]})
+  final<-do.call(rbind,storage_results)[,c(1,4,3)]
+  nodes_to_remove <- setdiff(setdiff(final$nextState,final$states),final_sample_summary[[sample]]$Clones$Clone)
+  final <- final%>%filter(!nextState%in%nodes_to_remove)
+  
+  nodes_to_remove <- setdiff(setdiff(final$nextState,final$states),final_sample_summary[[sample]]$Clones$Clone)
+  final <- final%>%filter(!nextState%in%nodes_to_remove)
+  final[!duplicated(final),]
+})
+
+all_results_filtered<-plyr::compact(all_results_filtered)#[is.null(all_results_filtered)]<-NULL
+
+all_results_filtered<-setNames(lapply(names(all_results_filtered),function(x){
+  data.frame(all_results_filtered[[x]],
+             "mutation"=x,
+             "edge"=paste(all_results_filtered[[x]]$states,all_results_filtered[[x]]$nextState,sep="->"))
+}),names(all_results_filtered))
+
+
+      final<-do.call(rbind,all_results_filtered)
+      if(length(final)==0){
+        return("exclude")
+      } else {
+        final%>%group_by(mutation)%>%distinct(nextState,reward)%>%summarize(total=sum(reward), .groups = 'drop')
+      }
+})
+
+```
+
+```{r}
+
+favorite_genes <- c("KRAS","FLT3","PTPN11","NRAS","ASXL1","NPM1","TET2","DNMT3A","IDH2","IDH1","JAK2")
+
+
+out_mat<-data.frame(do.call(rbind,output))%>%filter(mutation!="exclude")
+out_mat$Gene <- do.call(rbind,strsplit(out_mat$mutation,split="[_\\.]"))[,1]
+out_mat<- out_mat%>%filter(Gene%in%favorite_genes)
+out_mat$total <- as.numeric(out_mat$total)
+
+#gene_order <- out_mat%>%group_by(Gene)%>%summarize(median=median(total))%>%arrange(median)%>%pull(Gene)
+#out_mat$Gene <- factor(out_mat$Gene,levels=gene_order)
+out_mat$Gene <- factor(out_mat$Gene,levels=favorite_genes)
+ggA<-ggplot(out_mat,aes(x=Gene,y=total,fill=Gene))+
+                      geom_boxplot(outlier.shape=NA)+
+                      scale_fill_manual(values=tol.rainbow(n=length(levels(out_mat$Gene))))+
+                      geom_jitter(width=0.2,size=0.5)+  coord_flip()+theme_bw(base_size=8)+
+                      guides(fill=FALSE)+
+                      ylab("Fraction of sample explained \n by initiating mutation")
+
+ggsave(ggA, width=2.5,height=5,file="Fig3c.pdf")
+
+ggA 
+```
+
+The majority of states were reconstructed when mutations in epigenetic modifers such as DNMT3A and/or IDH1/2 were the initiating mutation(s).Conversely, very little of the clonal trajectory could be formed if the
+first mutation occurred in a signalling gene such as NRAS or FLT3. 
+
+This observation was highly correlated to the computed VAF from scDNA sequencing (Spearman’s ρ = 0.93; P ≤ 2.2 × 10−16; Extended Data Fig. 3d). 
+
+```{r}
+################ SFig3d: VAF by fraction sample covererd ######################
+```
+
+```{r  SFig3d}
+
+output<-setNames(lapply(DTAI_AML_samples,function(sample){
+  #print(sample)
+  all_results <-final_results[[sample]]
+  
+  all_results_filtered<-lapply(all_results,function(storage_results){
+    storage_results[lapply(storage_results,function(x){sum(x$reward,na.rm = TRUE)})==0]<-NULL
+    if(length(storage_results)==0){
+      return(NULL)
+    }
+    storage_results<-lapply(storage_results,function(x){x[1:which.max(x$cumulative_reward),]})
+    final<-do.call(rbind,storage_results)[,c(1,4,3)]
+    nodes_to_remove <- setdiff(setdiff(final$nextState,final$states),final_sample_summary[[sample]]$Clones$Clone)
+    final <- final%>%filter(!nextState%in%nodes_to_remove)
+    
+    nodes_to_remove <- setdiff(setdiff(final$nextState,final$states),final_sample_summary[[sample]]$Clones$Clone)
+    final <- final%>%filter(!nextState%in%nodes_to_remove)
+    final[!duplicated(final),]
+  })
+  
+  all_results_filtered<-plyr::compact(all_results_filtered)#[is.null(all_results_filtered)]<-NULL
+  
+  all_results_filtered<-setNames(lapply(names(all_results_filtered),function(x){
+    data.frame(all_results_filtered[[x]],
+               "mutation"=x,
+               "edge"=paste(all_results_filtered[[x]]$states,all_results_filtered[[x]]$nextState,sep="->"))
+  }),names(all_results_filtered))
+  
+  
+  final<-do.call(rbind,all_results_filtered)
+  if(length(final)==0){
+    return("exclude")
+  } else {
+    final%>%group_by(mutation)%>%distinct(nextState,reward)%>%summarize(total=sum(reward))
+  }
+}),DTAI_AML_samples)
+
+
+output<-setNames(lapply(names(output),function(x){
+  data.frame(data.frame(output[[x]]),"Sample"=x)
+}),names(output))
+
+out_vaf <-setNames(lapply(names(output),function(sample){
+  if(output[[sample]][,1]=="exclude"){
+    return(NULL) 
+  } else {
+    VAF <- data.frame("VAF"=colSums(as.matrix(final_sample_summary[[sample]]$NGT[,1:(ncol(final_sample_summary[[sample]]$NGT)-1)]))/(nrow(final_sample_summary[[sample]]$NGT)*2)*100,
+                      "mutation"=colnames(final_sample_summary[[sample]]$NGT[,1:(ncol(final_sample_summary[[sample]]$NGT)-1)]))
+  x <-inner_join(output[[sample]],VAF)
+  return(x)
+  }
+}),names(output))
+  
+out_vaf<-plyr::compact(out_vaf)
+out_vaf_mat <- do.call(rbind,out_vaf)
+#out_vaf_mat$Gene <- do.call(rbind,strsplit(out_vaf_mat$mutation,split="[_\\.]"))[,1]
+out_vaf_mat <- out_vaf_mat %>%
+  mutate(Gene = gsub('.p..*$','',mutation))
+favorite_genes <- c("ASXL1","DNMT3A","TET2","IDH1","IDH2","NPM1","KRAS","NRAS","PTPN11","FLT3","JAK2")
+
+```
+
+```{r}
+cor(out_vaf_mat$VAF,out_vaf_mat$total)
+```
+
+```{r}
+ggA<-ggplot(out_vaf_mat%>%filter(Gene%in%favorite_genes),aes(y=VAF/100,x=total/100,color=Gene))+
+          geom_point()+theme_minimal(base_size=10)+
+          ylab("Variant allele frequency")+
+          xlab("Fraction of sample explained \n by initiating mutation")+
+          scale_color_manual(values=tol.rainbow(n=length(favorite_genes)))
+ggA
+
+ggsave(ggA, width=4,height=4,file="SFig3d.pdf")
+
+```
+
+Figure Legend:  SFig3d, Correlation of VAF computed by scDNA sequencing to fraction of a mutant sample explained by the genetic trajectory starting with an initiating mutation in a given gene. Genes used as the initiating mutation for a given sample are denoted by colored squares (colours described in figure). Statistical significance calculated by Spearman’s rank correlation coefficient test (ρ = 0.93; P ≤ 2.2 × 10−16)
+
+The notable exception was TET2, which could serve as the disease-initiating mutation or as an acquired mutation during clonal progression, consistent with studies in patients with MPN or post-MPN AML that have suggested a context-specific effect of TET2 loss-of-function during myeloid transformation and clonal evolution.
+
+```{r}
+################ SFig3e & f Presence of initiating mutation ######################
+```
+
+We next examined which gene mutations were observed as initiating, single-mutant clones and found that single-mutant clones with a DTAI mutation were commonly identified, confirming these as likely clone-initiating mutations (Extended Data Fig. 3e)
+
+```{r SFig3e}
+
+output<-setNames(lapply(DTAI_AML_samples,function(sample){
+ # print(sample)
+  all_results <-final_results[[sample]]
+  
+  all_results_filtered<-lapply(all_results,function(storage_results){
+    storage_results[lapply(storage_results,function(x){sum(x$reward,na.rm = TRUE)})==0]<-NULL
+    if(length(storage_results)==0){
+      return(NULL)
+    }
+    storage_results<-lapply(storage_results,function(x){x[1:which.max(x$cumulative_reward),]})
+    final<-do.call(rbind,storage_results)[,c(1,4,3)]
+    nodes_to_remove <- setdiff(setdiff(final$nextState,final$states),final_sample_summary[[sample]]$Clones$Clone)
+    final <- final%>%filter(!nextState%in%nodes_to_remove)
+    
+    nodes_to_remove <- setdiff(setdiff(final$nextState,final$states),final_sample_summary[[sample]]$Clones$Clone)
+    final <- final%>%filter(!nextState%in%nodes_to_remove)
+    final[!duplicated(final),]
+  })
+  
+  all_results_filtered<-plyr::compact(all_results_filtered)#[is.null(all_results_filtered)]<-NULL
+  
+  all_results_filtered<-setNames(lapply(names(all_results_filtered),function(x){
+    data.frame(all_results_filtered[[x]],
+               "mutation"=x,
+               "edge"=paste(all_results_filtered[[x]]$states,all_results_filtered[[x]]$nextState,sep="->"))
+  }),names(all_results_filtered))
+  final<-do.call(rbind,all_results_filtered)
+}),DTAI_AML_samples)
+
+output<-plyr::compact(output)
+
+out_mat<-do.call(rbind,lapply(names(output),function(sample_name){
+  sample <- output[[sample_name]]
+  initial_state <- sample$states[1]
+  sample$Sample <- sample_name
+  sample%>%filter(states==initial_state)#%>%pull(nextState)
+}))
+out_mat$Gene <- do.call(rbind,strsplit(out_mat$mutation,split="[_\\.]"))[,1]
+favorite_genes <- c("ASXL1","DNMT3A","TET2","IDH1","IDH2","NPM1","KRAS","NRAS","PTPN11","FLT3","JAK2")
+
+out_mat<- out_mat%>%filter(Gene%in%favorite_genes)
+out_mat$present <-ifelse(out_mat$reward>0,1,0)
+
+gene_order_for_SFig3e <- c("DNMT3A","TET2","IDH2","IDH1","NRAS","NPM1","ASXL1","FLT3","JAK2","PTPN11","KRAS")
+
+out_mat$Gene <- factor(out_mat$Gene,levels=gene_order_for_SFig3e)
+
+table(do.call(c,lapply(split(out_mat,f=out_mat$Sample),function(x){
+  sum(x$present)
+})))
+
+
+ggA<-ggplot(out_mat,aes(x=Gene,fill=factor(present)))+
+  geom_bar(stat="count")+
+  ylab("Number of samples")+
+  xlab("")+
+ # ylab("Fraction of samples with \n homozygous mutant in >10% of cells")+
+  theme_classic(base_size=9)+
+  scale_y_continuous(expand=c(0,0))+
+  #theme(axis.text.x = element_text(angle=30,hjust=1))+
+  scale_fill_manual(values=c("grey80","dodgerblue4"),guide=FALSE)
+ggA
+
+```
+(Figure Legend : SFig3e, Number of samples where a monoallelic clone for a given gene is observed. Dark blue denotes total number of mutant samples where single-mutant clone is present for a given gene and grey represents mutant samples where single-mutant clone is unobserved.)
+
+However, single-mutant clones bearing the DNMT3A R882 missense mutation (15.79%; 3/19 mutant samples) were less frequently detected (P < 0.04) than non-R882 DNMT3A missense mutant initating clones (50.0%; 10/20 mutant samples; Extended Data Fig. 3f). 
+
+```{r  SFig3f}
+
+DNMT3A<-data.frame("R882"=tally(out_mat%>%
+                                  filter(Gene=="DNMT3A")%>%
+                                  filter(grepl("DNMT3A.p.R882",mutation))%>%
+                                  group_by(present)%>%
+                                  select(Sample))%>% pull(n),
+#                  "Other"=tally(out_mat%>%
+#                                  filter(Gene=="DNMT3A")%>%
+#                                  filter(!grepl("DNMT3A.p.R882",mutation))%>%
+#                                  group_by(present)%>%
+#                                  select(Sample))%>%pull(n),
+                  "Missense"=tally(out_mat%>%
+                                  filter(Gene=="DNMT3A")%>%
+                                  filter((!grepl("DNMT3A.p.R882",mutation)) & grepl ('[A-Z]$',mutation))%>%
+                                    
+                                  group_by(present)%>%
+                                  select(Sample))%>%pull(n),
+                  "Nonsense"=tally(out_mat%>%
+                                  filter(Gene=="DNMT3A")%>%
+                                  filter((!grepl("DNMT3A.p.R882",mutation)) & grepl ('\\.$',mutation))%>%
+                                  group_by(present)%>%
+                                  select(Sample))%>%pull(n)
+                  
+                  )
+
+
+
+
+DNMT3A$Mono_allele <- c("Absent","Present")
+
+ggB<-ggplot(melt(DNMT3A),aes(x=factor(variable,levels=c("Nonsense","Missense","R882")),
+                             y=value,
+                             fill=Mono_allele))+
+                    geom_bar(stat="identity")+
+                    theme_classic(base_size=9)+
+                   # theme(axis.text.x = element_text(angle=30,hjust=1))+
+                    xlab("")+ylab("Sample count")+
+                    scale_y_continuous(expand=c(0,0))+
+                    scale_fill_manual(values=c("Absent"="grey80","Present"=brewer.pal(5,"Reds")[5]),guide=FALSE)
+
+ggsave(ggB, width=2,height=2,file="SFig3e.pdf")
+
+ggB
+
+#plot_grid(ggA,ggB, align="hv",axis="tb",rel_widths = c(1,0.3))
+
+#ggsave(plot_grid(ggA,ggB, align="hv",axis="tb",rel_widths = c(1,0.3)), width=5.75,height=2,
+#       file="/Volumes/LevineLab/Levine Lab/Bobby/Collaborations/MissionBio/Analysis/2020/January/Figures/F3CD-initiating_mutation_monoallelic_presence_DNMT3A.pdf")
+
+```
+(Figure Legend:  SFig3f, Number of DNMT3A mutant samples where single-mutant clones are observed (red) or unobserved (grey) with samples categorized by DNMT3A R882 hotspot mutations, nonsense mutations, or missense mutations. A two-sided Fisher’s exact test was used to determine statistical significance (P ≤ 0.04) between DNMT3AR882 and other missense mutations.)
+
+This suggests that DNMT3A R882 mutations are less commonly observed as disease-initiating mutations and/or are more likely to acquire additional mutations and undergo rapid clonal evolution. These data are consonant with the relative paucity of DNMT3AR882 mutations in CH relative to overt AML
+
+
+```{r}
+################# Fig 3d : codes from V2_Convergent evolution generalized (tail part are dropped) ######################
+```
+
+```{r}
+
+double_mutant_plot <- function(A,B){
+#double_mutant_samples<-names(graph_results)[do.call(c,lapply(names(graph_results),function(x){
+double_mutant_samples<-DTAI_AML_samples[do.call(c,lapply(DTAI_AML_samples,function(x){
+  sample <- graph_results[[x]]
+  any(grepl(A,unique(sample$Action)))&any(grepl(B,unique(sample$Action)))
+}))]
+
+double_mutant_order<-setNames(lapply(double_mutant_samples,function(x){
+  print(x)
+  sample <- final_sample_summary[[x]]
+  mutations <- colnames(sample$NGT)
+  clones<- sample$Clone
+  A_het_clones <-sample$Architecture%>%filter(Genotype=="Heterozygous")%>%filter(grepl(A,Mutant))%>%distinct(Clone)%>%pull(Clone)
+  B_het_clones <-sample$Architecture%>%filter(Genotype=="Heterozygous")%>%filter(grepl(B,Mutant))%>%distinct(Clone)%>%pull(Clone)
+  
+  AB_het_clones<-intersect(A_het_clones,B_het_clones)
+  AB_clone_sizes <- graph_results[[x]]%>%filter(NextState%in%AB_het_clones)%>%filter(grepl(A,Action)|grepl(B,Action))%>%filter(Reward==max(Reward))%>%distinct(Reward)%>%pull(Reward)
+  antecdenent_options<-graph_results[[x]]%>%filter(NextState%in%AB_het_clones)%>%filter(grepl(A,Action)|grepl(B,Action))%>%filter(Reward==max(Reward))
+  
+  antecendent_clones<-graph_results[[x]]%>%filter(NextState%in%antecdenent_options$State)%>%filter(Reward!=0)
+  
+  set<-setNames(merge(antecdenent_options[,1:4],antecendent_clones[,3:4],by.x="State",by.y="NextState"),
+                c("Antecedent","Mutation","Max_het_state","Max_het_size","Antecednet_size"))
+  
+  Mut_A <- set%>%filter(grepl(A,set$Mutation))%>%distinct(Mutation,Antecednet_size)%>%filter(Antecednet_size==max(Antecednet_size))%>%pull(Mutation)
+  Mut_B <- set%>%filter(grepl(B,set$Mutation))%>%distinct(Mutation,Antecednet_size)%>%filter(Antecednet_size==max(Antecednet_size))%>%pull(Mutation)
+  
+  set <- set%>%filter(Mutation%in%c(Mut_A,Mut_B))
+  
+  convergence <- ifelse((any(grepl(A,set$Mutation)) &any(grepl(B,set$Mutation))),"Yes","No")
+  
+  
+  print(convergence)
+  
+  if(convergence=="Yes"){
+    sizes <- setNames(data.frame("Double_mutant"=unique(set$Max_het_size),
+                                 B=unique(set%>%filter(grepl(A,set$Mutation))%>%pull(Antecednet_size)),
+                                 A=unique(set%>%filter(grepl(B,set$Mutation))%>%pull(Antecednet_size))),
+                      c("Double_mutant",B,A))
+  } else if(any(grepl(B,set$Mutation))) {
+    sizes <- setNames(data.frame("Double_mutant"=unique(set$Max_het_size),
+                                 A=unique(set%>%filter(grepl(B,set$Mutation))%>%pull(Antecednet_size))),
+                      c("Double_mutant",A))
+  } else if(any(grepl(A,set$Mutation))) {
+    sizes <- setNames(data.frame("Double_mutant"=unique(set$Max_het_size),
+                                 B=unique(set%>%filter(grepl(A,set$Mutation))%>%pull(Antecednet_size))),
+                      c("Double_mutant",B))
+  } else if(nrow(set)<1){
+    return(data.frame("Double_mutant"=0))
+  }
+  return(sizes)
+}),double_mutant_samples)
+
+
+double_mutant_order_mat<-plyr::rbind.fill(setNames(lapply(double_mutant_order,function(x){data.frame(x)}),c(double_mutant_samples)))
+rownames(double_mutant_order_mat) <-    double_mutant_samples
+double_mutant_order_mat$Sample <- double_mutant_samples
+
+double_mutant_order_mat<- double_mutant_order_mat%>%filter(!Double_mutant==0)
+
+double_mutant_order_mat$Convergence <- ifelse((!is.na(double_mutant_order_mat[,A])&!is.na(double_mutant_order_mat[,B]))&  
+                                                double_mutant_order_mat[,A]>0&
+                                                double_mutant_order_mat[,B]>0,"Convergent",
+                                              ifelse(is.na(double_mutant_order_mat[,A])&double_mutant_order_mat[,B]>0,B,A))
+melted_set <-setNames(melt(double_mutant_order_mat),c("Sample","Convergence","Clone","Size"))
+
+melted_set$Clone <-factor(melted_set$Clone,levels=c(A,"Double_mutant",B))                                     
+melted_set$Clone <-plyr::revalue(melted_set$Clone,c("Double_mutant"="Double mutant"))                                     
+melted_set$Convergence <-factor(melted_set$Convergence,levels=c("Convergent",A,B))  
+#gene_name_A <- melted_set%>%filter(Convergence==A)
+melted_set
+}
+```
+
+```{r} 
+A="DNMT3A"
+B="IDH1"
+melted_set <- double_mutant_plot(A,B)
+
+############### Not finish yet ###############
+
+#colors_set <- c(brewer.pal(5,"Darks")[5],
+#            brewer.pal(5,"Reds")[5],
+#            brewer.pal(5,"Greens")[5])
+colors_set <- c('blue','black', 'red')
+#names(colors_set) <- c("Convergent",A,B)
+alpha_set <- c(0.5,0,1)
+names(alpha_set) <- names(colors_set)
+ggA<-ggplot(melted_set,aes(x=Clone,y=Size/100,group=Sample))+
+  geom_point( aes(color = Clone) ,size = 7)+
+  geom_line(aes(color=Clone),size = 2)+
+  ggtitle(paste(A,B))+
+  theme_bw(base_size=6)+
+  theme(plot.title = element_text(hjust=0.5))+
+  ylab("Fraction of sample in mutant clone")+
+  xlab("")+
+#  scale_alpha_manual(values=alpha_set,guide=FALSE)+
+ scale_color_manual(values=colors_set,drop=FALSE)#+
+
+ggsave(ggA, width=2.75,height=1.7,file=paste0("Fig3d","_",A,"_",B,".pdf"))
+
+ggA
+```
+
