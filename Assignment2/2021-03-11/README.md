@@ -1,11 +1,11 @@
-
-#### open Rstudio Cloud (https://rstudio.cloud/)
+---
+#### Open Rstudio Cloud (https://rstudio.cloud/)
 Download ZIP : https://github.com/MingyuYang-Yale/BENG469
 
 
 
 ---
-### Login HPC:
+#### Login HPC:
 (need to connect to Yale's **VPN** if off campus)
 
 ```
