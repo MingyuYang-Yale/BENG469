@@ -17,6 +17,7 @@ cd project
 ```
 cd Assignment2-SNV
 ```
+#### Copy the following two files to your own folder.
 ```
 cp /gpfs/ysm/project/beng469/beng469_my393/Assignment2-SNV/Figure3.r ./
 ```
