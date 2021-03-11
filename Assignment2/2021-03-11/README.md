@@ -57,3 +57,7 @@ install.packages('reshape2')
 ```
 install.packages('igraph')
 ```
+
+```
+quit()  # choose n to not save workspace image
+```
