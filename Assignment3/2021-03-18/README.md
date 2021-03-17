@@ -61,7 +61,7 @@ tar -zxvf graphviz-2.44.1.tar.gz
 cd graphviz-2.44.1/
 mkdir mybuild
 module load Perl/5.26.0-GCCcore-6.4.0
-./configure --prefix=/gpfs/ysm/project/beng469/beng469_my393/Assignment2-CNV/graphviz-2.44.1/mybuild
+./configure --prefix=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/graphviz-2.44.1/mybuild
 make 
 make install
 ```
