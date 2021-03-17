@@ -61,7 +61,7 @@ pip install jupyter --user
 pip install PyQt5==5.9.2
 ```
 
-### Download the data 
+#### Download the 10x Genomics data 
 
 We apply SCICoNE to the 10x Genomics data set from section E of a frozen breast tumor tissue from a triple negative ductal carcinoma with an estimated tumor purity of 75%, which is available here (https://support.10xgenomics.com/single-cell-dna/datasets/1.1.0/breast_tissue_E_2k). The raw data contain 2053 cells and 154794 genomic bins. 
 
