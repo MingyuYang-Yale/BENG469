@@ -1,12 +1,19 @@
 ***
-## Single-cell copy number calling and event history reconstruction
+#### Login HPC:
+(need to connect to Yale's **VPN** if off campus)
 
-Intra-tumor heterogeneity (ITH) has been a major confounding factor in cancer prognosis, treatment, and prevention. ITH describes the phenomenon in cancer when one tumor contains multiple subclones, each characterized by a certain group of genetic variations. When ITH is not fully characterized, cancer treatment tends to target only major clones whereas the small subclones may grow mid- or post-treatment, leading to cancer relapse. Fully characterizing ITH helps understanding cancer growth and thus can improve cancer treatment and prevention. To achieve that, one needs to correctly detect genetic variations in each cell and infer the phylogenetic tree of the subclones.
-
-(Inferring a phylogenetic tree based on CNAs detected from scDNAseq data to capture the cell-lineage tree which is crucial for unraveling ITH yet has not been extensively studied or pursued. Much work has been done on inferring such trees from SNV scDNAseq data.)
-
-Mallory, X.F., Edrisi, M., Navin, N. et al. Methods for copy number aberration detection from single-cell DNA-sequencing data. Genome Biol 21, 208 (2020). https://doi.org/10.1186/s13059-020-02119-8
-
+```
+ssh beng469_my393@farnam.hpc.yale.edu
+```
+```
+srun --pty -p interactive --mem=20g bash
+```
+```
+cd project
+```
+```
+mkdir Assignment3-CNV && cd Assignment3-CNV
+```
 ***
 
 ###  Install SCICoNE
