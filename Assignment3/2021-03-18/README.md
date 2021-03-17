@@ -1,3 +1,28 @@
+#### Setup X11 (On macOS)
+* Download and install XQuartz(https://www.xquartz.org)
+* open a termianl window, and run:
+```
+launchctl load -w /Library/LaunchAgents/org.macosforge.xquartz.startx.plist
+```
+* Log out(```quit```) and log back in to your Mac to reset some variables.
+**(quit and reopen terminal window)**
+```
+echo $DISPLAY
+```
+the terminal should respond : " /private/tmp/com.apple.launchd.y8vzcm7AMF/org.macosforge.xquartz:0 "
+
+#### Test X11
+When using ssh to log in to the clusters, use the ```-Y``` option to enable X11 forwarding. Example: ssh -Y
+```
+ssh -Y beng469_my393@farnam.hpc.yale.edu
+```
+```
+srun --pty --x11 -p interactive --mem=20g bash
+```
+```
+xclock
+```
+
 ***
 #### Login HPC:
 (need to connect to Yale's **VPN** if off campus)
