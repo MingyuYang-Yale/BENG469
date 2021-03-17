@@ -46,7 +46,7 @@ module load Python/3.6.2-foss-2017b
 module load Perl/5.26.0-GCCcore-6.4.0
 ```
 
-#### Install graphviz:
+#### Install graphviz: (can use mine to save time)
 ```
 wget https://www2.graphviz.org/Packages/stable/portable_source/graphviz-2.44.1.tar.gz
 tar -zxvf graphviz-2.44.1.tar.gz 
