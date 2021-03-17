@@ -64,7 +64,7 @@ cd nlopt
 mkdir build 
 mkdir out.build
 cd build
-cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_INSTALL_PREFIX=../out.build
+cmake ..  -DCMAKE_INSTALL_PREFIX=../out.build
 make 
 make install
 cd ../../
@@ -72,10 +72,11 @@ cd ../../
 
 #### Install SCICoNE:
 ```
-git clone https://github.com/cbg-ethz/SCICoNE.git
+cp xxxx
+# git clone https://github.com/cbg-ethz/SCICoNE.git
 cd SCICoNE
 mkdir build && cd build
-cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_PREFIX_PATH=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/nlopt/out.build
+cmake .. -DCMAKE_PREFIX_PATH=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/nlopt/out.build
 make 
 ```
 ```
@@ -83,7 +84,7 @@ cd ../pyscicone
 pip install scipy --upgrade --user
 pip install . --user 
 pip install jupyter --user
-pip install PyQt5==5.9.2
+pip install PyQt5
 ```
 
 #### Download the 10x Genomics data 
