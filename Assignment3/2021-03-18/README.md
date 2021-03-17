@@ -29,6 +29,7 @@ mkdir build
 ./configure --prefix=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/graphviz-2.44.1/build
 make 
 make install
+cd ../
 ```
 
 #### Install nlopt:
@@ -41,12 +42,13 @@ cd build
 cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_INSTALL_PREFIX=../out.build
 make 
 make install
+cd ../../
 ```
 
 #### Install SCICoNE:
 ```
 git clone https://github.com/cbg-ethz/SCICoNE.git
-cd ../../SCICoNE/
+cd SCICoNE
 mkdir build && cd build
 cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_PREFIX_PATH=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/nlopt/out.build
 make 
@@ -56,16 +58,16 @@ cd ../pyscicone
 pip install scipy --upgrade --user
 pip install . --user 
 pip install jupyter --user
-(pip install PyQt5==5.9.2 if you can use X11)
-
+pip install PyQt5==5.9.2
 ```
 
 ### Download the data 
+
+We apply SCICoNE to the 10x Genomics data set from section E of a frozen breast tumor tissue from a triple negative ductal carcinoma with an estimated tumor purity of 75%, which is available here (https://support.10xgenomics.com/single-cell-dna/datasets/1.1.0/breast_tissue_E_2k). The raw data contain 2053 cells and 154794 genomic bins. 
+
 ```
 wget http://cf.10xgenomics.com/samples/cell-dna/1.1.0/breast_tissue_E_2k/breast_tissue_E_2k_cnv_data.h5
 ```
-
-We apply SCICoNE to the 10x Genomics data set from section E of a frozen breast tumor tissue from a triple negative ductal carcinoma with an estimated tumor purity of 75%, which is available here (https://support.10xgenomics.com/single-cell-dna/datasets/1.1.0/breast_tissue_E_2k). The raw data contain 2053 cells and 154794 genomic bins. 
 
 ```
 ipython3
