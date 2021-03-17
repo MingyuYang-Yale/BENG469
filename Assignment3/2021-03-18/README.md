@@ -45,18 +45,6 @@ module load CMake/3.18.4-GCCcore-10.2.0
 module load Python/3.8.6-GCCcore-10.2.0
 ```
 
-#### Install graphviz: (can use mine to save time)
-```
-wget https://www2.graphviz.org/Packages/stable/portable_source/graphviz-2.44.1.tar.gz
-tar -zxvf graphviz-2.44.1.tar.gz 
-cd graphviz-2.44.1/
-mkdir build
-./configure --prefix=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/graphviz-2.44.1/build
-make 
-make install
-cd ../
-```
-
 #### Install nlopt:
 ```
 git clone git://github.com/stevengj/nlopt
