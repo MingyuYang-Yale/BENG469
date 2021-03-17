@@ -16,17 +16,17 @@ mkdir Assignment3-CNV && cd Assignment3-CNV
 ```
 ***
 
-###  Running SCICoNE on 10x Genomics data¶
+###  Running SCICoNE on 10x Genomics data
 Jack Kuipers, Mustafa Anıl Tuncel, Pedro Ferreira, Katharina Jahn, Niko Beerenwinkel. Single-cell copy number calling and event history reconstruction. bioRxiv 2020.04.28.065755; doi: https://doi.org/10.1101/2020.04.28.065755
 
-Load Modules:
+#### Load Modules:
 ```
 module load CMake/3.9.1
 module load Python/3.6.2-foss-2017b
 module load Perl/5.26.0-GCCcore-6.4.0
 ```
 
-Install graphviz:
+#### Install graphviz:
 ```
 wget https://www2.graphviz.org/Packages/stable/portable_source/graphviz-2.44.1.tar.gz
 tar -zxvf graphviz-2.44.1.tar.gz 
@@ -37,7 +37,7 @@ make
 make install
 ```
 
-Install nlopt:
+#### Install nlopt:
 ```
 git clone git://github.com/stevengj/nlopt
 cd nlopt
@@ -49,7 +49,7 @@ make
 make install
 ```
 
-Install SCICoNE:
+#### Install SCICoNE:
 ```
 git clone https://github.com/cbg-ethz/SCICoNE.git
 cd ../../SCICoNE/
