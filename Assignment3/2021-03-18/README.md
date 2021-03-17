@@ -4,14 +4,8 @@
 
 ```
 ssh beng469_my393@farnam.hpc.yale.edu
-```
-```
 srun --pty -p interactive --mem=20g bash
-```
-```
 cd project
-```
-```
 mkdir Assignment3-CNV && cd Assignment3-CNV
 ```
 ***
