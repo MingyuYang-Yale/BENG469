@@ -36,7 +36,7 @@ mkdir Assignment3-CNV && cd Assignment3-CNV
 ```
 ***
 
-###  Running SCICoNE on 10x Genomics data
+###  Install packages && Download datasets.
 Jack Kuipers, Mustafa Anıl Tuncel, Pedro Ferreira, Katharina Jahn, Niko Beerenwinkel. Single-cell copy number calling and event history reconstruction. bioRxiv 2020.04.28.065755; doi: https://doi.org/10.1101/2020.04.28.065755
 
 #### Load Modules:
@@ -95,6 +95,8 @@ We apply SCICoNE to the 10x Genomics data set from section E of a frozen breast 
 wget http://cf.10xgenomics.com/samples/cell-dna/1.1.0/breast_tissue_E_2k/breast_tissue_E_2k_cnv_data.h5
 ```
 
+***
+### Running SCICoNE on 10x Genomics data
 ```
 ipython3
 ```
