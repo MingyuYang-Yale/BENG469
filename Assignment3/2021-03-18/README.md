@@ -42,7 +42,6 @@ Jack Kuipers, Mustafa Anıl Tuncel, Pedro Ferreira, Katharina Jahn, Niko Beerenw
 #### Load Modules:
 ```
 module load CMake/3.9.1
-module load Mesa/17.0.2-foss-2017a
 module load Python/3.6.2-foss-2017b
 module load Perl/5.26.0-GCCcore-6.4.0
 ```
