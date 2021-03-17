@@ -16,7 +16,7 @@ mkdir Assignment3-CNV && cd Assignment3-CNV
 ```
 ***
 
-####  Install SCICoNE
+###  Running SCICoNE on 10x Genomics data¶
 Jack Kuipers, Mustafa Anıl Tuncel, Pedro Ferreira, Katharina Jahn, Niko Beerenwinkel. Single-cell copy number calling and event history reconstruction. bioRxiv 2020.04.28.065755; doi: https://doi.org/10.1101/2020.04.28.065755
 
 
