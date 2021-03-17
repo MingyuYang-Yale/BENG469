@@ -98,3 +98,16 @@ wget http://cf.10xgenomics.com/samples/cell-dna/1.1.0/breast_tissue_E_2k/breast_
 ```
 ipython3
 ```
+```{python}
+import scicone
+import numpy as np
+
+install_path = '../build/'
+temporary_outpath = './'
+seed = 42 # for reproducibility
+
+np.random.seed(seed)
+
+# Create SCICoNE object
+sci = scicone.SCICoNE(install_path, temporary_outpath, verbose=False)
+```
