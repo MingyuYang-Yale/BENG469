@@ -41,9 +41,8 @@ Jack Kuipers, Mustafa Anıl Tuncel, Pedro Ferreira, Katharina Jahn, Niko Beerenw
 
 #### Load Modules:
 ```
-module load CMake/3.9.1
-module load Python/3.6.2-foss-2017b
-module load Perl/5.26.0-GCCcore-6.4.0
+module load CMake/3.18.4-GCCcore-10.2.0
+module load Python/3.8.6-GCCcore-10.2.0
 ```
 
 #### Install graphviz: (can use mine to save time)
