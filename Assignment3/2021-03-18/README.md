@@ -38,7 +38,7 @@ cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAK
 make 
 make install
 ```
-
+Install SCICoNE:
 ```
 cd ../../SCICoNE/
 mkdir build && cd build
@@ -53,6 +53,7 @@ pip install jupyter --user
 (pip install PyQt5==5.9.2 if you can use X11)
 
 ```
+Install graphviz:
 ```
 cd ../../
 
@@ -65,6 +66,13 @@ module load Perl/5.26.0-GCCcore-6.4.0
 make 
 make install
 ```
+
+### Download the data 
+```
+wget http://cf.10xgenomics.com/samples/cell-dna/1.1.0/breast_tissue_E_2k/breast_tissue_E_2k_cnv_data.h5
+```
+
+We apply SCICoNE to the 10x Genomics data set from section E of a frozen breast tumor tissue from a triple negative ductal carcinoma with an estimated tumor purity of 75%, which is available here (https://support.10xgenomics.com/single-cell-dna/datasets/1.1.0/breast_tissue_E_2k). The raw data contain 2053 cells and 154794 genomic bins. 
 
 ```
 ipython3
