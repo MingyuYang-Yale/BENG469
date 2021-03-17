@@ -23,13 +23,35 @@ Jack Kuipers, Mustafa Anıl Tuncel, Pedro Ferreira, Katharina Jahn, Niko Beerenw
 ```
 module load CMake/3.9.1
 module load Python/3.6.2-foss-2017b
+module load Perl/5.26.0-GCCcore-6.4.0
+```
+
+Install graphviz:
+```
+wget https://www2.graphviz.org/Packages/stable/portable_source/graphviz-2.44.1.tar.gz
 ```
 ```
-git clone https://github.com/cbg-ethz/SCICoNE.git
-git clone git://github.com/stevengj/nlopt
+tar -zxvf graphviz-2.44.1.tar.gz 
 ```
+```
+cd graphviz-2.44.1/
+```
+```
+mkdir mybuild
+```
+```
+./configure --prefix=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/graphviz-2.44.1/mybuild
+```
+```
+make 
+```
+```
+make install
+```
+
 Install nlopt:
 ```
+git clone git://github.com/stevengj/nlopt
 cd nlopt
 mkdir build 
 mkdir out.build
@@ -40,6 +62,7 @@ make install
 ```
 Install SCICoNE:
 ```
+git clone https://github.com/cbg-ethz/SCICoNE.git
 cd ../../SCICoNE/
 mkdir build && cd build
 cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_PREFIX_PATH=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/nlopt/out.build
@@ -53,19 +76,8 @@ pip install jupyter --user
 (pip install PyQt5==5.9.2 if you can use X11)
 
 ```
-Install graphviz:
-```
-cd ../../
 
-wget https://www2.graphviz.org/Packages/stable/portable_source/graphviz-2.44.1.tar.gz
-tar -zxvf graphviz-2.44.1.tar.gz 
-cd graphviz-2.44.1/
-mkdir mybuild
-module load Perl/5.26.0-GCCcore-6.4.0
-./configure --prefix=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/graphviz-2.44.1/mybuild
-make 
-make install
-```
+
 
 ### Download the data 
 ```
