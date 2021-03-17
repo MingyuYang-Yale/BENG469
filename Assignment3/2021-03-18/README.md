@@ -100,6 +100,7 @@ wget http://cf.10xgenomics.com/samples/cell-dna/1.1.0/breast_tissue_E_2k/breast_
 ```
 ipython3
 ```
+Import scicone and create the SCICoNE object.
 ```python
 import scicone
 import numpy as np
@@ -112,4 +113,8 @@ np.random.seed(seed)
 
 # Create SCICoNE object
 sci = scicone.SCICoNE(install_path, temporary_outpath, verbose=False)
+```
+SCICoNE's API is prepared to handle the format from the standard cnv_data.h5 file produced by the 10x Genomics CNV pipeline. We use the function read_10x to extract the GC bias-corrected read counts, the unmappable bins and the chromosome stop bins to build the cells by bins matrix required by SCICoNE, and store everything at SCICoNE.data. We set downsampling_factor=10 to aggregate the 20kbp-sized bins into 200kbp.
+```python
+sci.read_10x('breast_tissue_E_2k_cnv_data.h5', downsampling_factor=10)
 ```
