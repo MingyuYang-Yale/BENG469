@@ -19,7 +19,7 @@ mkdir Assignment3-CNV && cd Assignment3-CNV
 ###  Running SCICoNE on 10x Genomics data¶
 Jack Kuipers, Mustafa Anıl Tuncel, Pedro Ferreira, Katharina Jahn, Niko Beerenwinkel. Single-cell copy number calling and event history reconstruction. bioRxiv 2020.04.28.065755; doi: https://doi.org/10.1101/2020.04.28.065755
 
-
+Load Modules:
 ```
 module load CMake/3.9.1
 module load Python/3.6.2-foss-2017b
@@ -29,23 +29,11 @@ module load Perl/5.26.0-GCCcore-6.4.0
 Install graphviz:
 ```
 wget https://www2.graphviz.org/Packages/stable/portable_source/graphviz-2.44.1.tar.gz
-```
-```
 tar -zxvf graphviz-2.44.1.tar.gz 
-```
-```
 cd graphviz-2.44.1/
-```
-```
-mkdir mybuild
-```
-```
-./configure --prefix=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/graphviz-2.44.1/mybuild
-```
-```
+mkdir build
+./configure --prefix=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/graphviz-2.44.1/build
 make 
-```
-```
 make install
 ```
 
@@ -60,6 +48,7 @@ cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAK
 make 
 make install
 ```
+
 Install SCICoNE:
 ```
 git clone https://github.com/cbg-ethz/SCICoNE.git
@@ -76,8 +65,6 @@ pip install jupyter --user
 (pip install PyQt5==5.9.2 if you can use X11)
 
 ```
-
-
 
 ### Download the data 
 ```
