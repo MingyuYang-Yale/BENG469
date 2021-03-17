@@ -182,3 +182,18 @@ cd ../../SCICoNE/pyscicone
 /gpfs/ysm/project/beng469/beng469_my393/Assignment2-CNV/graphviz-2.44.1/mybuild/bin/dot -Tpdf -O  Source.gv
 ```
 
+```
+module load miniconda
+conda create -n test python=3.9
+conda activate test
+module load CMake/3.12.1
+module load GCCcore/6.4.0
+cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_PREFIX_PATH=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/nlopt/out.build
+make
+
+pip install . 
+pip install jupyter
+pip install PyQt5
+
+conda deactivate
+```
