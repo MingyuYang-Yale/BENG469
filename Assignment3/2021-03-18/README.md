@@ -68,7 +68,7 @@ ycrc_conda_env.list build
 ```
 Open OnDemand (OOD) http://ood-farnam.hpc.yale.edu/
 
-* Additional modules for Jupyter Notebook (CMake/3.12.1 GCCcore/6.4.0)
+* Additional modules for Jupyter Notebook (```CMake/3.12.1 GCCcore/6.4.0)```)
 * Run /gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/SCICoNE/pyscicone/tutorial.ipynb
 
 #### Use IPython
