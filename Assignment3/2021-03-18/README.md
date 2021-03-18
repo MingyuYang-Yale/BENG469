@@ -117,7 +117,7 @@ srun --pty --x11 -p interactive --mem=5g bash
 ```
 xclock
 ```
-***
+
 
 ```bash
 # Install graphviz when use IPython
