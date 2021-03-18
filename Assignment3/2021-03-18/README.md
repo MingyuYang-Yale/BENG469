@@ -2,7 +2,7 @@
 ***
 #### Login HPC: (need to connect to Yale's **VPN** if off campus)
 
-```bash
+```shell
 ssh beng469_my393@farnam.hpc.yale.edu
 srun --pty -p interactive --mem=5g bash
 cd project
