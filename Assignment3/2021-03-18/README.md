@@ -89,7 +89,7 @@ pip install PyQt5
 conda install graphviz
 ```
 ***
-### Go through the SCICoNE tutorial:
+### Running SCICoNE on simulate_data:
 
 #### Use Jupyter notebook
 ```
