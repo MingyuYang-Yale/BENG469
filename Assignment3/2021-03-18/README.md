@@ -31,7 +31,7 @@ conda create -n scicone python=3.9
 conda activate scicone
 ```
 #### Install nlopt (about 2 minutes):
-```python
+```r
 # Clone the repository
 git clone git://github.com/stevengj/nlopt 
 cd nlopt
