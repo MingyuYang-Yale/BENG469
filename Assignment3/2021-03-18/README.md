@@ -84,6 +84,8 @@ cd ../pyscicone
 pip install . 
 pip install jupyter 
 pip install PyQt5
+
+#conda installs any package within conda environments
 conda install graphviz
 ```
 
