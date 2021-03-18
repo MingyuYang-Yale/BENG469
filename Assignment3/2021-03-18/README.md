@@ -1,3 +1,5 @@
+3. Install and test the **`SCICoNE`** pipeline on HPC
+4. Running SCICoNE on simulate_data to reconstructs the history of copy number events 
 
 ***
 #### Login HPC: (need to connect to Yale's **VPN** if off campus)
