@@ -91,9 +91,9 @@ pip install jupyter
 pip install PyQt5
 conda install graphviz
 ```
-***
-### Running SCICoNE on simulate_data:
 
+### Running SCICoNE on simulate_data:
+***
 #### Use Jupyter notebook
 ```bash
 # run "ycrc_conda_env.list build" to update your conda env for OOD
@@ -103,7 +103,7 @@ Open OnDemand (OOD) http://ood-farnam.hpc.yale.edu/
 
 * Additional modules for Jupyter Notebook (```CMake/3.12.1 GCCcore/6.4.0)```)
 * Path: /gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/SCICoNE/pyscicone/tutorial.ipynb
-
+***
 #### Use IPython
 
 Setup X11 (On macOS)
