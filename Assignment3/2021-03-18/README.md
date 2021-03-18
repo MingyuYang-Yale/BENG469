@@ -39,7 +39,6 @@ cd nlopt
 # Create and enter the build directory
 mkdir build && mkdir out.build && cd build  
 
-# Compile && build && install 
 cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_INSTALL_PREFIX=../out.build  
 make                         
 make install
