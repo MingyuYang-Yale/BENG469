@@ -32,7 +32,7 @@ cd ../../
 ```
 
 #### Install SCICoNE (about 5 minutes): 
-```
+```r
 cp /gpfs/ysm/project/beng469/beng469_my393/00.software/SCICoNE.tar.gz ./
 tar -zxvf SCICoNE.tar.gz
 cd SCICoNE
@@ -41,9 +41,9 @@ export NLopt_DIR=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/nlopt/o
 cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++
 make 
 
-##### Don't run#####
-#export NLopt_DIR=/gpfs/ysm/project/fan/my393/Assignment3-CNV/nlopt/out.build:$NLopt_DIR
-#cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_PREFIX_PATH=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/nlopt/out.build
+
+## export NLopt_DIR=/gpfs/ysm/project/fan/my393/Assignment3-CNV/nlopt/out.build:$NLopt_DIR
+## cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_PREFIX_PATH=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/nlopt/out.build
 ```
 
 #### Python wrapper
