@@ -14,7 +14,7 @@ cd project
 mkdir Assignment3-CNV && cd Assignment3-CNV
 ```
 #### Load Modules:
-```r
+```bash
 # miniconda is used to create a new environment to reduce dependency version conflicts between your projects.
 module load miniconda
 
