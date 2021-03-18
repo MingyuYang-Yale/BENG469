@@ -74,8 +74,6 @@ make
 ## export NLopt_DIR=/gpfs/ysm/project/fan/my393/Assignment3-CNV/nlopt/out.build:$NLopt_DIR
 ```
 
-
-
 #### Python wrapper
 ```
 cd ../pyscicone
