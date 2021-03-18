@@ -45,8 +45,8 @@ export NLopt_DIR=/gpfs/ysm/project/beng469/beng469_NETID/Assignment3-CNV/nlopt/o
 ```
 cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++
 make 
-
-
+```
+```shell
 ## export NLopt_DIR=/gpfs/ysm/project/fan/my393/Assignment3-CNV/nlopt/out.build:$NLopt_DIR
 ## cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_PREFIX_PATH=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/nlopt/out.build
 ```
