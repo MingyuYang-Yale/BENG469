@@ -58,7 +58,6 @@ conda install graphviz
 ```
 ycrc_conda_env.list build
 ```
-
 Open OnDemand (OOD) http://ood-farnam.hpc.yale.edu/
 
 * Additional modules for Jupyter Notebook (CMake/3.12.1 GCCcore/6.4.0)
@@ -93,6 +92,7 @@ xclock
 ```
 ***
 
+https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/2021-03-18/tutorial.ipynb
 ```
 cd project/Assignment3-CNV/SCICoNE/pyscicone
 module load miniconda
@@ -100,7 +100,6 @@ module load CMake/3.12.1
 module load GCCcore/6.4.0
 conda activate scicone
 ipython3
-
 ```
 
 ```
