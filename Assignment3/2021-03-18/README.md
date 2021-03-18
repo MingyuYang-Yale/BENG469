@@ -33,6 +33,37 @@ ssh -Y beng469_my393@farnam.hpc.yale.edu
 srun --pty --x11 -p interactive --mem=20g bash
 cd project
 mkdir Assignment3-CNV && cd Assignment3-CNV
+module load miniconda
+module load CMake/3.12.1
+module load GCCcore/6.4.0
+```
+#### Install nlopt:
+```
+git clone git://github.com/stevengj/nlopt
+cd nlopt
+mkdir build 
+mkdir out.build
+cd build
+cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_INSTALL_PREFIX=../out.build
+make 
+make install
+cd ../../
+```
+
+#### Install SCICoNE:
+```
+cp /gpfs/ysm/project/beng469/beng469_my393/00.software/SCICoNE.tar.gz ./
+# git clone https://github.com/cbg-ethz/SCICoNE.git
+tar -zxvf SCICoNE.tar.gz
+cd SCICoNE
+mkdir build && cd build
+export NLopt_DIR=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/nlopt/out.build:$NLopt_DIR
+
+#cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_PREFIX_PATH=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/nlopt/out.build
+
+cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++
+
+make 
 ```
 ***
 
@@ -41,38 +72,21 @@ Jack Kuipers, Mustafa Anıl Tuncel, Pedro Ferreira, Katharina Jahn, Niko Beerenw
 
 #### Load Modules:
 ```
-module load CMake/3.18.4-GCCcore-10.2.0
-module load Python/3.8.6-GCCcore-10.2.0
+#module load CMake/3.18.4-GCCcore-10.2.0
+#module load Python/3.8.6-GCCcore-10.2.0
 ```
 
-#### Install nlopt:
-```
-git clone git://github.com/stevengj/nlopt
-cd nlopt
-mkdir build 
-mkdir out.build
-cd build
-cmake ..  -DCMAKE_INSTALL_PREFIX=../out.build
-make 
-make install
-cd ../../
-```
 
-#### Install SCICoNE:
-```
-cp xxxx
-# git clone https://github.com/cbg-ethz/SCICoNE.git
-cd SCICoNE
-mkdir build && cd build
-cmake .. -DCMAKE_PREFIX_PATH=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/nlopt/out.build
-make 
-```
+
+
 ```
 cd ../pyscicone
-pip install scipy --upgrade --user
-pip install . --user 
-pip install jupyter --user
+conda create -n scicone python=3.9
+conda activate scicone
+pip install . 
+pip install jupyter 
 pip install PyQt5
+ipython3
 ```
 
 #### Download the 10x Genomics data 
