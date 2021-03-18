@@ -1,3 +1,7 @@
+
+![image](https://user-images.githubusercontent.com/50332096/111586085-b10a0480-8796-11eb-9714-5841eaa65454.png)
+
+
 In this tutorial, you will learn how to:
 
 1. Install and test the **`SCICoNE`** pipeline on HPC
