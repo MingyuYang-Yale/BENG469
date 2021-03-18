@@ -22,9 +22,11 @@ module load miniconda
 module load CMake/3.12.1
 module load GCCcore/6.4.0
 ```
-#### Create a virtual environment:
-```
+#### Create environment:
+```bash
+# create a new Conda environment called “scicone” 
 conda create -n scicone python=3.9
+# activate the "scicone" environment
 conda activate scicone
 ```
 #### Install nlopt (about 2 minutes):
