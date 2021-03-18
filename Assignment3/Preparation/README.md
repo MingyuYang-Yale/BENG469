@@ -12,37 +12,6 @@ Login HPC:(need to connect to Yale's **VPN** if off campus)
 ssh -Y beng469_my393@farnam.hpc.yale.edu
 srun --pty --x11 -p interactive --mem=20g bash
 cd /gpfs/ysm/project/beng469/beng469_my393
-```
-The purpose of a .bashrc file is to provide a place where you can set up variables, functions and aliases, define your settings that you want to use every time you open a new terminal window.
-```
-vi ~/.bashrc
-```
-
-Add the following codes to ~/.bashrc : 
-
-```
-if [ "$TERM" = "xterm" ]
-        then
-        export PS1="\[\033]2;\h:\u \w\007\033[33;1m\]\u \033[36;1m\t\033[0m \[\033[35;1m\]\w\[\033[0m\]\n\[\e[32;1m\]$ \[\e[0m\]"
-else
-        export PS1="\[\033[32;1m\]\h:\u \[\033[32;1m\]\$\[\033[0m\]"
-fi
-
-export LS_OPTIONS='--color=auto'
-eval "$(dircolors -b)"
-alias ls='ls $LS_OPTIONS'
-
-LS_COLORS='di=00;31;44:*.gz=01;31:*.txt=04;32:*.sh=01;34:*.pl=05;33:'
-export LS_COLORS
-```
-h – Host name           
-u – User name           
-w – Path of the current working directory               
-About color : https://gist.github.com/vratiu/9780109
-
-```
-source ~/.bashrc
-```
 
 ***
 ## Single-cell copy number calling and event history reconstruction
