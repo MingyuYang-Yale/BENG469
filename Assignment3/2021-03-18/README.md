@@ -61,6 +61,7 @@ mkdir build && cd build
 
 # remember change to your own NETID
 cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_PREFIX_PATH=/gpfs/ysm/project/beng469/beng469_NETID/Assignment3-CNV/nlopt/out.build
+
 make 
 ```
 ```bash
