@@ -68,19 +68,6 @@ make
 ## export NLopt_DIR=/gpfs/ysm/project/fan/my393/Assignment3-CNV/nlopt/out.build:$NLopt_DIR
 ```
 
-```bash
-# Install graphviz when use IPython
-# cd ../../
-
-# wget https://www2.graphviz.org/Packages/stable/portable_source/graphviz-2.44.1.tar.gz
-# tar -zxvf graphviz-2.44.1.tar.gz 
-# cd graphviz-2.44.1/
-# mkdir mybuild
-# module load Perl/5.26.0-GCCcore-6.4.0
-# ./configure --prefix=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/graphviz-2.44.1/mybuild
-# make 
-# make install
-```
 
 
 #### Python wrapper
@@ -131,6 +118,21 @@ srun --pty --x11 -p interactive --mem=5g bash
 xclock
 ```
 ***
+
+```bash
+# Install graphviz when use IPython
+# cd ../../
+
+# wget https://www2.graphviz.org/Packages/stable/portable_source/graphviz-2.44.1.tar.gz
+# tar -zxvf graphviz-2.44.1.tar.gz 
+# cd graphviz-2.44.1/
+# mkdir mybuild
+# module load Perl/5.26.0-GCCcore-6.4.0
+# ./configure --prefix=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/graphviz-2.44.1/mybuild
+# make 
+# make install
+```
+
 
 https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/2021-03-18/tutorial.ipynb
 ```
