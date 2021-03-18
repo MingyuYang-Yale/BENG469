@@ -14,8 +14,11 @@ cd project
 mkdir Assignment3-CNV && cd Assignment3-CNV
 ```
 #### Load Modules:
-```
+```python
+# miniconda is used to create a new environment to reduce dependency version conflicts between your projects.
 module load miniconda
+
+# CMake and GCC are used for Compile the c or c++ program and Build the executables.
 module load CMake/3.12.1
 module load GCCcore/6.4.0
 ```
