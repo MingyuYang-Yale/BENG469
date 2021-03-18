@@ -45,6 +45,7 @@ cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAK
 # Build the executables
 make                         
 make install
+
 cd ../../
 ```
 
