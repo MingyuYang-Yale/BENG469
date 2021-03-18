@@ -12,7 +12,7 @@ Login HPC:(need to connect to Yale's **VPN** if off campus)
 ssh -Y beng469_my393@farnam.hpc.yale.edu
 srun --pty --x11 -p interactive --mem=20g bash
 cd /gpfs/ysm/project/beng469/beng469_my393
-
+```
 ***
 ## Single-cell copy number calling and event history reconstruction
 
