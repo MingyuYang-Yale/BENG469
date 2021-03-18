@@ -84,6 +84,11 @@ xclock
 ***
 
 ```
+cd project/Assignment3-CNV/SCICoNE/pyscicone
+module load miniconda
+module load CMake/3.12.1
+module load GCCcore/6.4.0
+conda activate scicone
 ipython3
 
 ```
