@@ -96,9 +96,9 @@ conda install graphviz
 # run "ycrc_conda_env.list build" to update your conda env for OOD
 ycrc_conda_env.list build
 ```
-Open OnDemand (OOD) in a new window: http://ood-farnam.hpc.yale.edu/
+* Open OnDemand (OOD) in a new window: http://ood-farnam.hpc.yale.edu/
 
-Interactive Apps -> Jupyter nootbook
+* Interactive Apps -> Jupyter nootbook
 
 <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/OOD-Jupyter-notebook.png" alt="foo bar" title="train &amp; tracks" /></p>
 
