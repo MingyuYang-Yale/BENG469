@@ -2,25 +2,25 @@
 ***
 #### Login HPC: (need to connect to Yale's **VPN** if off campus)
 
-```shell
+```
 ssh beng469_my393@farnam.hpc.yale.edu
 srun --pty -p interactive --mem=5g bash
 cd project
 mkdir Assignment3-CNV && cd Assignment3-CNV
 ```
 #### Load Modules:
-```bash
+```
 module load miniconda
 module load CMake/3.12.1
 module load GCCcore/6.4.0
 ```
 #### Create a virtual environment:
-```bash
+```
 conda create -n scicone python=3.9
 conda activate scicone
 ```
 #### Install nlopt (about 2 minutes):
-```bash
+```
 git clone git://github.com/stevengj/nlopt
 cd nlopt
 mkdir build && mkdir out.build
@@ -32,7 +32,7 @@ cd ../../
 ```
 
 #### Install SCICoNE (about 5 minutes): 
-```bash
+```
 cp /gpfs/ysm/project/beng469/beng469_my393/00.software/SCICoNE.tar.gz ./
 tar -zxvf SCICoNE.tar.gz
 cd SCICoNE
@@ -54,6 +54,18 @@ pip install PyQt5
 conda install graphviz
 ```
 
+### Use Jupyter notebook
+```bash
+ycrc_conda_env.list build
+```
+
+Open OnDemand (OOD) http://ood-farnam.hpc.yale.edu/
+
+* Additional modules for Jupyter Notebook
+```
+CMake/3.12.1 GCCcore/6.4.0
+```
+
 ### Use IPython
 
 ***
@@ -72,18 +84,18 @@ the terminal should respond : " /private/tmp/com.apple.launchd.y8vzcm7AMF/org.ma
 
 Test X11
 * When using ssh to log in to the clusters, use the ```-Y``` option to enable X11 forwarding. Example: ssh -Y
-```bash
+```
 ssh -Y beng469_my393@farnam.hpc.yale.edu
 ```
-```bash
+```
 srun --pty --x11 -p interactive --mem=5g bash
 ```
-```bash
+```
 xclock
 ```
 ***
 
-```bash
+```
 cd project/Assignment3-CNV/SCICoNE/pyscicone
 module load miniconda
 module load CMake/3.12.1
@@ -93,24 +105,9 @@ ipython3
 
 ```
 
-```bash
+```
 /gpfs/ysm/project/beng469/beng469_my393/00.software/graphviz-2.44.1/mybuild/bin/dot -Tpdf -O  itree
 ```
-
-### Use Jupyter notebook
-```bash
-ycrc_conda_env.list build
-```
-
-Open OnDemand (OOD) http://ood-farnam.hpc.yale.edu/
-
-* Additional modules for Jupyter Notebook
-```
-CMake/3.12.1 GCCcore/6.4.0
-```
-
-
-
 ***
 
 ###  Install packages && Download datasets.
