@@ -7,19 +7,23 @@ ssh beng469_my393@farnam.hpc.yale.edu
 srun --pty -p interactive --mem=5g bash
 cd project
 mkdir Assignment3-CNV && cd Assignment3-CNV
+```
+#### Load Modules:
+```
 module load miniconda
 module load CMake/3.12.1
 module load GCCcore/6.4.0
-
+```
+#### Create a virtual environment:
+```
 conda create -n scicone python=3.9
 conda activate scicone
 ```
-#### Install nlopt:
+#### Install nlopt (about 2 minutes):
 ```
 git clone git://github.com/stevengj/nlopt
 cd nlopt
-mkdir build 
-mkdir out.build
+mkdir build && mkdir out.build
 cd build
 cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_INSTALL_PREFIX=../out.build
 make 
@@ -27,10 +31,9 @@ make install
 cd ../../
 ```
 
-#### Install SCICoNE:
+#### Install SCICoNE (about 5 minutes): 
 ```
 cp /gpfs/ysm/project/beng469/beng469_my393/00.software/SCICoNE.tar.gz ./
-# git clone https://github.com/cbg-ethz/SCICoNE.git
 tar -zxvf SCICoNE.tar.gz
 cd SCICoNE
 mkdir build && cd build
@@ -42,14 +45,15 @@ make
 #cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_PREFIX_PATH=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/nlopt/out.build
 ```
 
+#### Python wrapper
 ```
 cd ../pyscicone
-
 pip install . 
 pip install jupyter 
 pip install PyQt5
 conda install graphviz
 ```
+
 ### Use IPython
 
 ***
