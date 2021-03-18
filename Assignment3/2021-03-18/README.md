@@ -96,7 +96,11 @@ conda install graphviz
 # run "ycrc_conda_env.list build" to update your conda env for OOD
 ycrc_conda_env.list build
 ```
-Open OnDemand (OOD) http://ood-farnam.hpc.yale.edu/
+Open OnDemand (OOD) in a new window: http://ood-farnam.hpc.yale.edu/
+
+Interactive Apps -> Jupyter nootbook
+
+<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/OOD-Jupyter-notebook.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 * Additional modules for Jupyter Notebook (```CMake/3.12.1 GCCcore/6.4.0)```)
 * Path: /gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/SCICoNE/pyscicone/tutorial.ipynb
