@@ -77,6 +77,7 @@ cd ../pyscicone
 pip install . 
 pip install jupyter 
 pip install PyQt5
+conda install graphviz
 ipython3
 #ycrc_conda_env.list build
 #http://ood-farnam.hpc.yale.edu/
