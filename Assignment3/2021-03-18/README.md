@@ -65,6 +65,20 @@ cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAK
 
 make 
 ```
+
+```
+cd ../pyscicone
+conda create -n scicone python=3.9
+conda activate scicone
+pip install . 
+pip install jupyter 
+pip install PyQt5
+ipython3
+```
+
+```
+/gpfs/ysm/project/beng469/beng469_my393/00.software/graphviz-2.44.1/mybuild/bin/dot -Tpdf -O  itree
+```
 ***
 
 ###  Install packages && Download datasets.
@@ -79,15 +93,7 @@ Jack Kuipers, Mustafa Anıl Tuncel, Pedro Ferreira, Katharina Jahn, Niko Beerenw
 
 
 
-```
-cd ../pyscicone
-conda create -n scicone python=3.9
-conda activate scicone
-pip install . 
-pip install jupyter 
-pip install PyQt5
-ipython3
-```
+
 
 #### Download the 10x Genomics data 
 
