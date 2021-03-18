@@ -18,7 +18,7 @@ When using ssh to log in to the clusters, use the ```-Y``` option to enable X11 
 ssh -Y beng469_my393@farnam.hpc.yale.edu
 ```
 ```
-srun --pty --x11 -p interactive --mem=20g bash
+srun --pty --x11 -p interactive --mem=5g bash
 ```
 ```
 xclock
@@ -30,12 +30,15 @@ xclock
 
 ```
 ssh -Y beng469_my393@farnam.hpc.yale.edu
-srun --pty --x11 -p interactive --mem=20g bash
+srun --pty --x11 -p interactive --mem=5g bash
 cd project
 mkdir Assignment3-CNV && cd Assignment3-CNV
 module load miniconda
 module load CMake/3.12.1
 module load GCCcore/6.4.0
+
+conda create -n scicone python=3.9
+conda activate scicone
 ```
 #### Install nlopt:
 ```
@@ -59,6 +62,8 @@ cd SCICoNE
 mkdir build && cd build
 export NLopt_DIR=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/nlopt/out.build:$NLopt_DIR
 
+#export NLopt_DIR=/gpfs/ysm/project/fan/my393/Assignment3-CNV/nlopt/out.build:$NLopt_DIR
+
 #cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_PREFIX_PATH=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/nlopt/out.build
 
 cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++
@@ -68,17 +73,21 @@ make
 
 ```
 cd ../pyscicone
-conda create -n scicone python=3.9
-conda activate scicone
+
 pip install . 
 pip install jupyter 
 pip install PyQt5
 ipython3
+#ycrc_conda_env.list build
+#http://ood-farnam.hpc.yale.edu/
+Additional modules for Jupyter Notebook (optional)
+CMake/3.12.1 GCCcore/6.4.0
 ```
 
 ```
 /gpfs/ysm/project/beng469/beng469_my393/00.software/graphviz-2.44.1/mybuild/bin/dot -Tpdf -O  itree
 ```
+
 ***
 
 ###  Install packages && Download datasets.
