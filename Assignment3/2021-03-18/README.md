@@ -95,7 +95,8 @@ conda install graphviz
 ### Running SCICoNE on simulate_data:
 
 #### Use Jupyter notebook
-```
+```bash
+# run "ycrc_conda_env.list build" to update your conda env for OOD
 ycrc_conda_env.list build
 ```
 Open OnDemand (OOD) http://ood-farnam.hpc.yale.edu/
