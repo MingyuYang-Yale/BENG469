@@ -1,28 +1,3 @@
-***
-#### Setup X11 (On macOS)
-* Download and install XQuartz(https://www.xquartz.org)
-* open a termianl window, and run:
-```
-launchctl load -w /Library/LaunchAgents/org.macosforge.xquartz.startx.plist
-```
-* Log out(```quit```) and log back in to your Mac to reset some variables.
-**(quit and reopen terminal window)**
-```
-echo $DISPLAY
-```
-the terminal should respond : " /private/tmp/com.apple.launchd.y8vzcm7AMF/org.macosforge.xquartz:0 "
-
-#### Test X11
-When using ssh to log in to the clusters, use the ```-Y``` option to enable X11 forwarding. Example: ssh -Y
-```
-ssh -Y beng469_my393@farnam.hpc.yale.edu
-```
-```
-srun --pty --x11 -p interactive --mem=5g bash
-```
-```
-xclock
-```
 
 ***
 #### Login HPC:
@@ -78,16 +53,56 @@ pip install .
 pip install jupyter 
 pip install PyQt5
 conda install graphviz
+```
+### Use IPython
+```
 ipython3
-#ycrc_conda_env.list build
-#http://ood-farnam.hpc.yale.edu/
-Additional modules for Jupyter Notebook (optional)
-CMake/3.12.1 GCCcore/6.4.0
+
 ```
 
 ```
 /gpfs/ysm/project/beng469/beng469_my393/00.software/graphviz-2.44.1/mybuild/bin/dot -Tpdf -O  itree
 ```
+
+***
+Setup X11 (On macOS)
+* Download and install XQuartz(https://www.xquartz.org)
+* open a termianl window, and run:
+```
+launchctl load -w /Library/LaunchAgents/org.macosforge.xquartz.startx.plist
+```
+* Log out(```quit```) and log back in to your Mac to reset some variables.
+**(quit and reopen terminal window)**
+```
+echo $DISPLAY
+```
+the terminal should respond : " /private/tmp/com.apple.launchd.y8vzcm7AMF/org.macosforge.xquartz:0 "
+
+Test X11
+* When using ssh to log in to the clusters, use the ```-Y``` option to enable X11 forwarding. Example: ssh -Y
+```
+ssh -Y beng469_my393@farnam.hpc.yale.edu
+```
+```
+srun --pty --x11 -p interactive --mem=5g bash
+```
+```
+xclock
+```
+***
+
+### Use Jupyter notebook
+```
+ycrc_conda_env.list build
+```
+
+open website http://ood-farnam.hpc.yale.edu/
+* Additional modules for Jupyter Notebook
+```
+CMake/3.12.1 GCCcore/6.4.0
+```
+
+
 
 ***
 
