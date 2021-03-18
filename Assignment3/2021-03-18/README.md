@@ -149,4 +149,4 @@ ipython3
 ```
 ***
 ### Running SCICoNE on 10x Genomics data
-https://github.com/cbg-ethz/SCICoNE/blob/master/notebooks/10x_example.ipynb
+https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/2021-03-18/10x_example.ipynb
