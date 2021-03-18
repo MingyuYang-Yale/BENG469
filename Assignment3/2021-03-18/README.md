@@ -4,8 +4,8 @@
 (need to connect to Yale's **VPN** if off campus)
 
 ```
-ssh -Y beng469_my393@farnam.hpc.yale.edu
-srun --pty --x11 -p interactive --mem=5g bash
+ssh beng469_my393@farnam.hpc.yale.edu
+srun --pty -p interactive --mem=5g bash
 cd project
 mkdir Assignment3-CNV && cd Assignment3-CNV
 module load miniconda
@@ -36,14 +36,11 @@ tar -zxvf SCICoNE.tar.gz
 cd SCICoNE
 mkdir build && cd build
 export NLopt_DIR=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/nlopt/out.build:$NLopt_DIR
+cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++
+make 
 
 #export NLopt_DIR=/gpfs/ysm/project/fan/my393/Assignment3-CNV/nlopt/out.build:$NLopt_DIR
-
 #cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_PREFIX_PATH=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/nlopt/out.build
-
-cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++
-
-make 
 ```
 
 ```
@@ -55,14 +52,6 @@ pip install PyQt5
 conda install graphviz
 ```
 ### Use IPython
-```
-ipython3
-
-```
-
-```
-/gpfs/ysm/project/beng469/beng469_my393/00.software/graphviz-2.44.1/mybuild/bin/dot -Tpdf -O  itree
-```
 
 ***
 Setup X11 (On macOS)
@@ -91,12 +80,22 @@ xclock
 ```
 ***
 
+```
+ipython3
+
+```
+
+```
+/gpfs/ysm/project/beng469/beng469_my393/00.software/graphviz-2.44.1/mybuild/bin/dot -Tpdf -O  itree
+```
+
 ### Use Jupyter notebook
 ```
 ycrc_conda_env.list build
 ```
 
-open website http://ood-farnam.hpc.yale.edu/
+Open OnDemand (OOD) http://ood-farnam.hpc.yale.edu/
+
 * Additional modules for Jupyter Notebook
 ```
 CMake/3.12.1 GCCcore/6.4.0
@@ -109,16 +108,6 @@ CMake/3.12.1 GCCcore/6.4.0
 ###  Install packages && Download datasets.
 Jack Kuipers, Mustafa Anıl Tuncel, Pedro Ferreira, Katharina Jahn, Niko Beerenwinkel. Single-cell copy number calling and event history reconstruction. bioRxiv 2020.04.28.065755; doi: https://doi.org/10.1101/2020.04.28.065755
 
-#### Load Modules:
-```
-#module load CMake/3.18.4-GCCcore-10.2.0
-#module load Python/3.8.6-GCCcore-10.2.0
-```
-
-
-
-
-
 
 #### Download the 10x Genomics data 
 
@@ -130,8 +119,4 @@ wget http://cf.10xgenomics.com/samples/cell-dna/1.1.0/breast_tissue_E_2k/breast_
 
 ***
 ### Running SCICoNE on 10x Genomics data
-```
-ipython3
-```
-
 https://github.com/cbg-ethz/SCICoNE/blob/master/notebooks/10x_example.ipynb
