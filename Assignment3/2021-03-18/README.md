@@ -32,7 +32,7 @@ cd ../../
 ```
 
 #### Install SCICoNE (about 5 minutes): 
-```r
+```python
 cp /gpfs/ysm/project/beng469/beng469_my393/00.software/SCICoNE.tar.gz ./
 tar -zxvf SCICoNE.tar.gz
 cd SCICoNE
