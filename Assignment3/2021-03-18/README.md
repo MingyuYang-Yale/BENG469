@@ -20,7 +20,7 @@ conda create -n scicone python=3.9
 conda activate scicone
 ```
 #### Install nlopt (about 2 minutes):
-```bash
+```
 git clone git://github.com/stevengj/nlopt     
 cd nlopt
 mkdir build && mkdir out.build && cd build    
