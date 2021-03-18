@@ -102,7 +102,7 @@ ycrc_conda_env.list build
 
 <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/Assignment3/OOD-Jupyter-notebook.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-* Additional modules for Jupyter Notebook (```CMake/3.12.1 GCCcore/6.4.0)```)
+* Additional modules for Jupyter Notebook (```CMake/3.12.1 GCCcore/6.4.0```)
 * Path: /gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/SCICoNE/pyscicone/tutorial.ipynb
 ***
 #### Use IPython
