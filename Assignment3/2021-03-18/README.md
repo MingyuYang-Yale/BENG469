@@ -2,20 +2,20 @@
 ***
 #### Login HPC: (need to connect to Yale's **VPN** if off campus)
 
-```
+```bash
 ssh beng469_my393@farnam.hpc.yale.edu
 srun --pty -p interactive --mem=5g bash
 cd project
 mkdir Assignment3-CNV && cd Assignment3-CNV
 ```
 #### Load Modules:
-```
+```bash
 module load miniconda
 module load CMake/3.12.1
 module load GCCcore/6.4.0
 ```
 #### Create a virtual environment:
-```
+```bash
 conda create -n scicone python=3.9
 conda activate scicone
 ```
