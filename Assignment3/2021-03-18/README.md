@@ -32,15 +32,17 @@ cd ../../
 ```
 
 #### Install SCICoNE (about 5 minutes): 
-```bash
+```
 cp /gpfs/ysm/project/beng469/beng469_my393/00.software/SCICoNE.tar.gz ./
 tar -zxvf SCICoNE.tar.gz
 cd SCICoNE
 mkdir build && cd build
-
+```
+```bash
 # remember change to your own NETID
 export NLopt_DIR=/gpfs/ysm/project/beng469/beng469_NETID/Assignment3-CNV/nlopt/out.build:$NLopt_DIR
-
+```
+```
 cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++
 make 
 
