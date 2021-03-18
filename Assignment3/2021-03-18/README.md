@@ -54,6 +54,21 @@ make
 ## cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_PREFIX_PATH=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/nlopt/out.build
 ```
 
+```bash
+# Install graphviz when use IPython
+# cd ../../
+
+# wget https://www2.graphviz.org/Packages/stable/portable_source/graphviz-2.44.1.tar.gz
+# tar -zxvf graphviz-2.44.1.tar.gz 
+# cd graphviz-2.44.1/
+# mkdir mybuild
+# module load Perl/5.26.0-GCCcore-6.4.0
+# ./configure --prefix=/gpfs/ysm/project/beng469/beng469_my393/Assignment3-CNV/graphviz-2.44.1/mybuild
+# make 
+# make install
+```
+
+
 #### Python wrapper
 ```
 cd ../pyscicone
