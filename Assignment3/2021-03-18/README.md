@@ -1,7 +1,8 @@
 In this tutorial, you will learn how to:
 
 1. Install and test the **`SCICoNE`** pipeline on HPC
-2. Running SCICoNE on simulate_data/10x Genomics data (breast ) to reconstructs the history of copy number events 
+2. Running SCICoNE on simulate_data to reconstructs the history of copy number events 
+3. Running SCICoNE on 10x Genomics data (a frozen breast tumor tissue from a triple negative ductal carcinoma) to reconstructs the history of copy number events 
 
 ***
 #### Login HPC: (need to connect to Yale's **VPN** if off campus)
