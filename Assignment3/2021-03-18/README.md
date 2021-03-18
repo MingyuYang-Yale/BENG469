@@ -31,11 +31,18 @@ conda create -n scicone python=3.9
 conda activate scicone
 ```
 #### Install nlopt (about 2 minutes):
-```
-git clone git://github.com/stevengj/nlopt     
+```bash
+# Clone the repository
+git clone git://github.com/stevengj/nlopt 
 cd nlopt
-mkdir build && mkdir out.build && cd build    
-cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_INSTALL_PREFIX=../out.build          
+
+# Create and enter the build directory
+mkdir build && mkdir out.build && cd build  
+
+# Compile the program with cmake
+cmake .. -DCMAKE_C_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/gcc -DCMAKE_CXX_COMPILER=/ysm-gpfs/apps/software/GCCcore/6.4.0/bin/g++ -DCMAKE_INSTALL_PREFIX=../out.build  
+
+# Build the executables
 make                         
 make install
 cd ../../
