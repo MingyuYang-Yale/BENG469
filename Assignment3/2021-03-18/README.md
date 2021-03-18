@@ -77,6 +77,9 @@ make
 #### Python wrapper
 ```
 cd ../pyscicone
+
+# pip is the standard package manager for Python, It allows you to install and manage additional packages that are not part of the Python standard library
+
 pip install . 
 pip install jupyter 
 pip install PyQt5
