@@ -46,7 +46,7 @@ make
 ```
 
 #### Python wrapper
-```bash
+```
 cd ../pyscicone
 pip install . 
 pip install jupyter 
@@ -55,7 +55,7 @@ conda install graphviz
 ```
 
 ### Use Jupyter notebook
-```bash
+```
 ycrc_conda_env.list build
 ```
 
