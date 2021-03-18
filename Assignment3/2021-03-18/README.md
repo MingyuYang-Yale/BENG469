@@ -36,6 +36,7 @@ conda create -n scicone python=3.9
 conda activate scicone
 ```
 #### Install nlopt (about 2 minutes):
+library for nonlinear local and global optimization, which is required by SCICoNE
 ```bash
 # Clone the repository
 git clone git://github.com/stevengj/nlopt 
