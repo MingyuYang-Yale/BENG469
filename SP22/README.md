@@ -1,5 +1,6 @@
 
-### (2/1,2/3    Basic of HPC and coding tutorial I)
+### 2/1,2/3    
+### Basic of HPC and coding tutorial I
 
 # Introduction to HPC
 
