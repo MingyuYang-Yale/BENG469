@@ -37,7 +37,7 @@ You should have received a email from Yale Center for Research Computing:
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/mail-from-ycrc.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ***
-## Log on to the Clusters
+## Log in to the Clusters
 
 * Yale's clusters can only be accessed on the Yale network. For **off campus** access, you will need to first connect to Yale's **VPN**(https://software.yale.edu/software/cisco-vpn-anyconnect). 
 
