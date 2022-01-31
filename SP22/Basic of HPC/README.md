@@ -93,7 +93,7 @@ Once your key has been copied to the appropriate places on the clusters, you can
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/login-mac.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ***
-### Log on to the Clusters (Windows)
+### Log in to the Clusters (Windows)
 We recommend using MobaXterm to connect to the clusters. You can download, extract & install MobaXterm from 
 ( https://mobaxterm.mobatek.net/ ). 
 
