@@ -296,11 +296,14 @@ This removes everything in the directory, then the directory itself, asking at e
 ### Look inside files: 
 
 Let’s create that directory and file one more time.
+```
+mkdir testdata
+```
+```
+vim students-list.txt
+```
 
 #### ```cat```
-
-cat has nothing to do with cats. 
-<p><img width="300" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/real-cat.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 The cat (short for “concatenate“), which means join together, we can use ```cat``` to join multiple files together and print out their contents. we can also use cat print out only a file's content.
 
