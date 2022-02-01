@@ -272,6 +272,7 @@ Deleting Is Forever! The Linux shell doesn’t have a trash bin that we can reco
 ```rm``` by default only works on files, not directories.
 
 
+
 ### Delete a directory
 
 Let's move up one directory using cd .. :
