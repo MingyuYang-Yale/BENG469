@@ -293,25 +293,17 @@ This removes everything in the directory, then the directory itself, asking at e
 
 ### Look inside files: 
 
-Let’s create that directory and file one more time.
-```
-mkdir testdata
-```
-```
-vim students-list.txt
-```
-
 #### ```cat```
 
 The cat (short for “concatenate“), which means join together, we can use ```cat``` to join multiple files together and print out their contents. we can also use cat print out only a file's content.
 
 Let's use ```cat``` to display contents of students-list.txt :  
 ```
-cat students-list.txt
+cat students-list-sp22.txt
 ```
 when you add ```-n``` flag can show us the line number
 ```
-cat -n students-list.txt
+cat -n students-list-sp22.txt
 ```
 ---
 #### ```head/tail```
@@ -319,11 +311,11 @@ cat -n students-list.txt
 head: output the first n lines of a file. 
 
 ```
-head -n 5 students-list.txt 
+head -n 5 students-list-sp22.txt 
 ```
 tail: output the last n lines of a file. 
 ```
-tail -n 3 students-list.txt  
+tail -n 3 students-list-sp22.txt  
 ```
 
 Copy a cancer gene list file to your own directory:
