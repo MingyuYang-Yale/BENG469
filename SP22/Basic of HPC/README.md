@@ -220,9 +220,9 @@ Run Vim to create a file called student-list.txt.
 
 Opening a New File:
 
-* type ```vim draft.txt``` (create a file named slist.txt)
+* type ```vim draft.txt``` (create a file named draft.txt)
 * type ```i``` ( From command mode to insert mode type)
-* copy and paste the follwing texts to student-list.txt:  
+* copy and paste the follwing texts to draft.txt:  
 ```
 Hello World!
 ```
