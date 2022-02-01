@@ -1,4 +1,4 @@
-# Basic of HPC and coding tutorial (2/1)
+# Basic of HPC and coding tutorial (02/01/2022)
 
 ## What is HPC?
 High Performance Computing (HPC) cluster is a collection of networked computers and data storage.
@@ -288,7 +288,7 @@ This removes everything in the directory, then the directory itself, asking at e
 
 ***
 
-# Basic of HPC and coding tutorial (2/3)
+# Basic of HPC and coding tutorial (02/03/2022)
 
 
 ### Look inside files: 
