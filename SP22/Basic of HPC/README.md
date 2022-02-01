@@ -216,16 +216,30 @@ mkdir testdata
 ---
 ### Create/Edit Text
 
-Run Vim to create a file called draft.txt.
+Run Vim to create a file called students-list.txt.
 
 
 ```
-vim draft.txt
+vim students-list.txt
 ``` 
 * type ```i``` ( From command mode to insert mode type)
 * copy and paste the follwing texts to draft.txt:  
 ```
-Hello World!
+student-A    aeb98
+student-B    hc738
+student-C    gmc62
+student-D    eid8
+student-E    ahe3
+student-F    bdk35
+student-G    tm827
+student-H    sen37
+student-I    aeq4
+student-G    ser66
+student-K    vsv6
+student-L    av625
+student-M    lw729
+student-N    jrw74
+student-O    qw239
 ```
 * hit ```Esc``` key (From insert mode to command mode type)
 * type ```:wq``` (write file and exit vim)
