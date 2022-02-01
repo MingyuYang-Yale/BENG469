@@ -272,11 +272,6 @@ Deleting Is Forever! The Linux shell doesn’t have a trash bin that we can reco
 
 ### Delete a directory
 
-Let's move up one directory using cd .. :
-```
-cd ..
-```
-
 To remove testdata directory, we can do this with the recursive option for rm : 
 
 ```
