@@ -219,7 +219,9 @@ mkdir testdata
 Run Vim to create a file called draft.txt.
 
 
-```vim draft.txt``` (create a file named draft.txt)
+```
+vim draft.txt
+``` 
 * type ```i``` ( From command mode to insert mode type)
 * copy and paste the follwing texts to draft.txt:  
 ```
