@@ -216,16 +216,16 @@ mkdir testdata
 ---
 ### Create/Edit Text
 
-Run Vim to create a file called students-list.txt :
+Run Vim to create a file called draft.txt :
 
 (Vim is a text editor built to make creating and changing any kind of text)
 
 
 ```
-vim students-list.txt
+vim draft.txt
 ``` 
 * type ```i``` ( From command mode to insert mode type)
-* copy and paste the follwing texts to students-list.txt:  
+* copy and paste the follwing texts to draft.txt:  
 ```
 student-A    aeb98
 student-B    hc738
@@ -247,21 +247,34 @@ student-O    qw239
 * type ```:wq``` (write file and exit vim)
 ---
 
+### Move (rename) a File/Directory
+
+draft.txt isn’t a particularly informative name, so let’s change the file’s name using ```mv```, which is short for “move”:
+
+```
+mv draft.txt students-list.txt
+```
+
+### Copy a File
+The ```cp``` command works very much like ```mv```, except it copies a file instead of moving it. 
+
+```
+cp students-list.txt students-list-sp22.txt
+```
+
+
 ### Delete a File
 
 ```
-rm draft.txt
+rm students-list.txt
 ```
-This command removes files (rm is short for “remove”). If we run ls again, its output is empty
+This command removes files (```rm``` is short for “remove”). If we run ls again, its output is empty
 
 Deleting Is Forever! The Linux shell doesn’t have a trash bin that we can recover deleted files. Instead, when we delete files, they are unhooked from the file system so that their storage space on disk can be recycled. 
 
 rm by default only works on files, not directories.
 
 To remove directories, use: 
-```
-cd ..
-```
 
 ```
 rm -r testdata
@@ -273,25 +286,7 @@ deleting we can add the “interactive” flag -i to rm which will ask us fo
 rm -r -i testdata
 ```
 
-### Move (rename) a File/Directory
-Let’s create that directory and file one more time. 
 
-```
-mkdir testdata
-```
-
-```
-cd testdata
-```
-
-```
-vim draft.txt
-```
-draft.txt isn’t a particularly informative name, so let’s change the file’s name using mv, which is short for “move”:
-
-```
-mv draft.txt thesis.txt
-```
 
 
 
