@@ -213,9 +213,9 @@ mkdir testdata
 ---
 ### Create/Edit Text
 
-Run Vim to create a file called draft.txt :
+Run ```vim``` to create a file called draft.txt :
 
-(Vim is a text editor built to make creating and changing any kind of text)
+(```vim``` is a text editor built to make creating and changing any kind of text)
 
 
 ```
