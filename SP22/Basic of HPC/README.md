@@ -117,6 +117,9 @@ We recommend using MobaXterm to connect to the clusters. You can download, ext
 * Click the "Advanced SSH Settings" tab and check the "Use private key box", then click the file icon / magnifying glass to choose where you saved your private key (id_rsa.ppk).
 * Click OK.
 
+<p><img width="800" src="https://docs.ycrc.yale.edu/img/ssh-connection.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+
 ***
 
 ## Navigating Files and Directories
