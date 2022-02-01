@@ -216,7 +216,7 @@ mkdir testdata
 ---
 ### Create/Edit Text
 
-Run Vim to create a file called students-list.txt.
+Run Vim to create a file called students-list.txt :
 
 (Vim is a text editor built to make creating and changing any kind of text)
 
@@ -225,7 +225,7 @@ Run Vim to create a file called students-list.txt.
 vim students-list.txt
 ``` 
 * type ```i``` ( From command mode to insert mode type)
-* copy and paste the follwing texts to draft.txt:  
+* copy and paste the follwing texts to students-list.txt:  
 ```
 student-A    aeb98
 student-B    hc738
