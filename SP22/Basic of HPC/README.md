@@ -201,10 +201,11 @@ cd ~ 
 ### Make a Directory
 We now know how to explore files and directories, but how do we create them in the first place? 
 
-First go to project directory, then create a new directory called testdata using the command : 
+First go to our project directory using the command : 
 ```
 cd /gpfs/ysm/project/beng469/beng469_my393
 ```
+Then create a new directory called testdata 
 ```
 mkdir testdata
 ```
@@ -212,6 +213,22 @@ mkdir testdata
 
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/mkdir.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+---
+### Create/Edit Text
+
+Run Vim to create a file called student-list.txt.
+
+Opening a New File:
+
+* type ```vim student-list.txt``` (create a file named slist.txt)
+* type ```i``` ( From command mode to insert mode type)
+* copy and paste the follwing texts to student-list.txt:  
+```
+Hello World!
+```
+* hit ```Esc``` key (From insert mode to command mode type)
+* type ```:wq``` (write file and exit vim)
+---
 
 ### Delete a File
 
@@ -220,24 +237,24 @@ rm draft.txt
 ```
 This command removes files (rm is short for “remove”). If we run ls again, its output is empty
 
-
 Deleting Is Forever! The Linux shell doesn’t have a trash bin that we can recover deleted files. Instead, when we delete files, they are unhooked from the file system so that their storage space on disk can be recycled. 
 
-rm by default only works on files, not directories, to remove directories, use: 
+rm by default only works on files, not directories.
+
+To remove directories, use: 
+```
+cd ..
+```
 
 ```
 rm -r testdata
 ```
-
-
-
-Removing the files in a directory recursively can be a very dangerous operation. If we’re concerned about what we might be 
-deleting we can add the “interactive” flag -i to rm which will ask us for confirmation before each step.
-
 ```
 rm -r -i testdata
 ```
 
+Removing the files in a directory recursively can be a very dangerous operation. If we’re concerned about what we might be 
+deleting we can add the “interactive” flag -i to rm which will ask us for confirmation before each step.
 
 
 ### Move (rename) a File/Directory
@@ -269,33 +286,7 @@ The cp command works very much like mv, except it copies a file instead of mo
 cp thesis.txt thesis-v2.0.txt
 ```
 
----
-### Create/Edit Text
 
-Run Vim to create a file called student-list.txt.
-
-Opening a New File:
-
-* type ```vim student-list.txt``` (create a file named slist.txt)
-* type ```i``` ( From command mode to insert mode type)
-* copy and paste the follwing texts to student-list.txt:  
-```
-student-A    sb2723
-student-B    mb2823
-student-C    bmb62
-student-D    snd35
-student-E    nee6
-student-F    al2342
-student-G    kl646
-student-H    am2975
-student-I    dfm42
-student-G    svp26
-student-K    wt263
-student-L    jy568
-```
-* hit ```Esc``` key (From insert mode to command mode type)
-* type ```:wq``` (write file and exit vim)
----
 ### Look inside files: 
 
 #### ```cat```
