@@ -240,7 +240,7 @@ student-M    lw729
 student-N    jrw74
 student-O    qw239
 ```
-* hit ```Esc``` key (From insert mode to command mode type)
+* hit ```esc``` key (From insert mode to command mode type)
 * type ```:wq``` (write file and exit vim)
 ---
 
