@@ -268,13 +268,18 @@ cp students-list.txt students-list-sp22.txt
 ```
 rm students-list.txt
 ```
-This command removes files (```rm``` is short for “remove”). If we run ls again, its output is empty
+This command removes files (```rm``` is short for “remove”). 
 
 Deleting Is Forever! The Linux shell doesn’t have a trash bin that we can recover deleted files. Instead, when we delete files, they are unhooked from the file system so that their storage space on disk can be recycled. 
 
-rm by default only works on files, not directories.
+```rm``` by default only works on files, not directories.
 
-To remove directories, use: 
+Let's move up one directory using cd ..:
+```
+cd ..
+```
+
+To remove testdata directory, use rm -r : 
 
 ```
 rm -r testdata
@@ -286,16 +291,6 @@ deleting we can add the “interactive” flag -i to rm which will ask us fo
 rm -r -i testdata
 ```
 
-
-
-
-
-### Copy a File
-The cp command works very much like mv, except it copies a file instead of moving it. 
-
-```
-cp thesis.txt thesis-v2.0.txt
-```
 
 
 ### Look inside files: 
