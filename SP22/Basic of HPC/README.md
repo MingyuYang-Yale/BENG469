@@ -247,22 +247,6 @@ student-O    qw239
 * type ```:wq``` (write file and exit vim)
 ---
 
-### Move (rename) a File/Directory
-
-draft.txt isn’t a particularly informative name, so let’s change the file’s name using ```mv```, which is short for “move”:
-
-```
-mv draft.txt students-list.txt
-```
-
-### Copy a File
-The ```cp``` command works very much like ```mv```, except it copies a file instead of moving it. 
-
-```
-cp students-list.txt students-list-sp22.txt
-```
-
-
 ### Delete a File
 
 ```
