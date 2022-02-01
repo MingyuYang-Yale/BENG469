@@ -217,6 +217,7 @@ mkdir testdata
 ### Create/Edit Text
 
 Run Vim to create a file called students-list.txt.
+(Vim is a text editor built to make creating and changing any kind of text)
 
 
 ```
