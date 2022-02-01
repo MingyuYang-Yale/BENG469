@@ -289,60 +289,12 @@ rm -r -i testdata
 ```
 This removes everything in the directory, then the directory itself, asking at each step for you to confirm the deletion.
 
-//
 
-### Open a terminal and login to HPC: 
 
-(need to connect to Yale's VPN if off campus)
-```
-ssh beng469_my393@farnam.hpc.yale.edu (change my393 to your own NETID)
-```
----
-change directory to **project**.
-```
-cd project
-```
-list what’s in your **project** directory by running ```ls```
-```
-ls 
-```
-if you already have **testdata** directory, just run :
-```
-cd testdata 
-```
-Otherwise, make directory first and then change directory to **testdata**:
-```
-mkdir testdata
-cd testdata
-```
----
-### Create/Edit Text
 
-Run Vim to create a file called student-list.txt.
-
-Opening a New File:
-
-* type ```vim student-list.txt``` (create a file named slist.txt)
-* type ```i``` ( From command mode to insert mode type)
-* copy and paste the follwing texts to student-list.txt:  
-```
-student-A    sb2723
-student-B    mb2823
-student-C    bmb62
-student-D    snd35
-student-E    nee6
-student-F    al2342
-student-G    kl646
-student-H    am2975
-student-I    dfm42
-student-G    svp26
-student-K    wt263
-student-L    jy568
-```
-* hit ```Esc``` key (From insert mode to command mode type)
-* type ```:wq``` (write file and exit vim)
----
 ### Look inside files: 
+
+Let’s create that directory and file one more time.
 
 #### ```cat```
 
