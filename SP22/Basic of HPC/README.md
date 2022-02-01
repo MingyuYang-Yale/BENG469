@@ -307,13 +307,13 @@ vim students-list.txt
 
 The cat (short for “concatenate“), which means join together, we can use ```cat``` to join multiple files together and print out their contents. we can also use cat print out only a file's content.
 
-Let's use ```cat``` to display contents of student-list.txt :  
+Let's use ```cat``` to display contents of students-list.txt :  
 ```
-cat student-list.txt
+cat students-list.txt
 ```
 when you add ```-n``` flag can show us the line number
 ```
-cat -n student-list.txt
+cat -n students-list.txt
 ```
 ---
 #### ```head/tail```
@@ -321,11 +321,11 @@ cat -n student-list.txt
 head: output the first n lines of a file. 
 
 ```
-head -n 5 student-list.txt 
+head -n 5 students-list.txt 
 ```
 tail: output the last n lines of a file. 
 ```
-tail -n 3 student-list.txt  
+tail -n 3 students-list.txt  
 ```
 
 Copy a cancer gene list file to your own directory:
@@ -353,7 +353,7 @@ less cancer-gene.txt
 
 Next let's see how many lines/words/characters in a file, use ```wc``` command. ```wc``` is the “word count” command, it counts the number of lines, words, and characters in files.
 ```
-wc student-list.txt
+wc students-list.txt
 ```
 
 ```
@@ -364,7 +364,7 @@ wc cancer-gene.txt
 
 If we run wc -l instead of just wc, the output shows only the number of lines per file:
 ```
-wc -l student-list.txt
+wc -l students-list.txt
 ```
 You can also use -w to get only the number of words, or -c to get only the number of characters.
 
@@ -380,17 +380,17 @@ ls -lrt
 ```
 
 ```
-chmod u=rwx,g=rx,o=r student-list.txt
+chmod u=rwx,g=rx,o=r students-list.txt
 ```
 ```
-chmod ugo=r student-list.txt
+chmod ugo=r students-list.txt
 ```
 ```
-chmod ugo+x student-list.txt 
+chmod ugo+x students-list.txt 
 ```
 or
 ```
-chmod u+w,go-rx student-list.txt
+chmod u+w,go-rx students-list.txt
 ```
 
 Setting the permission this way called alpha-beta notation. We can also change permissions in numeric code in Linux
@@ -402,7 +402,7 @@ Setting the permission this way called alpha-beta notation. We can also change p
 <p><img width="750" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/permissions-3.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ```
-chmod 754 student-list.txt
+chmod 754 students-list.txt
 ```
 ---
 
@@ -436,14 +436,14 @@ open a new terminal window on your local computer: (command + T)
 
 * If you have some data that on the cluster, and want to download it to your own computer
 ```
-scp beng469_my393@farnam.hpc.yale.edu:/home/beng469_my393/project/testdata/student-list.txt ./
+scp beng469_my393@farnam.hpc.yale.edu:/home/beng469_my393/project/testdata/students-list.txt ./
 ```
 * If you want to upload a file from your own compter to cluster. 
 ```
-mv student-list.txt student-list-v2.txt 
+mv students-list.txt students-list-v2.txt 
 ```
 ```
-scp ./student-list-v2.txt beng469_my393@farnam.hpc.yale.edu:/home/beng469_my393/project/testdata
+scp ./students-list-v2.txt beng469_my393@farnam.hpc.yale.edu:/home/beng469_my393/project/testdata
 ```
 
 if you want tranfer directory, just add ```-r``` for recursive grasp not just a file, but all contents of the directory.
