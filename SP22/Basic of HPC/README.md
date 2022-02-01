@@ -203,7 +203,7 @@ We now know how to explore files and directories, but how do we create them in t
 
 First go to our project directory using the command : 
 ```
-cd /gpfs/ysm/project/beng469/beng469_my393
+cd project
 ```
 Then create a new directory called testdata 
 ```
