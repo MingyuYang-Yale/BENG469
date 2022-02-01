@@ -216,11 +216,10 @@ mkdir testdata
 ---
 ### Create/Edit Text
 
-Run Vim to create a file called student-list.txt.
+Run Vim to create a file called draft.txt.
 
-Opening a New File:
 
-* type ```vim draft.txt``` (create a file named draft.txt)
+```vim draft.txt``` (create a file named draft.txt)
 * type ```i``` ( From command mode to insert mode type)
 * copy and paste the follwing texts to draft.txt:  
 ```
