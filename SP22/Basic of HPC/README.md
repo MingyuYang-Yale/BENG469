@@ -250,13 +250,12 @@ cd ..
 ```
 rm -r testdata
 ```
-```
-rm -r -i testdata
-```
 
 Removing the files in a directory recursively can be a very dangerous operation. If we’re concerned about what we might be 
 deleting we can add the “interactive” flag -i to rm which will ask us for confirmation before each step.
-
+```
+rm -r -i testdata
+```
 
 ### Move (rename) a File/Directory
 Let’s create that directory and file one more time. 
