@@ -247,7 +247,7 @@ student-O    qw239
 * type ```:wq``` (write file and exit vim)
 ---
 
-### Move (rename) a File/Directory
+### Rename a File
 draft.txt isn’t a particularly informative name, so let’s change the file’s name using mv, which is short for “move”:
 
 ```
