@@ -247,6 +247,13 @@ student-O    qw239
 * type ```:wq``` (write file and exit vim)
 ---
 
+* Key Points 
+
+
+
+# Basic of HPC and coding tutorial (02/03/2022)
+
+
 ### Rename a File
 draft.txt isn’t a particularly informative name, so let’s change the file’s name using mv, which is short for “move”:
 
@@ -290,8 +297,6 @@ This removes everything in the directory, then the directory itself, asking at e
 
 
 ***
-
-# Basic of HPC and coding tutorial (02/03/2022)
 
 
 ### Look inside files: 
