@@ -247,12 +247,26 @@ student-O    qw239
 * type ```:wq``` (write file and exit vim)
 ---
 
-* Key Points 
-
-
-
 # Basic of HPC and coding tutorial (02/03/2022)
 
+### login to HPC
+
+(need to connect to Yale's VPN if off campus)
+
+```
+ssh beng469_my393@farnam.hpc.yale.edu (change my393 to your own NETID)
+```
+for windows user, please login to the cluster via MobaXtem
+
+---
+change directory to **project**.
+```
+cd project
+```
+list what’s in your **project** directory by running ```ls```
+```
+ls 
+```
 
 ### Rename a File
 draft.txt isn’t a particularly informative name, so let’s change the file’s name using mv, which is short for “move”:
