@@ -275,43 +275,14 @@ draft.txt isn’t a particularly informative name, so let’s change the file’
 mv draft.txt students-list.txt
 ```
 
+The first parameter tells mv what we’re “moving”, while the second is where it’s to go. In this case, we’re moving draft.txt to student-list.txt, which has the same effect as renaming the file. 
+
+
 ### Copy a File
 The cp command works very much like mv, except it copies a file instead of moving it. 
 ```
 cp students-list.txt students-list-sp22.txt
 ```
-
-### Delete a File
-
-```
-rm students-list.txt
-```
-This command removes files (```rm``` is short for “remove”). 
-
-Deleting Is Forever! The Linux shell doesn’t have a trash bin that we can recover deleted files. Instead, when we delete files, they are unhooked from the file system so that their storage space on disk can be recycled. 
-
-```rm``` by default only works on files, not directories.
-
-
-
-### Delete a directory
-
-To remove testdata directory, we can do this with the recursive option for rm : 
-
-```
-rm -r testdata
-```
-
-Removing the files in a directory recursively can be a very dangerous operation. If we’re concerned about what we might be 
-deleting we can add the “interactive” flag -i to rm which will ask us for confirmation before each step.
-```
-rm -r -i testdata
-```
-This removes everything in the directory, then the directory itself, asking at each step for you to confirm the deletion.
-
-
-***
-
 
 ### Look inside files: 
 
@@ -417,6 +388,39 @@ Setting the permission this way called alpha-beta notation. We can also change p
 chmod 754 students-list.txt
 ```
 ---
+
+### Delete a File
+
+```
+rm students-list.txt
+```
+This command removes files (```rm``` is short for “remove”). 
+
+Deleting Is Forever! The Linux shell doesn’t have a trash bin that we can recover deleted files. Instead, when we delete files, they are unhooked from the file system so that their storage space on disk can be recycled. 
+
+```rm``` by default only works on files, not directories.
+
+
+
+### Delete a directory
+
+To remove testdata directory, we can do this with the recursive option for rm : 
+
+```
+rm -r testdata
+```
+
+Removing the files in a directory recursively can be a very dangerous operation. If we’re concerned about what we might be 
+deleting we can add the “interactive” flag -i to rm which will ask us for confirmation before each step.
+```
+rm -r -i testdata
+```
+This removes everything in the directory, then the directory itself, asking at each step for you to confirm the deletion.
+
+
+***
+
+
 
 ## Storage Types
 |Name|Location|Good for|Quota|
