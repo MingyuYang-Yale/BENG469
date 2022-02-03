@@ -133,16 +133,6 @@ ls -lrt
 ```
 chmod u=rwx,g=rx,o=r cancer-gene.txt
 ```
-```
-chmod ugo=r cancer-gene.txt
-```
-```
-chmod ugo+x cancer-gene.txt
-```
-or
-```
-chmod u+w,go-rx cancer-gene.txt
-```
 
 Setting the permission this way called alpha-beta notation. We can also change permissions in numeric code in Linux
 
