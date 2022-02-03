@@ -131,17 +131,17 @@ ls -lrt
 ```
 
 ```
-chmod u=rwx,g=rx,o=r student-list.txt
+chmod u=rwx,g=rx,o=r cancer-gene.txt
 ```
 ```
-chmod ugo=r student-list.txt
+chmod ugo=r cancer-gene.txt
 ```
 ```
-chmod ugo+x student-list.txt 
+chmod ugo+x cancer-gene.txt
 ```
 or
 ```
-chmod u+w,go-rx student-list.txt
+chmod u+w,go-rx cancer-gene.txt
 ```
 
 Setting the permission this way called alpha-beta notation. We can also change permissions in numeric code in Linux
@@ -153,7 +153,7 @@ Setting the permission this way called alpha-beta notation. We can also change p
 <p><img width="750" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/permissions-3.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ```
-chmod 754 student-list.txt
+chmod 754 cancer-gene.txt
 ```
 ---
 
