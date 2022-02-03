@@ -493,10 +493,6 @@ exit
 
 #### Modules
 common software we have installed is available using module.  
-Load a module to use the software:
-```
-module load Python   (loads default version)
-```
 To see available software, run module avail
 ```
 module avail
@@ -504,6 +500,10 @@ module avail
 ```
 module avail Python
 ```
+```
+module load Python
+```
+
 #### Module commands
 |Command|Function|
 |------|-------|
