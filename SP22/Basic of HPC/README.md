@@ -353,42 +353,6 @@ You can also use -w to get only the number of words, or -c to get only the numbe
 
 ---
 
-## Permissions
-
-<p><img width="750" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/permissions-1.png" alt="foo bar" title="train &amp; tracks" /></p>
-
-A file owner can change the permisson with ```chmod``` command, short for "change mode".
-```
-ls -lrt
-```
-
-```
-chmod u=rwx,g=rx,o=r students-list.txt
-```
-```
-chmod ugo=r students-list.txt
-```
-```
-chmod ugo+x students-list.txt 
-```
-or
-```
-chmod u+w,go-rx students-list.txt
-```
-
-Setting the permission this way called alpha-beta notation. We can also change permissions in numeric code in Linux
-
-* 1 = Execute
-* 2 = Write
-* 4 = Read
-
-<p><img width="750" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/permissions-3.png" alt="foo bar" title="train &amp; tracks" /></p>
-
-```
-chmod 754 students-list.txt
-```
----
-
 ### Delete a File
 
 ```
