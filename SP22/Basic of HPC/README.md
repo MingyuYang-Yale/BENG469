@@ -414,11 +414,10 @@ For transfer data, you can either use ```scp``` or ```rsync```
 
 the source or the destination can be remote or local
 
-open a new terminal window on your local computer: (command + T)
-
 * If you have some data that on the cluster, and want to download it to your own computer on Mac
 
-open a new terminal window, then:
+open a new terminal window on your local computer: (command + T)
+
 ```
 scp beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/project/beng469/beng469_my393/00.database/cancer-gene.txt ./
 ```
