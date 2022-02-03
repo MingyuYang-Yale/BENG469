@@ -284,7 +284,7 @@ The cp command works very much like mv, except it copies a file instead of movin
 cp students-list.txt students-list-sp22.txt
 ```
 ```
-ls 
+ls -lrt
 ```
 ### Look inside files: 
 
