@@ -259,7 +259,7 @@ ssh beng469_my393@farnam.hpc.yale.edu (change my393 to your own NETID)
 ```
 For windows users, please login to the cluster via MobaXterm.
 
-*** For users only have class-specific account, you can also login to the cluster via OOD ( https://ood-farnam.hpc.yale.edu/ )
+* For users only have class-specific account, you can also login to the cluster via OOD(https://ood-farnam.hpc.yale.edu/)
 
 change directory to **project**.
 ```
