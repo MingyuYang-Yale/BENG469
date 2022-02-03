@@ -416,26 +416,19 @@ open a new terminal window on your local computer: (command + T)
 
 * If you have some data that on the cluster, and want to download it to your own computer
 ```
-scp beng469_my393@farnam.hpc.yale.edu:/home/beng469_my393/project/testdata/students-list.txt ./
-```
-* If you want to upload a file from your own compter to cluster. 
-```
-mv students-list.txt students-list-v2.txt 
+scp beng469_my393@farnam.hpc.yale.edu:/gpfs/ysm/project/beng469/beng469_my393/00.database/cancer-gene.txt ./
 ```
 ```
-scp ./students-list-v2.txt beng469_my393@farnam.hpc.yale.edu:/home/beng469_my393/project/testdata
+scp ./cancer-gene.txt beng469_my393@farnam.hpc.yale.edu:/home/beng469_my393/project/
 ```
 
 if you want tranfer directory, just add ```-r``` for recursive grasp not just a file, but all contents of the directory.
 
 for download: 
 ```
-scp -r beng469_my393@farnam.hpc.yale.edu:/home/beng469_my393/project/testdata/ ./
+scp -r beng469_my393@farnam.hpc.yale.edu:/home/beng469_my393/project/ ./
 ```
 for upload:
-```
-mv testdata testdata-v2
-```
 ```
 scp -r testdata-v2 beng469_my393@farnam.hpc.yale.edu:/home/beng469_my393/project/
 ```
