@@ -253,10 +253,13 @@ student-O    qw239
 
 (need to connect to Yale's VPN if off campus)
 
+For Mac users:
 ```
 ssh beng469_my393@farnam.hpc.yale.edu (change my393 to your own NETID)
 ```
-for windows user, please login to the cluster via MobaXtem
+For windows user : 
+
+please login to the cluster via MobaXterm
 
 ---
 change directory to **project**.
