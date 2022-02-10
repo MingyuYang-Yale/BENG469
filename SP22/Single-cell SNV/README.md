@@ -77,8 +77,7 @@ Install each package independently because the install script may prompt you to 
 ```r
 if (!requireNamespace("BiocManager", quietly = TRUE)) 
      install.packages("BiocManager")    
-```
-```r
+
 BiocManager::install("VariantAnnotation")
 BiocManager::install("plyranges")
 BiocManager::install("BSgenome.Hsapiens.UCSC.hg19")
