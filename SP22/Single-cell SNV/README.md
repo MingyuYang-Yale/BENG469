@@ -63,6 +63,9 @@ Load R
 ```
 module load R/3.6.1-foss-2018b
 ```
+```
+R
+```
 
 Before we install the Tapestri package, we need to install the related R packages first.
 
