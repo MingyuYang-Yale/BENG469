@@ -72,7 +72,7 @@ We will use the tapestri R package to extract the data.
 
 Before we install the Tapestri package, we need to install the related R packages first.
 
-The following steps will take ~30 minutes, we won't install them in class. You can install them by yourself after class if interested.
+The following steps will take ~30 minutes.
 ```r
 if (!requireNamespace("BiocManager", quietly = TRUE)) 
      install.packages("BiocManager")    
