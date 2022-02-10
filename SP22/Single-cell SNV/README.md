@@ -60,11 +60,14 @@ module load R/3.6.1-foss-2018b
 ```
 R
 ```
-### Install related R packages
+
+### Tapestri package:
+
+#### Install related R packages
 
 ***
 
-### Tapestri package:
+
 
 We will use the tapestri R package to extract the data.
 
