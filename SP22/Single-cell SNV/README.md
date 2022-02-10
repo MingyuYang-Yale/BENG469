@@ -63,9 +63,6 @@ cp /gpfs/ysm/project/beng469/beng469_my393/00.software/tapestri_1.1.0.tar.gz ./
 open R
 
 ```
-module avail R/3.6
-```
-```
 module load R/3.6.1-foss-2018b
 ```
 ```
