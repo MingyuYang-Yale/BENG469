@@ -101,6 +101,9 @@ install.packages(c("devtools", "digest"))
 devtools::install_github("mojaveazure/loomR")
 ```
 ```r
+devtools::install_github("jokergoo/circlize")
+```
+```r
 devtools::install_github("jokergoo/ComplexHeatmap")
 ```
 ```r
