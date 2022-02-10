@@ -12,7 +12,7 @@ They used a commercial platform from **Mission Bio** called **Tapestri**. The me
 ssh beng469_my393@farnam.hpc.yale.edu
 ```
 ```
-srun --pty -p interactive --mem=10g bash
+srun --pty -p interactive --mem=50g bash
 ```
 ```
 cd project
