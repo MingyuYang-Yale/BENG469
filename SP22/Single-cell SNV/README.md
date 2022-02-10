@@ -57,8 +57,13 @@ module avail R/3.6
 ```
 module load R/3.6.1-foss-2018b
 ```
+
+```r
+cp /gpfs/ysm/project/beng469/beng469_my393/00.bin/post_processing/post_processing* ./
 ```
-R
+
+```r
+R CMD BATCH post_processing.r 
 ```
 
 ### Tapestri package:
@@ -108,9 +113,3 @@ Just use the following R library path:
 ```
 ***
 
-```r
-cp /gpfs/ysm/project/beng469/beng469_my393/00.bin/post_processing/post_processing* ./
-```
-```r
-R CMD BATCH post_processing.r 
-```
