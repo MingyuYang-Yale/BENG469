@@ -91,7 +91,10 @@ BiocManager::install("BSgenome.Hsapiens.UCSC.hg19")
 BiocManager::install("TxDb.Hsapiens.UCSC.hg19.knownGene")
 ```
 ```r
-install.packages(c("devtools", "hdf5r", "digest"))
+BiocManager::install("rhdf5")
+```
+```r
+install.packages(c("devtools", "digest"))
 ```
 
 ```r
