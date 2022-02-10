@@ -62,7 +62,10 @@ module load R/3.6.1-foss-2018b
 ```
 R
 ```
-### Install related R packages（Optional）
+### Install related R packages
+
+***
+（Optional）
 
 ### Tapestri package:
 
@@ -97,6 +100,7 @@ BiocManager::install("org.Hs.eg.db")
 ```r
 devtools::install_local(path = "tapestri_1.1.0.tar.gz", repos='http://cran.us.r-project.org', upgrade="never")
 ```
+***
 
 Instead, Just use the R library: 
 ```r
