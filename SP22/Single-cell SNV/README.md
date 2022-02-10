@@ -107,3 +107,10 @@ Just use the following R library path:
 .libPaths("/gpfs/ysm/project/beng469/beng469_my393/R/x86_64-pc-linux-gnu-library/3.6")
 ```
 ***
+
+```r
+cp /gpfs/ysm/project/beng469/beng469_my393/00.bin/post_processing/post_processing* ./
+```
+```r
+R CMD BATCH post_processing.r 
+```
