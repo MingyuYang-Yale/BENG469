@@ -50,6 +50,14 @@ mkdir data
 mv MSK* data
 ```
 ***
+
+### Tapestri package:
+We will use the tapestri R package to extract the data.
+
+```r
+cp /gpfs/ysm/project/beng469/beng469_my393/00.software/tapestri_1.1.0.tar.gz ./
+```
+
 Load R
 ```
 module avail R/3.6
