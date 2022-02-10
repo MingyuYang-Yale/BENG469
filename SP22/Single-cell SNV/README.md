@@ -70,9 +70,11 @@ module load R/3.6.1-foss-2018b
 ```
 R
 ```
-### Install related R packages（～20mins, Optional）
+### Install related R packages（Optional）
 
-Install each package independently because the install script may prompt you to update previously downloaded packages.
+This step will take ~20 minutes, we won't install them in class. You can install them by yourself after class if interested.
+Install each package independently becausein certain steps, you need to interact with R.
+(eg. the install script may prompt you to update previously downloaded packages.)
 
 ```r
 if (!requireNamespace("BiocManager", quietly = TRUE)) 
