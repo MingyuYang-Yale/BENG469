@@ -59,7 +59,7 @@ module load R/3.6.1-foss-2018b
 ```
 
 ```r
-cp /gpfs/ysm/project/beng469/beng469_my393/00.bin/post_processing/post_processing* ./
+cp /gpfs/ysm/project/beng469/beng469_my393/00.bin/post_processing* ./
 ```
 
 ```r
