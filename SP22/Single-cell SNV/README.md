@@ -76,5 +76,5 @@ R CMD BATCH post_processing.r
 Or in Rstudio
 
 1. load post_processing.Rmd
-2. run every code block one by one.
+2. run each code block one by one.
 
