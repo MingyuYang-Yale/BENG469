@@ -96,7 +96,7 @@ devtools::install_local(path = "/gpfs/ysm/project/beng469/beng469_my393/00.softw
 ```
 ***
 
-#### Or instead
+#### Instead
 
 Just use the following R library path: 
 ```r
