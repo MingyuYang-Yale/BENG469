@@ -50,9 +50,7 @@ mkdir data
 mv MSK* data
 ```
 ***
-
-***
-open R
+Load R
 ```
 module avail R/3.6
 ```
