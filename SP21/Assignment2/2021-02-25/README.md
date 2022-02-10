@@ -1,3 +1,55 @@
+### Tapestri package:
+
+#### Install related R packages
+
+***
+
+
+
+We will use the tapestri R package to extract the data.
+
+Before we install the Tapestri package, we need to install the related R packages first.
+
+The following steps will take ~30 minutes. (Optional)
+```r
+if (!requireNamespace("BiocManager", quietly = TRUE)) 
+     install.packages("BiocManager")    
+
+BiocManager::install("VariantAnnotation")
+BiocManager::install("plyranges")
+BiocManager::install("BSgenome.Hsapiens.UCSC.hg19")
+BiocManager::install("TxDb.Hsapiens.UCSC.hg19.knownGene")
+BiocManager::install("rhdf5")
+
+install.packages(c("devtools", "digest"))
+
+devtools::install_github("mojaveazure/loomR")
+devtools::install_github("jokergoo/circlize")
+devtools::install_github("jokergoo/ComplexHeatmap")
+
+BiocManager::install("karyoploteR")
+BiocManager::install("annotatr")
+BiocManager::install("org.Hs.eg.db")
+```
+
+```r
+devtools::install_local(path = "/gpfs/ysm/project/beng469/beng469_my393/00.software/tapestri_1.1.0.tar.gz", repos='http://cran.us.r-project.org', upgrade="never")
+```
+***
+
+#### Or instead
+
+Just use the following R library path: 
+```r
+.libPaths("/gpfs/ysm/project/beng469/beng469_my393/R/x86_64-pc-linux-gnu-library/3.6")
+```
+***
+
+
+
+
+
+
 ***
 #### Login HPC:
 (need to connect to Yale's **VPN** if off campus)
