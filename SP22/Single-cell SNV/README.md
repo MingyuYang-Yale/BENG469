@@ -94,7 +94,7 @@ BiocManager::install("org.Hs.eg.db")
 ```r
 devtools::install_local(path = "/gpfs/ysm/project/beng469/beng469_my393/00.software/tapestri_1.1.0.tar.gz", repos='http://cran.us.r-project.org', upgrade="never")
 ```
-***
+
 
 #### Instead
 
