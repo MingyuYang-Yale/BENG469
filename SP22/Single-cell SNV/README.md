@@ -65,7 +65,6 @@ R
 ### Install related R packages
 
 ***
-（Optional）
 
 ### Tapestri package:
 
