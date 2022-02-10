@@ -70,9 +70,7 @@ R
 
 We will use the tapestri R package to extract the data.
 
-```
-cp /gpfs/ysm/project/beng469/beng469_my393/00.software/tapestri_1.1.0.tar.gz ./
-```
+Before we install the Tapestri package, we need to install the related R packages first.
 
 The following steps will take ~30 minutes, we won't install them in class. You can install them by yourself after class if interested.
 ```r
@@ -97,7 +95,7 @@ BiocManager::install("org.Hs.eg.db")
 ```
 
 ```r
-devtools::install_local(path = "tapestri_1.1.0.tar.gz", repos='http://cran.us.r-project.org', upgrade="never")
+devtools::install_local(path = "/gpfs/ysm/project/beng469/beng469_my393/00.software/tapestri_1.1.0.tar.gz", repos='http://cran.us.r-project.org', upgrade="never")
 ```
 ***
 
