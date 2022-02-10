@@ -138,6 +138,11 @@ final_NGTs<-setNames(lapply(names(filtered_NGT),function(x){
 }),names(filtered_NGT))
 ```
 
+After several filtering steps, we will have a more confident datasets with reduced false positive rate. 
+
+Next, use this dataset to assess the clonal abundance. 
+
+
 ```{r}
 # Select samples with at least 2 mutations 
 
