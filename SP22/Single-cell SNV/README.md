@@ -67,9 +67,10 @@ Run R script in command line
 R CMD BATCH post_processing.r 
 ```
 
-```r
+#### Or
+
 open Rstudio and load post_processing.Rmd
-```
+
 ### Tapestri package:
 
 #### Install related R packages
