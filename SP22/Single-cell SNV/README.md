@@ -62,10 +62,14 @@ module load R/3.6.1-foss-2018b
 cp /gpfs/ysm/project/beng469/beng469_my393/00.bin/post_processing* ./
 ```
 
+Run R script in command line
 ```r
 R CMD BATCH post_processing.r 
 ```
 
+```r
+open Rstudio and load post_processing.Rmd
+```
 ### Tapestri package:
 
 #### Install related R packages
