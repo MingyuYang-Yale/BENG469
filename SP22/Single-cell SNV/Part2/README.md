@@ -56,7 +56,7 @@
 Wait until the package is installed.
 <p><img width="900" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment2/2021-02-25/project12.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-#### Click to open "Fig1+2-20220216.Rmd"
+#### Click to open "Fig3ab-20220216.Rmd"
 <p><img width="900" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment2/2021-02-25/project13.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 #### Click "Install"
