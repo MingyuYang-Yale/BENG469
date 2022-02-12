@@ -36,7 +36,7 @@
 
 <p><img width="900" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment2/2021-02-25/project7.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-#### Click "Fig1+2-20220216.Rmd"
+#### Click to open "Fig1+2-20220216.Rmd"
 
 <p><img width="900" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment2/2021-02-25/project8.png" alt="foo bar" title="train &amp; tracks" /></p>
 
@@ -52,11 +52,14 @@
 
 <p><img width="900" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment2/2021-02-25/project11.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+
 Wait until the package is installed.
 <p><img width="900" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment2/2021-02-25/project12.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+#### Click to open "Fig1+2-20220216.Rmd"
 <p><img width="900" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment2/2021-02-25/project13.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+#### Click "Install"
 <p><img width="900" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment2/2021-02-25/project14.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 <p><img width="900" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment2/2021-02-25/project15.png" alt="foo bar" title="train &amp; tracks" /></p>
