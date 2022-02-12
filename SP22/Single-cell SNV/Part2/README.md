@@ -18,3 +18,8 @@
 
 <p><img width="900" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment2/2021-02-25/project2.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+
+#### Create New Project
+
+<p><img width="900" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment2/2021-02-25/project3.png" alt="foo bar" title="train &amp; tracks" /></p>
+
