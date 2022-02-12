@@ -40,6 +40,7 @@
 
 <p><img width="900" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment2/2021-02-25/project8.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+#### Click "Install"
 
 <p><img width="900" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment2/2021-02-25/project9.png" alt="foo bar" title="train &amp; tracks" /></p>
 
