@@ -28,7 +28,7 @@ vi submit.sh
 * type ```i``` ( From command mode to insert mode type)
 * change email address
 
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment2/2021-02-25/shellscripts.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment2/2021-02-25/email.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 * hit ```esc``` key (From insert mode to command mode type)
 * type ```:wq``` (write file and exit vim)
