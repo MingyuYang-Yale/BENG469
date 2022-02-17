@@ -26,6 +26,7 @@ Use ```vim``` to change mail user:
 vi submit.sh
 ```
 * type ```i``` ( From command mode to insert mode type)
+* change email address
 
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment2/2021-02-25/shellscripts.png" alt="foo bar" title="train &amp; tracks" /></p>
 
