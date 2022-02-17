@@ -37,3 +37,7 @@ vi submit.sh
 ```
 sbatch submit.sh 
 ```
+
+You will get emails when your job begin and end.
+
+Try to finish this assignment in two weeks.
