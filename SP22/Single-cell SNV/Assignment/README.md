@@ -32,3 +32,8 @@ vi submit.sh
 
 * hit ```esc``` key (From insert mode to command mode type)
 * type ```:wq``` (write file and exit vim)
+
+#### Submit job 
+```
+sbatch submit.sh 
+```
