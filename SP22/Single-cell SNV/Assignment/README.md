@@ -21,8 +21,13 @@ cp /gpfs/ysm/project/beng469/beng469_my393/00.bin/MDP_trajectory.r ./
 ```
 cp /gpfs/ysm/project/beng469/beng469_my393/00.bin/submit.sh ./
 ```
+Use ```vim``` to change mail user: 
+```
+vi submit.sh
+```
+* type ```i``` ( From command mode to insert mode type)
 
-#### open R
-```
-module load R/3.6.1-foss-2018b
-```
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment2/2021-02-25/shellscripts.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+* hit ```esc``` key (From insert mode to command mode type)
+* type ```:wq``` (write file and exit vim)
