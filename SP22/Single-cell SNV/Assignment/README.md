@@ -26,32 +26,3 @@ cp /gpfs/ysm/project/beng469/beng469_my393/00.bin/submit.sh ./
 ```
 module load R/3.6.1-foss-2018b
 ```
-```
-R
-```
-#### Install R packages (about 5 mins, CRAN mirrors choose "1")
-```
-install.packages('knitr')
-```
-```
-install.packages('kableExtra')
-```
-```
-install.packages('ReinforcementLearning')
-```
-```
-install.packages('dplyr')
-```
-```
-install.packages('tidyr')
-```
-```
-install.packages('reshape2')
-```
-```
-install.packages('igraph')
-```
-
-```
-quit()  # choose n to not save workspace image
-```
