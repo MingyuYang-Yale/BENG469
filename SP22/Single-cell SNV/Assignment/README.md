@@ -22,8 +22,6 @@ cp /gpfs/ysm/project/beng469/beng469_my393/00.bin/MDP_trajectory.r ./
 cp /gpfs/ysm/project/beng469/beng469_my393/00.bin/submit.sh ./
 ```
 
----
-
 #### open R
 ```
 module load R/3.6.1-foss-2018b
