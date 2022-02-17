@@ -1,3 +1,8 @@
+
+This is the assignment instruction for the SNV part. Try to finish this assignment in two weeks (before March 3rd 23:59 EST).
+
+If you have any difficuties to finish the assignment, feel free to contact us.
+
 ---
 #### Login HPC:
 (need to connect to Yale's **VPN** if off campus)
@@ -39,5 +44,3 @@ sbatch submit.sh
 ```
 
 You will get emails when your job begin and end.
-
-Try to finish this assignment in two weeks.
