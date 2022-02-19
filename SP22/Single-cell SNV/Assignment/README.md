@@ -43,4 +43,4 @@ vi submit.sh
 sbatch submit.sh 
 ```
 
-You will get emails when your job begin and end.
+You will get emails when your job begin and end. (THe job may takes 2 days to finish when HPC crowded)
