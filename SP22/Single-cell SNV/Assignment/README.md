@@ -56,5 +56,3 @@ There are 2 rds files generated:
 MDP_allsamples_results.rds
 
 MDP_trajectory_allsamples_for_each_gene.rds
-
-You can download them from HPC and upload to Rstudio Cloud, then use them to finish the codes in Fig3a+b.Rmd
