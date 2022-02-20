@@ -51,7 +51,7 @@ Start:
 End:
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment2/2021-02-25/email1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-(* Please forward this "COMPLETED" email to Junchen(junchen.yang@yale.edu), let him know that you finished the assignment.)
+(* Please forward this "COMPLETED" email to Junchen(junchen.yang@yale.edu), let him know that you finish the assignment.)
 
 #### Expected Results:
 
