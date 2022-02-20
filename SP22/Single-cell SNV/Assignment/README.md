@@ -53,7 +53,8 @@ You will get emails when the job begin and end. (This job will takes ~ 2 days to
 
 There are 2 rds files generated:
 
-MDP_allsamples_results.rds
-MDP_trajectory_allsamples_for_each_gene.rds
+*MDP_allsamples_results.rds
+
+*MDP_trajectory_allsamples_for_each_gene.rds
 
 You can download them from HPC and upload to Rstudio Cloud, then use them to finish the codes in Fig3a+b.Rmd
