@@ -43,7 +43,7 @@ vi submit.sh
 sbatch submit.sh 
 ```
 
-You will get emails when the job begin and end. (This job may takes ~ 2 days to finish when HPC crowded)
+You will get emails when the job begin and end. (This job will takes ~ 2 days to finish when HPC crowded)
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment2/2021-02-25/email2.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment2/2021-02-25/email1.png" alt="foo bar" title="train &amp; tracks" /></p>
