@@ -48,3 +48,10 @@ You will get emails when the job begin and end. (This job will takes ~ 2 days to
 
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment2/2021-02-25/email1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+
+There are 2 rds files generated:
+
+MDP_allsamples_results.rds
+MDP_trajectory_allsamples_for_each_gene.rds
+
+You can download then from HPC then upload to Rstudio Cloud, use them to finish the codes in Fig3a+b.Rmd
