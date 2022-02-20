@@ -49,7 +49,7 @@ You will get emails when the job begin and end. (This job will takes ~ 2 days to
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment2/2021-02-25/email1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
-#### Results:
+#### Expected Results:
 
 There are 2 rds files generated:
 
