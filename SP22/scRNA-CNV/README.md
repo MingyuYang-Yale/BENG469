@@ -8,9 +8,9 @@ In this computational lab, we will go through examples of calculating single cel
 ***
 Login HPC by Open OnDemand:
 
-Open our class specific Open OnDemand by the following address : 
+Open Farnam OnDemand:
 
-```
-beng469.ycrc.yale.edu
-```
+Go to beng469.ycrc.yale.edu in your web browser (make sure that you are on Yale Network or Yale VPN). You will see the following window once you logged in.
+
+<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
