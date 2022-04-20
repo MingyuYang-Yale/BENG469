@@ -27,3 +27,8 @@ Go to [beng469.ycrc.yale.edu](https://beng469.ycrc.yale.edu) in your web browser
  (you can leave other optional boxes blank), then click **Launch**
  
  <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-3.PNG" alt="foo bar" title="train &amp; tracks" /></p>
+
+4. Lauch Rstudio Server
+Wait for a few seconds until you see your requested session is running, then click **Connect to RStudio Server**. You will see a new window poping out.
+
+<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-4.png" alt="foo bar" title="train &amp; tracks" /></p>
