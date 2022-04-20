@@ -7,8 +7,7 @@ In this computational lab, we will go through examples of calculating single cel
 
 ***
 
-****
-1. Open Farnam OnDemand:
+**1. Open Farnam OnDemand:**
 
 Go to [beng469.ycrc.yale.edu](https://beng469.ycrc.yale.edu) in your web browser (make sure that you are on Yale Network or Yale VPN). You will see the following window once you logged in.
 
