@@ -56,7 +56,7 @@ Inside Rstudio, click the ellipsis icon in the file navigating panel at the bott
 
 In the "Go To Folder" window that pops out, paste ```~/project/scRNA-CNV``` to the "Directory" box: , then click "Open". 
 
-<p><img width="300" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-6.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-6.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 This will lead you to the directory where CopyKAT.Rmd and InferCNV.Rmd are located. You can click these files to open them.
 
