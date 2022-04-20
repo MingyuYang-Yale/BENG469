@@ -20,6 +20,10 @@ Go to [beng469.ycrc.yale.edu](https://beng469.ycrc.yale.edu) in your web browser
 
 3. Request computation resources
 
- Specify the resources as shown below (you can leave other optional boxes blank), then click **Launch**
+ Specify the resources as shown below 
+ 
+ (InferCNV need module **JAGS/4.3.0-foss-2020b**)
+ 
+ (you can leave other optional boxes blank), then click **Launch**
  
  <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-3.PNG" alt="foo bar" title="train &amp; tracks" /></p>
