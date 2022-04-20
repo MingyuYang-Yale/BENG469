@@ -8,5 +8,9 @@ In this computational lab, we will go through examples of calculating single cel
 ***
 Login HPC by Open OnDemand:
 
-Open our class specific Open OnDemand by this address : beng469.ycrc.yale.edu
+Open our class specific Open OnDemand by the following address : 
+
+```
+beng469.ycrc.yale.edu
+```
 
