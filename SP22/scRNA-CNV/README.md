@@ -22,7 +22,7 @@ Go to [beng469.ycrc.yale.edu](https://beng469.ycrc.yale.edu) in your web browser
 
  Specify the resources as shown below 
  
- (InferCNV need module **JAGS/4.3.0-foss-2020b**)
+ Additional module: **JAGS/4.3.0-foss-2020b**
  
  (you can leave other optional boxes blank), then click **Launch**
  
