@@ -14,6 +14,12 @@ Go to [beng469.ycrc.yale.edu](https://beng469.ycrc.yale.edu) in your web browser
 
 <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+
+2. Click open **Clusters** -> **Farnam Shell Access**
+
+<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-0.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-00.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 2. Click open **RStudio Server**
 
 <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-2.png" alt="foo bar" title="train &amp; tracks" /></p>
