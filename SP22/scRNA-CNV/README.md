@@ -47,3 +47,8 @@ cp -r /gpfs/ysm/project/beng469/beng469_my393/scRNA-CNV ./
 Wait for a few seconds until you see your requested session is running, then click **Connect to RStudio Server**. You will see a new window poping out.
 
 <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-4.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+### 7. Open the **CopyKAT** and **InferCNV** RMD files inside Rstudio Server
+
+Inside Rstudio, click the ellipsis icon in the file navigating panel at the bottom right. In the "Go To Folder" window that pops out, paste the following path to the "Directory" box: ```~/project/scRNA-CNV```, then click "Open". This will lead you to the directory where Trajectory_monocle2.Rmd and Trajectory_monocle3.Rmd are located. You can click these files to open them.
+
