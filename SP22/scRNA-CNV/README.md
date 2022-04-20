@@ -7,19 +7,19 @@ In this computational lab, we will go through examples of calculating single cel
 
 ***
 
-**1. Open Farnam OnDemand:**
+### 1. Open Farnam OnDemand:
 
 Go to [beng469.ycrc.yale.edu](https://beng469.ycrc.yale.edu) in your web browser (make sure that you are on Yale Network or Yale VPN). You will see the following window once you logged in.
 
 <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
-2. Click open **Clusters** -> **Farnam Shell Access**
+### 2. Click open **Clusters** -> **Farnam Shell Access**
 
 <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-0.png" alt="foo bar" title="train &amp; tracks" /></p>
 <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-00.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-3. Copy **scRNA-CNV** to your project folder :
+### 3. Copy **scRNA-CNV** to your project folder :
 
 ```
 cd project
@@ -29,11 +29,11 @@ cd project
 cp -r /gpfs/ysm/project/beng469/beng469_my393/scRNA-CNV ./
 ```
 
-4. Click open **RStudio Server**
+### 4. Click open **RStudio Server**
 
 <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-2.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-5. Request computation resources
+### 5. Request computation resources
 
  Specify the resources as shown below 
  
@@ -43,7 +43,7 @@ cp -r /gpfs/ysm/project/beng469/beng469_my393/scRNA-CNV ./
  
  <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-3.PNG" alt="foo bar" title="train &amp; tracks" /></p>
 
-6. Lauch Rstudio Server
+### 6. Lauch Rstudio Server
 Wait for a few seconds until you see your requested session is running, then click **Connect to RStudio Server**. You will see a new window poping out.
 
 <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-4.png" alt="foo bar" title="train &amp; tracks" /></p>
