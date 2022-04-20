@@ -14,7 +14,6 @@ Go to [beng469.ycrc.yale.edu](https://beng469.ycrc.yale.edu) in your web browser
 
 <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-![plot](https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-1.png)
-
 2. Click open **RStudio Server**
-![plot](https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-2.png)
+
+<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-2.png" alt="foo bar" title="train &amp; tracks" /></p>
