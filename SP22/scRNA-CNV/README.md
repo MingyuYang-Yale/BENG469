@@ -10,7 +10,7 @@ Login HPC by Open OnDemand:
 
 Open Farnam OnDemand:
 
-Go to beng469.ycrc.yale.edu in your web browser (make sure that you are on Yale Network or Yale VPN). You will see the following window once you logged in.
+Go to [beng469.ycrc.yale.edu](https://beng469.ycrc.yale.edu) in your web browser (make sure that you are on Yale Network or Yale VPN). You will see the following window once you logged in.
 
 <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
