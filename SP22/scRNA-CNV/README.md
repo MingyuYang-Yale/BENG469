@@ -54,7 +54,7 @@ Inside Rstudio, click the ellipsis icon in the file navigating panel at the bott
 
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-5.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-In the "Go To Folder" window that pops out, paste ```~/project/scRNA-CNV``` to the "Directory" box: , then click "Open". 
+In the "Go To Folder" window that pops out, paste ```~/project/scRNA-CNV``` to the "Directory" box: , then click "Ok". 
 
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-6.png" alt="foo bar" title="train &amp; tracks" /></p>
 
