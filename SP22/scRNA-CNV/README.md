@@ -24,7 +24,7 @@ Go to [beng469.ycrc.yale.edu](https://beng469.ycrc.yale.edu) in your web browser
 ```
 cd project
 ```
-
+Copy the demo data and codes:
 ```
 cp -r /gpfs/ysm/project/beng469/beng469_my393/scRNA-CNV ./
 ```
