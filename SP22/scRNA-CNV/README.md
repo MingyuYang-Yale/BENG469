@@ -3,7 +3,7 @@
 In this computational lab, we will go through examples of calculating single cell copy number profiles from 10X single cell RNA data, predicting tumor and normal cells, and inferring tumor subclones from using CopyKAT and InferCNV, try to repeat figure2a and 2c.
 
 <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/copykat-paper.png" alt="foo bar" title="train &amp; tracks" /></p>
-<p><img width="650" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Fig2ac.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="650" src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41587-020-00795-2/MediaObjects/41587_2020_795_Fig2_HTML.png?as=webp" alt="foo bar" title="train &amp; tracks" /></p>
 
 ***
 
