@@ -7,7 +7,7 @@
 
 * How to access HPC?
 
-* Storing & Transferring Data
+* How to transfer data?
 
 * What is OOD?
 
