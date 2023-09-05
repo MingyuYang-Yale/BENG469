@@ -7,7 +7,7 @@
 
 * How to access HPC?
 
-* How to transfer data?
+* How to transfer data to HPC?
 
 * What is OOD?
 
@@ -17,14 +17,11 @@
 * High Performance Computing (HPC) cluster is a collection of networked computers and data storage.
 * HPC are modern day supercompters (rack-mounted computers, Networking, Storage)
 
-
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/clusters.png" alt="foo bar" title="train &amp; tracks" /></p>
-
 
 * Access via the login nodes.
 * Shared filesystem presents data across all nodes.
 * Submit jobs scheduled to run on compute nodes.
-
 
 ### Why use HPC?
 *  Don’t want to tie up your own machine 
@@ -156,6 +153,26 @@ getquota
 * Project, scratch has a group quota shared with your group, large
 ---
 
+## Transfer Data to the HPC
+
+- command line:  ```scp``` or ```rsync```
+- GUI-based: Open OnDemand, CyberDuck, MobaXterm
+- GridFTP for large datasets : Globus
+
+## Get familar with Open OnDemond
+
+Install R package
+
+Due to the limited time, we can only give an brief introduction here. we will keep adding more materials to it on the following classes.
+
+More need to learn:
+
+R
+Python
+Linux
+Slurm
+
+student has different level, so 
 
 research.computing.yale.edu
 docs.ycrc.yale.edu
