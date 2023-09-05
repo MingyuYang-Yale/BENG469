@@ -45,7 +45,10 @@
 |Milgram|2,400|80|milgram.hpc.yale.edu|HIPAA and other sensitive data|
 
 <p>
-  <img height="150" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Grace.png" alt="foo bar" title="train &amp; tracks" />
+  <img height="150" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Grace.png" alt="foo bar" title="train &amp; tracks" /> 
+</p>
+The Grace cluster is is named for the computer scientist and United States Navy Rear Admiral Grace Murray Hopper, who received her Ph.D. in Mathematics from Yale in 1934.
+<p>  
   <img height="150" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Mccleary.png" alt="foo bar" title="train &amp; tracks" />
   <img height="150" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Milgram.png" alt="foo bar" title="train &amp; tracks" />
 </p>
