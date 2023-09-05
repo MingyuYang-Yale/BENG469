@@ -24,3 +24,8 @@
 * Access via the login nodes.
 * Shared filesystem presents data across all nodes.
 * Submit jobs scheduled to run on compute nodes.
+
+*** reference:
+
+- research.computing.yale.edu
+- docs.ycrc.yale.edu
