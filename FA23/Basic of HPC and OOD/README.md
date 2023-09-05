@@ -60,8 +60,10 @@ Three general methods to login:
 - Command line SSH (Linux or MacOS)
 beng469_netid@mccleary.ycrc.yale.edu
 - Graphical ssh tool (MobaXterm Windows)
-- Open OnDemand(OOD), web-based login  beng469.ycrc.yale.edu
-***** For most users, we recommend using the OOD, to access the clusters.
+- Open OnDemand(OOD), web-based login
+  -- beng469.ycrc.yale.edu
+
+For most users, we recommend using the OOD, to access the clusters.
 
 ## SSH Connection (Linux or MacOS)
 
