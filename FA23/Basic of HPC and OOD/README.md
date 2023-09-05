@@ -104,7 +104,7 @@ Copy and paste the output to https://sshkeys.hpc.yale.edu/  (Note: It can take 
 #### Log on to the Clusters (macOS and Linux)
 Once your key has been copied to the appropriate places on the clusters, you can log in with the command:
 ```
-    ssh beng469_netid@farnam.hpc.yale.edu
+ssh beng469_netid@mccleary.ycrc.yale.edu
 ```    
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/login-mac.png" alt="foo bar" title="train &amp; tracks" /></p>
 
