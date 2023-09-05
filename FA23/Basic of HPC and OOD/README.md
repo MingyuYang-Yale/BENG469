@@ -25,7 +25,28 @@
 * Shared filesystem presents data across all nodes.
 * Submit jobs scheduled to run on compute nodes.
 
-*** reference:
 
-- research.computing.yale.edu
-- docs.ycrc.yale.edu
+### Why use HPC?
+*  Don’t want to tie up your own machine 
+*  Have many long running jobs to run
+*  Want to run in parallel to get results quicker 
+*  Need more disk space 
+*  Need more memory
+*  Want to use software installed on the cluster
+*  Want to access data stored on the cluster 
+*  Want to use GPUs 
+
+## Yale Clusters
+
+|Cluster|CPUs|Nodes|Login Address|Purpose|
+|------|-------|------|-------|------|
+|Grace|69,000|740|grace.hpc.yale.edu|general|
+|McCleary|13,000|340|mccleary.ycrc.yale.edu|medical/life science,YCGA|
+|Milgram|2,400|80|milgram.hpc.yale.edu|HIPAA and other sensitive data (HIPPA: Health Insurance Portability and Accountability Act)|
+
+
+
+
+
+research.computing.yale.edu
+docs.ycrc.yale.edu
