@@ -11,7 +11,6 @@
 
 * What is OOD?
 
-***
 
 ### What is HPC?
 
