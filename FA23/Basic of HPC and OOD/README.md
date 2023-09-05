@@ -42,7 +42,7 @@
 |------|-------|------|-------|------|
 |Grace|69,000|740|grace.hpc.yale.edu|general|
 |McCleary|13,000|340|mccleary.ycrc.yale.edu|medical/life science,YCGA|
-|Milgram|2,400|80|milgram.hpc.yale.edu|HIPAA and other sensitive data (HIPPA: Health Insurance Portability and Accountability Act)|
+|Milgram|2,400|80|milgram.hpc.yale.edu|HIPAA and other sensitive data|
 
 
 
