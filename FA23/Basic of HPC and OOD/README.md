@@ -36,7 +36,7 @@
 *  Want to access data stored on the cluster 
 *  Want to use GPUs 
 
-## Yale Clusters
+## Yale HPC
 
 |Cluster||CPUs|Nodes|Login Address|Purpose|
 |------|-------|------|-------|------|------|
@@ -50,13 +50,18 @@
 You should have received a email from Yale Center for Research Computing:
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/mail-from-ycrc-mccleary.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-## Log in to the Clusters
+## Log in to the HPC
 
-* Yale's clusters can only be accessed on the Yale network. For **off campus** access, you will need to first connect to Yale's **VPN**(https://software.yale.edu/software/cisco-vpn-anyconnect). 
+Only reachable from Yale campus network:
+- YaleSecure (on campus)
+- Yale VPN (off campus)
 
-To login: 
-- SSH:  beng469_netid@mccleary.ycrc.yale.edu
-- OOD: beng469.ycrc.yale.edu
+Three general methods to login:
+- Command line ssh (Linux or MacOS)
+  beng469_netid@mccleary.ycrc.yale.edu
+- Graphical ssh tool (MobaXterm Windows)
+- Open OnDemand, web-based login
+  beng469.ycrc.yale.edu
 
 research.computing.yale.edu
 docs.ycrc.yale.edu
