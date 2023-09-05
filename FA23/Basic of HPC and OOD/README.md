@@ -57,13 +57,9 @@ Only reachable from Yale campus network:
 - Yale VPN (off campus)
 
 Three general methods to login:
-- Command line ssh (Linux or MacOS)
-
-  beng469_netid@mccleary.ycrc.yale.edu
+- Command line ssh (Linux or MacOS)  beng469_netid@mccleary.ycrc.yale.edu
 - Graphical ssh tool (MobaXterm Windows)
-- Open OnDemand, web-based login
-
-  beng469.ycrc.yale.edu
+- Open OnDemand, web-based login  beng469.ycrc.yale.edu
 
 research.computing.yale.edu
 docs.ycrc.yale.edu
