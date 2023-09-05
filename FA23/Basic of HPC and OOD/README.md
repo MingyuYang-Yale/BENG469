@@ -38,7 +38,7 @@
 
 ## Yale Clusters
 
-|Cluster||CPUs|Nodes|Login Address|Purpose||
+|Cluster||CPUs|Nodes|Login Address|Purpose|
 |------|-------|------|-------|------|------|
 |Grace|<p><img height="150" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Grace.png" alt="foo bar" title="train &amp; tracks" /> </p>|69,000|740|grace.hpc.yale.edu|general|
 |McCleary|<p><img height="150" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Mccleary.png" alt="foo bar" title="train &amp; tracks" /> </p>|13,000|340|mccleary.ycrc.yale.edu|medical/life science,YCGA|
