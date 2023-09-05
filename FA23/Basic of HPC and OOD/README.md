@@ -72,7 +72,7 @@ For most users, we recommend using the OOD, to access the clusters.
 
 https://docs.ycrc.yale.edu/clusters-at-yale/access/ssh/
 
-*** Generate Your Key Pair on macOS and Linux
+#### Generate Your Key Pair on macOS and Linux
 
 To generate a new key pair, first open a terminal/xterm session. 
 
