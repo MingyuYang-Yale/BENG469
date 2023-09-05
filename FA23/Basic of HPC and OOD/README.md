@@ -138,5 +138,24 @@ We recommend using MobaXterm to connect to the clusters. You can download, ext
 
 <p><img width="800" src="https://docs.ycrc.yale.edu/img/ssh-connection.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+## Storage Types
+|Name|Location|Good for|Quota|
+|------|-------|------|-------|
+|Home|~/|Scripts,final results|125GiB/Person|
+|Project|~/project|Larger datasets (keep a copy elsewhere)|4TiB/Group|
+|Scratch60|~/scratch|Temporary, shared files, purged every 60 days|10TiB/Group|
+---
+## Quotas
+* To check our course’s cluster quotas, run:
+```
+getquota
+```
+* All storage areas have quotas, both size and file count
+* If you hit your limit, jobs fail
+* Home quota is per user, small
+* Project, scratch has a group quota shared with your group, large
+---
+
+
 research.computing.yale.edu
 docs.ycrc.yale.edu
