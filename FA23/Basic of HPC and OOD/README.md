@@ -13,7 +13,7 @@
 
 ***
 
-* What is HPC?
+### What is HPC?
 
 High Performance Computing (HPC) cluster is a collection of networked computers and data storage.
 
