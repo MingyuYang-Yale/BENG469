@@ -47,6 +47,8 @@
 You should have received a email from Yale Center for Research Computing:
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/mail-from-ycrc-mccleary.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+the is specific for this course account. recommand to use it instead your own research account. this account will be removed after the class end.
+
 ## Log in to the HPC
 
 Only reachable from Yale campus network:
@@ -157,9 +159,13 @@ getquota
 
 - command line:  ```scp``` or ```rsync```
 - GUI-based: Open OnDemand, CyberDuck, MobaXterm
-- GridFTP for large datasets : Globus
+- For large datasets : Globus
 
-## Get familar with Open OnDemond
+## What is Open OnDemond(OOD)
+- OOD is an open-source web portal for HPC centers to provide users with an easy-to-use web interface to HPC clusters.
+- Web-based, doesn't require the installation of client software on your local machine.
+- Easy to use and simple to learn.
+- The easiest way to run GUI applications remotely on a cluster.
 
 Install R package
 
