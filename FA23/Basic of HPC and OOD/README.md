@@ -131,7 +131,7 @@ We recommend using MobaXterm to connect to the clusters. You can download, ext
 * Open MobaXterm.
 * From the top menu select Sessions -> New Session.
 * Click the SSH icon in the top left.
-* Enter the cluster login node address (e.g. farnam.hpc.yale.edu) as the Remote Host.
+* Enter the cluster login node address (e.g. mccleary.ycrc.yale.edu) as the Remote Host.
 * Check "Specify Username" and Enter your netID as the the username.
 * Click the "Advanced SSH Settings" tab and check the "Use private key box", then click the file icon / magnifying glass to choose where you saved your private key (id_rsa.ppk).
 * Click OK.
