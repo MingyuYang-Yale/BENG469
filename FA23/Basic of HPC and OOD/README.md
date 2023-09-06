@@ -65,8 +65,8 @@ ssh beng469_netid@mccleary.ycrc.yale.edu
 ```
 beng469.ycrc.yale.edu
 ```
-For first two methods use ssh and require an ssh key. See also: [https://docs.ycrc.yale.edu/clusters-at-yale/access/](https://docs.ycrc.yale.edu/clusters-at-yale/access/ssh/)
-For this class, we will use Open OnDemand to login to the cluster. For more advanced use cases that are not well supported by the Open OnDemand, you can connect to the cluster using SSH.
+- For first two methods use ssh and require an ssh key. See also: [https://docs.ycrc.yale.edu/clusters-at-yale/access/](https://docs.ycrc.yale.edu/clusters-at-yale/access/ssh/)
+- For this class, we will use Open OnDemand to login to the cluster. For more advanced use cases that are not well supported by the Open OnDemand, you can connect to the cluster using ssh.
 ## Storage Types
 |Name|Location|Good for|Quota|
 |------|-------|------|-------|
