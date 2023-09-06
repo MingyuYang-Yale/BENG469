@@ -79,8 +79,9 @@ Only reachable from Yale campus network:
 beng469.ycrc.yale.edu
 ```
 2. Log in with your Yale NetID and password
+   <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-3. After login you will see the OOD dashboard.
+4. After login you will see the OOD dashboard.
 
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood.png" alt="foo bar" title="train &amp; tracks" /></p>
 
