@@ -60,6 +60,9 @@ Three general methods to login:
 ssh beng469_netid@mccleary.ycrc.yale.edu
 ```
 - Graphical ssh tool (MobaXterm Windows)
+
+```https://docs.ycrc.yale.edu/clusters-at-yale/access/ssh/```
+  
 - Open OnDemand(OOD), web-based login
 ```
 beng469.ycrc.yale.edu
