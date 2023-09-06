@@ -74,11 +74,13 @@ Only reachable from Yale campus network:
 
 ### Access OOD
 
-**OOD site for our class**: 
+1. open OOD site for our class: 
 ```
-**beng469.ycrc.yale.edu**
+beng469.ycrc.yale.edu
 ```
-After login you will see the OOD dashboard.
+2. Log in with your Yale NetID and password
+
+3. After login you will see the OOD dashboard.
 
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood.png" alt="foo bar" title="train &amp; tracks" /></p>
 
