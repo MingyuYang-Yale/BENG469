@@ -90,7 +90,7 @@ beng469.ycrc.yale.edu
 
 - click **Files**
 
-Good for uploading/downloading files up to 10GiB
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-storages.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 #### Storage Types
 |Name|Location|Good for|Quota|
