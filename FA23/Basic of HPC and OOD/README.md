@@ -65,9 +65,16 @@ Only reachable from Yale campus network:
 - For the first two methods, you'll need an ssh key to access. The process of generating SSH keys varies depending on your platform. Find detailed instructions on how to generate and upload SSH keys <a href="https://docs.ycrc.yale.edu/clusters-at-yale/access/ssh/"> **here** </a> .
 - **In this class, we will mainly use Open OnDemand to access the HPC.** For more advanced use cases not well supported by the Open OnDemand, you can connect to the HPC using SSH.
 
+## Access Open OnDemond
+
+OOD site for our class: 
 ```
 beng469.ycrc.yale.edu
 ```
+After login you will see the OOD dashboard.
+
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-dashboard.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 ## Storage Types
 |Name|Location|Good for|Quota|
 |------|-------|------|-------|
