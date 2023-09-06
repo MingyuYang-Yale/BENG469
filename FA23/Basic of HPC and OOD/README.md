@@ -31,7 +31,7 @@
 *  Want to access data stored on the cluster 
 *  Want to use GPUs 
 
-## Yale HPC
+### Yale HPC
 
 |Cluster||CPUs|Nodes|Login Address|Purpose|
 |------|-------|------|-------|------|------|
