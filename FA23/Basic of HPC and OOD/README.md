@@ -8,8 +8,6 @@
 
 * What is OOD?
 
-* How to transfer data to HPC?
-
 
 ### What is HPC?
 
