@@ -88,7 +88,7 @@ beng469.ycrc.yale.edu
 - click **Clusters** -> **shell access**
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-ssh-login.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-- File manager (click **Files**)
+- click **Files**
   Good for uploading/downloading files up to 10GiB
 
 #### Storage Types
@@ -115,18 +115,15 @@ getquota
 - GUI-based: Open OnDemand, CyberDuck, MobaXterm
 - For large datasets : Globus
 
-Install R package
 
-Due to the limited time, we can only give an brief introduction here. we will keep adding more materials to it on the following classes.
+Due to the limited time, we can only give an brief introduction here.
 
-More need to learn:
+**Online Tutorials**
 
-R
-Python
-Linux
-Slurm
+https://docs.ycrc.yale.edu/resources/online-tutorials/
 
-student has different level, so 
+1. https://research.computing.yale.edu/training/introduction-hpc
+2. https://research.computing.yale.edu/ycrc-bootcamp-practical-introduction-linux 
+3. https://research.computing.yale.edu/training/intro-python
+4. https://research.computing.yale.edu/r-optimization-training-video 
 
-research.computing.yale.edu
-docs.ycrc.yale.edu
