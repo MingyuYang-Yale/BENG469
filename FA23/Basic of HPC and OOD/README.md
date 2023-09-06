@@ -62,11 +62,14 @@ ssh beng469_netid@mccleary.ycrc.yale.edu
 2. Graphical ssh tool (MobaXterm Windows)
   
 3. Open OnDemand(OOD), web-based login
+
+- For the first two methods, require an ssh key to access. The process of generating SSH keys varies depending on your platform. We won't cover the key generation process here, but you can find detailed instructions on how to generate and upload SSH keys on this webpage. ![image](https://github.com/MingyuYang-Yale/BENG469/assets/50332096/c324647c-e140-4ad9-8d88-fbc4e2a90037)
+[https://docs.ycrc.yale.edu/clusters-at-yale/access/](https://docs.ycrc.yale.edu/clusters-at-yale/access/ssh/)
+- In this class, we will mainly use Open OnDemand to access the HPC. For more advanced use cases that are not well supported by the Open OnDemand, you can connect to the cluster using ssh.
+
 ```
 beng469.ycrc.yale.edu
 ```
-- For first two methods use ssh and require an ssh key. See also: [https://docs.ycrc.yale.edu/clusters-at-yale/access/](https://docs.ycrc.yale.edu/clusters-at-yale/access/ssh/)
-- For this class, we will use Open OnDemand to login to the cluster. For more advanced use cases that are not well supported by the Open OnDemand, you can connect to the cluster using ssh.
 ## Storage Types
 |Name|Location|Good for|Quota|
 |------|-------|------|-------|
