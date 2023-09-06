@@ -55,20 +55,18 @@ Only reachable from Yale campus network:
 - Yale VPN (off campus)
 
 Three general methods to login:
-- Command line SSH (Linux or MacOS)
+1. Command line SSH (Linux or MacOS)
 ```
 ssh beng469_netid@mccleary.ycrc.yale.edu
 ```
-- Graphical ssh tool (MobaXterm Windows)
+2. Graphical ssh tool (MobaXterm Windows)
   
-- Open OnDemand(OOD), web-based login
+3. Open OnDemand(OOD), web-based login
 ```
 beng469.ycrc.yale.edu
 ```
-
 For first two methods use ssh and require an ssh key. See also: [https://docs.ycrc.yale.edu/clusters-at-yale/access/](https://docs.ycrc.yale.edu/clusters-at-yale/access/ssh/)
 
-For most users, we recommend using the OOD, to access the clusters.
 
 ## SSH Connection (Linux or MacOS)
 
