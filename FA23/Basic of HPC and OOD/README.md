@@ -64,7 +64,7 @@ Only reachable from Yale campus network:
 3. Open OnDemand(OOD), web-based login
 
 - For the first two methods, you'll need an ssh key to access. The process of generating SSH keys varies depending on your platform. Find detailed instructions on how to generate and upload SSH keys here. [https://docs.ycrc.yale.edu/clusters-at-yale/access/](https://docs.ycrc.yale.edu/clusters-at-yale/access/ssh/)
-- In this class, we will mainly use Open OnDemand to access the HPC. For more advanced use cases that are not well supported by the Open OnDemand, you can connect to the cluster using ssh.
+- In this class, we will mainly use Open OnDemand to access the HPC. For more advanced use cases not well supported by the Open OnDemand, you can connect to the HPC using SSH.
 
 ```
 beng469.ycrc.yale.edu
