@@ -73,7 +73,7 @@ beng469.ycrc.yale.edu
 ```
 After login you will see the OOD dashboard.
 
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-dashboard.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ## Storage Types
 |Name|Location|Good for|Quota|
