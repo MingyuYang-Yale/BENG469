@@ -1,6 +1,6 @@
 # Basic of HPC and OOD (09/07/2023)
 
-### Outline
+## Outline
 
 * What is HPC?
 
@@ -9,7 +9,7 @@
 * What is OOD?
 
 
-### What is HPC?
+## What is HPC?
 
 * High Performance Computing (HPC) cluster is a collection of networked computers and data storage.
 
@@ -40,12 +40,12 @@
 |Milgram|<p><img height="100" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Milgram.png" alt="foo bar" title="train &amp; tracks" /> </p>|2,400|80|milgram.hpc.yale.edu|HIPAA and other sensitive data|
 
 
-## Setting up an account
+### Setting up an account
 
 You should have received a email from Yale Center for Research Computing:
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/mail-from-ycrc-mccleary.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-## Log in to the HPC
+### Log in to the HPC
 
 Only reachable from Yale campus network:
 - YaleSecure (on campus)
