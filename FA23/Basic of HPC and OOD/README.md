@@ -17,8 +17,8 @@
 * High Performance Computing (HPC) cluster is a collection of networked computers and data storage.
 * HPC are modern day supercompters (rack-mounted computers, Networking, Storage)
 
-<p><img width="300" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/cluster-v2.png" alt="foo bar" title="train &amp; tracks" />
-    <img width="300" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/clusters.png" alt="foo bar" title="train &amp; tracks" />
+<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/cluster-v2.png" alt="foo bar" title="train &amp; tracks" />
+    <img height="300" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/clusters.png" alt="foo bar" title="train &amp; tracks" />
 </p>
 
 * Access via the login nodes.
