@@ -54,16 +54,16 @@ Only reachable from Yale campus network:
 - YaleSecure (on campus)
 - Yale VPN (off campus)
 
-Three general methods to login:
+#### Three general methods to login:
 1. Command line SSH (Linux or MacOS)
 ```
-ssh beng469_netid@mccleary.ycrc.yale.edu
+    ssh beng469_netid@mccleary.ycrc.yale.edu
 ```
 2. Graphical ssh tool (MobaXterm Windows)
   
 3. Open OnDemand(OOD), web-based login
 
-- For the first two methods, require an ssh key to access. The process of generating SSH keys varies depending on your platform. We won't cover the key generation process here, but you can find detailed instructions on how to generate and upload SSH keys on this webpage. [https://docs.ycrc.yale.edu/clusters-at-yale/access/](https://docs.ycrc.yale.edu/clusters-at-yale/access/ssh/)
+- For the first two methods, you'll need an ssh key to access. The process of generating SSH keys varies depending on your platform. Find detailed instructions on how to generate and upload SSH keys here. [https://docs.ycrc.yale.edu/clusters-at-yale/access/](https://docs.ycrc.yale.edu/clusters-at-yale/access/ssh/)
 - In this class, we will mainly use Open OnDemand to access the HPC. For more advanced use cases that are not well supported by the Open OnDemand, you can connect to the cluster using ssh.
 
 ```
