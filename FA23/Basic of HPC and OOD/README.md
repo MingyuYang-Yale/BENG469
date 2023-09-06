@@ -115,8 +115,8 @@ Due to the limited time, we can only give an brief introduction here.
 
 https://docs.ycrc.yale.edu/resources/online-tutorials/
 
-1. https://research.computing.yale.edu/training/introduction-hpc
-2. https://research.computing.yale.edu/ycrc-bootcamp-practical-introduction-linux 
-3. https://research.computing.yale.edu/training/intro-python
-4. https://research.computing.yale.edu/r-optimization-training-video 
+https://research.computing.yale.edu/training/introduction-hpc
+https://research.computing.yale.edu/ycrc-bootcamp-practical-introduction-linux 
+https://research.computing.yale.edu/training/intro-python
+https://research.computing.yale.edu/r-optimization-training-video 
 
