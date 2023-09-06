@@ -74,29 +74,31 @@ Only reachable from Yale campus network:
 
 ### Access OOD
 
-1. open OOD site for our class: 
+- open OOD site for our class: 
 ```
 beng469.ycrc.yale.edu
 ```
-2. Log in with your Yale NetID and password
+- Log in with your Yale NetID and password
    <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-login.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-4. After login you will see the OOD dashboard.
+- After login you will see the OOD dashboard.
 
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+- click **Clusters** -> **shell access**
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-ssh-login.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+- File manager (click **Files**)
+  Good for uploading/downloading files up to 10GiB
 
-- 
-
-## Storage Types
+#### Storage Types
 |Name|Location|Good for|Quota|
 |------|-------|------|-------|
 |Home|~/|Scripts,final results|125GiB/Person|
 |Project|~/project|Larger datasets (keep a copy elsewhere)|4TiB/Group|
 |Scratch60|~/scratch|Temporary, shared files, purged every 60 days|10TiB/Group|
----
-## Quotas
+
+#### Quotas
 * To check our course’s cluster quotas, run:
 ```
 getquota
@@ -105,14 +107,13 @@ getquota
 * If you hit your limit, jobs fail
 * Home quota is per user, small
 * Project, scratch has a group quota shared with your group, large
+- click **interactive apps** -> **Rstudio Server**
 ---
 
 ## Transfer Data to the HPC
-
 - command line:  ```scp``` or ```rsync```
 - GUI-based: Open OnDemand, CyberDuck, MobaXterm
 - For large datasets : Globus
-
 
 Install R package
 
