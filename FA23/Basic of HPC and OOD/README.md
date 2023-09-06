@@ -15,7 +15,6 @@
 ### What is HPC?
 
 * High Performance Computing (HPC) cluster is a collection of networked computers and data storage.
-* HPC are modern day supercompters (rack-mounted computers, Networking, Storage)
 
 <p><img width="400" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/cluster-v2.png" alt="foo bar" title="train &amp; tracks" />
     <img height="400" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/clusters.png" alt="foo bar" title="train &amp; tracks" />
@@ -49,7 +48,6 @@
 You should have received a email from Yale Center for Research Computing:
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/mail-from-ycrc-mccleary.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-the is specific for this course account. recommand to use it instead your own research account. this account will be removed after the class end.
 
 ## Log in to the HPC
 
