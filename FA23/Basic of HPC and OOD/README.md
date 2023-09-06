@@ -98,9 +98,10 @@ beng469.ycrc.yale.edu
 |Scratch60|~/scratch|Temporary, shared files, purged every 60 days|10TiB/Group|
 
 #### Transfer Data to the HPC
-- command line:  ```scp``` or ```rsync```
-- GUI-based: Open OnDemand, CyberDuck, MobaXterm
-- For large datasets : Globus
+1. command line:  ```scp``` or ```rsync```
+2. GUI-based: Open OnDemand, CyberDuck, MobaXterm
+3. For large datasets : Globus
+***
 
 - click **interactive apps** -> **Rstudio Server**
 
