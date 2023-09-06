@@ -99,22 +99,14 @@ beng469.ycrc.yale.edu
 |Project|~/project|Larger datasets (keep a copy elsewhere)|4TiB/Group|
 |Scratch60|~/scratch|Temporary, shared files, purged every 60 days|10TiB/Group|
 
-#### Quotas
-* To check our course’s cluster quotas, run:
-```
-getquota
-```
-* All storage areas have quotas, both size and file count
-* If you hit your limit, jobs fail
-* Home quota is per user, small
-* Project, scratch has a group quota shared with your group, large
-- click **interactive apps** -> **Rstudio Server**
----
-
-## Transfer Data to the HPC
+#### Transfer Data to the HPC
 - command line:  ```scp``` or ```rsync```
 - GUI-based: Open OnDemand, CyberDuck, MobaXterm
 - For large datasets : Globus
+
+- click **interactive apps** -> **Rstudio Server**
+
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-rstduio.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
 Due to the limited time, we can only give an brief introduction here.
