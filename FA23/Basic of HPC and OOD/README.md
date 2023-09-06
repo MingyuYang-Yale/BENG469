@@ -95,7 +95,7 @@ beng469.ycrc.yale.edu
 |------|-------|------|-------|
 |Home|~/|Scripts,final results|125GiB/Person|
 |Project|~/project|Larger datasets (keep a copy elsewhere)|4TiB/Group|
-|Scratch60|~/scratch|Temporary, shared files, purged every 60 days|10TiB/Group|
+|Scratch|~/scratch|Temporary, shared files, purged every 60 days|10TiB/Group|
 
 #### Transfer Data to the HPC
 1. command line:  ```scp``` or ```rsync```
