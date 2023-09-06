@@ -106,7 +106,7 @@ beng469.ycrc.yale.edu
 
 - click **interactive apps** -> **Rstudio Server**
 
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-rstduio.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-rstudio.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
 Due to the limited time, we can only give an brief introduction here.
