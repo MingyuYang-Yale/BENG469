@@ -100,7 +100,7 @@ beng469.ycrc.yale.edu
 #### Transfer Data to the HPC
 1. command line:  ```scp``` or ```rsync```
 2. GUI-based: Open OnDemand, CyberDuck, MobaXterm
-3. For large datasets : Globus <a href="[https://docs.ycrc.yale.edu/clusters-at-yale/access/ssh/](https://docs.globus.org/how-to/get-started/?_gl=1*1s9ku91*_ga*MTczODQzNTcyMy4xNjg5Mjc2NzEw*_ga_7ZB89HGG0P*MTY5NDAzNDk5NC42LjEuMTY5NDAzNTAxMS4wLjAuMA.)"> (see more information for how to log in and tranfer files with globus **here** </a>
+3. For large datasets : Globus <a href="[https://docs.globus.org/how-to/get-started/?_gl=1*1s9ku91*_ga*MTczODQzNTcyMy4xNjg5Mjc2NzEw*_ga_7ZB89HGG0P*MTY5NDAzNDk5NC42LjEuMTY5NDAzNTAxMS4wLjAuMA.]"> (see more information for how to log in and tranfer files with globus **here**) </a>
 
 ***
 
