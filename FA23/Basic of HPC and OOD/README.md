@@ -158,7 +158,18 @@ These partitions are purchased by groups for private use.
 Intended for projects related to the Yale Center for Genome Analysis
 
 **More information about Mccleary cluster, see** <a href="https://docs.ycrc.yale.edu/clusters/mccleary/">  **here** </a>
- 
+
+## Interactive vs. Batch
+
+#### Interactive jobs:
+* For development, debugging, or interactive environments like R and Matlab
+* One or a few jobs at a time
+#### Batch jobs:
+* Non-interactive
+* Can run many jobs simultaneously
+* Usually your best choice for production computing
+
+
 ### Software
 
 #### Modules
