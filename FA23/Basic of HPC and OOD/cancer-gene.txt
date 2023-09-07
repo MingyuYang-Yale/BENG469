@@ -1,0 +1,838 @@
+Gene	CGC513	BertVogelstein125	SMG127	Comprehensive435
+AARS	.	.	.	Candidate driver
+AARS2	.	.	.	High Confidence Driver
+ABCB1	.	.	.	High Confidence Driver
+ABI1	CGC	.	.	.
+ABL1	CGC	Oncogene	.	High Confidence Driver
+ABL2	CGC	.	.	.
+ACSL3	CGC	.	.	.
+ACTB	.	.	.	Candidate driver
+ACTG1	.	.	.	Candidate driver
+ACVR1B	.	TSG	1.00%	High Confidence Driver
+ACVR2A	.	.	0.60%	Candidate driver
+ADAM10	.	.	.	High Confidence Driver
+ADCY1	.	.	.	High Confidence Driver
+ADORA2A	.	.	.	High Confidence Driver
+CASC5	CGC	.	.	.
+MLLT11	CGC	.	.	.
+NCKIPSD	CGC	.	.	.
+AFF4	CGC	.	.	.
+AHCTF1	.	.	.	Candidate driver
+AHCYL2	.	.	.	Candidate driver
+AHDC1	.	.	.	Candidate driver
+AHNAK	.	.	.	Candidate driver
+AHNAK2	.	.	.	High Confidence Driver
+AJUBA	.	.	0.80%	High Confidence Driver
+AKAP9	CGC	.	.	High Confidence Driver
+AK9	.	.	.	High Confidence Driver
+AKT1	CGC	Oncogene	0.90%	High Confidence Driver
+AKT2	CGC	.	.	.
+ALDH2	CGC	.	.	.
+ALK	CGC	Oncogene	.	.
+RNF213	CGC	.	.	.
+AMPH	.	.	.	High Confidence Driver
+ANAPC1	.	.	.	High Confidence Driver
+ANKRD11	.	.	.	Candidate driver
+ANKRD12	.	.	.	High Confidence Driver
+ANKRD6	.	.	.	Candidate driver
+ANXA6	.	.	.	Candidate driver
+APAF1	.	.	.	High Confidence Driver
+APC	CGC	TSG	7.30%	High Confidence Driver
+AKR1B1	.	Oncogene	1.20%	High Confidence Driver
+ARAF	.	.	.	Candidate driver
+ARHGAP32	.	.	.	High Confidence Driver
+ARHGAP35	.	.	2.50%	High Confidence Driver
+ARHGEF12	CGC	.	.	.
+ARHGEF6	.	.	.	High Confidence Driver
+RHOH	CGC	.	.	.
+ARID1A	CGC	TSG	5.40%	High Confidence Driver
+ARID1B	.	TSG	.	.
+ARID2	CGC	TSG	.	High Confidence Driver
+ARID5B	.	.	1.60%	High Confidence Driver
+ARNT	CGC	.	.	.
+ASPM	.	.	.	High Confidence Driver
+ASPSCR1	CGC	.	.	.
+ASXL1	CGC	TSG	1.30%	High Confidence Driver
+GDNF	CGC	.	.	.
+ATF7IP	.	.	.	Candidate driver
+ATG13	.	.	.	High Confidence Driver
+ATIC	CGC	.	.	.
+ATM	CGC	TSG	3.30%	High Confidence Driver
+ANTXR1	.	.	2.40%	High Confidence Driver
+ATRX	CGC	TSG	2.80%	High Confidence Driver
+AXIN1	CGC	TSG	.	.
+AXIN2	.	.	0.90%	High Confidence Driver
+B2M	.	TSG	.	High Confidence Driver
+B4GALT3	.	.	0.20%	.
+RNF2	CGC	TSG	2.00%	High Confidence Driver
+BARD1	.	.	.	High Confidence Driver
+BAZ1B	.	.	.	Candidate driver
+BAZ2A	.	.	.	Candidate driver
+BCL10	CGC	.	.	.
+BCL11A	CGC	.	.	.
+BCL11B	CGC	.	.	.
+BCL2	CGC	Oncogene	.	.
+BCL3	CGC	.	.	.
+BCL6	CGC	.	.	.
+BCL6	CGC	.	.	.
+BCL7A	CGC	.	.	.
+BCL9	CGC	.	.	.
+BCL9L	.	.	.	Candidate driver
+BCLAF1	.	.	.	High Confidence Driver
+BCOR	CGC	TSG	.	High Confidence Driver
+BCR	CGC	.	.	.
+FLCN	CGC	.	.	.
+BIRC3	CGC	.	.	.
+BLM	CGC	.	.	High Confidence Driver
+BMPR1A	CGC	.	.	.
+BRAF	CGC	Oncogene	1.50%	High Confidence Driver
+BRCA1	CGC	TSG	1.90%	High Confidence Driver
+BRCA2	CGC	TSG	2.70%	High Confidence Driver
+BRD3	CGC	.	.	.
+BRD4	CGC	.	.	.
+MRPL36	CGC	.	.	.
+BTG1	CGC	.	.	.
+BUB1B	CGC	.	.	High Confidence Driver
+C12orf9	CGC	.	.	.
+HMGN2P46	CGC	.	.	.
+NUTM1	CGC	.	.	.
+RMI2	CGC	.	.	.
+C2orf44	CGC	.	.	.
+DFFB	.	.	.	High Confidence Driver
+CAMTA1	CGC	.	.	.
+CANT1	CGC	.	.	.
+CARD11	CGC	Oncogene	.	.
+CARM1	.	.	.	High Confidence Driver
+CARS	CGC	.	.	.
+CASP8	.	TSG	.	High Confidence Driver
+ERC2	.	.	.	High Confidence Driver
+RUNX1T1	CGC	.	.	.
+CBFA2T3	CGC	.	.	.
+CBFB	CGC	.	0.70%	High Confidence Driver
+CBL	CGC	Oncogene	.	.
+CBLB	CGC	.	.	.
+CBLC	CGC	.	.	.
+CCAR1	.	.	.	High Confidence Driver
+CCDC6	CGC	.	.	.
+CCNB1IP1	CGC	.	.	.
+CCND1	CGC	.	0.60%	High Confidence Driver
+CCND2	CGC	.	.	.
+CCND3	CGC	.	.	.
+CCNE1	CGC	.	.	.
+PDCD1LG2	CGC	.	.	.
+CD274	CGC	.	.	.
+CD74	CGC	.	.	.
+CD79A	CGC	.	.	.
+CD79B	CGC	.	.	.
+CDC73	.	TSG	.	High Confidence Driver
+FZR1	CGC	TSG	2.50%	High Confidence Driver
+CDH11	CGC	.	.	.
+CDK12	CGC	.	1.50%	High Confidence Driver
+CDK4	CGC	.	.	.
+CDK6	CGC	.	.	.
+CDKN1A	.	.	0.60%	High Confidence Driver
+CDKN1B	.	.	0.70%	High Confidence Driver
+CDKN2A	CGC	TSG	3.60%	High Confidence Driver
+CDKN2C	CGC	.	0.20%	High Confidence Driver
+CDX2	CGC	.	.	.
+CEBPA	CGC	TSG	0.50%	High Confidence Driver
+CNTRL	CGC	.	.	.
+CEP170	.	.	.	Candidate driver
+CFH	.	.	.	High Confidence Driver
+CHCHD7	CGC	.	.	.
+CHD3	.	.	.	Candidate driver
+CHD4	.	.	.	High Confidence Driver
+CHD7	.	.	.	Candidate driver
+CHD8	.	.	.	High Confidence Driver
+CHEK2	CGC	.	0.90%	High Confidence Driver
+CHIC2	CGC	.	.	.
+CHN1	CGC	.	.	.
+CIC	CGC	TSG	.	High Confidence Driver
+CIITA	CGC	.	.	.
+CLIP1	.	.	.	High Confidence Driver
+CLTC	CGC	.	.	High Confidence Driver
+CLTCL1	CGC	.	.	High Confidence Driver
+CXCR7	CGC	.	.	.
+CNOT1	.	.	.	Candidate driver
+CNOT3	CGC	.	.	Candidate driver
+COBLL1	.	.	.	Candidate driver
+COL18A1	.	.	.	High Confidence Driver
+COL1A1	CGC	.	.	.
+KLF6	CGC	.	.	.
+COX6C	CGC	.	.	.
+CREB1	CGC	.	.	High Confidence Driver
+CREB3L1	CGC	.	.	.
+CREB3L2	CGC	.	.	.
+CREBBP	CGC	TSG	.	.
+CRIPAK	.	.	0.70%	.
+CRLF2	CGC	Oncogene	.	.
+CRTC1	.	.	.	High Confidence Driver
+CRTC3	CGC	.	.	High Confidence Driver
+CSDE1	.	.	.	High Confidence Driver
+CSF1R	.	Oncogene	.	.
+CSF3R	CGC	.	.	.
+CTCF	.	.	2.40%	High Confidence Driver
+CTNNB1	CGC	Oncogene	2.90%	High Confidence Driver
+CTNND1	.	.	.	High Confidence Driver
+CTTN	.	.	.	High Confidence Driver
+CUL1	.	.	.	High Confidence Driver
+CUL3	.	.	.	Candidate driver
+CUX1	.	.	.	Candidate driver
+CYC1	.	.	.	Candidate driver
+CYLD	CGC	TSG	.	High Confidence Driver
+CCDC6	CGC	.	.	.
+DAB2IP	.	.	.	Candidate driver
+DAXX	CGC	TSG	.	.
+DCP1B	.	.	.	Candidate driver
+DDB2	CGC	.	.	.
+DDIT3	CGC	.	.	.
+DDX10	CGC	.	.	.
+DDX3X	.	.	.	Candidate driver
+DDX5	CGC	.	.	High Confidence Driver
+DDX6	CGC	.	.	.
+DEK	CGC	.	.	.
+DHX9	.	.	.	High Confidence Driver
+DICER1	CGC	.	.	High Confidence Driver
+DIDO1	.	.	.	Candidate driver
+DIS3L2	.	.	.	Candidate driver
+DMD	.	.	.	High Confidence Driver
+DNM2	CGC	.	.	.
+DNM3	.	.	.	Candidate driver
+DNMT1	.	Oncogene	.	.
+DNMT3A	CGC	Oncogene	2.80%	High Confidence Driver
+DOCK2	.	.	.	High Confidence Driver
+DOCK4	.	.	.	Candidate driver
+DOT1L	.	.	.	Candidate driver
+DST	.	.	.	Candidate driver
+DUX4	CGC	.	.	.
+EBF1	CGC	.	.	.
+ECT2L	CGC	.	.	.
+EEF1A1	.	.	.	High Confidence Driver
+EGFR	CGC	Oncogene	4.60%	High Confidence Driver
+EGR3	.	.	0.30%	.
+EIF4A2	CGC	.	0.80%	High Confidence Driver
+ELF3	.	.	0.60%	High Confidence Driver
+ELF4	CGC	.	.	.
+ELK4	CGC	.	.	.
+ERC1	CGC	.	.	.
+ELL	CGC	.	.	.
+ELN	CGC	.	.	.
+EML4	CGC	.	.	.
+EP300	CGC	TSG	2.50%	High Confidence Driver
+EPB41L3	.	.	.	Candidate driver
+EPHA3	.	.	2.10%	Candidate driver
+EPHB6	.	.	1.60%	Candidate driver
+EPPK1	.	.	1.40%	Candidate driver
+EPS15	CGC	.	.	.
+ERBB2	CGC	Oncogene	.	High Confidence Driver
+ERBB2IP	.	.	.	High Confidence Driver
+ERBB4	.	.	2.10%	Candidate driver
+ERCC2	CGC	.	0.70%	High Confidence Driver
+ERCC3	CGC	.	.	.
+ERCC4	CGC	.	.	.
+ERCC5	CGC	.	.	.
+ERG	CGC	.	.	.
+ESR1	.	.	.	High Confidence Driver
+ETV1	CGC	.	.	.
+ETV4	CGC	.	.	.
+ETV5	CGC	.	.	.
+ETV6	CGC	.	.	.
+MECOM	CGC	.	.	.
+EWSR1	CGC	.	.	High Confidence Driver
+EXT1	CGC	.	.	.
+EXT2	CGC	.	.	.
+EZH2	CGC	Oncogene	0.80%	High Confidence Driver
+EZR	CGC	.	.	.
+ACSL6	CGC	.	.	.
+AMER1	.	TSG	.	.
+FAM129B	.	.	.	Candidate driver
+NUTM2A	CGC	.	.	.
+FAM22B	CGC	.	.	.
+FAM46C	CGC	.	.	.
+FANCA	CGC	.	.	High Confidence Driver
+FANCC	CGC	.	.	.
+FANCD2	CGC	.	.	.
+FANCE	CGC	.	.	.
+FANCF	CGC	.	.	.
+FANCG	CGC	.	.	.
+FBN2	.	.	.	High Confidence Driver
+FBXO11	CGC	.	.	High Confidence Driver
+FBXW7	CGC	TSG	3.00%	High Confidence Driver
+FCGR2B	CGC	.	.	.
+FCHO2	.	.	.	Candidate driver
+FES	.	.	.	High Confidence Driver
+FEV	CGC	.	.	.
+FGFR1	CGC	.	.	.
+FGFR1OP	CGC	.	.	.
+FGFR2	CGC	Oncogene	1.50%	High Confidence Driver
+FGFR3	CGC	Oncogene	1.00%	High Confidence Driver
+FH	CGC	.	.	.
+FHIT	CGC	.	.	.
+FIP1L1	CGC	.	.	.
+FLI1	CGC	.	.	.
+FLJ27352	CGC	.	.	.
+FLNA	.	.	.	Candidate driver
+FLT3	CGC	Oncogene	2.70%	High Confidence Driver
+FN1	.	.	.	High Confidence Driver
+FNBP1	CGC	.	.	.
+FOSL2	.	.	.	Candidate driver
+FOXA1	.	.	0.80%	High Confidence Driver
+FOXA2	.	.	0.50%	High Confidence Driver
+FOXL2	CGC	Oncogene	.	.
+FOXO1	CGC	.	.	.
+FOXO3	CGC	.	.	.
+FOXP1	CGC	.	.	.
+FRG1B	.	.	.	High Confidence Driver
+FSTL3	CGC	.	.	.
+FUBP1	CGC	TSG	.	.
+FUS	CGC	.	.	.
+KDSR	CGC	.	.	.
+G3BP1	.	.	.	Candidate driver
+GAB3	.	.	.	Candidate driver
+GAS7	CGC	.	.	.
+GATA1	CGC	TSG	.	.
+GATA2	CGC	Oncogene	.	.
+GATA3	CGC	TSG	3.20%	High Confidence Driver
+GDI1	.	.	.	Candidate driver
+GIGYF2	.	.	.	Candidate driver
+GMPS	CGC	.	.	.
+GNA11	CGC	Oncogene	.	.
+GNAI1	.	.	.	High Confidence Driver
+GNAQ	CGC	Oncogene	.	.
+GNAS	CGC	Oncogene	.	High Confidence Driver
+GNL3L	.	.	.	Candidate driver
+GOLGA5	CGC	.	.	High Confidence Driver
+GOPC	CGC	.	.	.
+GOT2	.	.	.	High Confidence Driver
+GPC3	CGC	.	.	.
+GPHN	CGC	.	.	High Confidence Driver
+GPS2	.	.	.	High Confidence Driver
+ARHGAP26	CGC	.	.	.
+GRIN3A	.	.	.	Candidate driver
+GTF2H1	.	.	.	High Confidence Driver
+H3F3A	CGC	Oncogene	.	.
+H3F3C	.	.	0.40%	High Confidence Driver
+SPECC1	CGC	.	.	.
+CLP1	CGC	.	.	.
+HERC1	.	.	.	Candidate driver
+HERPUD1	CGC	.	.	.
+HEY1	CGC	.	.	.
+SOS1	.	.	1.70%	High Confidence Driver
+HIP1	CGC	.	.	.
+HIST1H1C	.	.	0.60%	Candidate driver
+HIST1H2BD	.	.	0.40%	Candidate driver
+HIST1H3B	CGC	Oncogene	.	.
+HIST1H4I	CGC	.	.	.
+HLA-A	.	.	.	High Confidence Driver
+HLA-B	.	.	.	High Confidence Driver
+EPAS1	CGC	.	.	.
+MNX1	CGC	.	.	.
+HMGA1	CGC	.	.	.
+HMGA2	CGC	.	.	.
+HMGXB4	.	.	.	High Confidence Driver
+HNF1A	.	TSG	.	.
+HNRNPA2B1	CGC	.	.	.
+HOOK3	CGC	.	.	.
+HOXA11	CGC	.	.	.
+HOXA13	CGC	.	.	.
+HOXA9	CGC	.	.	.
+HOXC11	CGC	.	.	.
+HOXC13	CGC	.	.	.
+HOXD11	CGC	.	.	.
+HOXD13	CGC	.	.	.
+HRAS	CGC	Oncogene	.	High Confidence Driver
+CDC73	CGC	.	.	.
+HSP90AB1	.	.	.	High Confidence Driver
+HSPA8	.	.	.	High Confidence Driver
+HSP90AA2	CGC	.	.	.
+HSP90AB1	CGC	.	.	.
+HUWE1	.	.	.	High Confidence Driver
+IARS2	.	.	.	Candidate driver
+IDH1	CGC	Oncogene	1.50%	High Confidence Driver
+IDH2	CGC	Oncogene	0.80%	High Confidence Driver
+IGH	CGC	.	.	.
+IGK	CGC	.	.	.
+IGL	CGC	.	.	.
+IK	.	.	.	Candidate driver
+IKZF1	CGC	.	.	.
+IL2	CGC	.	.	.
+IL21R	CGC	.	.	.
+IL6ST	CGC	.	.	.
+IL7R	CGC	.	.	.
+ING1	.	.	.	Candidate driver
+INPP4A	.	.	.	Candidate driver
+INTS1	.	.	.	Candidate driver
+IRF4	CGC	.	.	.
+IRS2	.	.	.	High Confidence Driver
+FCRL4	CGC	.	.	.
+ITGA6	.	.	.	High Confidence Driver
+ITK	CGC	.	.	.
+JAK1	CGC	Oncogene	.	.
+JAK2	CGC	Oncogene	.	High Confidence Driver
+JAK3	CGC	Oncogene	.	.
+JAZF1	CGC	.	.	.
+JMJD1C	.	.	.	Candidate driver
+JUN	CGC	.	.	.
+KALRN	.	.	.	High Confidence Driver
+KCNJ5	CGC	.	.	.
+KDM5A	CGC	.	.	.
+KDM5C	CGC	TSG	2.00%	High Confidence Driver
+KDM6A	CGC	TSG	2.00%	High Confidence Driver
+KDM6B	.	.	.	Candidate driver
+KDR	CGC	.	.	.
+KEAP1	.	.	2.60%	High Confidence Driver
+KIAA0947	.	.	.	Candidate driver
+KIAA1109	.	.	.	High Confidence Driver
+KIAA1549	CGC	.	.	.
+KIF20B	.	.	.	Candidate driver
+KIF5B	CGC	.	.	.
+KIFC3	.	.	.	High Confidence Driver
+KIT	CGC	Oncogene	1.40%	High Confidence Driver
+KLF4	CGC	Oncogene	.	.
+KLK2	CGC	.	.	.
+KRAS	CGC	Oncogene	6.70%	High Confidence Driver
+KTN1	CGC	.	.	.
+AFF3	CGC	.	.	.
+LASP1	CGC	.	.	.
+LCK	CGC	.	.	.
+TOX4	CGC	.	.	High Confidence Driver
+TET1	CGC	.	.	.
+LEPR	.	.	.	High Confidence Driver
+LHFP	CGC	.	.	.
+LIFR	CGC	.	1.20%	High Confidence Driver
+LMO1	CGC	.	.	.
+LMO2	CGC	.	.	.
+LPP	CGC	.	.	High Confidence Driver
+LRIG3	CGC	.	.	.
+LRRK2	.	.	2.80%	High Confidence Driver
+LTBP1	.	.	.	Candidate driver
+LUC7L2	.	.	.	Candidate driver
+LUM	.	.	.	High Confidence Driver
+LYL1	CGC	.	.	.
+LYN	.	.	.	High Confidence Driver
+LZTR1	.	.	.	High Confidence Driver
+MACF1	.	.	.	Candidate driver
+SMAD4	CGC	.	.	.
+MAF	CGC	.	.	.
+MAFB	CGC	.	.	.
+MALAT1	.	.	2.70%	High Confidence Driver
+MALT1	CGC	.	.	.
+MAML2	CGC	.	.	.
+METAP1	.	.	.	Candidate driver
+MAP1B	.	.	.	Candidate driver
+MAP2K1	CGC	Oncogene	.	.
+MAP2K2	CGC	.	.	.
+MAP2K4	CGC	.	1.40%	High Confidence Driver
+MAP3K1	.	TSG	2.70%	High Confidence Driver
+MAP3K3	.	.	.	High Confidence Driver
+MAP3K4	.	.	.	High Confidence Driver
+MAP4	.	.	.	Candidate driver
+MAPK8IP1	.	.	0.70%	High Confidence Driver
+MARCKSL1	.	.	.	Candidate driver
+MAST2	.	.	.	High Confidence Driver
+MATK	.	.	.	High Confidence Driver
+MAX	CGC	.	.	High Confidence Driver
+MCM7	.	.	.	Candidate driver
+MDC1	.	.	.	High Confidence Driver
+MDM2	CGC	.	.	.
+MDM4	CGC	.	.	.
+MDN1	.	.	.	Candidate driver
+MECOM	CGC	.	.	.
+MDS2	CGC	.	.	.
+MECOM	.	.	1.50%	High Confidence Driver
+CRTC1	CGC	.	.	.
+MED12	CGC	Oncogene	.	High Confidence Driver
+MED13	.	.	.	High Confidence Driver
+MED17	.	.	.	High Confidence Driver
+MEF2A	.	.	.	High Confidence Driver
+MEGF6	.	.	.	Candidate driver
+MEN1	CGC	TSG	.	.
+MET	CGC	Oncogene	.	.
+METTL14	.	.	.	High Confidence Driver
+MGAM	.	.	.	Candidate driver
+MICAL1	.	.	.	Candidate driver
+MIR142	.	.	0.20%	.
+MITF	CGC	.	.	.
+MKI67	.	.	.	Candidate driver
+MKL1	CGC	.	.	.
+MLF1	CGC	.	.	.
+MLH1	CGC	TSG	.	.
+MLL	CGC	.	.	High Confidence Driver
+MLL2	CGC	TSG	5.90%	High Confidence Driver
+MLL3	CGC	TSG	6.60%	High Confidence Driver
+MLL4	.	.	2.00%	.
+MLLT1	CGC	.	.	.
+MLLT10	CGC	.	.	High Confidence Driver
+AFF1	CGC	.	.	.
+MLLT3	CGC	.	.	High Confidence Driver
+MLLT4	CGC	.	.	High Confidence Driver
+MLLT6	CGC	.	.	.
+FOXO4	CGC	.	.	.
+MME	.	.	.	Candidate driver
+MMP2	.	.	.	High Confidence Driver
+MN1	CGC	.	.	High Confidence Driver
+MPL	CGC	Oncogene	.	.
+9-Sep	CGC	.	.	.
+MSH2	CGC	TSG	.	.
+MSH6	CGC	TSG	.	.
+MSI2	CGC	.	.	.
+MSN	CGC	.	.	High Confidence Driver
+STK4	.	.	.	High Confidence Driver
+SH2D1A	CGC	.	.	.
+MTM1	.	.	.	Candidate driver
+MTOR	.	.	3.00%	High Confidence Driver
+MUC1	CGC	.	.	.
+MUTYH	CGC	.	.	.
+MYB	CGC	.	.	High Confidence Driver
+MYC	CGC	.	.	.
+MYCBP2	.	.	.	Candidate driver
+MYCL1	CGC	.	.	.
+MYCN	CGC	.	.	.
+MYD88	CGC	Oncogene	.	.
+MYH11	CGC	.	.	.
+MYH9	CGC	.	.	High Confidence Driver
+MYO1D	.	.	.	Candidate driver
+KAT6B	CGC	.	.	.
+NAA15	.	.	.	Candidate driver
+NACA	CGC	.	.	.
+NAV1	.	.	.	Candidate driver
+NAV3	.	.	4.60%	High Confidence Driver
+NBEA	.	.	.	Candidate driver
+NBPF10	.	.	.	High Confidence Driver
+NLRP2	CGC	.	.	.
+NCOA1	CGC	.	.	.
+NCOA2	CGC	.	.	.
+NCOA3	.	.	.	High Confidence Driver
+NCOA4	CGC	.	.	High Confidence Driver
+NCOR1	.	TSG	2.20%	High Confidence Driver
+NCOR2	.	.	.	High Confidence Driver
+NDRG1	CGC	.	.	.
+NEB	.	.	.	High Confidence Driver
+NEDD4L	.	.	.	High Confidence Driver
+NEK1	.	.	.	Candidate driver
+NEK8	.	.	.	Candidate driver
+NF1	CGC	TSG	4.40%	High Confidence Driver
+NF2	CGC	TSG	.	.
+NFE2L2	CGC	Oncogene	2.30%	High Confidence Driver
+NFE2L3	.	.	0.80%	.
+NFIB	CGC	.	.	.
+NFKB2	CGC	.	.	.
+NIN	CGC	.	.	High Confidence Driver
+NIPBL	.	.	.	Candidate driver
+NKX2-1	CGC	.	.	.
+NLRP3	.	.	.	High Confidence Driver
+NMT2	.	.	.	Candidate driver
+NONO	CGC	.	.	High Confidence Driver
+NOTCH1	CGC	TSG	3.10%	High Confidence Driver
+NOTCH2	CGC	TSG	.	.
+NPM1	CGC	TSG	1.80%	High Confidence Driver
+NR1H2	.	.	.	High Confidence Driver
+NR4A2	.	.	.	High Confidence Driver
+NR4A3	CGC	.	.	.
+NRAS	CGC	Oncogene	1.50%	High Confidence Driver
+NSD1	CGC	.	2.40%	High Confidence Driver
+NT5C2	CGC	.	.	.
+NTRK1	CGC	.	.	.
+NTRK3	CGC	.	.	.
+NUMA1	CGC	.	.	High Confidence Driver
+NUP214	CGC	.	.	High Confidence Driver
+NUP93	.	.	.	High Confidence Driver
+NUP98	CGC	.	.	High Confidence Driver
+OLIG2	CGC	.	.	.
+OMD	CGC	.	.	.
+P2RY8	CGC	.	.	.
+P4HB	.	.	.	Candidate driver
+PABPC1	.	.	.	High Confidence Driver
+PABPC4	.	.	.	Candidate driver
+PAFAH1B2	CGC	.	.	.
+PALB2	CGC	.	.	.
+PAX3	CGC	.	.	.
+PAX5	CGC	TSG	.	.
+PAX7	CGC	.	.	.
+PAX8	CGC	.	.	.
+PBRM1	CGC	TSG	5.40%	High Confidence Driver
+PBX1	CGC	.	.	.
+PCBP1	.	.	0.30%	High Confidence Driver
+MBD1	CGC	.	.	High Confidence Driver
+PCSK7	CGC	.	.	.
+PDE4DIP	CGC	.	.	.
+PDGFB	CGC	.	.	.
+PDGFRA	CGC	Oncogene	1.90%	High Confidence Driver
+PDGFRB	CGC	.	.	.
+PDS5A	.	.	.	Candidate driver
+PGAP3	CGC	.	.	.
+PHF6	CGC	TSG	0.80%	High Confidence Driver
+PHLDA1	.	.	.	High Confidence Driver
+PHOX2B	CGC	.	.	.
+PICALM	CGC	.	.	.
+PIK3CA	CGC	Oncogene	17.80%	High Confidence Driver
+PIK3CB	.	.	.	High Confidence Driver
+PIK3CG	.	.	1.70%	High Confidence Driver
+PIK3R1	CGC	TSG	4.40%	High Confidence Driver
+LONP1	CGC	.	.	.
+PIP5K1A	.	.	.	High Confidence Driver
+PLAG1	CGC	.	.	.
+PLCG1	.	.	.	High Confidence Driver
+PLEC	.	.	.	High Confidence Driver
+PML	CGC	.	.	.
+PMS1	CGC	.	.	.
+PMS2	CGC	.	.	.
+PRRX1	CGC	.	.	.
+5-Sep	CGC	.	.	.
+POLE	.	.	.	Candidate driver
+POLK	.	.	2.40%	.
+POT1	CGC	.	.	.
+POTEF	.	.	.	High Confidence Driver
+POU2AF1	CGC	.	.	.
+POU5F1	CGC	.	.	.
+PPARG	CGC	.	.	.
+PPFIA4	.	.	.	Candidate driver
+PPP2R1A	CGC	Oncogene	1.50%	High Confidence Driver
+PRCC	CGC	.	.	.
+PRDM1	CGC	TSG	.	.
+PRDM16	CGC	.	.	.
+PRDM2	.	.	.	Candidate driver
+PRF1	CGC	.	.	.
+PRKAR1A	CGC	.	.	High Confidence Driver
+PRKCD	.	.	.	High Confidence Driver
+CCNL1	CGC	.	.	.
+PRPF8	.	.	.	High Confidence Driver
+PRRC2A	.	.	.	Candidate driver
+PRDX6	.	.	0.90%	Candidate driver
+PSEN1	.	.	.	High Confidence Driver
+PSIP1	CGC	.	.	.
+PSMD11	.	.	.	Candidate driver
+PSME3	.	.	.	Candidate driver
+PTCH1	CGC	.	.	.
+PTCH1	.	TSG	.	.
+PTEN	CGC	TSG	9.70%	High Confidence Driver
+PTPN11	CGC	Oncogene	1.00%	High Confidence Driver
+PTPN13	.	.	.	Candidate driver
+PTPRC	CGC	.	.	.
+PWP1	.	.	.	Candidate driver
+QKI	.	.	.	Candidate driver
+RAB11FIP5	.	.	.	Candidate driver
+RABEP1	CGC	.	.	.
+RAC1	CGC	.	.	High Confidence Driver
+RAD21	CGC	.	0.90%	High Confidence Driver
+RAD51B	CGC	.	.	.
+RAF1	CGC	.	.	.
+RAG1	.	.	.	Candidate driver
+RALGAPA1	.	.	.	Candidate driver
+RALGDS	CGC	.	.	.
+RANBP17	CGC	.	.	.
+RANBP2	.	.	.	High Confidence Driver
+RANBP3	.	.	.	High Confidence Driver
+RANGAP1	.	.	.	Candidate driver
+RAP1GDS1	CGC	.	.	.
+RARA	CGC	.	.	.
+RASA1	.	.	.	High Confidence Driver
+RB1	CGC	TSG	3.20%	High Confidence Driver
+RBFOX2	.	.	.	Candidate driver
+RBM10	.	.	.	Candidate driver
+RBM15	CGC	.	.	.
+RBMX	.	.	.	High Confidence Driver
+RECQL4	CGC	.	.	.
+REL	CGC	.	.	.
+RET	CGC	Oncogene	.	.
+RHEB	.	.	.	High Confidence Driver
+RHOA	.	.	.	High Confidence Driver
+LRIF1	.	.	.	Candidate driver
+RNF111	.	.	.	Candidate driver
+RNF213	.	.	.	High Confidence Driver
+RNF43	CGC	TSG	.	High Confidence Driver
+ROS1	CGC	.	.	.
+RPGR	.	.	.	High Confidence Driver
+RPL15	CGC	.	.	.
+RPL22	CGC	.	1.00%	High Confidence Driver
+RPL5	CGC	.	0.70%	High Confidence Driver
+RPN1	CGC	.	.	.
+RPP38	.	.	.	Candidate driver
+RPSAP58	.	.	.	High Confidence Driver
+RSRC1	.	.	.	Candidate driver
+SNX29	CGC	.	.	.
+RUNX1	CGC	TSG	1.60%	High Confidence Driver
+KAT6A	CGC	.	.	.
+RXRA	.	.	.	High Confidence Driver
+SBDS	CGC	.	.	.
+SDC4	CGC	.	.	.
+SDHAF2	CGC	.	.	.
+SDHB	CGC	.	.	.
+SDHC	CGC	.	.	.
+SDHD	CGC	.	.	.
+SEC23B	.	.	.	Candidate driver
+6-Sep	CGC	.	.	.
+SET	CGC	.	.	.
+SETBP1	CGC	Oncogene	2.20%	.
+SETD2	CGC	TSG	3.60%	High Confidence Driver
+SETX	.	.	.	Candidate driver
+SF3B1	CGC	Oncogene	1.30%	High Confidence Driver
+SFPQ	CGC	.	.	.
+SRSF3	CGC	.	.	.
+SGK1	.	.	.	High Confidence Driver
+SH2B3	CGC	.	.	.
+SH3GL1	CGC	.	.	.
+SH3PXD2A	.	.	.	Candidate driver
+STIL	CGC	.	.	.
+SIN3A	.	.	1.10%	High Confidence Driver
+SLC25A10	.	.	.	Candidate driver
+SLC34A2	CGC	.	.	.
+SLC3A2	.	.	.	Candidate driver
+SLC45A3	CGC	.	.	.
+SMAD2	.	TSG	0.90%	High Confidence Driver
+SMAD4	.	TSG	1.40%	High Confidence Driver
+SMARCA4	CGC	TSG	.	High Confidence Driver
+SMARCAD1	.	.	.	Candidate driver
+SMARCB1	CGC	TSG	.	.
+SMARCE1	CGC	.	.	.
+SMC1A	.	.	1.50%	High Confidence Driver
+SMC3	.	.	1.20%	High Confidence Driver
+SMC4	.	.	.	Candidate driver
+SMCHD1	.	.	.	Candidate driver
+SMOX	CGC	Oncogene	.	.
+SMYD4	.	.	.	Candidate driver
+SOCS1	CGC	TSG	.	.
+SOS1	.	.	.	High Confidence Driver
+SOX17	.	.	0.30%	High Confidence Driver
+SOX2	CGC	.	.	.
+SOX9	.	TSG	0.70%	Candidate driver
+SPATA6	.	.	.	High Confidence Driver
+SPEG	.	.	.	Candidate driver
+SPEN	.	.	.	High Confidence Driver
+SPOP	.	Oncogene	0.70%	High Confidence Driver
+SPTAN1	.	.	.	Candidate driver
+SRCAP	.	.	.	Candidate driver
+SRGAP3	CGC	.	.	.
+SRRM2	.	.	.	Candidate driver
+SRSF2	CGC	Oncogene	.	.
+SS18	CGC	.	.	.
+SS18L1	CGC	.	.	.
+SSX1	CGC	.	.	.
+SSX2	CGC	.	.	.
+SSX2IP	.	.	.	Candidate driver
+SSX4	CGC	.	.	.
+STAG2	.	TSG	2.20%	High Confidence Driver
+STAT3	CGC	.	.	High Confidence Driver
+STAT5B	CGC	.	.	.
+STIP1	.	.	.	Candidate driver
+STK11	CGC	TSG	0.90%	High Confidence Driver
+STL	CGC	.	.	.
+SUFU	CGC	.	.	.
+SUZ12	CGC	.	.	High Confidence Driver
+SVIL	.	.	.	Candidate driver
+SYK	CGC	.	.	.
+SYNE1	.	.	.	High Confidence Driver
+TAF1	.	.	2.30%	High Confidence Driver
+TAF15	CGC	.	.	.
+TAL1	CGC	.	.	.
+TAL2	CGC	.	.	.
+TANC2	.	.	.	Candidate driver
+TBL1XR1	CGC	.	0.80%	High Confidence Driver
+TBX3	.	.	1.40%	High Confidence Driver
+TCEA1	CGC	.	.	.
+HNF1A	CGC	.	.	.
+TCF12	CGC	.	.	High Confidence Driver
+TCF7L1	CGC	.	.	.
+TCF7	.	.	.	High Confidence Driver
+TCF7L2	CGC	.	.	High Confidence Driver
+TCL1A	CGC	.	.	.
+TCL6	CGC	.	.	.
+TERT	CGC	.	.	.
+TET2	CGC	TSG	1.60%	High Confidence Driver
+TFDP1	.	.	.	High Confidence Driver
+TFE3	CGC	.	.	.
+TFEB	CGC	.	.	.
+TFG	CGC	.	.	.
+TFPT	CGC	.	.	.
+TFRC	CGC	.	.	.
+TGFBR2	.	.	1.10%	High Confidence Driver
+TGIF1	.	.	.	High Confidence Driver
+TGOLN2	.	.	.	Candidate driver
+THRAP3	CGC	.	.	.
+TICAM1	.	.	.	Candidate driver
+TRIM24	CGC	.	.	.
+TJP2	.	.	.	High Confidence Driver
+TLR4	.	.	1.90%	Candidate driver
+TLX1	CGC	.	.	.
+TLX3	CGC	.	.	.
+TMPRSS2	CGC	.	.	.
+TNFAIP3	CGC	TSG	.	.
+TNFRSF10C	.	.	.	High Confidence Driver
+TNFRSF14	CGC	.	.	.
+TNFRSF17	CGC	.	.	.
+FAS	CGC	.	.	.
+TNKS1BP1	.	.	.	Candidate driver
+TNPO1	.	.	.	Candidate driver
+TOM1	.	.	.	High Confidence Driver
+TOP1	CGC	.	.	.
+TOP3A	.	.	.	High Confidence Driver
+TP53	CGC	TSG	42.00%	High Confidence Driver
+TP53BP1	.	.	.	High Confidence Driver
+TPM1	.	.	.	Candidate driver
+TPM3	CGC	.	.	.
+TPM4	CGC	.	.	.
+TPR	CGC	.	.	High Confidence Driver
+TRA	CGC	.	.	.
+TRAF7	CGC	TSG	.	.
+TRB	CGC	.	.	.
+TRD	CGC	.	.	.
+TRIM27	CGC	.	.	.
+TRIM33	CGC	.	.	.
+TRIM7	.	.	.	High Confidence Driver
+TRIO	.	.	.	High Confidence Driver
+TRIP11	CGC	.	.	High Confidence Driver
+TSC1	CGC	TSG	.	.
+TSC2	CGC	.	.	High Confidence Driver
+TSHR	CGC	Oncogene	.	.
+TSHZ2	.	.	1.80%	.
+TSHZ3	.	.	2.60%	.
+TTK	.	.	.	Candidate driver
+TTL	CGC	.	.	.
+TUBA1A	.	.	.	High Confidence Driver
+TXNIP	.	.	.	High Confidence Driver
+U2AF1	CGC	Oncogene	0.80%	High Confidence Driver
+UBE2Z	.	.	.	Candidate driver
+UBE4A	.	.	.	Candidate driver
+UBR5	CGC	.	.	.
+UHRF1BP1L	.	.	.	High Confidence Driver
+USP28	.	.	.	Candidate driver
+USP6	CGC	.	.	.
+USP9X	.	.	2.10%	Candidate driver
+UTP14A	.	.	.	Candidate driver
+VEZF1	.	.	0.60%	.
+VEZT	.	.	.	Candidate driver
+VHL	CGC	TSG	6.90%	High Confidence Driver
+VTI1A	CGC	.	.	.
+WAS	CGC	.	.	.
+WHSC1	CGC	.	.	High Confidence Driver
+WHSC1L1	CGC	.	.	High Confidence Driver
+WIF1	CGC	.	.	.
+WRN	CGC	.	.	High Confidence Driver
+WT1	CGC	TSG	1.00%	High Confidence Driver
+AMER1	CGC	.	.	.
+WWTR1	CGC	.	.	.
+XPA	CGC	.	.	.
+XPC	CGC	.	.	.
+XPO1	CGC	.	.	.
+YWHAE	CGC	.	.	.
+ZEB2	.	.	.	Candidate driver
+ZFHX3	.	.	.	High Confidence Driver
+ZFP36L1	.	.	.	High Confidence Driver
+ZFP36L2	.	.	.	High Confidence Driver
+ZMYM2	.	.	.	High Confidence Driver
+ZMYM4	.	.	.	Candidate driver
+ZMYND8	.	.	.	Candidate driver
+ZNF132	.	.	.	High Confidence Driver
+ZBTB16	CGC	.	.	.
+ZMYM2	CGC	.	.	.
+PATZ1	CGC	.	.	.
+ZNF300	.	.	.	High Confidence Driver
+ZNF331	CGC	.	.	.
+ZNF384	CGC	.	.	.
+ZNF451	.	.	.	Candidate driver
+ZNF521	CGC	.	.	.
+ZNF703	.	.	.	Candidate driver
+ZNF814	.	.	.	High Confidence Driver
+ZNF844	.	.	.	High Confidence Driver
+CNBP	CGC	.	.	.
+ZNF91	.	.	.	High Confidence Driver
