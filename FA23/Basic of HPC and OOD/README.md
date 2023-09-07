@@ -97,7 +97,6 @@ beng469.ycrc.yale.edu
 |Project|~/project|Larger datasets (keep a copy elsewhere)|4TiB/Group|
 |Scratch|~/scratch|Temporary, shared files, purged every 60 days|10TiB/Group|
 
----
 #### Quotas
 * To check our course’s cluster quotas, run:
 ```
