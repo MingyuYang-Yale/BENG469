@@ -97,14 +97,26 @@ beng469.ycrc.yale.edu
 |Project|~/project|Larger datasets (keep a copy elsewhere)|4TiB/Group|
 |Scratch|~/scratch|Temporary, shared files, purged every 60 days|10TiB/Group|
 
+---
+#### Quotas
+* To check our course’s cluster quotas, run:
+```
+getquota
+```
+* All storage areas have quotas, both size and file count
+* If you hit your limit, jobs fail
+* Home quota is per user, small
+* Project, scratch60 has a group quota shared with your group, large
+---
+
 - click **interactive apps** -> **Rstudio Server**
 
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-rstudio.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ## Transfer Data
-- command line:  ```scp``` or ```rsync```
--  GUI-based: Open OnDemand, CyberDuck, MobaXterm
--   For large datasets : Globus
+- Command line:  ```scp``` or ```rsync```
+- GUI-based: Open OnDemand, CyberDuck, MobaXterm
+- For large datasets : Globus
 
 #### Globus
 
@@ -116,11 +128,38 @@ beng469.ycrc.yale.edu
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Globus.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 (More information about how to log in and tranfer files with globus <a href="https://docs.globus.org/how-to/get-started/?_gl=1*1s9ku91*_ga*MTczODQzNTcyMy4xNjg5Mjc2NzEw*_ga_7ZB89HGG0P*MTY5NDAzNDk5NC42LjEuMTY5NDAzNTAxMS4wLjAuMA..">  **here** </a>)
-
 ***
 
+## Editing files on the cluster
+- learn a linux command line editor, eg. ```nano```, ```vim```, ```emacs```
+- Use Open OnDemand or MobaXterm
+- Edit locally and copy them each (not recommended)
 
-Due to the limited time, we can only give an brief introduction here.
+```
+vim draft.txt
+``` 
+* type ```i``` ( From command mode to insert mode type)
+* copy and paste the follwing texts to draft.txt:  
+```
+student-A    aeb98
+student-B    hc738
+student-C    gmc62
+student-D    eid8
+student-E    ahe3
+student-F    bdk35
+student-G    tm827
+student-H    sen37
+student-I    aeq4
+student-G    ser66
+student-K    vsv6
+student-L    av625
+student-M    lw729
+student-N    jrw74
+student-O    qw239
+```
+* hit ```esc``` key (From insert mode to command mode type)
+* type ```:wq``` (write file and exit vim)
+---
 
 **Online Tutorials**
 
