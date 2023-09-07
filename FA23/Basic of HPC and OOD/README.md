@@ -93,7 +93,7 @@ beng469.ycrc.yale.edu
 #### Storage Types
 |Name|Location|Good for|Quota|
 |------|-------|------|-------|
-|Home|~/|Scripts,final results|125GiB/Person|
+|Home|~/|Scripts|125GiB/Person|
 |Project|~/project|Larger datasets (keep a copy elsewhere)|4TiB/Group|
 |Scratch|~/scratch|Temporary, shared files, purged every 60 days|10TiB/Group|
 
