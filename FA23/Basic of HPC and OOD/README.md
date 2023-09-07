@@ -135,8 +135,6 @@ getquota
 - Edit locally and copy them each (not recommended)
 
 ---
-
----
 ## Slurm Overview
 #### Slurm manages all the details of compute node usage:
 * Prioritizing and scheduling jobs
