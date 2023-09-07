@@ -97,16 +97,19 @@ beng469.ycrc.yale.edu
 |Project|~/project|Larger datasets (keep a copy elsewhere)|4TiB/Group|
 |Scratch|~/scratch|Temporary, shared files, purged every 60 days|10TiB/Group|
 
-#### Transfer Data to the HPC
-1. command line:  ```scp``` or ```rsync```
-2. GUI-based: Open OnDemand, CyberDuck, MobaXterm
-3. For large datasets : Globus (More information about how to log in and tranfer files with globus <a href="https://docs.globus.org/how-to/get-started/?_gl=1*1s9ku91*_ga*MTczODQzNTcyMy4xNjg5Mjc2NzEw*_ga_7ZB89HGG0P*MTY5NDAzNDk5NC42LjEuMTY5NDAzNTAxMS4wLjAuMA..">  **here** </a>)
-
-***
-
 - click **interactive apps** -> **Rstudio Server**
 
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-rstudio.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+## Transfer Data
+1. command line:  ```scp``` or ```rsync```
+2. GUI-based: Open OnDemand, CyberDuck, MobaXterm
+3. For large datasets : Globus
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/globus.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+(More information about how to log in and tranfer files with globus <a href="https://docs.globus.org/how-to/get-started/?_gl=1*1s9ku91*_ga*MTczODQzNTcyMy4xNjg5Mjc2NzEw*_ga_7ZB89HGG0P*MTY5NDAzNDk5NC42LjEuMTY5NDAzNTAxMS4wLjAuMA..">  **here** </a>)
+
+***
 
 
 Due to the limited time, we can only give an brief introduction here.
