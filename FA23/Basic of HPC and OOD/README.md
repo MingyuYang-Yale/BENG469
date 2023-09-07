@@ -163,7 +163,7 @@ These partitions are purchased by groups for private use.
 #### YCGA partitions 
 Intended for projects related to the Yale Center for Genome Analysis
 
-More information about Mccleary cluster, see <a href="https://docs.ycrc.yale.edu/clusters/mccleary/">  **here** </a>)
+**More information about Mccleary cluster, see** <a href="https://docs.ycrc.yale.edu/clusters/mccleary/">  **here** </a>
  
 ### Software
 
