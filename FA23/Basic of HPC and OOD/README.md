@@ -150,13 +150,13 @@ getquota
 
 ## Partitions
 #### Public Purpose:
-* **day**: Use the day partition for most batch jobs. This is the default if you don't specify one with --partition.
-* **devel**: Use the devel partition to jobs with which you need ongoing interaction. For example, exploratory analyses or debugging compilation.
-* **week**: Use the week partition for jobs that need a longer runtime than day allows.
-* **long**: Use the long partition for jobs that need a longer runtime than week allows.
-* **gpu**: Use the gpu partition for jobs that make use of GPUs
-* **bigmem**: Use the bigmem partition for jobs that have memory requirements other partitions can't handle.
-* **scavenge**: Use the scavenge partition to run preemptable jobs on more resources than normally allowed.
+* **day**: for most batch jobs. This is the default if you don't specify one with --partition.
+* **devel**: for jobs with which you need ongoing interaction. For example, exploratory analyses or debugging compilation.
+* **week**: for jobs that need a longer runtime than day allows.
+* **long**: for jobs that need a longer runtime than week allows.
+* **gpu**: for jobs that make use of GPUs.
+* **bigmem**: for jobs that have memory requirements other partitions can't handle.
+* **scavenge**: uses idle nodes from other partitions (can be preempted).
 
 #### PI Partitions
 These partitions are purchased by groups for private use. 
