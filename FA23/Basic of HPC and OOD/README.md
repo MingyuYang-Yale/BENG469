@@ -128,12 +128,6 @@ getquota
 
 (More information about how to log in and tranfer files with globus <a href="https://docs.globus.org/how-to/get-started/?_gl=1*1s9ku91*_ga*MTczODQzNTcyMy4xNjg5Mjc2NzEw*_ga_7ZB89HGG0P*MTY5NDAzNDk5NC42LjEuMTY5NDAzNTAxMS4wLjAuMA..">  **here** </a>)
 
-
-## Editing files on the cluster
-- learn a linux command line editor, eg. ```nano```, ```vim```, ```emacs```
-- Use Open OnDemand or MobaXterm
-- Edit locally and copy them each (not recommended)
-
 ---
 ## Slurm Overview
 #### Slurm manages all the details of compute node usage:
