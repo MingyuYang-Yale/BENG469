@@ -127,38 +127,13 @@ getquota
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Globus.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 (More information about how to log in and tranfer files with globus <a href="https://docs.globus.org/how-to/get-started/?_gl=1*1s9ku91*_ga*MTczODQzNTcyMy4xNjg5Mjc2NzEw*_ga_7ZB89HGG0P*MTY5NDAzNDk5NC42LjEuMTY5NDAzNTAxMS4wLjAuMA..">  **here** </a>)
-***
+
 
 ## Editing files on the cluster
 - learn a linux command line editor, eg. ```nano```, ```vim```, ```emacs```
 - Use Open OnDemand or MobaXterm
 - Edit locally and copy them each (not recommended)
 
-```
-vim draft.txt
-``` 
-* type ```i``` ( From command mode to insert mode type)
-* copy and paste the follwing texts to draft.txt:  
-```
-student-A    aeb98
-student-B    hc738
-student-C    gmc62
-student-D    eid8
-student-E    ahe3
-student-F    bdk35
-student-G    tm827
-student-H    sen37
-student-I    aeq4
-student-G    ser66
-student-K    vsv6
-student-L    av625
-student-M    lw729
-student-N    jrw74
-student-O    qw239
-```
-* hit ```esc``` key (From insert mode to command mode type)
-* type ```:wq``` (write file and exit vim)
----
 
 **Online Tutorials**
 
