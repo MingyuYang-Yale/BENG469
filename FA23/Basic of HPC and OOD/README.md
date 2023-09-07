@@ -196,7 +196,7 @@ module load Python
 
 ---
 
-**Online Tutorials**
+## **Online Tutorials**
 
 https://docs.ycrc.yale.edu/resources/online-tutorials/
 
