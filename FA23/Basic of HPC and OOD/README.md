@@ -149,20 +149,22 @@ getquota
 * You or your script exits and system automatically releases resources
 
 ## Partitions
-#### General Purpose: 
-* interactive for interactive jobs (srun)
-* general default on Farnam/Ruddle
+#### Public Purpose:
+* **day**: Use the day partition for most batch jobs. This is the default if you don't specify one with --partition.
+* **devel**: Use the devel partition to jobs with which you need ongoing interaction. For example, exploratory analyses or debugging compilation.
+* **week**: Use the week partition for jobs that need a longer runtime than day allows.
+* **long**: Use the long partition for jobs that need a longer runtime than week allows.
+* **gpu**: Use the gpu partition for jobs that make use of GPUs
+* **bigmem**: Use the bigmem partition for jobs that have memory requirements other partitions can't handle.
+* **scavenge**: Use the scavenge partition to run preemptable jobs on more resources than normally allowed.
+
+#### PI Partitions
+These partitions are purchased by groups for private use. 
+#### YCGA partitions 
+Intended for projects related to the Yale Center for Genome Analysis
+
+More information about Mccleary cluster, see <a href="https://docs.ycrc.yale.edu/clusters/mccleary/">  **here** </a>)
  
-#### Special Use Cases:
-* gpu nodes with gpus
-* bigmem nodes with large RAM (for jobs requiring >= 100G)
-* pi_name reserved for specific groups
-
-#### Scavenge: (very useful for short or well-checkpointed jobs)
-* scavenge uses idle nodes from other partitions (can be preempted)
-
----
-
 ### Software
 
 #### Modules
