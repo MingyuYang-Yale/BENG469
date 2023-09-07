@@ -147,8 +147,8 @@ getquota
 * Slurm finds then grants you compute resources
 * You run commands or execute a script on those resources
 * You or your script exits and system automatically releases resources
----
-### Partitions
+
+## Partitions
 #### General Purpose: 
 * interactive for interactive jobs (srun)
 * general default on Farnam/Ruddle
