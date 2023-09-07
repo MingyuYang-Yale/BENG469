@@ -257,7 +257,7 @@ exit
 ### Software
 
 #### Modules
-common software we have installed is available using module.  
+common software YCRC have installed is available using module.  
 Load a module to use the software:
 ```
 module load Python   (loads default version)
