@@ -169,6 +169,24 @@ Intended for projects related to the Yale Center for Genome Analysis
 * Can run many jobs simultaneously
 * Usually your best choice for production computing
 
+#### Interactive Allocation
+```
+salloc
+```
+```
+squeue
+```
+```
+squeue --me
+```
+Use Exit to close the interactive node.
+```
+exit
+```
+---
+### Software
+
+#### Modules
 
 ## Software
 
