@@ -170,7 +170,7 @@ Intended for projects related to the Yale Center for Genome Analysis
 * Usually your best choice for production computing
 
 
-### Software
+## Software
 
 #### Modules
 common software we have installed is available using module.  
