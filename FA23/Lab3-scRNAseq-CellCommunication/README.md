@@ -4,7 +4,7 @@
 
 ### CellPhoneDB
 
-First let's explore the cellphoneDB's online interactive portal[https://www.cellphonedb.org/](https://www.cellphonedb.org/).
+First let's explore the cellphoneDB's online interactive portal. [https://www.cellphonedb.org/](https://www.cellphonedb.org/)
 
 We will run the analysis in a python jupyter notebook using google colab, click the badge below to launch the notebook:
 
