@@ -2,6 +2,8 @@
 
 [Background slide](https://docs.google.com/presentation/d/1Wsw-ZFaIEPDwmTcfwu-B2BNArz7KvRhLEnfrZf6lGYg/edit?usp=sharing) on how different cell-cell communication tools work. 
 
+---
+
 ### CellPhoneDB:
 
 - First let's explore the cellphoneDB's online interactive portal. [https://www.cellphonedb.org/](https://www.cellphonedb.org/)
