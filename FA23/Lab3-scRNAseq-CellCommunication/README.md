@@ -4,14 +4,21 @@
 
 ### CellPhoneDB:
 
-First let's explore the cellphoneDB's online interactive portal. [https://www.cellphonedb.org/](https://www.cellphonedb.org/)
+- First let's explore the cellphoneDB's online interactive portal. [https://www.cellphonedb.org/](https://www.cellphonedb.org/)
 
-We will run the analysis in a python jupyter notebook using google colab, click the badge below to launch the notebook:
+- We will run the analysis in a python jupyter notebook using google colab, click the badge below to launch the notebook:
 
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MingyuYang-Yale/BENG469/blob/main/FA23/Lab3-scRNAseq-CellCommunication/cellphoneDB.ipynb)
 
 
-### Connectome 
+### Connectome:
+
+- Demonstration of the worflow using a cross-platform pancreas data. [demo](https://msraredon.github.io/Connectome/articles/01%20Connectome%20Workflow.html)
+
+
+### NicheNet:
+
+
 
 
 
