@@ -17,10 +17,13 @@
 
 - Demonstration of the worflow using a cross-platform pancreas data. [demo](https://msraredon.github.io/Connectome/articles/01%20Connectome%20Workflow.html)
 
+### NICHES:
+
+- Estimating Microenvironment from Spatial Data. [Demo](https://msraredon.github.io/NICHES/articles/01%20NICHES%20Spatial.html)
 
 ### NicheNet:
 
-
+- Perform NicheNet analysis starting from a Seurat object: step-by-step analysis. [demo](https://github.com/saeyslab/nichenetr/blob/master/vignettes/seurat_steps.md)
 
 
 
