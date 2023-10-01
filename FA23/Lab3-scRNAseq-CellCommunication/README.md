@@ -15,7 +15,7 @@
 
 ### Connectome:
 
-- Demonstration of the worflow using a cross-platform pancreas data. [demo](https://msraredon.github.io/Connectome/articles/01%20Connectome%20Workflow.html)
+- Demonstration of the worflow using a cross-platform pancreas data. [Demo](https://msraredon.github.io/Connectome/articles/01%20Connectome%20Workflow.html)
 
 ### NICHES:
 
@@ -23,7 +23,7 @@
 
 ### NicheNet:
 
-- Perform NicheNet analysis starting from a Seurat object: step-by-step analysis. [demo](https://github.com/saeyslab/nichenetr/blob/master/vignettes/seurat_steps.md)
+- Perform NicheNet analysis starting from a Seurat object: step-by-step analysis. [Demo](https://github.com/saeyslab/nichenetr/blob/master/vignettes/seurat_steps.md)
 
 
 
