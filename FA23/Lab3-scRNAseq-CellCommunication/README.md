@@ -18,5 +18,7 @@ We will run the analysis in a python jupyter notebook using google colab, click 
 ### Reference:
 
 <a id="1">[1]</a> Vento-Tormo, Roser, et al. "Single-cell reconstruction of the early maternal–fetal interface in humans." Nature 563.7731 (2018): 347-353.
+
 <a id="2">[2]</a> Efremova, Mirjana, et al. "CellPhoneDB: inferring cell–cell communication from combined expression of multi-subunit ligand–receptor complexes." Nature protocols 15.4 (2020): 1484-1506.
-<a id="2">[3]</a>Raredon, Micha Sam Brickman, et al. "Computation and visualization of cell–cell signaling topologies in single-cell systems data using connectome." Scientific Reports 12.1 (2022): 4187.
+
+<a id="3">[3]</a>Raredon, Micha Sam Brickman, et al. "Computation and visualization of cell–cell signaling topologies in single-cell systems data using connectome." Scientific Reports 12.1 (2022): 4187.
