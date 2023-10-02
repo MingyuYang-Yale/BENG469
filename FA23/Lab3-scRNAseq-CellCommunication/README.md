@@ -34,4 +34,10 @@
 
 <a id="2">[2]</a> Efremova, Mirjana, et al. "CellPhoneDB: inferring cell–cell communication from combined expression of multi-subunit ligand–receptor complexes." Nature protocols 15.4 (2020): 1484-1506.
 
-<a id="3">[3]</a>Raredon, Micha Sam Brickman, et al. "Computation and visualization of cell–cell signaling topologies in single-cell systems data using connectome." Scientific Reports 12.1 (2022): 4187.
+<a id="3">[3]</a> Raredon, Micha Sam Brickman, et al. "Computation and visualization of cell–cell signaling topologies in single-cell systems data using connectome." Scientific Reports 12.1 (2022): 4187.
+
+<a id="4">[4]</a> Raredon, Micha Sam Brickman, et al. "Comprehensive visualization of cell–cell interactions in single-cell and spatial transcriptomics with NICHES." Bioinformatics 39.1 (2023): btac775.
+
+<a id="5">[5]</a> Browaeys, Robin, Wouter Saelens, and Yvan Saeys. "NicheNet: modeling intercellular communication by linking ligands to target genes." Nature methods 17.2 (2020): 159-162.
+
+<a id="6">[6]</a> Dimitrov, Daniel, et al. "Comparison of methods and resources for cell-cell communication inference from single-cell RNA-Seq data." Nature communications 13.1 (2022): 3224.
