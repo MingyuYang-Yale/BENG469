@@ -4,7 +4,7 @@
 
 ---
 
-### [CellPhoneDB](https://github.com/ventolab/CellphoneDB):
+### CellPhoneDB:
 
 - First let's explore the cellphoneDB's online interactive portal. [https://www.cellphonedb.org/](https://www.cellphonedb.org/)
 
