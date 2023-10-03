@@ -6,6 +6,12 @@ In this computational lab, we will go through examples of calculating single cel
 ### InferCNV: 
 
 Inferring copy number alterations from tumor single cell RNA-Seq data.[Tutorial](https://github.com/broadinstitute/inferCNV/wiki)
+
+
+### CopyKAT
+Inference of genomic copy number and subclonal structure of human tumors from high-throughput single cell RNAseq data. [Tutorial](https://github.com/navinlabcode/copykat)
+
+
 <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/copykat-paper.png" alt="foo bar" title="train &amp; tracks" /></p>
 <p><img width="650" src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41587-020-00795-2/MediaObjects/41587_2020_795_Fig2_HTML.png?as=webp" alt="foo bar" title="train &amp; tracks" /></p>
 
