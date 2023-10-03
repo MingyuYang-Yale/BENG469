@@ -1,19 +1,6 @@
 # BENG 469 Lab session 4 - instructions
 
-In this computational lab, we will go through examples of calculating single cell copy number profiles from 10X single cell RNA data, predicting tumor and normal cells, and inferring tumor subclones from using CopyKAT and InferCNV. We will try to replicate the results presented in Figure 2a and 2c from the [Paper](https://www.nature.com/articles/s41587-020-00795-2) discussed in our session last Thursday.
-
-
-### InferCNV: 
-
-Inferring copy number alterations from tumor single cell RNA-Seq data.[Tutorial](https://github.com/broadinstitute/inferCNV/wiki)
-
-
-### CopyKAT
-Inference of genomic copy number and subclonal structure of human tumors from high-throughput single cell RNAseq data. [Tutorial](https://github.com/navinlabcode/copykat)
-
-
-<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/copykat-paper.png" alt="foo bar" title="train &amp; tracks" /></p>
-<p><img width="650" src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41587-020-00795-2/MediaObjects/41587_2020_795_Fig2_HTML.png?as=webp" alt="foo bar" title="train &amp; tracks" /></p>
+In this computational lab, we will go through examples of calculating single cell copy number profiles from 10X single cell RNA data, predicting tumor and normal cells, and inferring tumor subclones from using [CopyKAT](https://github.com/navinlabcode/copykat) and [InferCNV](https://github.com/broadinstitute/inferCNV/wiki). We will try to replicate the results presented in Figure 2a and 2c from the [Paper](https://www.nature.com/articles/s41587-020-00795-2) discussed in our session last Thursday.
 
 ***
 
