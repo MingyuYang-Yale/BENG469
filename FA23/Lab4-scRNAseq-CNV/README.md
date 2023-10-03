@@ -8,7 +8,7 @@ In this computational lab, we will go through examples of calculating single cel
 
 #### 1. Prerequisites:
 
-- Since the HPC is temporarily unavailable due to scheduled maintenance, I will conducting the lab session using my personal laptop for demonstration purposes.
+- Since the HPC is temporarily unavailable due to scheduled maintenance, I will be conducting the lab session using my personal laptop for demonstration purposes.
 - Considering the diverse local machines we use, unexpected errors may occur. If you prefer, you can choose to observe and listen during the lab session and revisit the materials once the HPC is back online.
 - **Alternatively**, to actively participate during the session, please make sure to [install R](https://cran.r-project.org/) and [R Studio](https://posit.co/download/rstudio-desktop/) on your own laptop before the lab session.
   
