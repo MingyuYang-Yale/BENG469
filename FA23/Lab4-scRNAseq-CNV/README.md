@@ -5,13 +5,13 @@ In this computational lab, we will go through examples of calculating single cel
 ***
 
 Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity" from Files on Canvas.
-<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/download-1.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/download-1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ### 1. Open Farnam OnDemand:
 
 Go to [beng469.ycrc.yale.edu](https://beng469.ycrc.yale.edu) in your web browser (make sure that you are on Yale Network or Yale VPN). You will see the following window once you logged in.
 
-<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-1.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
 ### 2. Click open **Clusters** -> **Farnam Shell Access**
