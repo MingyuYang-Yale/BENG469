@@ -6,7 +6,7 @@ In this computational lab, we will go through examples of calculating single cel
 
 - As the HPC is temporarily unavailable due to scheduled maintenance, I will conducting the lab session using my personal laptop for demonstration purposes. To actively participate during the session, please [install R](https://cran.r-project.org/) and [R Studio](https://posit.co/download/rstudio-desktop/) on your own laptop prior to the lab session.
 
-```
+```{r Install packages}
 library(devtools)
 install_github("navinlabcode/copykat")
 if (!requireNamespace("BiocManager", quietly = TRUE))
@@ -18,8 +18,7 @@ devtools::install_github("bmbroom/NGCHMR", ref="stable")
 devtools::install_github("broadinstitute/inferCNV_NGCHM")
 ```
 
-
-Alternatively, you can listen during the lab session, and then revisit the materials once the HPC is back online.
+- Alternatively, you can listen during the lab session, and then revisit the materials once the HPC is back online.
 
 #### 2. Download files:
 Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity" from Files on Canvas.
