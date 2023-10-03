@@ -1,4 +1,4 @@
-***
+# BENG 469 Lab session 4 - instructions
 
 In this computational lab, we will go through examples of calculating single cell copy number profiles from 10X single cell RNA data, predicting tumor and normal cells, and inferring tumor subclones from using CopyKAT and InferCNV, try to repeat figure2a and 2c.
 
