@@ -10,16 +10,7 @@ As the HPC is temporarily unavailable due to scheduled maintenance, I will condu
 Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity" from Files on Canvas.
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/download-1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-#### 3. Open the **CopyKAT** and **InferCNV** RMD files inside Rstudio Server
+#### 3. Open the R project and **CopyKAT** and **InferCNV** RMD files
 
-Inside Rstudio, click the ellipsis icon in the file navigating panel at the bottom right. 
-
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-5.png" alt="foo bar" title="train &amp; tracks" /></p>
-
-In the "Go To Folder" window that pops out, paste ```~/project/scRNA-CNV``` to the "Directory" box: , then click "Ok". 
-
-<p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-6.png" alt="foo bar" title="train &amp; tracks" /></p>
-
-This will lead you to the directory where CopyKAT.Rmd and InferCNV.Rmd are located. You can click these files to open them.
-
+Once you are inside Rstudio, use the file navigation panel at the bottom right to click open the downloaded "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity" folder then click the "Lab4-scRNAseq-CNV.Rproj" file to start the R project. Then, click open “CopyKAT.Rmd” and “InferCNV.Rmd” . 
 
