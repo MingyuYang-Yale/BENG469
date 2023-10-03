@@ -4,7 +4,7 @@ In this computational lab, we will go through examples of calculating single cel
 
 #### 1. Prerequisites:
 
-Because the HPC is under maintenance from Oct.3-Oct.5, I will use my own laptop to demostrate during the lab session. if you want to follow me during the lab session, please [install R](https://cran.r-project.org/) and [R Studio](https://posit.co/download/rstudio-desktop/) on your laptop prior to the lab session.
+Due to scheduled maintenance on the HPC system from October 3rd to October 5th, I will be conducting the lab session using my personal laptop for demonstration purposes. To actively participate during the lab session, please [install R](https://cran.r-project.org/) and [R Studio](https://posit.co/download/rstudio-desktop/) on your own laptop prior to the lab session.
 
 #### 2. Download files:
 Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity" from Files on Canvas.
