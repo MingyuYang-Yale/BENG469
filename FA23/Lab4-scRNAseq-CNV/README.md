@@ -10,48 +10,7 @@ As the HPC is temporarily unavailable due to scheduled maintenance, I will condu
 Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity" from Files on Canvas.
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/download-1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-### 1. Open Farnam OnDemand:
-
-Go to [beng469.ycrc.yale.edu](https://beng469.ycrc.yale.edu) in your web browser (make sure that you are on Yale Network or Yale VPN). You will see the following window once you logged in.
-
-<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-1.png" alt="foo bar" title="train &amp; tracks" /></p>
-
-
-### 2. Click open **Clusters** -> **Farnam Shell Access**
-
-<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-0.png" alt="foo bar" title="train &amp; tracks" /></p>
-<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-00.png" alt="foo bar" title="train &amp; tracks" /></p>
-
-### 3. Copy **scRNA-CNV** to your project folder :
-
-```
-cd project
-```
-Copy the demo data and codes:
-```
-cp -r /gpfs/ysm/project/beng469/beng469_my393/scRNA-CNV ./
-```
-
-### 4. Click open **RStudio Server**
-
-<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-2.png" alt="foo bar" title="train &amp; tracks" /></p>
-
-### 5. Request computation resources
-
- Specify the resources as shown below 
- 
- Additional module: **JAGS/4.3.0-foss-2020b**
- 
- (you can leave other optional boxes blank), then click **Launch**
- 
- <p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-000.jpg" alt="foo bar" title="train &amp; tracks" /></p>
-
-### 6. Lauch Rstudio Server
-Wait for a few seconds until you see your requested session is running, then click **Connect to RStudio Server**. You will see a new window poping out.
-
-<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-4.png" alt="foo bar" title="train &amp; tracks" /></p>
-
-### 7. Open the **CopyKAT** and **InferCNV** RMD files inside Rstudio Server
+#### 3. Open the **CopyKAT** and **InferCNV** RMD files inside Rstudio Server
 
 Inside Rstudio, click the ellipsis icon in the file navigating panel at the bottom right. 
 
