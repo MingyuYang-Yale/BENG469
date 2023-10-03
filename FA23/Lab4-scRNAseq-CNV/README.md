@@ -12,5 +12,5 @@ Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity
 
 #### 3. Open the R project and **CopyKAT** and **InferCNV** RMD files
 
-##### Open the downloaded folder named '10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity.' Within this folder, click on the 'Lab4-scRNAseq-CNV.Rproj' file to launch Rstudio and initiate the R project. 
-##### Open both 'CopyKAT.Rmd' and 'InferCNV.Rmd' by clicking on them.
+- Open the downloaded folder named '10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity.' Within this folder, click on the 'Lab4-scRNAseq-CNV.Rproj' file to launch Rstudio and initiate the R project. 
+- Open both 'CopyKAT.Rmd' and 'InferCNV.Rmd' by clicking on them.
