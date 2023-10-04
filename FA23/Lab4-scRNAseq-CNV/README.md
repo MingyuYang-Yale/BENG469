@@ -87,7 +87,17 @@ Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity
 - Cluster single-cell copy number data to identify clonal subpopulations.
 - Generate consensus profiles representing subclonal genotypes for further analysis of gene expression differences.
 
+### Comparison between CopyKAT and inferCNV
+
+|       | CopyKAT | inferCNV |
+| ----------- | ----------- |--------------|
+| Diploid Cell Identification      | Hierarchical clustering, GMM       | Assumes reference set of diploid cells|
+| Breakpoint Detection   | Poisson-gamma models, KS tests      |HMM-based change-point detection|
+
 ---
+
+
+
 
 ## Using HPC 
 
