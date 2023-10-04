@@ -4,9 +4,9 @@ In this computational lab, we will go through examples of calculating single cel
 
 #### 1. Prerequisites:
 
-- Since the HPC is temporarily unavailable due to scheduled maintenance, I will be conducting the lab session using my personal laptop for demonstration purposes.
-- Considering the diverse local machines we use, unexpected errors may occur. If you prefer, you can choose to observe and listen during the lab session and revisit the materials once the HPC is back online.
-- **Alternatively**, to actively participate during the session, please make sure to [install R](https://cran.r-project.org/) and [R Studio](https://posit.co/download/rstudio-desktop/) on your own laptop before the lab session.
+- HPC is currently under maintenance, so I will be conducting the lab session using my personal laptop for demonstration purposes.
+- The files and data are uploaded to Canvas, you can download and upload them to HPC once it's back online, and run the analysis after the lab session.
+- **Alternatively**, to actively participate during the session, you can [install R](https://cran.r-project.org/) and [R Studio](https://posit.co/download/rstudio-desktop/) on your own laptop prior the lab session and follow the instructions below on how to run the analysis locally on you own computer.
   
 #### 2. Download files:
 Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity" from Files on Canvas.
@@ -20,17 +20,15 @@ Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity
 
 #### 4. Install related R packages (this should take approximately 10-20 minutes).
 
-- Open 'Install_packages.Rmd', install the related R packages on your local R environment :
+- Click to open 'Install_packages.Rmd'
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/demo2.png" alt="foo bar" title="train &amp; tracks" /></p>
-
-- After you opened the 'Install_packages.Rmd', you may see a triangle mark come out in the left top panel to show that you need to install some packages first (see below), if so, please click "Install"
+- Upon opening 'Install_packages.Rmd', you may notice a triangular icon appearing in the top left panel, indicating that certain packages need to be installed (as shown below). If you see this, please click "Install".
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/demo3.png" alt="foo bar" title="train &amp; tracks" /></p>
-- After you click "Install", you will see an green bar show out in the left bottom panel (see below)
+- After clicking the "Install", a green progress bar will appear in the bottom left panel (as depicted below).
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/demo4.png" alt="foo bar" title="train &amp; tracks" /></p>
-- Then, please click to run the first and second chunk to install packages. 
-- during the install process, it will ask you interactively if you want to update old packages, type n for No or type 3 for None. (show below)
+- Next, run the first and second code chunks to initiate the package installation process.
+- During the installation process, you will be prompted to interactively decide whether you want to update any existing packages. To decline updates, type 'n' for No or '3' for None (as illustrated below).
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/demo5.png" alt="foo bar" title="train &amp; tracks" /></p>
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/demo6.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-
-- Open both 'CopyKAT.Rmd' and 'InferCNV.Rmd' by clicking on them.
+#### 5. Open both 'CopyKAT.Rmd' and 'InferCNV.Rmd' by clicking on them.
