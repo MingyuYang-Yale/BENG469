@@ -42,3 +42,30 @@ Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity
 - If you encounter errors when attempting to install this line: ```devtools::install_github("broadinstitute/inferCNV_NGCHM")```, please try to instal the standalone [JAGS](https://sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/) software first and then attempt the installation again.
 
 #### 5. Open both 'CopyKAT.Rmd' and 'InferCNV.Rmd' by clicking on them.
+
+---
+
+## Using HPC 
+
+If you wanna do the analysis on HPC after it's back online, 
+
+1. Go to [beng469.ycrc.yale.edu](https://beng469.ycrc.yale.edu) in your web browser (make sure that you are on Yale Secure Network or Yale VPN).
+
+2. Go to the Rstudio-server initialization page, and specify the parameters/resources as follows:
+
+| Parameters      | Values |
+| ----------- | ----------- |
+| R version      | R/4.2.0-foss-2020b       |
+| Number of hours   | 6        |
+| Number of CPU cores per node   | 8        |
+| Memory per CPU core in GiB   | 10       |
+| Partitions   | day        |
+| Reservation (optional)   | beng469        |
+| Additional modules (optional)  | JAGS/4.3.0-foss-2020b   |
+
+Then click Launch to launch an Rstudio session, and connect the Rstudio session once it’s started
+
+
+
+
+
