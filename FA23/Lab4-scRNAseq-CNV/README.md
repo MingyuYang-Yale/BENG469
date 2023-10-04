@@ -49,25 +49,45 @@ Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity
 
 <p><img width="1000" src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41587-020-00795-2/MediaObjects/41587_2020_795_Fig1_HTML.png?as=webp" alt="foo bar" title="train &amp; tracks" /></p>
 
-#### **Input Data**: The workflow starts with a UMI count matrix from scRNA-seq.
+#### Input Data
 
-#### **Fig. 1a : Data Preprocessing**:
-- Genes are annotated and ordered according to their genomic coordinates.
-- Variance is stabilized using the ***Freeman-Tukey transformation***
-- Outliers in the UMI counts are smoothed using polynomial ***dynamic linear modeling (DLM)***.
+-Begins with a gene expression matrix derived from unique molecular identifier (UMI) counts from single-cell RNA sequencing (scRNA-seq).
 
-#### **Fig. 1b : Identification of Diploid Cells**: 
-- single cells are grouped into clusters.
-- ***Gaussian mixture model (GMM)***. helps estimate variance within each cluster. The cluster with the lowest estimated variance is defined as 'confident diploid cells.'
+#### Data Preprocessing
 
-#### **Fig. 1c : **Chromosome Breakpoint Detection**: 
+- Genes are organized by genomic coordinates.
+- Variance is stabilized using Freeman-Tukey transformation.
+- Outliers in UMI counts are smoothed using polynomial dynamic linear modeling (DLM).
 
-- ***Poisson-gamma model*** and ***Markov chain Monte Carlo (MCMC) iterations*** to calculate posterior means for gene windows.
-- ***Kolmogorov-Smirnov (KS) tests*** are then used to join adjacent windows with no significant mean differences. 
+#### Identification of Diploid Cells
 
-#### **Fig. 1d** : Perform hierarchical clustering to predict aneuploid turmor cells from normal diploid cells.
+- Identify a subset of diploid cells as a baseline.
+- Achieved by grouping single cells into hierarchical clusters.
+- Gaussian mixture modeling (GMM) estimates variance within clusters.
+- Cluster with the lowest variance is labeled as 'confident diploid cells.'
+- Special 'GMM definition' mode for challenging cases.
 
-#### **Fig. 1e : Clonal Subpopulation Identification**: single-cell copy number data is clustered to identify clonal subpopulations, and consensus profiles representing subclonal genotypes are generated for further analysis of gene expression differences.
+#### Chromosome Breakpoint Detection
+
+- Utilizes a Poisson-gamma model and Markov chain Monte Carlo (MCMC) iterations.
+- Calculate posterior means for gene windows.
+- Apply Kolmogorov-Smirnov (KS) tests to join adjacent windows with no significant mean differences.
+- Involves clustering thousands of single cells.
+- Identify consensus chromosome breakpoints for the entire cell population.
+
+#### Copy Number Calculation
+
+- Calculate copy number values for each window as posterior averages across genes spanning adjacent chromosome breakpoints.
+- Convert copy number values from gene space to genomic positions.
+- Achieve genome-wide copy number profiles for each single cell at an approximate resolution of 5 Mb.
+
+#### Clonal Subpopulation Identification
+
+- Apply hierarchical clustering to single-cell copy number data.
+- Identify the largest distance between aneuploid tumor cells and diploid stromal cells.
+- If genomic distance is not significant, switch to the GMM definition model to predict single tumor cells individually.
+- Cluster single-cell copy number data to identify clonal subpopulations.
+- Generate consensus profiles representing subclonal genotypes for further analysis of gene expression differences.
 
 ---
 
