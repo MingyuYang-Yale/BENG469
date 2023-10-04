@@ -45,7 +45,7 @@ Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity
 
 CopyKAT Analysis Workflow
 
-<p><img width="1000" src="[https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/demo6.png](https://www.nature.com/articles/s41587-020-00795-2/figures/1)" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="1000" src="https://www.nature.com/articles/s41587-020-00795-2/figures/1" alt="foo bar" title="train &amp; tracks" /></p>
 
 ---
 
