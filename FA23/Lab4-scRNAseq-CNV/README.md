@@ -22,8 +22,13 @@ Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity
 
 - Open 'Install_packages.Rmd', install the related R packages on your local R environment (this should take approximately 10-20 minutes):
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/demo2.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+- After you opened the 'Install_packages.Rmd', you may see a triangle mark come out in the left top panel to show that you need to install some packages first (see below), if so, please click "Install"
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/demo3.png" alt="foo bar" title="train &amp; tracks" /></p>
+- After you click "Install", you will see an green bar show out in the left bottom panel (see below)
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/demo4.png" alt="foo bar" title="train &amp; tracks" /></p>
+- Then, please click to run the first and second chunk to install packages. 
+- during the install process, it will ask you interactively if you want to update old packages, type n for No or type 3 for None. (show below)
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/demo5.png" alt="foo bar" title="train &amp; tracks" /></p>
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/demo6.png" alt="foo bar" title="train &amp; tracks" /></p>
 
