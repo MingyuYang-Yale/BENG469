@@ -24,6 +24,10 @@ Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity
 
 - Open 'Install_packages.Rmd', install the related R packages on your local R environment (this should take approximately 10-20 minutes):
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/demo2.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/demo3.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/demo4.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/demo5.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/demo6.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
 - Open both 'CopyKAT.Rmd' and 'InferCNV.Rmd' by clicking on them.
