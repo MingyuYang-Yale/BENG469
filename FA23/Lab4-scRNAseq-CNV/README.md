@@ -49,25 +49,25 @@ Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity
 
 <p><img width="1000" src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41587-020-00795-2/MediaObjects/41587_2020_795_Fig1_HTML.png?as=webp" alt="foo bar" title="train &amp; tracks" /></p>
 
-*** **Input Data**: The workflow starts with a UMI count matrix from scRNA-seq.
+#### **Input Data**: The workflow starts with a UMI count matrix from scRNA-seq.
 
-*** **Fig. 1a : Data Preprocessing**:
+#### **Fig. 1a : Data Preprocessing**:
 - Genes are annotated and ordered according to their genomic coordinates.
 - Variance is stabilized using the ***Freeman-Tukey transformation***
 - Outliers in the UMI counts are smoothed using polynomial ***dynamic linear modeling (DLM)***.
 
-*** **Fig. 1b : Identification of Diploid Cells**: 
+#### **Fig. 1b : Identification of Diploid Cells**: 
 - single cells are grouped into clusters.
 - ***Gaussian mixture model (GMM)***. helps estimate variance within each cluster. The cluster with the lowest estimated variance is defined as 'confident diploid cells.'
 
-*** **Fig. 1c : **Chromosome Breakpoint Detection**: 
+#### **Fig. 1c : **Chromosome Breakpoint Detection**: 
 
 - ***Poisson-gamma model*** and ***Markov chain Monte Carlo (MCMC) iterations*** to calculate posterior means for gene windows.
 - ***Kolmogorov-Smirnov (KS) tests*** are then used to join adjacent windows with no significant mean differences. 
 
-*** **Fig. 1d** : Perform hierarchical clustering to predict aneuploid turmor cells from normal diploid cells.
+#### **Fig. 1d** : Perform hierarchical clustering to predict aneuploid turmor cells from normal diploid cells.
 
-*** **Fig. 1e : Clonal Subpopulation Identification**: single-cell copy number data is clustered to identify clonal subpopulations, and consensus profiles representing subclonal genotypes are generated for further analysis of gene expression differences.
+#### **Fig. 1e : Clonal Subpopulation Identification**: single-cell copy number data is clustered to identify clonal subpopulations, and consensus profiles representing subclonal genotypes are generated for further analysis of gene expression differences.
 
 ---
 
