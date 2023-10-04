@@ -39,4 +39,6 @@ Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/demo5.png" alt="foo bar" title="train &amp; tracks" /></p>
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/demo6.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+- If you get errors from when you run install this line: devtools::install_github("broadinstitute/inferCNV_NGCHM"), try to install the standalone [JAGS](https://sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/)
+
 #### 5. Open both 'CopyKAT.Rmd' and 'InferCNV.Rmd' by clicking on them.
