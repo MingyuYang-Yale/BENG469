@@ -72,8 +72,6 @@ Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity
 - Utilizes a Poisson-gamma model and Markov chain Monte Carlo (MCMC) iterations.
 - Calculate posterior means for gene windows.
 - Apply Kolmogorov-Smirnov (KS) tests to join adjacent windows with no significant mean differences.
-- Involves clustering thousands of single cells.
-- Identify consensus chromosome breakpoints for the entire cell population.
 
 #### Copy Number Calculation
 
