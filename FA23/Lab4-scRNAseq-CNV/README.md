@@ -43,9 +43,21 @@ Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity
 
 #### 5. Open both 'CopyKAT.Rmd' and 'InferCNV.Rmd' by clicking on them.
 
-CopyKAT Analysis Workflow
+--- 
+
+### CopyKAT Analysis Workflow
 
 <p><img width="1000" src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41587-020-00795-2/MediaObjects/41587_2020_795_Fig1_HTML.png?as=webp" alt="foo bar" title="train &amp; tracks" /></p>
+
+- The workflow takes the gene expression matrix as input.
+- use Freeman-Turkey transformation to stabilize variance
+- use dynamic linear modeling (DLM) to smooth the outliers.
+- Define normal cells by the cluster that have minimal variance as estimated by Gaussian Mixture Model(GMM)
+- Find the copy number variation breakpoints by using Markov Chain Monte Carlo(MCMC) segmentation and Kolmogorov-Smirnov(KS) testing.
+- Perform hierarchical clustering to predict aneuploid turmor cells from the normal diploid cells.
+- cluter the single cell copy number data to identify clonal subpopulations.
+
+
 
 ---
 
