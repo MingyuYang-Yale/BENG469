@@ -34,7 +34,7 @@ Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity
 
 - Next, run the first and second code chunks to initiate the package installation process.
 
-- During the installation process, you will be prompted to interactively decide whether you want to update any existing packages. To decline updates, type 'n' for No or '3' for None (as illustrated below).
+- During the installation process, you will be prompted to interactively decide whether you want to update any existing packages. To decline updates, type ***'n'*** for No or ***'3'*** for None (as illustrated below).
 
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/demo5.png" alt="foo bar" title="train &amp; tracks" /></p>
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/demo6.png" alt="foo bar" title="train &amp; tracks" /></p>
