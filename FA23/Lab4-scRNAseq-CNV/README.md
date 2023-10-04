@@ -49,14 +49,25 @@ Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity
 
 <p><img width="1000" src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41587-020-00795-2/MediaObjects/41587_2020_795_Fig1_HTML.png?as=webp" alt="foo bar" title="train &amp; tracks" /></p>
 
-- **Input Data**: The workflow starts with a gene expression matrix based on unique molecular identifier (UMI) counts from scRNA-seq.
+*** **Input Data**: The workflow starts with a UMI count matrix from scRNA-seq.
 
-- **Data Preprocessing**: Genes are annotated and ordered according to their genomic coordinates. Variance is stabilized using the ***Freeman-Tukey transformation***, and outliers in the UMI counts are smoothed using polynomial ***dynamic linear modeling (DLM)***.
-- Identification of Diploid Cells: A critical step is identifying a subset of diploid cells with high confidence to establish a copy number baseline for normal 2N cells. This is done by grouping single cells into hierarchical clusters and estimating the variance within each cluster using a ***Gaussian mixture model (GMM)***. The cluster with the lowest estimated variance is defined as 'confident diploid cells.'
+*** **Fig. 1a : Data Preprocessing**:
+- Genes are annotated and ordered according to their genomic coordinates.
+- Variance is stabilized using the ***Freeman-Tukey transformation***
+- Outliers in the UMI counts are smoothed using polynomial ***dynamic linear modeling (DLM)***.
 
-- **Chromosome Breakpoint Detection**: The workflow employs a ***Poisson-gamma model*** and ***Markov chain Monte Carlo (MCMC) iterations*** to calculate posterior means for gene windows. ***Kolmogorov-Smirnov (KS) tests*** are then used to join adjacent windows with no significant mean differences. Thousands of single cells are clustered, consensus chromosome breakpoints are identified, and genomic breakpoints for the entire cell population are created. Copy number values for each window are calculated as posterior averages across genes spanning adjacent chromosome breakpoints.
+*** **Fig. 1b : Identification of Diploid Cells**: 
+- single cells are grouped into clusters.
+- ***Gaussian mixture model (GMM)***. helps estimate variance within each cluster. The cluster with the lowest estimated variance is defined as 'confident diploid cells.'
 
-- **Clonal Subpopulation Identification**: Hierarchical clustering is applied to single-cell copy number data to identify the largest distance between aneuploid tumor cells and diploid stromal cells. If genomic distance is not significant, the GMM definition model is used to predict single tumor cells individually. Finally, single-cell copy number data is clustered to identify clonal subpopulations, and consensus profiles representing subclonal genotypes are generated for further analysis of gene expression differences.
+*** **Fig. 1c : **Chromosome Breakpoint Detection**: 
+
+- ***Poisson-gamma model*** and ***Markov chain Monte Carlo (MCMC) iterations*** to calculate posterior means for gene windows.
+- ***Kolmogorov-Smirnov (KS) tests*** are then used to join adjacent windows with no significant mean differences. 
+
+*** **Fig. 1d** : Perform hierarchical clustering to predict aneuploid turmor cells from normal diploid cells.
+
+*** **Fig. 1e : Clonal Subpopulation Identification**: single-cell copy number data is clustered to identify clonal subpopulations, and consensus profiles representing subclonal genotypes are generated for further analysis of gene expression differences.
 
 ---
 
