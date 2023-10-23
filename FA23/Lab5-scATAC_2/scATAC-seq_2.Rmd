@@ -1,0 +1,196 @@
+---
+title: "BENG 469 Lab (scATAC-seq_2)"
+output: html_document
+---
+
+### Skip this step in the lab session
+### Monocle3 installation information: https://cole-trapnell-lab.github.io/monocle3/docs/installation/
+### Try this part after class if you are interested to install the packages yourself. Be confident and patient, step by step. You will nail it!
+# ```{r message=FALSE, warning=FALSE}
+# install.packages("BiocManager")
+# install.packages("devtools")
+# install.packages('Seurat') # Seurat V4, R(version 4.0.4)
+# install.packages("Signac")
+# BiocManager::install("ggbio")
+# BiocManager::install("biovizBase")
+# BiocManager::install("AnnotationFilter")
+# BiocManager::install("BSgenome.Mmusculus.UCSC.mm9")
+# BiocManager::install("EnsDb.Mmusculus.v75")
+# remotes::install_github('satijalab/seurat-wrappers')
+# BiocManager::install(c('BiocGenerics', 'DelayedArray', 'DelayedMatrixStats',
+#                       'limma', 'S4Vectors', 'SingleCellExperiment',
+#                       'SummarizedExperiment', 'batchelor', 'Matrix.utils'))
+# install.packages('rsample')
+# devtools::install_github('cole-trapnell-lab/leidenbase')
+# devtools::install_github('cole-trapnell-lab/monocle3')
+# BiocManager::install("Gviz")
+# remotes::install_github("cole-trapnell-lab/cicero-release", ref = "monocle3")
+# BiocManager::install("JASPAR2020")
+# BiocManager::install("TFBSTools")
+# install.packages('knitr')
+# ```
+
+### Run the code below to clean the environment load the library
+```{r}
+rm(list = ls())
+#.libPaths("/home/beng469_sb2723/R/x86_64-pc-linux-gnu-library/4.2" )
+.libPaths("/vast/palmer/apps/avx2/software/R/4.2.0-foss-2020b/lib64/R/library")
+```
+
+### scATAC-seq lab starts from here ###
+
+### Load packages (check package installation)
+```{r message=FALSE, warning=FALSE}
+library(Signac) 
+library(Seurat)
+library(monocle3)
+library(GenomeInfoDb)
+library(BSgenome.Mmusculus.UCSC.mm9)
+library(EnsDb.Mmusculus.v75)
+library(ggplot2)
+library(patchwork)
+library(SeuratWrappers)
+library(cicero)
+library(JASPAR2020)
+library(TFBSTools)
+library(knitr)
+set.seed(1234)
+```
+
+
+### load raw counts (https://atlas.gs.washington.edu/mouse-atac/data/)
+```{r}
+counts <- readRDS('/gpfs/gibbs/project/beng469/beng469_sb2723/L5_scATAC_2/atac_matrix.binary.qc_filtered.rds')
+
+# features (peaks) x cells
+dim(counts) 
+```
+
+```{r}
+include_graphics(c('/gpfs/gibbs/project/beng469/beng469_sb2723/L5_scATAC_2/img/matrix.png', '/gpfs/gibbs/project/beng469/beng469_sb2723/L5_scATAC_2/img/peaks.png'))
+```
+
+
+### Randomly downsample dataset (~10%) (Quiz: how many cells?)
+```{r}
+counts.subsampled <- counts[, sample(colnames(counts), size =8000, replace=F)]
+dim(counts.subsampled) 
+```
+
+### adjust the row names (optional)
+# ```{r}
+# row.names(counts) <- sub("_", ":", row.names(counts), fixed=TRUE)
+# row.names(counts) <- sub("_", "-", row.names(counts), fixed=TRUE)
+# head(row.names(counts))
+# ```
+
+
+### load metadata (https://atlas.gs.washington.edu/mouse-atac/data/) (Quiz: what is the row name?)
+```{r}
+metadata <- read.table(file="/gpfs/gibbs/project/beng469/beng469_sb2723/L5_scATAC_2/cell_metadata.txt", header=TRUE, row.names=1, sep='\t', stringsAsFactors=FALSE)
+metadata <- metadata[colnames(counts.subsampled), ]
+head(metadata)
+```
+
+
+
+### We will use Seurat and Signac packages for data analysis
+
+### create seurat ChromatinAssay (https://satijalab.org/signac/articles/data_structures.html)
+```{r}
+chrom_assay <- CreateChromatinAssay(counts = counts.subsampled, sep = c("_", "_"),genome = 'mm9')
+```
+
+### create seurat object (https://satijalab.org/seurat/)
+```{r}
+atac_obj <- CreateSeuratObject(
+  counts = chrom_assay,
+  assay = "peaks",
+  meta.data = metadata
+)
+atac_obj
+atac_obj[['peaks']]
+granges(atac_obj)
+```
+
+### We can also add gene annotations to the atac_obj object for the mouse genome. This will allow downstream functions to pull the gene annotation information directly from the object.
+```{r message=FALSE, warning=FALSE}
+# extract gene annotations from EnsDb (take a while)
+annotations <- GetGRangesFromEnsDb(ensdb = EnsDb.Mmusculus.v75)
+
+# change to UCSC style since the data was mapped to mm9
+seqlevelsStyle(annotations) <- 'UCSC'
+genome(annotations) <- "mm9"
+
+# add the gene information to the object
+Annotation(atac_obj) <- annotations
+head(annotations)
+```
+
+### Normalization and linear dimensional reduction
+### Normalization: Signac performs term frequency-inverse document frequency (TF-IDF) normalization. This is a two-step normalization procedure, that both normalizes across cells to correct for differences in cellular sequencing depth, and across peaks to give higher values to more rare peaks.
+
+### Feature selection: The low dynamic range of scATAC-seq data makes it challenging to perform variable feature selection, as we do for scRNA-seq. Instead, we can choose to use only the top n% of features (peaks) for dimensional reduction, or remove features present in less than n cells with the FindTopFeatures() function. Here, we will use all features, though we note that we see very similar results when using only a subset of features (try setting min.cutoff to ‘q75’ to use the top 25% all peaks), with faster runtimes. Features used for dimensional reduction are automatically set as VariableFeatures() for the Seurat object by this function.
+
+### Dimension reduction: We next run singular value decomposition (SVD) on the TD-IDF matrix, using the features (peaks) selected above. This returns a reduced dimension representation of the object (for users who are more familiar with scRNA-seq, you can think of this as analogous to the output of PCA).
+
+```{r}
+include_graphics(c('/gpfs/gibbs/project/beng469/beng469_sb2723/L5_scATAC_2/img/PCA.png'))
+```
+
+### The combined steps of TF-IDF followed by SVD are known as latent semantic indexing (LSI).
+
+```{r message=FALSE, warning=FALSE}
+#(take a while)
+atac_obj <- RunTFIDF(atac_obj)
+atac_obj <- FindTopFeatures(atac_obj, min.cutoff = 'q0')
+atac_obj <- RunSVD(object = atac_obj)
+```
+
+
+### The first LSI component often captures sequencing depth (technical variation) rather than biological variation. If this is the case, the component should be removed from downstream analysis. We can assess the correlation between each LSI component and sequencing depth using the DepthCor() function: (Quiz: should we remove LSI 1? Why?)
+```{r}
+DepthCor(atac_obj)
+
+# Here we see there is a very strong correlation between the first LSI component and the total number of counts for the cell, so we will perform downstream steps without this component.
+```
+
+
+
+### Non-linear dimension reduction and clustering
+### Now that the cells are embedded in a low-dimensional space, we can use methods commonly applied for the analysis of scRNA-seq data to perform graph-based clustering, and non-linear dimension reduction for visualization. The functions RunUMAP(), FindNeighbors(), and FindClusters() all come from the Seurat package.
+```{r message=FALSE, warning=FALSE}
+# (take a while)
+atac_obj <- RunUMAP(
+  object = atac_obj,
+  reduction = 'lsi',
+  dims = 2:30
+)
+```
+
+```{r message=FALSE, warning=FALSE}
+atac_obj <- FindNeighbors(
+  object = atac_obj,
+  reduction = 'lsi',
+  dims = 2:30
+)
+```
+
+### Quiz: change the resolution to 0.1, will you have more clusters or less clusters?
+### https://distill.pub/2016/misread-tsne/
+```{r message=FALSE, warning=FALSE}
+atac_obj <- FindClusters(
+  object = atac_obj,
+  algorithm = 3,
+  resolution = 1.2, #1.2
+  verbose = FALSE
+)
+```
+
+### Quiz: how do get the tissue labels for each clusters?
+```{r}
+p1 <- DimPlot(object = atac_obj, label = TRUE) + NoLegend()
+p2 <- DimPlot(object = atac_obj, label = FALSE, group.by = 'tissue')
+p1+p2
+```
+
