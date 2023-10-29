@@ -1,5 +1,7 @@
 ```cd project```
+
 ```salloc```
+
 module load miniconda
 conda create -n st-pipeline python=3.7
 conda activate st-pipeline 
