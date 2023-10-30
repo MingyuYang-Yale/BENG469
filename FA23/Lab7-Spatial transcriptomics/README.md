@@ -9,7 +9,7 @@ beng469.ycrc.yale.edu
 - click **Clusters** -> **shell access**
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-ssh-login.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-
+Proceed ([y]/n)? y
 
 ```
 cd project
