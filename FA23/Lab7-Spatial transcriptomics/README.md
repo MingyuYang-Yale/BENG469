@@ -62,6 +62,10 @@ st_pipeline_run.py -h
 cp /vast/palmer/scratch/fan/my393/L7/00.sh/stpipeline.sh ./
 ```
 
+```
+sbatch stpipeline.sh **NETID**
+```
+
 
 
 
