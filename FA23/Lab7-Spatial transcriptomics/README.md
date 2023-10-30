@@ -5,10 +5,6 @@ Open McCleary OnDemand at ```beng469.ycrc.yale.edu``` in a browser window
 - click **Clusters** -> **shell access**
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-ssh-login.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-
-
-Proceed ([y]/n)? y
-
 ```
 cd project
 ```
@@ -28,6 +24,8 @@ module load miniconda
 conda create -n st-pipeline python=3.7
 ```
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/stpipeline-1.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+Proceed ([y]/n)? y
 
 ```
 conda activate st-pipeline
