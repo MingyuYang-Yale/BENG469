@@ -1,14 +1,9 @@
 ### Access OOD
 
-- open OOD site for our class: 
+- open OOD 
 ```
 beng469.ycrc.yale.edu
 ```
-- Log in with your Yale NetID and password
-   <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-login.png" alt="foo bar" title="train &amp; tracks" /></p>
-
-- After login you will see the OOD dashboard.
-
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 - click **Clusters** -> **shell access**
