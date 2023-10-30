@@ -23,7 +23,7 @@ module load miniconda
 ```
 conda create -n st-pipeline python=3.7
 ```
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/stpipeline-1.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/stpipeline-1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 Proceed ([y]/n)? y
 
@@ -55,4 +55,4 @@ pip install stpipeline
 ```
 st_pipeline_run.py -h
 ```
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/stpipeline-2.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/stpipeline-3.png" alt="foo bar" title="train &amp; tracks" /></p>
