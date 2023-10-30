@@ -26,9 +26,10 @@ module load miniconda
 ```
 conda create -n st-pipeline python=3.7
 ```
+Proceed ([y]/n)? **y**
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/stpipeline-1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-Proceed ([y]/n)? y
+
 
 ```
 conda activate st-pipeline
