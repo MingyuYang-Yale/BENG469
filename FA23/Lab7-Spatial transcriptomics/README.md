@@ -15,6 +15,9 @@ beng469.ycrc.yale.edu
 cd project
 ```
 ```
+mkdir Lab7-Spatial_transcriptomics && cd Lab7-Spatial_transcriptomics
+```
+```
 salloc
 ```
 ```
