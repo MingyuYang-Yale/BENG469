@@ -23,7 +23,7 @@ conda install Cython
 conda install -c bioconda star
 ```
 ```
-conda install -c bioconda samtools openssl=1.0
+conda install -c bioconda samtools
 ```
 ```
 pip install 'pysam==0.15.4'
