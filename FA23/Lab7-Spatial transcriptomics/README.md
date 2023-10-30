@@ -1,6 +1,4 @@
-### Access OOD
-
-- open OOD 
+Open McCleary OnDemand at beng469.ycrc.yale.edu in a browser window
 ```
 beng469.ycrc.yale.edu
 ```
