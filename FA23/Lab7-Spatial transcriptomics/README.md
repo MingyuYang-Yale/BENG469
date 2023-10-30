@@ -23,11 +23,15 @@ conda install Cython
 conda install -c bioconda star
 ```
 ```
+conda install -c bioconda samtools openssl=1.0
+```
+```
 pip install 'pysam==0.15.4'
 ```
 ```
 pip install taggd
 ```
+
 ```
 pip install stpipeline
 ```
