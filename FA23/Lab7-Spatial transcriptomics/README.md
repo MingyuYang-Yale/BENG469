@@ -59,11 +59,11 @@ st_pipeline_run.py -h
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/stpipeline-3.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ```
-cp /vast/palmer/scratch/fan/my393/L7/00.sh/stpipeline.sh ./
+cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.sh/stpipeline.sh ./
 ```
 
 ```
-sbatch stpipeline.sh **NETID**
+sbatch stpipeline.sh NETID
 ```
 
 
