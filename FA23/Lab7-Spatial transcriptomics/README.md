@@ -96,3 +96,7 @@ Go to the Rstudio-server initialization page, and specify the parameters/resourc
 | Partitions   | devel        |
 | Reservation (optional)   |       |
 | Additional modules (optional)  |   |
+
+
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/rsession1.png" alt="foo bar" title="train &amp; tracks" /></p>
+
