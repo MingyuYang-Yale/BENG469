@@ -83,7 +83,7 @@ sbatch stpipeline.sh my393 --mail-user=mingyu.yang@yale.edu
 
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/notification.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-
+If you receive email notifications says **FAILED**, please contact us.
 
 ### Launch an Rstudio-server session:
    
