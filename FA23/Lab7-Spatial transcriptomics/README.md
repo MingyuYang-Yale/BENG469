@@ -68,6 +68,9 @@ cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.sh/stpipeline.sh ./
 ```
 sbatch stpipeline.sh NETID --mail-user=xx.xx@yale.edu
 ```
+```
+squeue --me
+```
 You will receive an email said your job has **Began**:
 
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/notifications1.png" alt="foo bar" title="train &amp; tracks" /></p>
