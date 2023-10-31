@@ -80,10 +80,8 @@ cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.sh/stpipeline.sh ./
 ```
 sbatch stpipeline.sh my393 --mail-user=mingyu.yang@yale.edu
 ```
-You will receive an email said your job has began:
-<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/notification.png" alt="foo bar" title="train &amp; tracks" /></p>
-
-If you receive email notifications says **FAILED**, please contact us immediately.
+You will receive an email said your job has **Began**:
+If you receive email notifications says **Failed**, please contact us immediately.
 
 ### Launch an Rstudio-server session:
    
