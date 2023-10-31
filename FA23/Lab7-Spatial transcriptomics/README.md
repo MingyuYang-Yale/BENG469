@@ -88,6 +88,6 @@ Go to the Rstudio-server initialization page, and specify the parameters/resourc
 | Number of hours   | 6        |
 | Number of CPU cores per node   | 4        |
 | Memory per CPU core in GiB   | 10       |
-| Partitions   | day        |
+| Partitions   | devel        |
 | Reservation (optional)   |       |
 | Additional modules (optional)  |   |
