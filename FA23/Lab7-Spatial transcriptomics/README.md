@@ -70,8 +70,10 @@ st_pipeline_run.py -h
 ```
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/stpipeline-3.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+
+Copy the stpipeline.sh to your directory, ```cp``` stands for copy.
 ```
-cp stpipeline.sh ./
+cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.sh/stpipeline.sh ./
 ```
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/change-email.png" alt="foo bar" title="train &amp; tracks" /></p>
 
