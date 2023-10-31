@@ -5,17 +5,29 @@ Open McCleary OnDemand at ```beng469.ycrc.yale.edu``` in a browser window
 - click **Clusters** -> **shell access**
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-ssh-login.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+First go to our **project** directory, ```cd``` stands for “change directory”
 ```
-cd project
+cd project 
 ```
+Then create a new directory called **Lab7-Spatial_transcriptomics**, ```mkdir``` stands for "make directory"
 ```
 mkdir Lab7-Spatial_transcriptomics
 ```
+Then go to the Lab7-Spatial_transcriptomics directory
 ```
 cd Lab7-Spatial_transcriptomics
 ```
 
 ### Install [Stpipeline](https://github.com/SpatialTranscriptomicsResearch/st_pipeline):
+
+#### Basically what the ST pipeline does (default mode) is :
+
+1. Quality trimming (read 1 and read 2) :
+2. Remove low quality bases
+3. Contamimant filter e.x. rRNA genome (Optional)
+4. Mapping with STAR (only read 2)
+5. Demultiplexing with Taggd (only read 1)
+6. Annotate the reads with htseq-count
 
 ```
 salloc
