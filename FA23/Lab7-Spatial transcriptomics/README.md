@@ -65,9 +65,11 @@ Copy the stpipeline.sh to your directory, ```cp``` stands for copy.
 ```
 cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.sh/stpipeline.sh ./
 ```
+Submit a batch job to compute node
 ```
 sbatch stpipeline.sh NETID --mail-user=xx.xx@yale.edu
 ```
+View information about your job
 ```
 squeue --me
 ```
