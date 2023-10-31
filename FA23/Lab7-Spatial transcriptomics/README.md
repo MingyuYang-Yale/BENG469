@@ -46,26 +46,14 @@ Proceed ([y]/n)? **y**
 conda activate st-pipeline
 ```
 ```
-conda install Numpy
+conda install Numpy Cython
 ```
 ```
-conda install Cython
-```
-```
-conda install -c bioconda star
-```
-```
-conda install -c bioconda samtools
-```
-```
-pip install 'pysam==0.15.4'
-```
-```
-pip install taggd
+conda install -c bioconda star samtools
 ```
 
 ```
-pip install stpipeline
+pip install 'pysam==0.15.4' taggd stpipeline
 ```
 ```
 st_pipeline_run.py -h
