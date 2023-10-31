@@ -20,7 +20,7 @@ cd Lab7-Spatial_transcriptomics
 
 ### Install [Stpipeline](https://github.com/SpatialTranscriptomicsResearch/st_pipeline):
 
-#### Basically what the ST pipeline does (default mode) is :
+#### Basically what the [ST pipeline](https://academic.oup.com/bioinformatics/article/33/16/2591/3111847) does is :
 
 1. Quality trimming (read 1 and read 2) :
 2. Remove low quality bases
