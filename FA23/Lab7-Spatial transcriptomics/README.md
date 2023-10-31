@@ -65,10 +65,8 @@ Copy the stpipeline.sh to your directory, ```cp``` stands for copy.
 ```
 cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.sh/stpipeline.sh ./
 ```
-<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/change-email.png" alt="foo bar" title="train &amp; tracks" /></p>
-
 ```
-sbatch stpipeline.sh my393 --mail-user=mingyu.yang@yale.edu
+sbatch stpipeline.sh NETID --mail-user=xx.xx@yale.edu
 ```
 You will receive an email said your job has **Began**:
 If you receive email notifications says **Failed**, please contact us immediately.
