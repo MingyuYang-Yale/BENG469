@@ -17,7 +17,7 @@ getquota
 ```
 Go to your **palmer_scratch** directory, ```cd``` stands for “change directory”
 ```
-cd project 
+cd palmer_scratch 
 ```
 Then create a new directory called **Lab7-Spatial_transcriptomics**, ```mkdir``` stands for "make directory"
 ```
