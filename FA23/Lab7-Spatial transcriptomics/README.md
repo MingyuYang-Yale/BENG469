@@ -31,7 +31,7 @@ Then go to the Lab7-Spatial_transcriptomics directory
 ```
 cd Lab7-Spatial_transcriptomics
 ```
-The raw data we will use today located in the following folder:
+The raw data we will use today is located in the following folder:
 ```
 /vast/palmer/scratch/fan/my393/BENG469/L7/01.demo_data/GSM4189611_50t
 ```
