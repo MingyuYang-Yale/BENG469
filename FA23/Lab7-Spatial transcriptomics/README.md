@@ -11,11 +11,11 @@ beng469.ycrc.yale.edu
 Click **Clusters** -> **shell access**
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-ssh-login.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-Use ls command to list files and directories.
+Use ```ls``` command to list files and directories.
 ```
 ls -lrt
 ```
-Use getquota command to monitor your current storage usage & limits
+Use ```getquota``` command to monitor your current storage usage & limits
 ```
 getquota
 ```
