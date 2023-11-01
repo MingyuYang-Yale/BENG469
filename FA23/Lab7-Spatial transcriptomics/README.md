@@ -130,7 +130,12 @@ You will also receive an email said your job has **COMPLETED**:
 
 If you receive email notifications says **Failed**, please contact us immediately.
 
+
 ---
+Copy Rmd files to you folder
+```
+cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.bin/Lab7-DBiT-seq.Rmd ./
+```
 
 ### Launch an Rstudio-server session:
    
