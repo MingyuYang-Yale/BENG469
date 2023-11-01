@@ -59,6 +59,9 @@ FASTQ files
 ---
 #### Install [Stpipeline](https://github.com/SpatialTranscriptomicsResearch/st_pipeline):
 
+<p><img width="500" src="https://academic.oup.com/view-large/figure/394522388/BIOINFORMATICS_33_16_2591_f1.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+
 ##### Basically what the [ST pipeline](https://academic.oup.com/bioinformatics/article/33/16/2591/3111847) does is :
 
 1. Quality trimming (read 1 and read 2) :
