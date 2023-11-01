@@ -15,7 +15,7 @@ Use ```ls``` command to list files and directories.
 ```
 ls -lrt
 ```
-Use ```getquota``` command to monitor your current storage usage & limits
+Use ```getquota``` command to monitor your current storage usage
 ```
 getquota
 ```
