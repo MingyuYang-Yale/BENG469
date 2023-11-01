@@ -35,7 +35,7 @@ The raw data we will use today is located in the following folder:
 ```
 /vast/palmer/scratch/fan/my393/BENG469/L7/01.demo_data/GSM4189611_50t
 ```
-FASTQ files
+Raw data FASTQ files explained
 ```
 less -S /vast/palmer/scratch/fan/my393/BENG469/L7/01.demo_data/GSM4189611_50t/GSM4189611_50t.R2.fastq.gz
 ```
