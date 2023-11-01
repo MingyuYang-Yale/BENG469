@@ -32,11 +32,12 @@ Then go to the Lab7-Spatial_transcriptomics directory
 cd Lab7-Spatial_transcriptomics
 ```
 The raw data we will use today is located in the following folder:
-- Read 1 containing the spatial information and the UMI
-- Read 2 containing the genomic sequence
 ```
 /vast/palmer/scratch/fan/my393/BENG469/L7/01.demo_data/GSM4189611_50t
 ```
+
+- Read 1 containing the spatial information and the UMI
+- Read 2 containing the genomic sequence
 
 ```
 less -S /vast/palmer/scratch/fan/my393/BENG469/L7/01.demo_data/GSM4189611_50t/GSM4189611_50t.R2.fastq.gz
