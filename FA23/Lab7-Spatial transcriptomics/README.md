@@ -138,7 +138,7 @@ If you receive email notifications says **Failed**, please contact us immediatel
 cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.bin/Lab7-DBiT-seq.Rmd ./
 ```
 
-### Launch an Rstudio-server session:
+#### Launch an Rstudio-server session:
    
 Go to the Rstudio-server initialization page, and specify the parameters/resources as follows:
 
