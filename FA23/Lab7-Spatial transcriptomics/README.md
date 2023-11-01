@@ -33,7 +33,7 @@ cd Lab7-Spatial_transcriptomics
 ```
 The raw data we will use today is located in the following folder:
 ```
-/vast/palmer/scratch/fan/my393/BENG469/L7/01.demo_data/GSM4189611_50t
+ls -lrt /vast/palmer/scratch/fan/my393/BENG469/L7/01.demo_data/GSM4189611_50t
 ```
 
 - Read 1 containing the spatial information and the UMI
