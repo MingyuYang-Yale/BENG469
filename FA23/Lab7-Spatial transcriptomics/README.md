@@ -94,7 +94,6 @@ Go to the Rstudio-server initialization page, and specify the parameters/resourc
 | Number of CPU cores per node   | 4        |
 | Memory per CPU core in GiB   | 4       |
 | Partitions   | day        |
-| Reservation (optional)   |       |
 | Additional modules (optional)  | Python/3.8.6-GCCcore-10.2.0   |
 |User defined environment variables for .Renviron (optional)|PYTHONPATH=/gpfs/gibbs/project/beng469/beng469_my393/Python3.8/site-packages|
 
