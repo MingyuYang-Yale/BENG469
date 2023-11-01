@@ -46,7 +46,10 @@ less -S /vast/palmer/scratch/fan/my393/BENG469/L7/01.demo_data/GSM4189611_50t/GS
 
 FASTQ files
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/fastq.png" alt="foo bar" title="train &amp; tracks" /></p>
-
+- A sequence identifier with information about the sequencing run and the cluster.
+- The sequence (the base calls; A, C, T, G and N).
+- A separator, which is simply a plus (+) sign.
+- The base call quality scores. Using ASCII characters to represent the numerical quality scores.
 
 #### Install [Stpipeline](https://github.com/SpatialTranscriptomicsResearch/st_pipeline):
 
