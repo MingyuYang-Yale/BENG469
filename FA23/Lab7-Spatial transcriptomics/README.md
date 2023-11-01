@@ -44,7 +44,7 @@ less -S /vast/palmer/scratch/fan/my393/BENG469/L7/01.demo_data/GSM4189611_50t/GS
 * Use ```arrow key```:arrow_down: :arrow_up: to go down or go up just one line at a time. 
 * Use ```q``` key to quit out less.
 
-FASTQ files
+FASTQ files (Read 1 containing the spatial information and the UMI and read 2 containing the genomic sequence)
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/fastq.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 - A sequence identifier with information about the sequencing run and the cluster.
