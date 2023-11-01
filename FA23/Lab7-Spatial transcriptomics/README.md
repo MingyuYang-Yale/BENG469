@@ -130,6 +130,8 @@ You will also receive an email said your job has **COMPLETED**:
 
 If you receive email notifications says **Failed**, please contact us immediately.
 
+---
+
 ### Launch an Rstudio-server session:
    
 Go to the Rstudio-server initialization page, and specify the parameters/resources as follows:
