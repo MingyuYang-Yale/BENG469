@@ -1,6 +1,6 @@
 # BENG 469 Lab session 7 - instructions
 
-Open McCleary OnDemand at ```beng469.ycrc.yale.edu``` in a browser window
+#### Open McCleary OnDemand at ```beng469.ycrc.yale.edu``` in a browser window
 
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood.png" alt="foo bar" title="train &amp; tracks" /></p>
 
@@ -28,9 +28,9 @@ Then go to the Lab7-Spatial_transcriptomics directory
 cd Lab7-Spatial_transcriptomics
 ```
 
-### Install [Stpipeline](https://github.com/SpatialTranscriptomicsResearch/st_pipeline):
+#### Install [Stpipeline](https://github.com/SpatialTranscriptomicsResearch/st_pipeline):
 
-#### Basically what the [ST pipeline](https://academic.oup.com/bioinformatics/article/33/16/2591/3111847) does is :
+##### Basically what the [ST pipeline](https://academic.oup.com/bioinformatics/article/33/16/2591/3111847) does is :
 
 1. Quality trimming (read 1 and read 2) :
 2. Remove low quality bases
