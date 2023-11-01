@@ -37,7 +37,7 @@ The raw data we will use today is located in the following folder:
 ```
 
 - Read 1 containing the spatial information and the UMI
-  <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/read1.png" alt="foo bar" title="train &amp; tracks" /></p>
+  <p><img width="300" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/read1.png" alt="foo bar" title="train &amp; tracks" /></p>
 - Read 2 containing the genomic sequence
 
 ```
