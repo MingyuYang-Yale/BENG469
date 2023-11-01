@@ -59,7 +59,7 @@ FASTQ files
 ---
 #### Install [Stpipeline](https://github.com/SpatialTranscriptomicsResearch/st_pipeline):
 
-<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/stpipeline-5.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="600" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/stpipeline-5.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
 ##### Basically what the [ST pipeline](https://academic.oup.com/bioinformatics/article/33/16/2591/3111847) does is :
