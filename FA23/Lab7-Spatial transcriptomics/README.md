@@ -1,6 +1,6 @@
 # BENG 469 Lab session 7 - instructions
 
-#### Open McCleary OnDemand
+#### Open McCleary OnDemand in a browser window
 ```
 beng469.ycrc.yale.edu
 ```
