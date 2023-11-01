@@ -1,3 +1,5 @@
+# BENG 469 Lab session 7 - instructions
+
 Open McCleary OnDemand at ```beng469.ycrc.yale.edu``` in a browser window
 
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood.png" alt="foo bar" title="train &amp; tracks" /></p>
