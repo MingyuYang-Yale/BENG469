@@ -155,6 +155,10 @@ Go to the Rstudio-server initialization page, and specify the parameters/resourc
 
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/rsession1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+
+```
+~/palmer_scratch/Lab7-Spatial_transcriptomics
+```
 ```
 /vast/palmer/scratch/fan/my393/BENG469/L7/00.bin
 ```
