@@ -39,6 +39,10 @@ FASTQ files
 ```
 less -S /vast/palmer/scratch/fan/my393/BENG469/L7/01.demo_data/GSM4189611_50t/GSM4189611_50t.R2.fastq.gz
 ```
+```
+* Use ```space bar``` to go to the next page, ```b``` move up one page.
+* Use ```arrow key```:arrow_down: :arrow_up: to go down or go up just one line at a time. 
+* Use ```q``` key to quit out less.
 
 
 #### Install [Stpipeline](https://github.com/SpatialTranscriptomicsResearch/st_pipeline):
