@@ -32,6 +32,11 @@ Then go to the Lab7-Spatial_transcriptomics directory
 cd Lab7-Spatial_transcriptomics
 ```
 
+```
+less -S /vast/palmer/scratch/fan/my393/BENG469/L7/01.demo_data/GSM4189611_50t/GSM4189611_50t.R2.fastq.gz
+```
+
+
 #### Install [Stpipeline](https://github.com/SpatialTranscriptomicsResearch/st_pipeline):
 
 ##### Basically what the [ST pipeline](https://academic.oup.com/bioinformatics/article/33/16/2591/3111847) does is :
