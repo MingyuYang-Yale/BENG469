@@ -92,10 +92,12 @@ Go to the Rstudio-server initialization page, and specify the parameters/resourc
 | R version      | R/4.2.0-foss-2020b       |
 | Number of hours   | 6        |
 | Number of CPU cores per node   | 4        |
-| Memory per CPU core in GiB   | 10       |
-| Partitions   | devel        |
+| Memory per CPU core in GiB   | 4       |
+| Partitions   | day        |
 | Reservation (optional)   |       |
-| Additional modules (optional)  |   |
+| Additional modules (optional)  | Python/3.8.6-GCCcore-10.2.0   |
+
+|User defined environment variables for .Renviron (optional)|PYTHONPATH=/gpfs/gibbs/project/beng469/beng469_my393/Python3.8/site-packages|
 
 
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/rsession1.png" alt="foo bar" title="train &amp; tracks" /></p>
