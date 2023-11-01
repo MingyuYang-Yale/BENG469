@@ -66,7 +66,7 @@ FASTQ files
 ##### Basically what the [ST pipeline](https://academic.oup.com/bioinformatics/article/33/16/2591/3111847) does is :
 
 1. Quality trimming (read 1 and read 2) :
-2. Contamimant filter e.x. rRNA genome (Optional)
+2. Contaminant filter e.x. rRNA genome (Optional)
 3. Mapping with STAR (only read 2)
 4. Demultiplexing with Taggd (only read 1)
 6. Annotate the reads with htseq-count
