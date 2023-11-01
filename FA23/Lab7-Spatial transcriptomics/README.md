@@ -69,12 +69,7 @@ FASTQ files
 3. Mapping with STAR (only read 2)
 4. Demultiplexing with Taggd (only read 1)
 6. Annotate the reads with htseq-count
-
-Spatial barcodes for DBiT-seq
-```
-head /vast/palmer/scratch/fan/my393/BENG469/L7/00.database/barcodes-AB.xls
-```
-
+   
 ```
 salloc
 ```
