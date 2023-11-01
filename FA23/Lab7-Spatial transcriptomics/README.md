@@ -56,6 +56,7 @@ FASTQ files
 - A separator, which is simply a plus (+) sign.
 - The base quality scores. Using ASCII characters to represent the numerical quality scores.
 
+---
 #### Install [Stpipeline](https://github.com/SpatialTranscriptomicsResearch/st_pipeline):
 
 ##### Basically what the [ST pipeline](https://academic.oup.com/bioinformatics/article/33/16/2591/3111847) does is :
