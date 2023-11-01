@@ -7,7 +7,15 @@ Open McCleary OnDemand at ```beng469.ycrc.yale.edu``` in a browser window
 - click **Clusters** -> **shell access**
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-ssh-login.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-First go to our **project** directory, ```cd``` stands for “change directory”
+Use ls command to list files and directories.
+```
+ls -lrt
+```
+Use getquota command to monitor your current storage usage & limits
+```
+getquota
+```
+Go to your **palmer_scratch** directory, ```cd``` stands for “change directory”
 ```
 cd project 
 ```
