@@ -49,11 +49,11 @@ FASTQ files
 
 - A sequence identifier with information about the sequencing run and the cluster.
 
-- The sequence (the base calls; A, C, T, G and N).
+- The sequence (the bases; A, C, T, G and N).
 
 - A separator, which is simply a plus (+) sign.
 
-- The base call quality scores. Using ASCII characters to represent the numerical quality scores.
+- The base quality scores. Using ASCII characters to represent the numerical quality scores.
 
 #### Install [Stpipeline](https://github.com/SpatialTranscriptomicsResearch/st_pipeline):
 
