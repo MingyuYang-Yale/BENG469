@@ -19,7 +19,7 @@ Use ```getquota``` command to monitor current storage usage
 ```
 getquota
 ```
-Go to your **palmer_scratch** directory, ```cd``` stands for “change directory”
+Go to **palmer_scratch** directory, ```cd``` stands for “change directory”
 ```
 cd palmer_scratch 
 ```
