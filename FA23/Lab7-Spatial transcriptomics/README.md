@@ -103,3 +103,6 @@ Go to the Rstudio-server initialization page, and specify the parameters/resourc
 ```
 /vast/palmer/scratch/fan/my393/BENG469/L7/00.bin
 ```
+
+
+pip install --target=/gpfs/gibbs/project/beng469/beng469_my393/local --use-feature=2020-resolver magic-impute
