@@ -57,7 +57,8 @@ FASTQ files
 - The base quality scores. Using ASCII characters to represent the numerical quality scores.
 
 ---
-#### Install [Stpipeline](https://github.com/SpatialTranscriptomicsResearch/st_pipeline):
+
+### [ST pipeline](https://academic.oup.com/bioinformatics/article/33/16/2591/3111847)
 
 <p><img width="500" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/stpipeline-5.png" alt="foo bar" title="train &amp; tracks" /></p>
 
@@ -69,7 +70,9 @@ FASTQ files
 3. Mapping with STAR (only read 2)
 4. Demultiplexing with Taggd (only read 1)
 6. Annotate the reads with htseq-count
-   
+
+
+#### Install [Stpipeline](https://github.com/SpatialTranscriptomicsResearch/st_pipeline):
 ```
 salloc
 ```
