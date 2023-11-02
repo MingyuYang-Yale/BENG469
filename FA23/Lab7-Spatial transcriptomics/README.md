@@ -130,6 +130,9 @@ You will also receive an email said your job has **COMPLETED**:
 
 If you receive email notifications says **Failed**, please contact us immediately.
 
+
+This job will take ~1.5hr. You will get the spatial gene expression matrix like this:
+
 ```
 less -S /vast/palmer/scratch/fan/my393/BENG469/L7/01.demo_data/GSM4189611_50t.tsv
 ```
