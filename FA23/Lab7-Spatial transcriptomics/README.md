@@ -1,5 +1,9 @@
 # BENG 469 Lab session 7 - instructions
 
+## Schematic DBiT-Seq workflow
+
+<p><img src="https://github.com/MingyuYang-Yale/DBiT-seq/blob/master/workflow.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 #### Open OOD in a browser window
 
 ```
