@@ -112,6 +112,12 @@ cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.sh/stpipeline.sh ./
 ```
 cat stpipeline.sh
 ```
+
+```
+head /vast/palmer/scratch/fan/my393/BENG469/L7/00.database/barcodes-AB.xls
+```
+
+
 Submit a batch job to compute node
 ```
 sbatch stpipeline.sh NETID --mail-user=xx.xx@yale.edu
