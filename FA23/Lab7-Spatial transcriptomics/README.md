@@ -80,7 +80,7 @@ salloc
 module load miniconda
 ```
 ```
-conda create -n -y st-pipeline python=3.7
+conda create -y -n st-pipeline python=3.7
 ```
 ```
 conda activate st-pipeline
