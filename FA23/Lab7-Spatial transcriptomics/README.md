@@ -155,7 +155,6 @@ Go to the Rstudio-server initialization page, and specify the parameters/resourc
 | Memory per CPU core in GiB   | 8       |
 | Partitions   | day        |
 | Additional modules (optional)  | Python/3.8.6-GCCcore-10.2.0   |
-|User defined environment variables for .Renviron (optional)|PYTHONPATH=PYTHONPATH=/gpfs/gibbs/project/beng469/beng469_my393/python3.8|
 
 
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/rsession1.png" alt="foo bar" title="train &amp; tracks" /></p>
