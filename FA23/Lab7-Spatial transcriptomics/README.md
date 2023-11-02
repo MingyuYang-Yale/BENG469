@@ -93,7 +93,7 @@ conda install -y -c bioconda star samtools
 ```
 
 ```
-pip install -y 'pysam==0.15.4' taggd stpipeline
+pip install 'pysam==0.15.4' taggd stpipeline
 ```
 ```
 st_pipeline_run.py -h
