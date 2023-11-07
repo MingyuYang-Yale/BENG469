@@ -175,10 +175,14 @@ salloc
 module load miniconda
 conda create -n spatialde
 conda activate spatialde
-pip install matplotlib --user
-pip install spatialde --user
+pip install numpy pandas
+pip install spatialde
+pip install patsy
 conda deactivate
 module purge
 ycrc_conda_env.sh update
+
+
+conda env remove
 ```
 
