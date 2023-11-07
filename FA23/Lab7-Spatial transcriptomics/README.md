@@ -169,3 +169,16 @@ Go to the Rstudio-server initialization page, and specify the parameters/resourc
 ~/palmer_scratch/Lab7-Spatial_transcriptomics
 ```
 
+SpatialDE
+```
+salloc
+module load miniconda
+conda create -n spatialde
+conda activate spatialde
+pip install matplotlib --user
+pip install spatialde --user
+conda deactivate
+module purge
+ycrc_conda_env.sh update
+```
+
