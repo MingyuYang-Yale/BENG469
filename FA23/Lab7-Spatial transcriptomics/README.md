@@ -175,8 +175,9 @@ salloc
 module load miniconda
 conda create -n spatialde
 conda activate spatialde
-pip install numpy pandas patsy 
-conda install matplotlib
+pip install numpy==1.24.2
+pip install pandas patsy 
+pip install matplotlib==3.7.0
 pip install spatialde
 module purge
 ycrc_conda_env.sh update
