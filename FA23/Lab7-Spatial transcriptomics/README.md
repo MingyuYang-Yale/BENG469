@@ -173,14 +173,15 @@ SpatialDE
 ```
 salloc
 module load miniconda
-conda create -n spatialde
+conda create -n spatialde python=3.7
 conda activate spatialde
-pip install numpy==1.24.2
-pip install pandas patsy 
-pip install matplotlib==3.7.0
+conda install pandas patsy matplotlib==3.7.0 numpy==1.24.2
+
 pip install spatialde
 module purge
 ycrc_conda_env.sh update
+
+conda env remove --name spatialde
 
 ```
 
