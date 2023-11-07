@@ -172,13 +172,28 @@ Go to the Rstudio-server initialization page, and specify the parameters/resourc
 SpatialDE
 ```
 salloc
+```
+```
 module load miniconda
+```
+```
 conda create -n spatialde python=3.7
+```
+```
 conda activate spatialde
+```
+```
 pip install pandas patsy matplotlib numpy
+```
+```
 pip install spatialde
+```
+```
 module purge
+```
+```
 ycrc_conda_env.sh update
+```
 
 conda env remove --name spatialde
 
