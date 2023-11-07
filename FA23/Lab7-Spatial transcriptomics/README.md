@@ -183,7 +183,7 @@ conda create -n spatialde python=3.7
 conda activate spatialde
 ```
 ```
-pip install pandas patsy matplotlib numpy
+pip install numpy pandas matplotlib jupyter patsy
 ```
 ```
 pip install spatialde
