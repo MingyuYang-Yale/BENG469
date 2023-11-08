@@ -24,7 +24,9 @@ cd Lab7-Spatial_transcriptomics
 cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.bin/Lab7-DBiT-seq.Rmd ./
 ```
 
-Go back to OOD and Launch an Rstudio-server session:
+#### Go back to OOD and Launch an Rstudio-server session:
+
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-8.png" alt="foo bar" title="train &amp; tracks" /></p>
    
 Go to the Rstudio-server initialization page, and specify the parameters/resources as follows:
 
