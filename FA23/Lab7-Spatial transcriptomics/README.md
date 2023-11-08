@@ -210,7 +210,7 @@ Go to the Jupyter initialization page, and specify the parameters/resources as f
 | Number of CPU cores per node   | 1        |
 | Memory per CPU core in GiB   | 8       |
 | Partitions   | day        |
-|Reservation (optional)|beng469|
+|Reservation (optional) | beng469 |
 
 
 
