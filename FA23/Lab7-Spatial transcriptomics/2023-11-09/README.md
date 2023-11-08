@@ -9,8 +9,6 @@ beng469.ycrc.yale.edu
 Click **Clusters** -> **shell access**
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-ssh-login.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-### Downstream analysis:
-
 Go to **palmer_scratch** directory, ```cd``` stands for “change directory”
 ```
 cd palmer_scratch 
