@@ -208,5 +208,12 @@ Go to the **Jupyter** initialization page, and specify the parameters/resources 
 | Partitions   | day        |
 | Reservation (optional) | beng469 |
 
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-7.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+
 Assignment 2:
+
+1. STpipeline
+2. Rmd analysis
+3. SpatialDE 
 
