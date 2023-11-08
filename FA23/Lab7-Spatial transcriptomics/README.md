@@ -157,7 +157,7 @@ Go to the Rstudio-server initialization page, and specify the parameters/resourc
 | ----------- | ----------- |
 | R version      | R/4.2.0-foss-2020b       |
 | Number of hours   | 6        |
-| Number of CPU cores per node   | 4        |
+| Number of CPU cores per node   | 1        |
 | Memory per CPU core in GiB   | 8       |
 | Partitions   | day        |
 
@@ -198,6 +198,21 @@ ycrc_conda_env.sh update
 conda env remove --name spatialde
 
 ```
+
+#### Launch an Rstudio-server session:
+   
+Go to the Jupyter initialization page, and specify the parameters/resources as follows:
+
+| Parameters      | Values |
+| ----------- | ----------- |
+| Environment Setup (select the miniconda environment)      | spatialde       |
+| Number of hours   | 6        |
+| Number of CPU cores per node   | 1        |
+| Memory per CPU core in GiB   | 8       |
+| Partitions   | day        |
+|Reservation (optional)|beng469|
+
+
 
 Assignment 2:
 
