@@ -1,5 +1,11 @@
 # BENG 469 Lab session 7 - instructions
 
+#### Open OOD in a browser window
+
+```
+beng469.ycrc.yale.edu
+```
+
 ### Downstream analysis:
 #### Copy Rmd files to you folder
 ```
