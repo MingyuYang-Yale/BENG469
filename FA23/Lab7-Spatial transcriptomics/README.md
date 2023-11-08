@@ -169,7 +169,7 @@ Go to the Rstudio-server initialization page, and specify the parameters/resourc
 ~/palmer_scratch/Lab7-Spatial_transcriptomics
 ```
 
-SpatialDE
+### [SpatialDE] (https://www.nature.com/articles/nmeth.4636)
 ```
 salloc
 ```
@@ -195,7 +195,7 @@ module purge
 ycrc_conda_env.sh update
 ```
 
-#### Launch an Rstudio-server session:
+#### Launch an Jupyter session:
    
 Go to the **Jupyter** initialization page, and specify the parameters/resources as follows:
 
@@ -206,10 +206,7 @@ Go to the **Jupyter** initialization page, and specify the parameters/resources 
 | Number of CPU cores per node   | 1        |
 | Memory per CPU core in GiB   | 8       |
 | Partitions   | day        |
-|Reservation (optional) | beng469 |
-
-
-
+| Reservation (optional) | beng469 |
 
 Assignment 2:
 
