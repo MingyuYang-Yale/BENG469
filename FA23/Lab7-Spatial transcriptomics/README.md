@@ -169,7 +169,7 @@ Go to the Rstudio-server initialization page, and specify the parameters/resourc
 ~/palmer_scratch/Lab7-Spatial_transcriptomics
 ```
 
-### [SpatialDE] (https://www.nature.com/articles/nmeth.4636)
+### [SpatialDE](https://www.nature.com/articles/nmeth.4636)
 ```
 salloc
 ```
