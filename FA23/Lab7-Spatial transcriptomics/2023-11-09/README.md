@@ -22,7 +22,7 @@ cd Lab7-Spatial_transcriptomics
 #### Copy Rmd files to you folder
 ```
 cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.bin/Lab7-DBiT-seq.Rmd ./
-
+```
 
 #### Launch an Rstudio-server session:
    
