@@ -6,11 +6,25 @@
 beng469.ycrc.yale.edu
 ```
 
+Click **Clusters** -> **shell access**
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-ssh-login.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 ### Downstream analysis:
+
+Go to **palmer_scratch** directory, ```cd``` stands for “change directory”
+```
+cd palmer_scratch 
+```
+
+Then go to the Lab7-Spatial_transcriptomics directory
+```
+cd Lab7-Spatial_transcriptomics
+```
+
 #### Copy Rmd files to you folder
 ```
 cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.bin/Lab7-DBiT-seq.Rmd ./
-```
+
 
 #### Launch an Rstudio-server session:
    
