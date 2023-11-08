@@ -195,9 +195,6 @@ module purge
 ycrc_conda_env.sh update
 ```
 
-conda env remove --name spatialde
-
-
 #### Launch an Rstudio-server session:
    
 Go to the **Jupyter** initialization page, and specify the parameters/resources as follows:
