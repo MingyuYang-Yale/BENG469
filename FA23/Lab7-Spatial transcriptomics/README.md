@@ -157,7 +157,7 @@ Go to the Rstudio-server initialization page, and specify the parameters/resourc
 | ----------- | ----------- |
 | R version      | R/4.2.0-foss-2020b       |
 | Number of hours   | 6        |
-| Number of CPU cores per node   | 1        |
+| Number of CPU cores per node   | 4        |
 | Memory per CPU core in GiB   | 8       |
 | Partitions   | day        |
 
