@@ -86,7 +86,7 @@ salloc
 module load miniconda
 ```
 ```
-conda create -n spatialde python=3.7
+conda create -y -n spatialde python=3.7
 ```
 ```
 conda activate spatialde
