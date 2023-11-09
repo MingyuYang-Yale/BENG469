@@ -119,10 +119,3 @@ Go to the **Jupyter** initialization page, and specify the parameters/resources 
 
 <p><img width="600" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-9.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-
-Assignment 2:
-
-1. STpipeline
-2. Rmd analysis
-3. SpatialDE 
-
