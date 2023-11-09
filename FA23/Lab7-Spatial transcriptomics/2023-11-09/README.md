@@ -15,6 +15,12 @@ Go to your results under **project** fileset to Check the log file for STPipelin
 cd project/Lab7-Spatial_transcriptomics/GSM4189611_50t
 ```
 
+Use ls command to list files and directories.
+```
+ls -lrt 
+```
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/log4.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 ```
 cat GSM4189611_50t_log.txt
 ```
