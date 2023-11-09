@@ -77,6 +77,9 @@ FASTQ files
 
 
 #### Install [Stpipeline](https://github.com/SpatialTranscriptomicsResearch/st_pipeline):
+
+Start an interactive job using the ```salloc``` 
+
 ```
 salloc
 ```
