@@ -76,6 +76,9 @@ Go to the Rstudio-server initialization page, and specify the parameters/resourc
 ```
 
 ### [SpatialDE](https://www.nature.com/articles/nmeth.4636)
+
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-ssh-login.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 ```
 salloc
 ```
