@@ -1,4 +1,4 @@
-# BENG 469 Lab session 7 - instructions
+# BENG 469 Lab session 7-2 - instructions
 
 #### Open OOD in a browser window
 
