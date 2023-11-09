@@ -104,6 +104,13 @@ module purge
 ycrc_conda_env.sh update
 ```
 
+```
+cd ~/ondemand
+```
+```
+cat conda-jupyter-env-list.txt
+```
+
 #### Launch an Jupyter session:
    
 Go to the **Jupyter** initialization page, and specify the parameters/resources as follows:
