@@ -51,9 +51,9 @@ Specify the parameters/resources as follows:
 | Partitions   | day        |
 | Reservation | beng469 |
 
+Click the three dots in the bottom right panel, then put the fold path in the box.
+
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/rsession1.png" alt="foo bar" title="train &amp; tracks" /></p>
-
-
 
 
 
