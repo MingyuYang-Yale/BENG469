@@ -32,4 +32,31 @@ Submit the job to the compute node. Here please change to you netid (don’t nee
 sbatch stpipeline-10t.sh NETID --mail-user=xx.xx@yale.edu
 ```
 
+Copy Rmd files to you folder
+```
+cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.bin/Lab7-DBiT-seq.Rmd ./
+```
+
 ### Run Rmd file.
+
+Go back to OOD and Launch an Rstudio-server session:
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-8.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+   
+Go to the Rstudio-server initialization page, and specify the parameters/resources as follows:
+
+| Parameters      | Values |
+| ----------- | ----------- |
+| R version      | R/4.2.0-foss-2020b       |
+| Number of hours   | 6        |
+| Number of CPU cores per node   | 1       |
+| Memory per CPU core in GiB   | 8       |
+| Partitions   | day        |
+| Reservation | beng469 |
+
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/rsession1.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+
+
+
+
