@@ -1,6 +1,6 @@
 ###  BENG 469 Assignemnt 2 - instructions
 
-####  Run stpipeline anb spatialde on another sample
+####  Part 1: Run stpipeline on another sample (GSM4096261_10t)
 - Access the Mccleary cluster
   <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-ssh-login.png" alt="foo bar" title="train &amp; tracks" /></p>
 - Go to the Lab7-Spatial_transcriptomics directory
@@ -33,6 +33,9 @@ sbatch stpipeline-10t.sh NETID --mail-user=xx.xx@yale.edu
 cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.bin/Lab7-SpatialDE-Assignment2.ipynb ./
 ```
 
+####  Part 2: 
+- After you receive an email said you job has COMPLETED, 
+
 - Go back to OOD and Launch an Jupyter session:
 
 Specify the parameters/resources as follows:
@@ -48,5 +51,6 @@ Specify the parameters/resources as follows:
 
 - Open the Jupyter notebook
 
+**Please finish the 5 code writing/completion tasks as indicated in the Jupyter notebook.**
 **You don’t need to submit any additional file or report for this assignment.**
 
