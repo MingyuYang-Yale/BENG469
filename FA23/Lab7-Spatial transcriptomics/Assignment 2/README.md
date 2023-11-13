@@ -1,4 +1,4 @@
-### Run stpipeline on another sample named GSM4096261_10t (5mins):
+### Run stpipeline on another sample (5mins):
 
 Open OOD in a browser
 ```
