@@ -45,9 +45,11 @@ Specify the parameters/resources as follows:
 | Partitions   | day        |
 | Reservation | beng469 |
 
-- Connect to Jupyter then Click the three dots in the bottom right panel, then put the fold path in the box.
+- Connect to Jupyter
+- Open the Jupyter notebook
+  
+<p><img width="200" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/a2-2.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/rsession1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
 
