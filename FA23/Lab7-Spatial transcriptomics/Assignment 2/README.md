@@ -1,4 +1,6 @@
-### Run stpipeline on another sample (5mins):
+## BENG 469 Assignemnt 2 - instructions
+
+#### Run stpipeline anb SpatialDE on another sample :
 
 1. Access the Mccleary cluster
 
