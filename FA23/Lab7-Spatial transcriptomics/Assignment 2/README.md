@@ -69,7 +69,7 @@ Specify the parameters/resources as follows:
 Open the Jupyter notebook (Lab7-SpatialDE-Assignment2.ipynb)
 
 **You don’t need to submit any additional file or report for this assignment.** You just need to save
-the ipynb file and the results and annotation file from it in place under your lab1-scRNAseq-assignment/ folder, and we
+the ipynb file and the results and annotation file from it in place under your Lab7-Spatial_transcriptomics/Assignment2 folder, and we
 will evaluate the results from those files.
 
 
