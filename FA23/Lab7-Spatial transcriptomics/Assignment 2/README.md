@@ -34,7 +34,7 @@ cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.bin/Lab7-SpatialDE-Assignment2.i
 ```
 You can pause here to wait for the job finish (will take around 2 hours)
 
-###  Part 2: 
+###  Part 2: finish the 5 code writing/completion tasks in the Jupyter notebook
 - After you receive an email said your job has COMPLETED 
 
 - Open OOD and Launch an Jupyter session:
@@ -51,8 +51,6 @@ Specify the parameters/resources as follows:
 | Reservation | beng469 |
 
 - Open the Jupyter notebook (Lab7-SpatialDE-Assignment2.ipynb)
-
-**Please finish the 5 code writing/completion tasks as indicated in the Jupyter notebook.**
 
 **You don’t need to submit any additional file or report for this assignment.**
 
