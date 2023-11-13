@@ -66,7 +66,7 @@ Specify the parameters/resources as follows:
 | Partitions   | day        |
 | Reservation | beng469 |
 
-Open the Jupyter notebook (Lab7-SpatialDE-Assignment2.ipynb)
+Open the Jupyter notebook (Lab7-SpatialDE-Assignment2.ipynb), and finish the tasks.
 
 **You don’t need to submit any additional file or report for this assignment.** You just need to save
 the ipynb file and the results and annotation file from it in place under your Lab7-Spatial_transcriptomics/Assignment2 folder, and we
