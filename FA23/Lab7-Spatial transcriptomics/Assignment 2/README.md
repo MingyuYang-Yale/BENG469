@@ -2,6 +2,7 @@
 
 ####  Run stpipeline anb spatialde on another sample
 - Access the Mccleary cluster
+  <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-ssh-login.png" alt="foo bar" title="train &amp; tracks" /></p>
 - Go to the Lab7-Spatial_transcriptomics directory
 ```
 cd ~/project/Lab7-Spatial_transcriptomics
