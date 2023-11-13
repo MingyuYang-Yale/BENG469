@@ -1,4 +1,4 @@
-#### Run stpipeline (5mins):
+### Run stpipeline (5mins):
 
 Go to the Lab7-Spatial_transcriptomics directory
 ```
@@ -25,3 +25,4 @@ Submit the job to the compute node. Here please change to you netid (don’t nee
 sbatch stpipeline-10t.sh NETID --mail-user=xx.xx@yale.edu
 ```
 
+### Run Rmd file.
