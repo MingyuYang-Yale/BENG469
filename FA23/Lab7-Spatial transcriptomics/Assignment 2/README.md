@@ -12,6 +12,7 @@ Start an interactive job
 ```
 salloc
 ```
+Load Miniconda
 ```
 module load miniconda
 ```
