@@ -1,60 +1,54 @@
 ### Run stpipeline on another sample (5mins):
 
-Open OOD in a browser
-```
-beng469.ycrc.yale.edu
-```
-Click Clusters -> shell access
-<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-ssh-login.png" alt="foo bar" title="train &amp; tracks" /></p>
+1. Access the Mccleary cluster
 
-Go to the Lab7-Spatial_transcriptomics directory
+2. Go to the Lab7-Spatial_transcriptomics directory
 ```
 cd ~/project/Lab7-Spatial_transcriptomics
 ```
-Copy the stpipeline.sh to your directory
+3. Copy the stpipeline.sh to your directory
 ```
 cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.sh/stpipeline.sh ./
 ```
-Edit this stpipeline.sh, change the SampleID to 'GSM4096261_10t'
+4. Edit this stpipeline.sh, change the SampleID to 'GSM4096261_10t'
 ```
 ```
-Start an interactive job
-```
-
-```
-Load Miniconda
+5. Start an interactive job
 ```
 
 ```
-Activate the conda envionment 'st-pipeline'
+6. Load Miniconda
 ```
 
 ```
-Submit the job to the compute node. Here please change to you netid (don’t need to add beng469, just your netid) and your email address.
+7. Activate the conda envionment 'st-pipeline'
+```
+
+```
+8. Submit the job to the compute node. Here please change to you netid (don’t need to add beng469, just your netid) and your email address.
 ```
 sbatch stpipeline-10t.sh NETID --mail-user=xx.xx@yale.edu
 ```
 
-Copy Rmd files to you folder
+9. Copy ipynb file to you folder
 ```
-cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.bin/Lab7-DBiT-seq.Rmd ./
+cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.bin/Lab7-SpatialDE-Assignment2.ipynb ./
 ```
 
-### Run Rmd file.
+10. Go back to OOD and Launch an Jupyter session:
 
-Go back to OOD and Launch an Rstudio-server session:
 Specify the parameters/resources as follows:
 
 | Parameters      | Values |
 | ----------- | ----------- |
-| R version      | R/4.2.0-foss-2020b       |
+| Environment Setup (select the miniconda environment) | spatialde  |
 | Number of hours   | 6        |
-| Number of CPU cores per node   | 1       |
+| Number of CPU cores per node   | 1        |
 | Memory per CPU core in GiB   | 8       |
 | Partitions   | day        |
 | Reservation | beng469 |
 
-Click the three dots in the bottom right panel, then put the fold path in the box.
+Connect to Jupyter then Click the three dots in the bottom right panel, then put the fold path in the box.
 
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/rsession1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
