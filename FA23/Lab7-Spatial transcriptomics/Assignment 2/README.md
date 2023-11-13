@@ -34,12 +34,12 @@ Start an interactive job
 
 Load Miniconda
 ```
-(leave as blank on purpose)
+
 ```
 
 Activate the conda envionment 'st-pipeline'
 ```
-(leave as blank on purpose)
+
 ```
 
 **Submit the job to the compute node**. 
