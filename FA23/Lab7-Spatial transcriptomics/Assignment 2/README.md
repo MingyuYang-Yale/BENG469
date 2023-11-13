@@ -11,9 +11,12 @@ Go to the Lab7-Spatial_transcriptomics directory
 ```
 cd ~/project/Lab7-Spatial_transcriptomics
 ```
-
+Copy the stpipeline.sh to your directory
 ```
-cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.sh/stpipeline-10t.sh ./
+cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.sh/stpipeline.sh ./
+```
+Edit this stpipeline.sh, change the SampleID to 'GSM4096261_10t'
+```
 ```
 Start an interactive job
 ```
