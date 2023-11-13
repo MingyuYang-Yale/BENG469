@@ -1,8 +1,7 @@
 ## BENG 469 Assignemnt 2 - instructions
 
 #### Run stpipeline anb SpatialDE on another sample :
-
-1. Access the Mccleary cluster
+- Access the Mccleary cluster
 
 2. Go to the Lab7-Spatial_transcriptomics directory
 ```
