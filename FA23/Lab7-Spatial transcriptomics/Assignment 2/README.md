@@ -18,7 +18,7 @@ cd Assingment2
 ```
 Copy the stpipeline.sh to your folder
 ```
-cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.sh/stpipeline.sh ./
+cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.sh/stpipeline-Assignment2.sh ./
 ```
 Copy ipynb file to you folder
 ```
