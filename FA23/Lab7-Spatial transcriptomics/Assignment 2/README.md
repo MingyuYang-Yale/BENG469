@@ -1,3 +1,5 @@
+#### Run stpipeline (5mins):
+
 Go to the Lab7-Spatial_transcriptomics directory
 ```
 cd ~/project/Lab7-Spatial_transcriptomics
@@ -18,5 +20,6 @@ conda activate st-pipeline
 ```
 Submit a batch job to compute node
 ```
-sbatch stpipeline.sh NETID --mail-user=xx.xx@yale.edu
+sbatch stpipeline-10t.sh NETID --mail-user=xx.xx@yale.edu
 ```
+
