@@ -46,8 +46,8 @@ Here please change to you netid (don’t need to add beng469, just your netid) a
 sbatch stpipeline-10t.sh NETID --mail-user=xx.xx@yale.edu
 ```
 
-**You can pause here to wait for the job finish (will take around 2 hours)**
-**After you receive an email said your job has COMPLETED, you can continue the second part**
+*You can pause here to wait for the job finish (will take around 2 hours)*
+*After you receive an email said your job has COMPLETED, you can continue the second part*
 
 ###  Part 2: finish the 5 code writing/completion tasks in the Jupyter notebook
 
