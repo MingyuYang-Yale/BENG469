@@ -22,7 +22,7 @@ cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.sh/stpipeline.sh ./
 - Activate the conda envionment 'st-pipeline'
 ```
 ```
-- Submit the job to the compute node. Here please change to you netid (don’t need to add beng469, just your netid) and your email address.
+- **Submit the job to the compute node**. Here please change to you netid (don’t need to add beng469, just your netid) and your email address.
 ```
 sbatch stpipeline-10t.sh NETID --mail-user=xx.xx@yale.edu
 ```
@@ -50,7 +50,7 @@ Specify the parameters/resources as follows:
   
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/a2-2.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-- Finish the 5 tasks in the Jupyter notebook
+- **Finish the 5 tasks in the Jupyter notebook**
 
-
+**You don’t need to submit any additional file or report for this assignment.**
 
