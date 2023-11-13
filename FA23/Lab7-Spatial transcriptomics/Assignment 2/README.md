@@ -7,9 +7,21 @@
 ```
 cd ~/project/Lab7-Spatial_transcriptomics
 ```
-- Copy the stpipeline.sh to your directory
+Create a new diretory named 'Assingment2'
+```
+mkdir Assingment2
+```
+Go to the Assingment2 directory
+```
+cd Assingment2
+```
+- Copy the stpipeline.sh to your folder
 ```
 cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.sh/stpipeline.sh ./
+```
+- Copy ipynb file to you folder
+```
+cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.bin/Lab7-SpatialDE-Assignment2.ipynb ./
 ```
 - **Open the stpipeline.sh file, change the SampleID to 'GSM4096261_10t'**
 <p><img width="200" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/a2-1.png" alt="foo bar" title="train &amp; tracks" /></p>
@@ -28,10 +40,6 @@ cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.sh/stpipeline.sh ./
 sbatch stpipeline-10t.sh NETID --mail-user=xx.xx@yale.edu
 ```
 
-- Copy ipynb file to you folder
-```
-cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.bin/Lab7-SpatialDE-Assignment2.ipynb ./
-```
 You can pause here to wait for the job finish (will take around 2 hours)
 
 ###  Part 2: finish the 5 code writing/completion tasks in the Jupyter notebook
