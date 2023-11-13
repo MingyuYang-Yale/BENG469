@@ -1,6 +1,6 @@
-## BENG 469 Assignemnt 2 - instructions
+###  BENG 469 Assignemnt 2 - instructions
 
-### Run stpipeline anb spatialde on another sample
+####  Run stpipeline anb spatialde on another sample
 - Access the Mccleary cluster
 - Go to the Lab7-Spatial_transcriptomics directory
 ```
