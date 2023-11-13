@@ -52,5 +52,6 @@ Specify the parameters/resources as follows:
 - Open the Jupyter notebook (Lab7-SpatialDE-Assignment2.ipynb)
 
 **Please finish the 5 code writing/completion tasks as indicated in the Jupyter notebook.**
+
 **You don’t need to submit any additional file or report for this assignment.**
 
