@@ -15,6 +15,7 @@ salloc
 ```
 module load miniconda
 ```
+Activate the conda envionment st-pipeline
 ```
 conda activate st-pipeline
 ```
