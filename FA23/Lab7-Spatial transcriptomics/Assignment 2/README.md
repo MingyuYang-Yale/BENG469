@@ -29,14 +29,17 @@ cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.bin/Lab7-SpatialDE-Assignment2.i
 
 Start an interactive job
 ```
+(leave as blank on purpose)
 ```
 
 Load Miniconda
 ```
+(leave as blank on purpose)
 ```
 
 Activate the conda envionment 'st-pipeline'
 ```
+(leave as blank on purpose)
 ```
 
 **Submit the job to the compute node**. 
