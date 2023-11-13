@@ -50,6 +50,7 @@ Specify the parameters/resources as follows:
   
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/a2-2.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+- Finish the 5 tasks in the Jupyter notebook
 
 
 
