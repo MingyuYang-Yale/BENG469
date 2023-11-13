@@ -43,7 +43,7 @@ Activate the conda envionment 'st-pipeline'
 
 Here please change to you netid (don’t need to add beng469, just your netid) and your email address.
 ```
-sbatch stpipeline-10t.sh NETID --mail-user=xx.xx@yale.edu
+sbatch stpipeline-Assignment2.sh NETID --mail-user=xx.xx@yale.edu
 ```
 
 *You can pause here to wait for the job finish (will take around 2 hours)*
