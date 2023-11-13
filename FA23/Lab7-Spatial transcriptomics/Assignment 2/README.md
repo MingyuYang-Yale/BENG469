@@ -20,7 +20,7 @@ Activate the conda envionment st-pipeline
 ```
 conda activate st-pipeline
 ```
-Submit a batch job to compute node
+Submit the job to the compute node. Here please change to you netid (don’t need to add beng469, just your netid) and your email address.
 ```
 sbatch stpipeline-10t.sh NETID --mail-user=xx.xx@yale.edu
 ```
