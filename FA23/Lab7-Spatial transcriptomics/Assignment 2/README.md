@@ -1,5 +1,11 @@
 ### Run stpipeline (5mins):
 
+Open OOD in a browser
+```
+beng469.ycrc.yale.edu
+```
+Click Clusters -> shell access
+
 Go to the Lab7-Spatial_transcriptomics directory
 ```
 cd ~/project/Lab7-Spatial_transcriptomics
