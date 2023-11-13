@@ -11,20 +11,13 @@ cd ~/project/Lab7-Spatial_transcriptomics
 cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.sh/stpipeline.sh ./
 ```
 4. Edit this stpipeline.sh, change the SampleID to 'GSM4096261_10t'
-```
-```
+
 5. Start an interactive job
-```
 
-```
 6. Load Miniconda
-```
 
-```
 7. Activate the conda envionment 'st-pipeline'
-```
 
-```
 8. Submit the job to the compute node. Here please change to you netid (don’t need to add beng469, just your netid) and your email address.
 ```
 sbatch stpipeline-10t.sh NETID --mail-user=xx.xx@yale.edu
