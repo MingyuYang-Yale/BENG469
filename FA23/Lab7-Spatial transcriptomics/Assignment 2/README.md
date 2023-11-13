@@ -40,10 +40,7 @@ cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.bin/Lab7-DBiT-seq.Rmd ./
 ### Run Rmd file.
 
 Go back to OOD and Launch an Rstudio-server session:
-<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ood-8.png" alt="foo bar" title="train &amp; tracks" /></p>
-
-   
-Go to the Rstudio-server initialization page, and specify the parameters/resources as follows:
+Specify the parameters/resources as follows:
 
 | Parameters      | Values |
 | ----------- | ----------- |
