@@ -34,9 +34,9 @@ cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.bin/Lab7-SpatialDE-Assignment2.i
 ```
 
 ####  Part 2: 
-- After you receive an email said you job has COMPLETED, 
+- After you receive an email said your job has COMPLETED 
 
-- Go back to OOD and Launch an Jupyter session:
+- Open OOD and Launch an Jupyter session:
 
 Specify the parameters/resources as follows:
 
@@ -49,7 +49,7 @@ Specify the parameters/resources as follows:
 | Partitions   | day        |
 | Reservation | beng469 |
 
-- Open the Jupyter notebook
+- Open the Jupyter notebook (Lab7-SpatialDE-Assignment2.ipynb)
 
 **Please finish the 5 code writing/completion tasks as indicated in the Jupyter notebook.**
 **You don’t need to submit any additional file or report for this assignment.**
