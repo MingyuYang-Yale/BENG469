@@ -32,7 +32,7 @@ sbatch stpipeline-10t.sh NETID --mail-user=xx.xx@yale.edu
 ```
 cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.bin/Lab7-SpatialDE-Assignment2.ipynb ./
 ```
-You can pause here to wait for the job finished (will take around 2 hours)
+You can pause here to wait for the job finish (will take around 2 hours)
 
 ###  Part 2: 
 - After you receive an email said your job has COMPLETED 
