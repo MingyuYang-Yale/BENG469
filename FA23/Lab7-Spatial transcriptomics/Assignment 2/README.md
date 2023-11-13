@@ -48,7 +48,7 @@ Specify the parameters/resources as follows:
 - Connect to Jupyter
 - Open the Jupyter notebook
   
-<p><img width="400" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/a2-2.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/a2-2.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
 
