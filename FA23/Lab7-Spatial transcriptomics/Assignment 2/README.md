@@ -90,6 +90,12 @@ ls -lrt ~/project/Lab7-Spatial_transcriptomics/Assingment2
 ```
 
 
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ You will get these files and folders: @@
+
 $${\color{red}You will get these files and folders:}$$
 
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/a2-4.png" alt="foo bar" title="train &amp; tracks" /></p>
