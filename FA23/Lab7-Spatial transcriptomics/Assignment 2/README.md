@@ -53,13 +53,14 @@ sbatch stpipeline-Assignment2.sh NETID --mail-user=xx.xx@yale.edu
 
 *After you receive an email said your job has COMPLETED, you can continue the second part*
 
-If you successfully run through the STpipeline on the new sample, you will get a file with name ‘GSM4096261_10t_stdata.updated.tsv'
+If you successfully run through the STpipeline on the new sample, when you use the following command
 
 ```
 ls -lrt ~/project/Lab7-Spatial_transcriptomics/Assingment2/GSM4096261_10t/
 ```
-<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/a2-3.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+You will get 4 files as this:
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/a2-3.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
 ###  Part 2: finish the 5 code writing/completion tasks in the Jupyter notebook
