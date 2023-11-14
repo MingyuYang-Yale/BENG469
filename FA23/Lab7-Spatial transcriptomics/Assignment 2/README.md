@@ -19,7 +19,9 @@ cd Assingment2
 5. Copy the stpipeline-Assignment2.sh to your folder
 ```bash
 cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.sh/stpipeline-Assignment2.sh ./
-```bash
+```
+
+
 6. Copy .ipynb file to you folder
 ```bash
 cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.bin/Lab7-SpatialDE-Assignment2.ipynb ./
