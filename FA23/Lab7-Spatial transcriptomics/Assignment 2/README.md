@@ -49,7 +49,7 @@ Here please change to you netid (don’t need to add beng469, just your netid) a
 sbatch stpipeline-Assignment2.sh NETID --mail-user=xx.xx@yale.edu
 ```
 
-*You can pause here to wait for the job finish (will take around 3.5 hours)*
+*You can pause here to wait for the job finish (will take ~3 hours)*
 
 *After you receive an email said your job has COMPLETED, you can continue the second part*
 
