@@ -53,6 +53,13 @@ sbatch stpipeline-Assignment2.sh NETID --mail-user=xx.xx@yale.edu
 
 *After you receive an email said your job has COMPLETED, you can continue the second part*
 
+The GSM4096261_10t_stdata.updated.tsv file will be used for the input data in next part. 
+
+```
+ls ~/project/Lab7-Spatial_transcriptomics/Assingment2/GSM4096261_10t/GSM4096261_10t_stdata.updated.tsv
+```
+
+
 ###  Part 2: finish the 5 code writing/completion tasks in the Jupyter notebook
 
 
