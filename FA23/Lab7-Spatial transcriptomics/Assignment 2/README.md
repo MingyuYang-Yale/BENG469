@@ -37,10 +37,10 @@ cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.bin/Lab7-SpatialDE-Assignment2.i
 
 9. Load Miniconda and activate the conda environment 'st-pipeline':
 ```bash
-
+(leave as blank on purpose)
 ```
 
-10. **Submit the job to the compute node**. 
+10. Submit the job to the compute node. 
 
 Replace NETID with your netid (don’t need to add beng469) and your email address.
 ```bash
