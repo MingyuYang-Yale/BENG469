@@ -53,7 +53,7 @@ sbatch stpipeline-Assignment2.sh NETID --mail-user=xx.xx@yale.edu
 
 *After you receive an email said your job has COMPLETED, you can continue the second part*
 
-If you successfully run through the STpipeline on the new sample, when you run the following command
+$\color{red}{\textsf{If you successfully finish part1, when you run the following command}}$
 
 ```
 ls -lrt ~/project/Lab7-Spatial_transcriptomics/Assingment2/GSM4096261_10t/
@@ -85,7 +85,7 @@ Open the Jupyter notebook (Lab7-SpatialDE-Assignment2.ipynb), and finish the tas
 **You don’t need to submit any additional file or report for this assignment.** You just need to save
 the ipynb file after you finish to run it. 
 
-If you successfully run through the .ipynb file, go back to the clusters, when you run the following command
+$\color{red}{\textsf{If you successfully finish part2, go back to the clusters, and run the following command:}}$
 ```
 ls -lrt ~/project/Lab7-Spatial_transcriptomics/Assingment2
 ```
