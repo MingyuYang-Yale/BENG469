@@ -17,30 +17,31 @@ mkdir Assingment2
 cd Assingment2
 ```
 5. Copy the stpipeline-Assignment2.sh to your folder
-```
+```bash
 cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.sh/stpipeline-Assignment2.sh ./
 ```bash
 6. Copy .ipynb file to you folder
-```
+```bash
 cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.bin/Lab7-SpatialDE-Assignment2.ipynb ./
 ```
 7. **Open the stpipeline-Assignment2.sh file and change the SampleID to 'GSM4096261_10t'**
 <p><img width="200" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/a2-1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+
 8. Start an interactive job
-```
+```bash
 (leave as blank on purpose)
 ```
 
 9. Load Miniconda and activate the conda environment 'st-pipeline':
-```
+```bash
 
 ```
 
 10. **Submit the job to the compute node**. 
 
 Replace NETID with your netid (don’t need to add beng469) and your email address.
-```
+```bash
 sbatch stpipeline-Assignment2.sh NETID --mail-user=xx.xx@yale.edu
 ```
 
