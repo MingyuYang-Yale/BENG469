@@ -58,7 +58,7 @@ If you successfully run through the STpipeline on the new sample, you will get a
 ```
 ls -lrt ~/project/Lab7-Spatial_transcriptomics/Assingment2/GSM4096261_10t/
 ```
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/a2-3.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/a2-3.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
 
@@ -86,5 +86,5 @@ the ipynb file after you finish to run it.
 under your Lab7-Spatial_transcriptomics/Assignment2 folder, and we
 will evaluate the results from those files.
 
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/a2-4.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/a2-4.png" alt="foo bar" title="train &amp; tracks" /></p>
 
