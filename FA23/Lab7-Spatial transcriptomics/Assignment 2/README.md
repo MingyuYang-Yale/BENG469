@@ -91,6 +91,9 @@ ls -lrt ~/project/Lab7-Spatial_transcriptomics/Assingment2
 
 <code style="color : red">You will get these files and folders:</code>
 
+#0f0[This is green text]
+
+#7fffff00[This is yellow text at 50% opacity]
 
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/a2-4.png" alt="foo bar" title="train &amp; tracks" /></p>
 
