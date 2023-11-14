@@ -89,7 +89,8 @@ If you successfully run through the .ipynb file, go back to the clusters, when y
 ls -lrt ~/project/Lab7-Spatial_transcriptomics/Assingment2
 ```
 
-$\color{red}{\Large{\textsf{You will get these files and folders}}$
+$\color{red}{\textsf{You will get these files and folders}$
+
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/a2-4.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 We will evaluate the results from those files.
