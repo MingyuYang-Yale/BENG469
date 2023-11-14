@@ -82,7 +82,7 @@ Specify the parameters/resources as follows:
 
 Open the Jupyter notebook (Lab7-SpatialDE-Assignment2.ipynb), and finish the tasks.
 
-**You don’t need to submit any additional file or report for this assignment.** You just need to save
+$\color{red}{\textsf{**You don’t need to submit any additional file or report for this assignment.**:}}$ You just need to save
 the ipynb file after you finish to run it. 
 
 $\color{red}{\textsf{If you successfully finish part2, go back to the clusters, and run the following command:}}$
