@@ -61,12 +61,10 @@ $\color{red}{\textsf{You will get 4 files:}}$
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/a2-3.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
-###  Part 2: finish the 5 code writing/completion tasks in the Jupyter notebook
+###  Part 2: Finish 5 code writing/completion tasks in the Jupyter notebook
 
 
-Open OOD and Launch an Jupyter session:
-
-Specify the parameters/resources as follows:
+1. Open OOD and Launch an Jupyter session with the following parameters:
 
 | Parameters      | Values |
 | ----------- | ----------- |
@@ -77,9 +75,13 @@ Specify the parameters/resources as follows:
 | Partitions   | day        |
 | Reservation | beng469 |
 
-Open the Jupyter notebook (Lab7-SpatialDE-Assignment2.ipynb), 
-- complete the 5 tasks.
-- Save the ipynb file after you finish.
+2. Open the Jupyter notebook (Project-> Lab7-Spatial_transcriptomics -> Assingment2 -> Lab7-SpatialDE-Assignment2.ipynb)
+
+3. complete the 5 tasks.
+
+4. Save the .ipynb file after you finish.
+
+5. Check the Assignment2 directory for files:
 
 $\color{red}{\textsf{You don’t need to submit any additional file or report for this assignment.}}$ 
 
