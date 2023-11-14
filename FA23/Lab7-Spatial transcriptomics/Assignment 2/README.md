@@ -50,7 +50,7 @@ Pause and wait for the job to finish (approximately 3 hours). After receiving an
 
 11. Check the output directory:
 
-$\color{red}{\textsf{If you successfully finish part1, when you run the following command}}$
+$\color{red}{\textsf{If you successfully finish Part 1, when you run the following command}}$
 
 ```bash
 ls -lrt ~/project/Lab7-Spatial_transcriptomics/Assingment2/GSM4096261_10t/
@@ -85,7 +85,7 @@ $\color{red}{\textsf{You will get 4 files:}}$
 
 $\color{red}{\textsf{You don’t need to submit any additional file or report for this assignment.}}$ 
 
-$\color{red}{\textsf{If you successfully finish part2, go back to the clusters, and run the following command:}}$
+$\color{red}{\textsf{If you successfully finish Part 2, go back to the clusters, and run the following command:}}$
 ```
 ls -lrt ~/project/Lab7-Spatial_transcriptomics/Assingment2
 ```
