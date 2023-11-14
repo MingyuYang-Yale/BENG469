@@ -53,11 +53,13 @@ sbatch stpipeline-Assignment2.sh NETID --mail-user=xx.xx@yale.edu
 
 *After you receive an email said your job has COMPLETED, you can continue the second part*
 
-The ‘GSM4096261_10t_stdata.updated.tsv’ file will be used for the input data in next part. 
+If you successfully run through the STpipeline on the new sample, you will get a file with name ‘GSM4096261_10t_stdata.updated.tsv'
 
 ```
-ls ~/project/Lab7-Spatial_transcriptomics/Assingment2/GSM4096261_10t/GSM4096261_10t_stdata.updated.tsv
+ls -lrt ~/project/Lab7-Spatial_transcriptomics/Assingment2/GSM4096261_10t/
 ```
+<p><img width="200" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/a2-3.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 
 
 ###  Part 2: finish the 5 code writing/completion tasks in the Jupyter notebook
@@ -79,7 +81,10 @@ Specify the parameters/resources as follows:
 Open the Jupyter notebook (Lab7-SpatialDE-Assignment2.ipynb), and finish the tasks.
 
 **You don’t need to submit any additional file or report for this assignment.** You just need to save
-the ipynb file and the results and annotation file from it in place under your Lab7-Spatial_transcriptomics/Assignment2 folder, and we
+the ipynb file after you finish to run it. 
+
+under your Lab7-Spatial_transcriptomics/Assignment2 folder, and we
 will evaluate the results from those files.
 
+<p><img width="200" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/a2-4.png" alt="foo bar" title="train &amp; tracks" /></p>
 
