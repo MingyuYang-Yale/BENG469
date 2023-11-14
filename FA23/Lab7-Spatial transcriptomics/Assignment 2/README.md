@@ -59,7 +59,8 @@ If you successfully run through the STpipeline on the new sample, when you run t
 ls -lrt ~/project/Lab7-Spatial_transcriptomics/Assingment2/GSM4096261_10t/
 ```
 
-You will get 4 files as this:
+$\color{red}{\textsf{You will get 4 files:}}$
+
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/a2-3.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
@@ -90,7 +91,7 @@ ls -lrt ~/project/Lab7-Spatial_transcriptomics/Assingment2
 ```
 
 
-$\color{red}{\textsf{You will get these files and folders}}$
+$\color{red}{\textsf{You will get these files:}}$
 
 <p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/a2-4.png" alt="foo bar" title="train &amp; tracks" /></p>
 
