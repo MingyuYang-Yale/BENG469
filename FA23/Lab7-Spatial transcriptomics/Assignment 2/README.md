@@ -24,7 +24,7 @@ Copy ipynb file to you folder
 ```
 cp /vast/palmer/scratch/fan/my393/BENG469/L7/00.bin/Lab7-SpatialDE-Assignment2.ipynb ./
 ```
-**Open the stpipeline.sh file, change the SampleID to 'GSM4096261_10t'**
+**Open the stpipeline-Assignment2.sh file, change the SampleID to 'GSM4096261_10t'**
 <p><img width="200" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/a2-1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 Start an interactive job
