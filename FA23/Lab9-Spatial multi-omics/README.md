@@ -51,7 +51,7 @@ Go to the **Jupyter** initialization page, and specify the parameters/resources 
 
 | Parameters      | Values |
 | ----------- | ----------- |
-| Environment Setup (select the miniconda environment) | lab1116  |
+| Environment Setup (select the miniconda environment) | squidpy  |
 | Number of hours   | 6        |
 | Number of CPU cores per node   | 1        |
 | Memory per CPU core in GiB   | 8       |
