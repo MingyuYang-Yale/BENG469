@@ -1,5 +1,7 @@
 # BENG 469 Lab session 9 - instructions
 
+[Background slide](https://docs.google.com/presentation/d/1Wsw-ZFaIEPDwmTcfwu-B2BNArz7KvRhLEnfrZf6lGYg/edit?usp=sharing) 
+
 ### Python environment
 
 We will build a Python environment using conda for the lab.
