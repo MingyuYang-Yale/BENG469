@@ -34,7 +34,7 @@ cat conda-jupyter-env-list.txt
 ```
 
 ```
-cd project
+cd ~/project
 ```
 
 ```
