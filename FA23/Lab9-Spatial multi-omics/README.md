@@ -35,18 +35,6 @@ cd ~/ondemand
 cat conda-jupyter-env-list.txt
 ```
 
-```
-cd ~/project
-```
-
-```
-mkdir Lab9-Spatial_multi_omics && cd Lab9-Spatial_multi_omics
-```
-
-```
-cp /gpfs/gibbs/project/beng469/beng469_md2547/Lab9-Spatial_multi_omics/Lab9-Spatial_multi_omics.ipynb ./
-```
-
 #### Launch an Jupyter session:
    
 Go to the **Jupyter** initialization page, and specify the parameters/resources as follows:
