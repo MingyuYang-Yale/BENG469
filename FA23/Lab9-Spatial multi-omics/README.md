@@ -11,10 +11,10 @@ salloc
 module load miniconda
 ```
 ```
-conda create -y -n squidpy python=3.7
+conda create -y -n Lab9-squidpy python=3.7
 ```
 ```
-conda activate squidpy
+conda activate Lab9-squidpy
 ```
 ```
 pip install numpy pandas matplotlib jupyter patsy 'scanpy[leiden]' squidpy
@@ -51,7 +51,7 @@ Go to the **Jupyter** initialization page, and specify the parameters/resources 
 
 | Parameters      | Values |
 | ----------- | ----------- |
-| Environment Setup (select the miniconda environment) | squidpy  |
+| Environment Setup (select the miniconda environment) | Lab9-squidpy  |
 | Number of hours   | 6        |
 | Number of CPU cores per node   | 1        |
 | Memory per CPU core in GiB   | 8       |
