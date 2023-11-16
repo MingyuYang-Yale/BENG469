@@ -1,4 +1,4 @@
-# BENG 469 Lab session 1116 - instructions
+# BENG 469 Lab session 9 - instructions
 
 ### Python environment
 
@@ -11,10 +11,10 @@ salloc
 module load miniconda
 ```
 ```
-conda create -y -n lab1116 python=3.7
+conda create -y -n squidpy python=3.7
 ```
 ```
-conda activate lab1116
+conda activate squidpy
 ```
 ```
 pip install numpy pandas matplotlib jupyter patsy 'scanpy[leiden]' squidpy
@@ -31,6 +31,18 @@ cd ~/ondemand
 ```
 ```
 cat conda-jupyter-env-list.txt
+```
+
+```
+cd project
+```
+
+```
+mkdir Lab9-Spatial_multi_omics && cd Lab9-Spatial_multi_omics
+```
+
+```
+cp /gpfs/gibbs/project/beng469/beng469_md2547/Lab9-Spatial_multi_omics/Lab9-Spatial_multi_omics.ipynb ./
 ```
 
 #### Launch an Jupyter session:
