@@ -8,13 +8,13 @@
 ```bash
 cd ~/project/Lab7-Spatial_transcriptomics
 ```
-3. Create a new diretory named 'Assingment2':
+3. Create a new diretory named 'Assignment2':
 ```bash
-mkdir Assingment2
+mkdir Assignment2
 ```
-4. Go to the Assingment2 directory:
+4. Go to the Assignment2 directory:
 ```bash
-cd Assingment2
+cd Assignment2
 ```
 5. Copy the stpipeline-Assignment2.sh to your folder:
 ```bash
@@ -87,7 +87,7 @@ $\color{red}{\textsf{You don’t need to submit any additional file or report fo
 
 $\color{red}{\textsf{If you successfully finish Part 2, go back to the clusters, and run the following command:}}$
 ```
-ls -lrt ~/project/Lab7-Spatial_transcriptomics/Assingment2
+ls -lrt ~/project/Lab7-Spatial_transcriptomics/Assignment2
 ```
 
 
