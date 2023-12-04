@@ -53,7 +53,7 @@ Pause and wait for the job to finish (approximately 3 hours). After receiving an
 $\color{red}{\textsf{If you successfully finish Part 1, when you run the following command}}$
 
 ```bash
-ls -lrt ~/project/Lab7-Spatial_transcriptomics/Assingment2/GSM4096261_10t/
+ls -lrt ~/project/Lab7-Spatial_transcriptomics/Assignment2/GSM4096261_10t/
 ```
 
 $\color{red}{\textsf{You will get 4 files:}}$
@@ -75,7 +75,7 @@ $\color{red}{\textsf{You will get 4 files:}}$
 | Partitions   | day        |
 | Reservation | beng469 |
 
-2. Open the Jupyter notebook (Project-> Lab7-Spatial_transcriptomics -> Assingment2 -> Lab7-SpatialDE-Assignment2.ipynb)
+2. Open the Jupyter notebook (Project-> Lab7-Spatial_transcriptomics -> Assignment2 -> Lab7-SpatialDE-Assignment2.ipynb)
 
 3. complete the 5 tasks.
 
