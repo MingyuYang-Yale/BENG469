@@ -15,7 +15,7 @@ module load miniconda
 conda create -n spacodex python=3.10 jupyterlab jupyter
 ```
 
-Please find the GITHUB_USER and GITHUB_TOKEN in the Announcements email we sent today, and replace the following'xxx' 
+Please locate the GITHUB_USER and GITHUB_TOKEN in today's Announcements email we sent. Replace the placeholder 'xxx' with the corresponding values found in the email.
 
 ```
 export GITHUB_USER=xxx
