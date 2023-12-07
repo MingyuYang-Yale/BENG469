@@ -39,7 +39,7 @@ ycrc_conda_env.sh update
 cat ~/ondemand/conda-jupyter-env-list.txt
 ```
 
-#### Copy Jupyter Notebook to your directory
+### Copy Jupyter Notebook to your directory
 
 
 ```bash
