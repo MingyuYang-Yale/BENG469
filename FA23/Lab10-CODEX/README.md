@@ -1,9 +1,7 @@
 
 # BENG 469 Lab session 10 - instructions
 
-### Install SpaCodex
-
-$\color{red}{\textsf{Please keep this part within the class because the package we are using has not been published yet.}}$ 
+### Install SpaCodex $\color{red}{\textsf{(Please keep this part within the class because the package we are using has not been published yet.)}}$ 
 
 Start an interactive job using the salloc
 ```bash
