@@ -77,10 +77,10 @@ Go to the **Jupyter** initialization page, and specify the parameters/resources 
 
 Connect to Jupter
 
-<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/jupyter1.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/jupyter1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 Click project -> Lab10_CODEX -> notebooks
-<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/jupyter2.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/jupyter2.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 Open and run the notebooks one by one
-<p><img width="700" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/jupter3.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/jupter3.png" alt="foo bar" title="train &amp; tracks" /></p>
