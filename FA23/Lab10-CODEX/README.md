@@ -51,7 +51,7 @@ mkdir Lab10_CODEX  && cd Lab10_CODEX
 ```
 Copy the folder with notebooks to your folder:
 ```bash
-cp -r /gpfs/gibbs/project/beng469/beng469_sb2723/Lab10_CODEX/notebooks ./
+cp -r /gpfs/gibbs/project/beng469/beng469_my393/Lab10_CODEX/notebooks ./
 ```
 
 ### Launch an Jupyter session:
