@@ -17,7 +17,7 @@ conda create -y -n spacodex python=3.10 jupyterlab jupyter
 ```bash
 conda activate spacodex
 ```
-Please find the 'GITHUB_USER' and 'GITHUB_TOKEN' in the Announcement we sent today, and replace the following 'xxx'
+Please find the 'GITHUB_USER' and 'GITHUB_TOKEN' in the Canvas Announcement we sent today, and replace the following 'xxx'
 
 ```
 export GITHUB_USER=xxx
