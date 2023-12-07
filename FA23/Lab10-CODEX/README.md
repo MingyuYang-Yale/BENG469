@@ -62,11 +62,10 @@ Go to the **Jupyter** initialization page, and specify the parameters/resources 
 | ----------- | ----------- |
 | Environment Setup (select the miniconda environment) | spacodex  |
 | Number of hours   | 6        |
-| Number of CPU cores per node   | 2        |
+| Number of CPU cores per node   | 1       |
 | Memory per CPU core in GiB   | 8       |
 | Partitions   | gpu        |
 | Number of GPUs per node | 1 |
-| Reservation | beng469 |
 | Additional modules for Jupyter (optional) | CUDAcore/11.3.1 cuDNN/8.2.1.32-CUDA-11.3.1 |
 
 
