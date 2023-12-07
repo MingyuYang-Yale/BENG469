@@ -12,7 +12,7 @@ salloc
 module load miniconda
 ```
 ```bash
-conda create -n spacodex python=3.10 jupyterlab jupyter
+conda create -y -n spacodex python=3.10 jupyterlab jupyter
 ```
 
 ```
