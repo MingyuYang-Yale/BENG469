@@ -17,10 +17,10 @@ conda create -n spacodex python=3.10 jupyterlab jupyter
 
 Please find the GITHUB_USER and GITHUB_TOKEN in the Announcements email we sent today:
 
-```bash
+```
 export GITHUB_USER=$\color{red}{\textsf{xxx}}$
 ```
-```bash
+```
 export GITHUB_TOKEN=$\color{red}{\textsf{xxx}}$
 ```
 
