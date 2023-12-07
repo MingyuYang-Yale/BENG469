@@ -44,16 +44,12 @@ cat ~/ondemand/conda-jupyter-env-list.txt
 
 ```bash
 cd ~/project/
-```
-3. Create a new diretory named 'Lab10_CODEX':
+
+Create a new diretory named 'Lab10_CODEX':
 ```bash
-mkdir Lab10_CODEX
+mkdir Lab10_CODEX  && cd Lab10_CODEX
 ```
-4. Go to the Lab10_CODEX directory:
-```bash
-cd Lab10_CODEX
-```
-5. Copy the folder with notebooks to your folder:
+Copy the folder with notebooks to your folder:
 ```bash
 cp -r /gpfs/gibbs/project/beng469/beng469_sb2723/Lab10_CODEX/notebooks ./
 ```
