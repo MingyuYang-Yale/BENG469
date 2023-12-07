@@ -18,10 +18,10 @@ conda create -y -n spacodex python=3.10 jupyterlab jupyter
 conda activate spacodex
 ```
 ```
-export GITHUB_USER=Shuozhen
+export GITHUB_USER=xxx
 ```
 ```
-export GITHUB_TOKEN=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
+export GITHUB_TOKEN=xxx
 ```
 
 ```bash
