@@ -71,5 +71,6 @@ Go to the **Jupyter** initialization page, and specify the parameters/resources 
 | Number of GPUs per node | 1 |
 | Additional modules for Jupyter | CUDAcore/11.3.1 cuDNN/8.2.1.32-CUDA-11.3.1 |
 
+(If the queue time longer than usual, you can consider to change the partition to gpu_devel or scavenge_gpu instead.)
 
 ### Open your Notebook folder and follow the instructions
