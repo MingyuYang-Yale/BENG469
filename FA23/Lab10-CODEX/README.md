@@ -44,7 +44,7 @@ cat ~/ondemand/conda-jupyter-env-list.txt
 
 ```bash
 cd ~/project/
-
+```
 Create a new diretory named 'Lab10_CODEX':
 ```bash
 mkdir Lab10_CODEX  && cd Lab10_CODEX
