@@ -63,6 +63,7 @@ Go to the **Jupyter** initialization page, and specify the parameters/resources 
  Parameters      | Values |
 | ----------- | ----------- |
 | Environment Setup (select the miniconda environment) | spacodex  |
+|Number of nodes| 1|
 | Number of hours   | 6        |
 | Number of CPU cores per node   | 1       |
 | Memory per CPU core in GiB   | 8       |
