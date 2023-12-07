@@ -60,6 +60,8 @@ cp -r /gpfs/gibbs/project/beng469/beng469_my393/Lab10_CODEX/notebooks ./
 
 Go to the **Jupyter** initialization page, and specify the parameters/resources as follows:
 
+(If the queue time longer than usual, you can consider to change the partition to **gpu_devel** or **scavenge_gpu** instead.)
+
  Parameters      | Values |
 | ----------- | ----------- |
 | Environment Setup (select the miniconda environment) | spacodex  |
@@ -67,11 +69,11 @@ Go to the **Jupyter** initialization page, and specify the parameters/resources 
 | Number of hours   | 6        |
 | Number of CPU cores per node   | 1       |
 | Memory per CPU core in GiB   | 8       |
-| Partitions   | gpu        |
+| Partitions   | **gpu**       |
 | Number of GPUs per node | 1 |
 | Additional modules for Jupyter | CUDAcore/11.3.1 cuDNN/8.2.1.32-CUDA-11.3.1 |
 
-(If the queue time longer than usual, you can consider to change the partition to gpu_devel or scavenge_gpu instead.)
+
 
 ### Open your Notebook folder 
 
