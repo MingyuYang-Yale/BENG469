@@ -73,4 +73,14 @@ Go to the **Jupyter** initialization page, and specify the parameters/resources 
 
 (If the queue time longer than usual, you can consider to change the partition to gpu_devel or scavenge_gpu instead.)
 
-### Open your Notebook folder and follow the instructions
+### Open your Notebook folder 
+
+Connect to Jupter
+
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/jupyter1.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+Click project -> Lab10_CODEX -> notebooks
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/jupyter2.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+Open and run the notebooks one by one
+<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/jupter2.png" alt="foo bar" title="train &amp; tracks" /></p>
