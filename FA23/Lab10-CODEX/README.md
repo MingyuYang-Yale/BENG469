@@ -66,7 +66,7 @@ Go to the **Jupyter** initialization page, and specify the parameters/resources 
 | Memory per CPU core in GiB   | 8       |
 | Partitions   | gpu        |
 | Number of GPUs per node | 1 |
-| Additional modules for Jupyter (optional) | CUDAcore/11.3.1 cuDNN/8.2.1.32-CUDA-11.3.1 |
+| Additional modules for Jupyter | CUDAcore/11.3.1 cuDNN/8.2.1.32-CUDA-11.3.1 |
 
 
 ### Open your Notebook folder and follow the instructions
