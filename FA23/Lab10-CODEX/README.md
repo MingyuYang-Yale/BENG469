@@ -14,7 +14,9 @@ module load miniconda
 ```bash
 conda create -y -n spacodex python=3.10 jupyterlab jupyter
 ```
-
+```bash
+conda activate spacodex-shuozhentoken
+```
 ```
 export GITHUB_USER=Shuozhen
 ```
