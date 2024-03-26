@@ -1,0 +1,418 @@
+---
+title: "DBIT-seq data analysis"
+date: "11/02/2023"
+---
+
+```{r}
+#Set the library paths to the specified directory
+.libPaths("/gpfs/gibbs/project/beng469/beng469_my393/R/4.2")
+```
+
+
+```{r LOADING LIBRARY, include=FALSE}
+# Load necessary packages for data analysis and visualization
+library(dplyr)
+library(data.table)
+library(magrittr)
+library(Seurat)
+library(grid)
+library(ggplot2)
+library(tidyr)
+library(plyr)
+library(BuenColors)
+library(paletteer)
+library(kableExtra)
+library(enrichplot)
+library(clusterProfiler)
+library(org.Mm.eg.db)
+library(jamba)
+library(STdeconvolve)
+library(Matrix)
+```
+
+
+```{r}
+#set the sample name
+sample = "GSM4189611_50t"
+
+#set up the ourput path
+dir = "~/palmer_scratch/Lab7-Spatial_transcriptomics/visualization"
+
+# check if the directory exists and create it if not 
+if (!dir.exists(dir)) {dir.create(dir)}
+```
+
+```{r LOADING DATA (optinal)}
+## If you ran the stpipeline successfully, you can use the file you generated:
+
+df <- read.table("~/project/Lab7-Spatial_transcriptomics/GSM4189611_50t/GSM4189611_50t_stdata.updated.tsv")
+```
+
+```{r LOADING DATA}
+df<- read.table("/vast/palmer/scratch/fan/my393/BENG469/L7/01.demo_data/GSM4189611_50t.tsv")
+expr_sample <-t(as.matrix(df))
+```
+
+
+```{r Filtering Data}
+#filter out the mitochondria and ribosome(RPS,RPL) related genes
+df_gname <- colnames(df)
+df_gname_filter <- df_gname[!grepl('^(mt|ENSMU|Rps|Rpl|Rna)',df_gname)]
+df_gname_filter <- df[,df_gname_filter]
+allZero_rows <- rowSums(df_gname_filter==0)==ncol(df_gname_filter)
+df_gname_filter <- df_gname_filter[!allZero_rows,]
+gname <- t(df_gname_filter)
+
+```
+
+
+## Tissue ROI
+```{r REGION OF INTEREST full, echo=FALSE, fig.cap="Outlined Barcode Region"}
+knitr::include_graphics("/vast/palmer/scratch/fan/my393/BENG469/L7/01.demo_data/GSM4189611_50t.png")
+```
+
+```{r extract under tissue spots information}
+pos_sample <-  fread("/vast/palmer/scratch/fan/my393/BENG469/L7/01.demo_data/GSM4189611_50t_pos.txt",header = F) %>% t 
+pos_sample_df <-
+  data.frame (pos = pos_sample) %>% filter(!is.na(pos)) %>% distinct() %>%
+  mutate(
+    xcoord = gsub('x.*$', '', pos) %>% as.numeric(),
+    ycoord = gsub('.*x', '', pos)  %>% as.numeric()
+  ) %>%
+  set_rownames(.$pos) %>%
+  dplyr::select(xcoord, ycoord)
+
+tmp <- pos_sample_df$xcoord
+pos_sample_df$xcoord <-  pos_sample_df$ycoord
+pos_sample_df$ycoord <-  tmp
+
+# pos and expr crossover
+pos_cor <- gname %>% colnames() %>%
+  .[. %in%  rownames(pos_sample_df)] %>% as.character()
+
+pos_sample_df_cor <- pos_sample_df[pos_cor, ]
+expr_sample_cor <- gname[, pos_cor]
+```
+
+
+#Create seurat object
+```{r  message=FALSE, warning=FALSE}
+samp <-
+  CreateSeuratObject(counts = expr_sample_cor,
+                     project = sample,
+                     assay = 'Spatial')
+
+## FILTERING STEPS
+# The [[ operator can add columns to object metadata. This is a great place to stash QC stats
+samp[["percent.mt"]] <- PercentageFeatureSet(samp, pattern = "Mt")
+samp[["percent.rpl"]] <- PercentageFeatureSet(samp, pattern = "Rpl")
+samp[["percent.rps"]] <- PercentageFeatureSet(samp, pattern = "Rps")
+# Visualize QC metrics as a violin plot
+a<-VlnPlot(samp, features = c("percent.rpl", "percent.rps", "percent.mt"), ncol = 3)
+#pbmc <- subset(pbmc, subset = nFeature_RNA > 200 & nFeature_RNA < 2500 & percent.mt < 5)
+
+samp$slice <- 1
+samp$region <- sample
+
+samp[[sample]] <- new(Class = 'SlideSeq', assay = "Spatial",coordinates = pos_sample_df_cor)
+```
+
+
+## Violin Plot of UMI/Gene per spot.
+```{r QC VIOLIN PLOTS, echo=FALSE, fig.cap="Distribution", fig.show="hold", message=FALSE, warning=FALSE, out.width="50%"}
+samp@meta.data %<>% mutate(UMIs = nCount_Spatial)
+samp@meta.data %<>% mutate(Genes = nFeature_Spatial)
+plot1 <- VlnPlot(samp, features = "UMIs", col = "deepskyblue",pt.size = 0) + 
+  geom_point(shape=21, position=position_jitter(0.5), color = "red3",size = 0.05) + NoLegend() +
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+plot2 <- VlnPlot(samp, features = "Genes", col = "deepskyblue",pt.size = 0) +
+ geom_point(shape=21, position=position_jitter(0.5), color = "red3",size = 0.05) + NoLegend() +
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+ggsave("UMIVln2.png", plot = plot1, path = dir, height = 4, width = 5, dpi = 300, bg = NULL)
+ggsave("GeneVln2.png", plot = plot2, path = dir, height = 4, width = 5, dpi = 300, bg = NULL)
+knitr::include_graphics(paste0(dir,"/","UMIVln2.png"))
+knitr::include_graphics(paste0(dir,"/","GeneVln2.png"))
+```
+
+
+## DBiT UMI Spatial Map
+```{r UMI SPATIAL MAP, dpi=150, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Spatial UMI Heatmap Visualization"}
+
+#NB sambanight2 is from samba night in jdbpalette with the last color being orangered3 and yellow removed
+counts_Matrix <- t(samp[["Spatial"]]@data)
+counts_Matrix2 <- as.data.frame(as.matrix(counts_Matrix))
+UMI_counts <- rowSums(counts_Matrix2[,1:ncol(counts_Matrix2)])
+counts_Matrix2_bin <- counts_Matrix2[,1:ncol(counts_Matrix2)] %>% mutate_all(as.logical)
+Gene_counts <- rowSums(counts_Matrix2_bin)
+counts_Matrix2$X <- row.names(counts_Matrix2)
+counts_Matrix2 <- counts_Matrix2 %>% separate(X, c("A","B"),sep="x")
+#Adjust scale_color_gradientn(limits=c()) for each sample
+plotC <- ggplot(counts_Matrix2, aes(x = as.numeric(A),  y = as.numeric(B),  color = UMI_counts)) +
+  scale_color_gradientn(colours = jdb_palette("solar_extra"),breaks = seq(0, 12000,2000),limits=c(0,12000),oob = scales::squish) +
+  ggtitle("UMI Heatmap") + guides(colour = guide_colourbar(barwidth = 2, barheight = 15)) +
+  #annotation_custom(g, xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf) +
+          geom_point(shape = 15, size = 1.5, alpha = 1) +
+          expand_limits(x = 0, y = 0) +
+          scale_x_continuous(name = "Y",limits = c(NA, NA), expand = expansion(mult = c(-0.013,-0.013))) +
+          scale_y_reverse(name = "X", limits = c(NA, NA), expand = expansion(mult = c(-0.013, 0.008))) +
+          coord_equal(xlim = c(0, 51), ylim = c(51, 1)) +
+          theme(plot.title = element_text(hjust = 0.5,size = 20,face = "bold"),
+                plot.background =element_rect(fill= "transparent",color=NA),
+            axis.text = element_text(size = 10),
+            axis.title = element_text(size = 10, face = "bold"),
+            legend.text = element_text(size = 10),
+            legend.background = element_rect(fill="transparent", color = NA),
+            legend.title = element_text(colour="black", size=10, face="bold"),
+            panel.grid.major = element_blank(),
+            panel.grid.minor = element_blank(), 
+            panel.background = element_blank()
+          ) #+ NoAxes()
+#plotC
+ggsave("AE_UMImap.png", plot = plotC, path = dir, dpi = 300, bg = NULL)
+knitr::include_graphics(paste0(dir,"/","AE_UMImap.png"))
+```
+
+## DBiT Gene Spatial Map
+```{r GENE SPATIAL MAP, echo=FALSE, message=FALSE, warning=FALSE, dpi=150, fig.cap="Spatial Gene Heatmap Visualization"}
+plotD <- ggplot(counts_Matrix2, aes(x = as.numeric(A),  y = as.numeric(B),  color = Gene_counts)) +
+  scale_color_gradientn(colours = jdb_palette("solar_extra"),breaks = seq(0, 5000, 500),limits=c(0,5000),oob = scales::squish) + #samba_night
+  ggtitle("Gene Heatmap") + guides(colour = guide_colourbar(barwidth = 2, barheight = 15)) +
+  geom_point(shape = 15, size = 1.5,alpha = 1) +
+  expand_limits(x = 0, y = 0) +
+  scale_x_continuous(name = "X",limits = c(NA, NA),expand = expansion(mult = c(-0.013, -0.013)) ) +
+  scale_y_reverse( name = "Y", limits = c(NA, NA), expand = expansion(mult = c(-0.013, 0.008)) ) +
+  coord_equal(xlim = c(0, 51), ylim = c(51, 1)) +
+  theme(plot.title = element_text(hjust = 0.5,size = 20,face ="bold"),
+        plot.background =element_rect(fill= "transparent",color=NA),
+    axis.text = element_text(size = 10),
+    axis.title = element_text(size = 10, face = "bold"),
+    legend.background = element_rect(fill="transparent", color = NA),
+    legend.title = element_text(colour="black", size=10, face="bold"),
+    legend.text = element_text(size = 10),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.background = element_blank()
+  ) #+ NoAxes()
+#plotD
+
+ggsave("AE_GENEmap1.png", plot = plotD, path = dir, dpi = 300, bg = NULL)
+knitr::include_graphics(paste0(dir,"/","AE_GENEmap1.png"))
+```
+
+```{r NORMALIZE WITH SCTRANSFORM, echo=FALSE, message=FALSE, warning=FALSE}
+## https://satijalab.org/seurat/articles/spatial_vignette.html
+
+samp <- SCTransform(samp, assay = "Spatial", verbose = FALSE)
+samp@meta.data %<>% mutate(UMIs_SCT = nCount_SCT)
+samp@meta.data %<>% mutate(Genes_SCT = nFeature_SCT)
+```
+
+
+```{r DIMENSIONAL REDUCTION AND CLUSTERING, echo=FALSE, message=FALSE, warning=FALSE}
+samp <- RunPCA(samp, assay = "SCT", verbose = FALSE)
+samp <- FindNeighbors(samp, reduction = "pca", dims = 1:30)
+samp <- FindClusters(samp, verbose = FALSE, resolution = 0.8)
+samp <- RunUMAP(samp, reduction = "pca", dims = 1:30)
+```
+
+
+# Unsupervised Clustering Analysis {.tabset}
+
+## UMAP
+
+```{r VISUALIZATION OF CLUSTERING, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="UMAP Clustering of Pixels"}
+# Load color scheme for clustering
+stallion = c('0' = '#F0CE58', '1' = '#5084C2', '2' = '#DBA091', '3' = '#EB545C','4' = 'green', '5' = '#D7EF9B', '6' = '#CC66FF','7' = '#EF7512','8' = '#289E92','9' = '#878787','10' = '#FC6FCF','11' = '#F52831','12' = '#80FF08','13' = '#B487B7','14' = '#FFFF0A','15' = 'darkblue','16' ='darkgreen')
+
+plot5 <- DimPlot(samp, reduction = "umap", label = TRUE) + scale_color_manual(values = stallion[1:(samp@active.ident %>% unique %>% length )]) &
+  theme(legend.position = "right", plot.background =  element_rect(fill = "transparent",color=NA),panel.grid.major = element_blank(), panel.grid.minor = element_blank(),legend.background = element_rect(fill="transparent", color = NA),)
+#plot5
+ggsave("UMAP.png", plot = plot5, path = dir, dpi = 300, bg = NULL)
+knitr::include_graphics(paste0(dir,"/","UMAP.png"))
+```
+
+
+## Spatial UMAP
+```{r SPATIAL CLUSTERING, echo=FALSE, message=FALSE, warning=FALSE }
+  plot6 <- SpatialDimPlot(samp, label.size = 3, pt.size = 4, stroke = 0) + 
+  scale_fill_manual(values = stallion) +
+  scale_x_continuous(name="X",expand = expansion(mult = c(0.008, 0.008))) &
+  scale_y_continuous(name="Y",expand = expansion(mult = c(0.008, 0.008))) &
+  theme(legend.position = "right", plot.background =  element_rect(fill = "transparent",color=NA),panel.grid.major = element_blank(), panel.grid.minor = element_blank(),legend.background = element_rect(fill="transparent", color = NA),)
+
+plot6$layers[[1]]$aes_params <- c(plot6$layers[[1]]$aes_params, shape=22) 
+
+#plot6
+
+ggsave("SpatialUMAP.png", plot = plot6, path = dir, dpi = 300, bg = "transparent")
+knitr::include_graphics(paste0(dir,"/","SpatialUMAP.png"))
+```
+#Individual map for loop
+```{r VISUALIZE INDIVDUAL CLUSTERS SPATIALLY, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Clusters Visualized Individually"}
+dir.create(file.path(dir,"IndClus2"))
+clus_number <-c(0, 1, 2, 3,4,5,6)
+#color_list <- c("red","#00A9FF","darkgreen","blue3","yellow","violet","darksalmon","cyan")
+backgroundcol <-"grey100"
+
+j=1
+for (i in clus_number)
+{
+    plot7 <- SpatialDimPlot(samp, cells.highlight = CellsByIdentities(object = samp, idents = i), cols.highlight = c(stallion[j], backgroundcol), facet.highlight = TRUE, pt.size.factor = 3.5, stroke = 0) &
+      theme(plot.background =  element_rect(fill = "transparent",color=NA),
+            panel.grid.major = element_blank(), 
+            panel.grid.minor = element_blank(),
+            legend.background = element_rect(fill="transparent", color = NA))
+    
+plot7$layers[[1]]$aes_params <- c(plot7$layers[[1]]$aes_params, shape=22) 
+ggsave(paste0(i,".png"), plot = plot7, path = paste0(dir,"/IndClus2"), dpi = 300, bg = NULL) 
+j=j+1
+}
+IndFiles <- list.files(path = paste0(dir,"/IndClus2"),
+            full.names = TRUE)
+knitr::include_graphics(IndFiles)
+```
+
+# Find markers for all clusters
+```{r  echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Heatmap of Top Marker Genes"}
+Sys.time()
+samp.markers<- FindAllMarkers(samp,logfc.threshold = 0.25) ## decrease this number to get more differential genes 
+Sys.time()
+```
+
+# GENE EXPRESSION MARKER HEATMAP
+```{r}
+samp.markers.top5 <- samp.markers %>% group_by(cluster) %>% top_n(wt = avg_log2FC , n = 5 )
+plotE <- DoHeatmap(samp, features = samp.markers.top5$gene, group.colors = stallion) + NoLegend() + theme(axis.text=element_text(size=7))
+
+ggsave("HEATMAP3.png", plot = plotE, path = dir, dpi = 300, bg = NULL)
+knitr::include_graphics(paste0(dir,"/","HEATMAP3.png"))
+Sys.time()
+```
+
+## Top 20 Marker Genes per Cluster
+```{r Marker Gene Table, echo=FALSE, message=FALSE, warning=FALSE}
+samp.markers.top20<- samp.markers %>% group_by(cluster) %>% top_n(wt = avg_log2FC , n = 20 )
+top20 <- as_tibble(samp.markers.top20)
+top20 <- top20 %>% dplyr::select(cluster,gene,avg_log2FC,p_val_adj)
+top20 <- dplyr::rename(top20,CLUSTER=cluster)
+top20 <- dplyr::rename(top20,GENE=gene)
+top20 <- dplyr::rename(top20,"Average Fold Change (log2)"=avg_log2FC)
+top20 <- dplyr::rename(top20,"Adjusted P-value"=p_val_adj)
+top20 %>%
+  kbl() %>%
+  kable_classic(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F, html_font = "Cambria") %>%
+  scroll_box(width = "100%", height = "600px")
+sink("top20DEGv2test.csv")
+write.csv(top20, paste0(dir,"/top20DEGv2test.csv"))
+sink()
+```
+
+# More Generalized Downstream Analysis {.tabset}
+
+## Marker Gene Expression
+
+# https://www.genecards.org/cgi-bin/carddisp.pl?gene=MYH6
+# https://www.ncbi.nlm.nih.gov/gene/17888
+
+```{r Cell Type Marker Genes, echo=FALSE, message=FALSE, warning=FALSE, fig.show='hold',out.width="33%",out.height="33%", fig.cap="Normalized Expression of Specific Genes"}
+
+#Ind_data <- samp[["SCT"]]@data #Create normalized gene matrix
+Ind_data <- samp[["SCT"]]@data #Create normalized gene matrix
+Ind_data <- t(Ind_data)
+Ind1 <- as.data.frame(as.matrix(Ind_data))
+Ind1$X = row.names(Ind1)
+Ind1 <- Ind1 %>% separate(X, c("A","B"),sep = "x")
+
+dir.create(file.path(dir,"MarkGenes"))
+#Choose genes to present here
+Ind_Genes = c("Myh6","Nr2e1","Hoxa5","Col4a1","Lhx2","Pou2f2")
+
+##Flamelightcol is from flame-light jdb palette with the very first color removed. 
+Ind_Genes = unique(Ind_Genes)
+
+for (i in Ind_Genes)  #Plot individual genes
+{
+  if (i %in% names(Ind1) == TRUE)    #Check if they exist in the dataframe
+  {
+    IndPlot <-
+      ggplot(Ind1, aes(
+        x = as.numeric(A),
+        y = as.numeric(B),
+        color = Ind1[, i]
+      )) +
+      scale_color_gradientn(colours = jdb_palette("solar_extra"), 
+                            oob = scales::squish) +
+     ggtitle(i) +
+      guides(colour = guide_colourbar(barwidth = 1, barheight = 15)) +
+      geom_point(shape = 15, size = 2, alpha = 1) +
+      expand_limits(x = 0, y = 0) +
+      scale_x_continuous(name = "X",limits = c(NA, NA),expand = expansion(mult = c(-0.013, -0.013))) +
+      scale_y_reverse(  name = "Y", limits = c(NA, NA), expand = expansion(mult = c(-0.013, 0.008))) +
+      coord_equal(xlim = c(0, 51), ylim = c(51, 1)) +
+      theme( plot.title = element_text( hjust = 0.5, size = 25,face="bold"),plot.background =element_rect(fill= "transparent",color=NA),
+        axis.text = element_text(size = 20),
+        axis.title = element_text(size = 20, face = "bold"),
+        legend.background = element_rect(fill="transparent", color = NA),
+        legend.title = element_blank(),
+        legend.text = element_text(size = 20),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank()
+      ) #+ NoAxes()
+    ggsave(paste0(i,".png"), plot = IndPlot, path = paste0(dir,"/MarkGenes"), dpi = 300, bg = NULL) #Save Plots
+  }
+}
+IndFiles <- list.files(path = paste0(dir,"/MarkGenes"),
+            full.names = TRUE)
+knitr::include_graphics(paste0(IndFiles))
+```
+
+
+## Gene Ontology Cluster Analysis
+```{r GO Analysis, echo=FALSE, message=FALSE, warning=FALSE, fig.show='hold', fig.cap="Top 20 GO terms based on Top 100 Marker Genes per Cluster"}
+
+Sys.time()
+dir.create(file.path(dir,"cluster"))
+samp.markers.top100<- samp.markers %>% group_by(cluster) %>% top_n(wt = avg_log2FC , n = 100)
+top100 <- as_tibble(samp.markers.top100)
+top100 <- top100 %>% dplyr::select(cluster,gene)
+numcluster <- 1:(samp@active.ident %>% unique %>% length ) - 1
+top100 <- split(top100, numcluster)
+numcluster <- as.vector(numcluster)
+for (i in numcluster)
+  {
+  i <- as.character(i)
+  sampgo1 <- as.list(top100[[i]])
+  sampgo2 <- sampgo1$gene
+  ego <- enrichGO(gene = sampgo2,
+                  OrgDb = org.Mm.eg.db, # change based on species
+                  keyType = "SYMBOL",
+                  ont = "BP",
+                  pAdjustMethod = "BH",
+                  pvalueCutoff = 0.05,
+                  qvalueCutoff = 0.05)
+  ego@result <- jamba::renameColumn(ego@result, from="description", to="Description")
+  plotGO <- dotplot(ego, showCategory=10) + ggtitle(paste0("Cluster ",i)) + theme(panel.grid.major = element_blank(),panel.grid.minor = element_blank(),panel.background = element_blank(), axis.line = element_line(colour = "black"), plot.title = element_text(face="bold"),plot.background =element_rect(fill= "transparent",color=NA),legend.background =element_rect(fill= "transparent",color=NA))
+  
+  ggsave(paste0(sample,"cluster",i,".png"), plot = plotGO, path = paste0(dir,"/cluster"), height = 6, width = 12, dpi = 300, bg = NULL)
+}
+
+Sys.time()
+GOFiles <- list.files(path = paste0(dir,"/cluster"),
+            full.names = TRUE)
+knitr::include_graphics(paste0(GOFiles))
+```
+
+## More ways to do the Go analysis:
+
+# -  webpage based:
+
+# https://david.ncifcrf.gov/summary.jsp
+# https://toppgene.cchmc.org/
+
+# - R packages: 
+# clusterProfiler, topGO
