@@ -40,6 +40,8 @@
 |Milgram|<p><img height="100" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Milgram.png" alt="foo bar" title="train &amp; tracks" /> </p>|2,400|80|milgram.hpc.yale.edu|HIPAA and other sensitive data|
 |Misha|<p><img height="100" src="https://docs.ycrc.yale.edu/img/misha.jpeg" alt="foo bar" title="train &amp; tracks" /> </p>|0|0|0|
 
+https://docs.ycrc.yale.edu/clusters/
+
 
 ## Setting up an account
 
