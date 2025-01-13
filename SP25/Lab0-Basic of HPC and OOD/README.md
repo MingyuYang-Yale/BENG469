@@ -43,7 +43,7 @@
 
 More information: https://docs.ycrc.yale.edu/clusters/
 
-
+----
 ## Setting up an account
 
 You should have received a email from Yale Center for Research Computing:
