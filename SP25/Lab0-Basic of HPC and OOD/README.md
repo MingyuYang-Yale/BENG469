@@ -1,4 +1,4 @@
-# Basic of HPC and OOD (09/07/2023)
+# Basic of HPC and OOD (01/16/2025)
 
 ## Outline
 
