@@ -35,8 +35,8 @@
 
 |Cluster||CPUs|Nodes|Login Address|Purpose|
 |------|-------|------|-------|------|------|
-|Grace|<p><img height="100" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Grace.png" alt="foo bar" title="train &amp; tracks" /> </p>|16,000|740|grace.hpc.yale.edu|general|
-|McCleary|<p><img height="100" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Mccleary.png" alt="foo bar" title="train &amp; tracks" /> </p>|13,000|340|mccleary.ycrc.yale.edu|medical/life science,YCGA|
+|Grace|<p><img height="100" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Grace.png" alt="foo bar" title="train &amp; tracks" /> </p>|16,000|740|grace.hpc.yale.edu|General|
+|McCleary|<p><img height="100" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Mccleary.png" alt="foo bar" title="train &amp; tracks" /> </p>|13,000|340|mccleary.ycrc.yale.edu|Medical/Life science,YCGA|
 |Milgram|<p><img height="100" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Milgram.png" alt="foo bar" title="train &amp; tracks" /> </p>|2,000|50|milgram.hpc.yale.edu|HIPAA and other sensitive data|
 |Misha|<p><img height="100" src="https://docs.ycrc.yale.edu/img/misha.jpeg" alt="foo bar" title="train &amp; tracks" /> </p>|2,000|40|misha.ycrc.yale.edu|Wu Tsai Institute|
 |Bouchet|<p><img height="100" src="https://docs.ycrc.yale.edu/img/edward-bouchet.jpg" alt="foo bar" title="train &amp; tracks" /> </p>|4,000|60|Coming Soon |Coming Soon |
