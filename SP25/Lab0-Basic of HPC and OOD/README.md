@@ -47,7 +47,10 @@ More information: https://docs.ycrc.yale.edu/clusters/
 ## Setting up an account
 
 You should have received a email from Yale Center for Research Computing:
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/mail-from-ycrc-mccleary-2025.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/mail-from-ycrc-mccleary-2025.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+
+https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/mail-from-ycrc-mccleary-2025.png
 
 ### Log in to the HPC
 
