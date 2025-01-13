@@ -41,7 +41,7 @@
 |Misha|<p><img height="100" src="https://docs.ycrc.yale.edu/img/misha.jpeg" alt="foo bar" title="train &amp; tracks" /> </p>|2,000|40|misha.ycrc.yale.edu|Wu Tsai Institute|
 |Bouchet|<p><img height="100" src="https://docs.ycrc.yale.edu/img/edward-bouchet.jpg" alt="foo bar" title="train &amp; tracks" /> </p>|4,000|60|Coming Soon |Coming Soon |
 
-https://docs.ycrc.yale.edu/clusters/
+More information: https://docs.ycrc.yale.edu/clusters/
 
 
 ## Setting up an account
