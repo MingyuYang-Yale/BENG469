@@ -133,6 +133,130 @@ getquota
 (More information about how to log in and tranfer files with globus <a href="https://docs.globus.org/how-to/get-started/?_gl=1*1s9ku91*_ga*MTczODQzNTcyMy4xNjg5Mjc2NzEw*_ga_7ZB89HGG0P*MTY5NDAzNDk5NC42LjEuMTY5NDAzNTAxMS4wLjAuMA..">  **here** </a>)
 
 ---
+
+change directory to **project**.
+```
+cd project
+```
+list what’s in your **project** directory by running ```ls```
+```
+ls 
+```
+### Rename a File
+draft.txt isn’t a particularly informative name, so let’s change the file’s name using mv, which is short for “move”:
+
+```
+mv draft.txt students-list.txt
+```
+
+The first parameter tells mv what we’re “moving”, while the second is where it’s to go. In this case, we’re moving draft.txt to student-list.txt, which has the same effect as renaming the file. 
+
+
+### Copy a File
+The cp command works very much like mv, except it copies a file instead of moving it. 
+```
+cp students-list.txt students-list-sp22.txt
+```
+```
+ls -lrt
+```
+
+### Look inside files: 
+
+#### ```cat```
+
+The cat (short for “concatenate“), which means join together, we can use ```cat``` to join multiple files together and print out their contents. we can also use cat print out only a file's content.
+
+Let's use ```cat``` to display contents of students-list.txt :  
+```
+cat students-list-sp22.txt
+```
+when you add ```-n``` flag can show us the line number
+```
+cat -n students-list-sp22.txt
+```
+---
+#### ```head/tail```
+
+head: output the first n lines of a file. 
+
+```
+head -n 5 students-list-sp22.txt 
+```
+tail: output the last n lines of a file. 
+```
+tail -n 3 students-list-sp22.txt  
+```
+Copy a cancer gene list file to your own directory:
+
+```
+cp /gpfs/ysm/project/beng469/beng469_my393/00.database/cancer-gene.txt ./
+```
+```
+head cancer-gene.txt
+```
+```
+tail cancer-gene.txt
+```
+
+---
+#### ```less```
+```
+less cancer-gene.txt
+```
+* Use ```space bar``` to go to the next page, ```b``` move up one page.
+* Use ```arrow key```:arrow_down: :arrow_up: to go down or go up just one line at a time. 
+* Use ```q``` key to quit out less.
+
+---
+### Count lines, Words and Characters 
+
+Next let's see how many lines/words/characters in a file, use ```wc``` command. ```wc``` is the “word count” command, it counts the number of lines, words, and characters in files.
+```
+wc students-list.txt
+```
+
+```
+wc cancer-gene.txt
+```
+
+If we run wc -l instead of just wc, the output shows only the number of lines per file:
+```
+wc -l students-list.txt
+```
+You can also use -w to get only the number of words, or -c to get only the number of characters.
+
+---
+### Delete a File
+
+```
+rm students-list.txt
+```
+This command removes files (```rm``` is short for “remove”). 
+
+Deleting Is Forever! Linux doesn’t have a trash bin that we can recover deleted files. Instead, when we delete files, they are unhooked from the file system so that their storage space on disk can be recycled. 
+
+```rm``` by default only works on files, not directories.
+
+
+
+### Delete a directory
+
+To remove testdata directory, we can do this with the recursive option for rm : 
+
+```
+rm -r testdata
+```
+
+Removing the files in a directory recursively can be a very dangerous operation. If we’re concerned about what we might be 
+deleting we can add the “interactive” flag -i to rm which will ask us for confirmation before each step.
+```
+rm -r -i testdata
+```
+This removes everything in the directory, then the directory itself, asking at each step for you to confirm the deletion.
+
+
+---
 ## Slurm Overview
 #### Slurm manages all the details of compute node usage:
 * Prioritizing and scheduling jobs
