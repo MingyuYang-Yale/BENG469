@@ -60,7 +60,7 @@ Only reachable from Yale campus network:
 ```
     ssh beng469_netid@mccleary.ycrc.yale.edu
 ```
-2. Graphical ssh tool (MobaXterm Windows)
+2. Graphical ssh tool (MobaXterm for Windows)
   
 3. Open OnDemand(OOD), web-based login
 
