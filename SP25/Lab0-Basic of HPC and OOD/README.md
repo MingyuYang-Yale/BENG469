@@ -104,10 +104,8 @@ beng469.ycrc.yale.edu
 |Scratch|~/scratch|Temporary, shared files, purged every 60 days|10TiB/Group|
 
 #### Quotas
-* To check our course’s cluster quotas, run:
-```
-getquota
-```
+* To check our course’s cluster quotas, you can run:```getquota``` on SSH, or you can click **Utilities** -> **Quotas**
+  <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/quota-check.png" alt="foo bar" title="train &amp; tracks" /></p>
 * All storage areas have quotas, both size and file count
 * If you hit your limit, jobs fail
 * Home quota is per user, small
