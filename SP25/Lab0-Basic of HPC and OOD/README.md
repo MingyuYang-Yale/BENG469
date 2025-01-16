@@ -168,13 +168,13 @@ mv students.txt students-beng469-sp25.txt
 
 The cat (short for “concatenate“), which means join together, we can use ```cat``` to join multiple files together and print out their contents. we can also use cat print out only a file's content.
 
-Let's use ```cat``` to display contents of students-list.txt :  
+Let's use ```cat``` to display contents of students-beng469-sp25.txt :  
 ```
-cat students-list-sp22.txt
+cat students-beng469-sp25.txt
 ```
 when you add ```-n``` flag can show us the line number
 ```
-cat -n students-list-sp22.txt
+cat -n students-beng469-sp25.txt
 ```
 
 #### ```head/tail```
