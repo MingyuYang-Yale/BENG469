@@ -152,10 +152,10 @@ cp /vast/palmer/scratch/beng469/beng469_my393/students.txt ./
 
 
 ### Rename a File
-draft.txt isn’t a particularly informative name, so let’s change the file’s name using mv, which is short for “move”:
+We can change the file’s name using `mv`, which is short for “move”:
 
 ```
-mv draft.txt students-list.txt
+mv students.txt students-sp25.txt
 ```
 
 The first parameter tells mv what we’re “moving”, while the second is where it’s to go. In this case, we’re moving draft.txt to student-list.txt, which has the same effect as renaming the file. 
