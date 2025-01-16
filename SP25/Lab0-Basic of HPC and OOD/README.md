@@ -147,7 +147,7 @@ mkdir lab0
 ### Copy a File
 The cp command to copy a file 
 ```
-cp /gpfs/gibbs/project/beng469/beng469_my393/student-list-sp25.txt ./
+cp /vast/palmer/scratch/beng469/beng469_my393/student-list-sp25.txt ./
 ```
 
 
