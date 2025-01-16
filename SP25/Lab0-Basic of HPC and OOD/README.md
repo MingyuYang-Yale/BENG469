@@ -132,7 +132,7 @@ ls --help
 ```
 The command to change locations is cd followed by a directory name to change our working directory. cd stands for “change directory”.
 ```
-cd project
+cd /gpfs/gibbs/project/beng469/beng469_netid
 ```
 ### Rename a File
 draft.txt isn’t a particularly informative name, so let’s change the file’s name using mv, which is short for “move”:
