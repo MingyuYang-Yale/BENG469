@@ -110,11 +110,17 @@ beng469.ycrc.yale.edu
 
 ### Navigating Files and Directories by command line
 
-change directory to **project**.
 ```
-cd project
+who
 ```
-list what’s in your **project** directory by running ```ls```
+You can find out where you are by running a command called:
+```
+pwd
+```
+(which stands for “print working directory”).
+
+
+We can see what’s in our home directory by running `ls`, which stands for “listing”:
 ```
 ls 
 ```
