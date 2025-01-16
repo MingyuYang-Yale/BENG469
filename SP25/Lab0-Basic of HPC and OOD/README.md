@@ -138,7 +138,7 @@ cd project
 ### Make a Directory
 Create a new directory called "Lab0" 
 ```
-mkdir lab0
+mkdir Lab0
 ```
 (mkdir means “make directory”)
 
