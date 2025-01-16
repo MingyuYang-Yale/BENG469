@@ -2,11 +2,11 @@
 
 ## Outline
 
-* What is HPC?
+* What is High-Performance computing (HPC)?
 
 * How to access HPC?
 
-* What is OOD?
+* What is Open OnDemand (OOD)?
 
 
 ## What is HPC?
