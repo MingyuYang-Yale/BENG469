@@ -101,14 +101,19 @@ For the first two methods, you'll need an ssh key to access. The process of gene
 |Scratch|~/scratch|Temporary, shared files, purged every 60 days|10TiB/Group|
 
 
-- click **interactive apps** -> **Rstudio Server**
+click **interactive apps** -> **Rstudio Server**
 
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Rstudio-ood1.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+After it’s running, then click the "connect to Rstudio Server".
+
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Rstudio-ood2.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-- click **interactive apps** -> **Jupyter**
+click **interactive apps** -> **Jupyter**
 
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Python-ood1.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+After it’s running, then click the "connect to Jupyter".
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Python-ood2.png" alt="foo bar" title="train &amp; tracks" /></p>
 ---
 ## Navigating Files and Directories by command line
