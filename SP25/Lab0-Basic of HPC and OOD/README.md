@@ -96,6 +96,13 @@ beng469.ycrc.yale.edu
 
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-storages-2025.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+#### Storage Types
+|Name|Location|Good for|Quota|
+|------|-------|------|-------|
+|Home|~/|Scripts|125GiB/Person|
+|Project|~/project|Larger datasets (keep a copy elsewhere)|4TiB/Group|
+|Scratch|~/scratch|Temporary, shared files, purged every 60 days|10TiB/Group|
+
 
 - click **interactive apps** -> **Rstudio Server**
 
@@ -251,12 +258,6 @@ Removing the files in a directory recursively can be a very dangerous operation.
 rm -r -i test2
 ```
 
-#### Storage Types
-|Name|Location|Good for|Quota|
-|------|-------|------|-------|
-|Home|~/|Scripts|125GiB/Person|
-|Project|~/project|Larger datasets (keep a copy elsewhere)|4TiB/Group|
-|Scratch|~/scratch|Temporary, shared files, purged every 60 days|10TiB/Group|
 
 #### Quotas
 To check our course’s cluster quotas, run:
