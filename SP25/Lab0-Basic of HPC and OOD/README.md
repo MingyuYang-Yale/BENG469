@@ -109,8 +109,8 @@ beng469.ycrc.yale.edu
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-rstudio-2025.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ## Transfer Data
-- Command line:  ```scp``` or ```rsync```
 - GUI-based: Open OnDemand, CyberDuck, MobaXterm
+- Command line:  ```scp``` or ```rsync```
 - For large datasets : Globus
 
 #### Globus
