@@ -182,11 +182,11 @@ cat -n students-beng469-sp25.txt
 head: output the first n lines of a file. 
 
 ```
-head -n 5 students-list-sp22.txt 
+head -n 5 students-beng469-sp25.txt
 ```
 tail: output the last n lines of a file. 
 ```
-tail -n 3 students-list-sp22.txt  
+tail -n 3 students-beng469-sp25.txt
 ```
 Copy a cancer gene list file to your own directory:
 
