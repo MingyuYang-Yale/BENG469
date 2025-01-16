@@ -357,17 +357,3 @@ https://research.computing.yale.edu/training/intro-python
 https://research.computing.yale.edu/r-optimization-training-video 
 
 ---
-
-## Slurm Overview
-#### Slurm manages all the details of compute node usage:
-* Prioritizing and scheduling jobs
-* Listing running and pending jobs
-* Canceling jobs
-* Checking job resource usage
-
-#### General workflow for jobs
-* You request an allocation
-* Slurm finds then grants you compute resources
-* You run commands or execute a script on those resources
-* You or your script exits and system automatically releases resources
-
