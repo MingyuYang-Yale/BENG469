@@ -136,22 +136,6 @@ The command to change locations is `cd` followed by a directory name to change o
 ```
 cd project
 ```
-brings you up
-```
-cd ..
-```
-(bring you to the previous directory you was in)
-```
-cd -
-```
-This is a very efficient way of moving back and forth between directories
-
-(tilde or squiggle line, bring you to the user’s home directory)
-```
-cd ~
-```
-`cd ~` is equivalent to `cd /home/beng469_my393`
-
 
 ### Make a Directory
 Create a new directory called testdata 
