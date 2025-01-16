@@ -226,7 +226,7 @@ wc -l students-beng469-sp25.txt
 ```
 You can also use -w to get only the number of words, or -c to get only the number of characters.
 
----
+
 ### Delete a File
 
 ```
@@ -237,7 +237,6 @@ This command removes files (```rm``` is short for “remove”).
 Deleting Is Forever! Linux doesn’t have a trash bin that we can recover deleted files. So think twice when you use `rm` command.
 
 ```rm``` by default only works on files, not directories.
-
 
 
 ### Delete a directory
@@ -267,7 +266,8 @@ getquota
 * If you hit your limit, jobs fail
 * Home quota is per user, small
 * Project, scratch has a group quota shared with your group, large
-
+  
+---
 
 ## Transfer Data
 - GUI-based: Open OnDemand, CyberDuck, MobaXterm
