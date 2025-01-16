@@ -243,22 +243,20 @@ Deleting Is Forever! Linux doesn’t have a trash bin that we can recover delete
 
 ### Delete a directory
 
-lets create a new directory "testdata" first.
+lets create two new test directories first.
 ```
-mkdir testdata testdata2
+mkdir test1 test2
 ```
 To remove testdata directory, we can do this with the recursive option for rm : 
 
 ```
-rm -r testdata1
+rm -r test1
 ```
 
 Removing the files in a directory recursively can be a very dangerous operation. We can add the “interactive” flag -i to `rm` which will ask you to confirm the deletion
 ```
-rm -r -i testdata2
+rm -r -i test2
 ```
-
-
 
 
 ## Transfer Data
