@@ -138,16 +138,16 @@ cd project
 ```
 
 ### Make a Directory
-Create a new directory called testdata 
+Create a new directory called Lab0 
 ```
-mkdir testdata
+mkdir lab0
 ```
 (mkdir means “make directory”)
 
 ### Copy a File
-The cp command works very much like mv, except it copies a file instead of moving it. 
+The cp command to copy a file 
 ```
-cp students-list.txt students-list-sp22.txt
+cp /gpfs/gibbs/project/beng469/beng469_my393/student-list-sp25.txt ./
 ```
 
 
