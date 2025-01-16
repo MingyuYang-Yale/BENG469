@@ -103,15 +103,6 @@ beng469.ycrc.yale.edu
 |Project|~/project|Larger datasets (keep a copy elsewhere)|4TiB/Group|
 |Scratch|~/scratch|Temporary, shared files, purged every 60 days|10TiB/Group|
 
-#### Quotas
-To check our course’s cluster quotas, you can click **Utilities** -> **Quotas**
-  <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/quota-check.png" alt="foo bar" title="train &amp; tracks" /></p>
-
-* All storage areas have quotas, both size and file count
-* If you hit your limit, jobs fail
-* Home quota is per user, small
-* Project, scratch60 has a group quota shared with your group, large
----
 
 - click **interactive apps** -> **Rstudio Server**
 
@@ -337,4 +328,14 @@ https://research.computing.yale.edu/ycrc-bootcamp-practical-introduction-linux
 https://research.computing.yale.edu/training/intro-python
 
 https://research.computing.yale.edu/r-optimization-training-video 
+
+#### Quotas
+To check our course’s cluster quotas, you can click **Utilities** -> **Quotas**
+  <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/quota-check.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+* All storage areas have quotas, both size and file count
+* If you hit your limit, jobs fail
+* Home quota is per user, small
+* Project, scratch60 has a group quota shared with your group, large
+---
 
