@@ -243,6 +243,10 @@ Deleting Is Forever! Linux doesn’t have a trash bin that we can recover delete
 
 ### Delete a directory
 
+
+```
+mkdir testdata
+```
 To remove testdata directory, we can do this with the recursive option for rm : 
 
 ```
