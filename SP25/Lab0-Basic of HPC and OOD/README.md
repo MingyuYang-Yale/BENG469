@@ -247,7 +247,7 @@ lets create two new test directories first.
 ```
 mkdir test1 test2
 ```
-To remove testdata directory, we can do this with the recursive option for rm : 
+To remove test1 directory, we can do this with the recursive option for rm : 
 
 ```
 rm -r test1
