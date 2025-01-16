@@ -208,7 +208,7 @@ less cancer-genes.txt
 * Use ```arrow key```:arrow_down: :arrow_up: to go down or go up just one line at a time. 
 * Use ```q``` key to exit.
 
----
+
 ### Count lines, Words and Characters 
 
 Next let's see how many lines/words/characters in a file, use ```wc``` command. ```wc``` is the “word count” command, it counts the number of lines, words, and characters in files.
