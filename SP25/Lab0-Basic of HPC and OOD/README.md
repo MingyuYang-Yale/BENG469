@@ -124,6 +124,16 @@ We can see what’s in our home directory by running `ls`, which stands for “l
 ```
 ls 
 ```
+```
+ls -l
+```
+```
+ls --help
+```
+The command to change locations is cd followed by a directory name to change our working directory. cd stands for “change directory”.
+```
+cd project
+```
 ### Rename a File
 draft.txt isn’t a particularly informative name, so let’s change the file’s name using mv, which is short for “move”:
 
