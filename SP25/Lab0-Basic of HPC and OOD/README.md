@@ -77,10 +77,7 @@ For the first two methods, you'll need an ssh key to access. The process of gene
 
 ### Access OOD
 
-- open OOD site for our class: 
-```
-beng469.ycrc.yale.edu
-```
+- open OOD site for our class: `beng469.ycrc.yale.edu`
 - Log in with your Yale NetID and password
    <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-login.png" alt="foo bar" title="train &amp; tracks" /></p>
 
