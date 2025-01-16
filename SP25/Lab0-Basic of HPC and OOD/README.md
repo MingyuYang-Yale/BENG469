@@ -85,15 +85,15 @@ For the first two methods, you'll need an ssh key to access. The process of gene
 
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-2025.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-- click **Clusters** -> **shell access**
+- Click **Clusters** -> **shell access**
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-ssh-login-2025.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
-- click **Files**
+- Click **Files**
 
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-storages-2025.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-#### Storage Types
+- Storage Types
 |Name|Location|Good for|Quota|
 |------|-------|------|-------|
 |Home|~/|Scripts|125GiB/Person|
@@ -101,19 +101,19 @@ For the first two methods, you'll need an ssh key to access. The process of gene
 |Scratch|~/scratch|Temporary, shared files, purged every 60 days|10TiB/Group|
 
 
-click **interactive apps** -> **Rstudio Server**
+- Click **interactive apps** -> **Rstudio Server**
 
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Rstudio-ood1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-After it’s running, then click the "connect to Rstudio Server".
+- After it’s running, then click the "connect to Rstudio Server".
 
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Rstudio-ood2.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-click **interactive apps** -> **Jupyter**
+- Click **interactive apps** -> **Jupyter**
 
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Python-ood1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-After it’s running, then click the "connect to Jupyter".
+- After it’s running, then click the "connect to Jupyter".
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Python-ood2.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ---
