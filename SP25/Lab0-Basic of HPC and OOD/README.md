@@ -259,8 +259,8 @@ rm -r -i test2
 ```
 
 
-#### Quotas
-To check our course’s cluster quotas, run:
+### Quotas
+To monitor your current storage usage & limits, run:
 ```
 getquota
 ```
