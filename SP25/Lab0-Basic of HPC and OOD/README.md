@@ -108,6 +108,7 @@ beng469.ycrc.yale.edu
 
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-rstudio-2025.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+---
 ## Navigating Files and Directories by command line
 
 ```
@@ -305,6 +306,7 @@ Intended for projects related to the Yale Center for Genome Analysis
 
 **More information about Mccleary cluster, see** <a href="https://docs.ycrc.yale.edu/clusters/mccleary/">  **here** </a>
 
+---
 ## Interactive vs. Batch
 
 #### Interactive jobs:
