@@ -287,18 +287,7 @@ getquota
 (More information about how to log in and tranfer files with globus <a href="https://docs.globus.org/how-to/get-started/?_gl=1*1s9ku91*_ga*MTczODQzNTcyMy4xNjg5Mjc2NzEw*_ga_7ZB89HGG0P*MTY5NDAzNDk5NC42LjEuMTY5NDAzNTAxMS4wLjAuMA..">  **here** </a>)
 
 ---
-## Slurm Overview
-#### Slurm manages all the details of compute node usage:
-* Prioritizing and scheduling jobs
-* Listing running and pending jobs
-* Canceling jobs
-* Checking job resource usage
 
-#### General workflow for jobs
-* You request an allocation
-* Slurm finds then grants you compute resources
-* You run commands or execute a script on those resources
-* You or your script exits and system automatically releases resources
 
 ## Partitions
 #### Public Purpose:
@@ -369,4 +358,16 @@ https://research.computing.yale.edu/r-optimization-training-video
 
 ---
 
+## Slurm Overview
+#### Slurm manages all the details of compute node usage:
+* Prioritizing and scheduling jobs
+* Listing running and pending jobs
+* Canceling jobs
+* Checking job resource usage
+
+#### General workflow for jobs
+* You request an allocation
+* Slurm finds then grants you compute resources
+* You run commands or execute a script on those resources
+* You or your script exits and system automatically releases resources
 
