@@ -108,7 +108,7 @@ beng469.ycrc.yale.edu
 
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-rstudio-2025.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-### Navigating Files and Directories by command line
+## Navigating Files and Directories by command line
 
 ```
 who
@@ -130,10 +130,41 @@ ls -l
 ```
 ls --help
 ```
-The command to change locations is cd followed by a directory name to change our working directory. cd stands for “change directory”.
+The command to change locations is `cd` followed by a directory name to change our working directory. cd stands for “change directory”.
 ```
 cd project
 ```
+brings you up
+```
+cd ..
+```
+(bring you to the previous directory you was in)
+```
+cd -
+```
+This is a very efficient way of moving back and forth between directories
+
+(tilde or squiggle line, bring you to the user’s home directory)
+```
+cd ~
+```
+`cd ~` is equivalent to `cd /home/beng469_my393`
+
+
+### Make a Directory
+Create a new directory called testdata 
+```
+mkdir testdata
+```
+(mkdir means “make directory”)
+
+### Copy a File
+The cp command works very much like mv, except it copies a file instead of moving it. 
+```
+cp students-list.txt students-list-sp22.txt
+```
+
+
 ### Rename a File
 draft.txt isn’t a particularly informative name, so let’s change the file’s name using mv, which is short for “move”:
 
