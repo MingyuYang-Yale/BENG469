@@ -191,13 +191,13 @@ tail -n 3 students-beng469-sp25.txt
 Copy a cancer gene list file to your own directory:
 
 ```
-cp /gpfs/ysm/project/beng469/beng469_my393/00.database/cancer-gene.txt ./
+cp /vast/palmer/scratch/beng469/beng469_my393/cancer-genes.txt ./
 ```
 ```
-head cancer-gene.txt
+head cancer-genes.txt
 ```
 ```
-tail cancer-gene.txt
+tail cancer-genes.txt
 ```
 
 ---
