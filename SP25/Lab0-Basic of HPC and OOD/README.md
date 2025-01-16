@@ -103,8 +103,13 @@ For the first two methods, you'll need an ssh key to access. The process of gene
 
 - click **interactive apps** -> **Rstudio Server**
 
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-rstudio-2025.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Rstduio-ood1.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Rstduio-ood2.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+- click **interactive apps** -> **Jupyter**
+
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Python-ood1.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Python-ood2.png" alt="foo bar" title="train &amp; tracks" /></p>
 ---
 ## Navigating Files and Directories by command line
 
