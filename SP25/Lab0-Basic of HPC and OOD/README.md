@@ -119,7 +119,7 @@ pwd
 ```
 (which stands for “print working directory”).
 
-
+### List Your Files and Directories
 We can see what’s in our home directory by running `ls`, which stands for “listing”:
 ```
 ls 
@@ -130,6 +130,8 @@ ls -l
 ```
 ls --help
 ```
+
+### Move Around
 The command to change locations is `cd` followed by a directory name to change our working directory. cd stands for “change directory”.
 ```
 cd project
