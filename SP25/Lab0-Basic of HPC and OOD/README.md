@@ -267,7 +267,7 @@ getquota
 * All storage areas have quotas, both size and file count
 * If you hit your limit, jobs fail
 * Home quota is per user, small
-* Project, scratch60 has a group quota shared with your group, large
+* Project, scratch has a group quota shared with your group, large
 
 
 ## Transfer Data
