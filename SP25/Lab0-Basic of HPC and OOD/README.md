@@ -94,6 +94,7 @@ For the first two methods, you'll need an ssh key to access. The process of gene
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-storages-2025.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 - Storage Types
+  
 |Name|Location|Good for|Quota|
 |------|-------|------|-------|
 |Home|~/|Scripts|125GiB/Person|
