@@ -223,7 +223,7 @@ wc cancer-genes.txt
 
 If we run wc -l instead of just wc, the output shows only the number of lines per file:
 ```
-wc -l students-list.txt
+wc -l students-beng469-sp25.txt
 ```
 You can also use -w to get only the number of words, or -c to get only the number of characters.
 
