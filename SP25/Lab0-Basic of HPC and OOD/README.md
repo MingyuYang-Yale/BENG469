@@ -138,7 +138,7 @@ cd project
 ```
 
 ### Make a Directory
-Create a new directory called Lab0 
+Create a new directory called "Lab0" 
 ```
 mkdir lab0
 ```
