@@ -159,7 +159,7 @@ cp /vast/palmer/scratch/beng469/beng469_my393/students.txt ./
 We can change the file’s name using `mv`, which is short for “move”:
 
 ```
-mv students.txt students-sp25.txt
+mv students.txt students-beng469-sp25.txt
 ```
 
 ### Look inside files: 
