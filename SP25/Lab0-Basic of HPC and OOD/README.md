@@ -243,7 +243,7 @@ Deleting Is Forever! Linux doesn’t have a trash bin that we can recover delete
 
 ### Delete a directory
 
-
+lets create a new directory "testdata" first.
 ```
 mkdir testdata
 ```
