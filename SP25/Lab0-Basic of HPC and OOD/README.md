@@ -144,6 +144,11 @@ mkdir lab0
 ```
 (mkdir means “make directory”)
 
+change directory to "Lab0"
+```
+cd Lab0
+```
+
 ### Copy a File
 The cp command to copy a file 
 ```
