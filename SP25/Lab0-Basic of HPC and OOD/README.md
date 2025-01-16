@@ -200,7 +200,6 @@ head cancer-genes.txt
 tail cancer-genes.txt
 ```
 
----
 #### ```less```
 ```
 less cancer-genes.txt
