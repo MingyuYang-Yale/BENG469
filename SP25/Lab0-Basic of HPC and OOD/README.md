@@ -115,6 +115,7 @@ click **interactive apps** -> **Jupyter**
 
 After it’s running, then click the "connect to Jupyter".
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Python-ood2.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 ---
 ## Navigating Files and Directories by command line
 
