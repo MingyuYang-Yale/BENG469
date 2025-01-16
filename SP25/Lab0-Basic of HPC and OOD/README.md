@@ -108,117 +108,6 @@ beng469.ycrc.yale.edu
 
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-rstudio-2025.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-## Transfer Data
-- GUI-based: Open OnDemand, CyberDuck, MobaXterm
-- Command line:  ```scp``` or ```rsync```
-- For large datasets : Globus
-
-#### Globus
-
-- very fast
-- automatic integrity checks
-- Restartable
-- Email notifications
-
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Globus.png" alt="foo bar" title="train &amp; tracks" /></p>
-
-(More information about how to log in and tranfer files with globus <a href="https://docs.globus.org/how-to/get-started/?_gl=1*1s9ku91*_ga*MTczODQzNTcyMy4xNjg5Mjc2NzEw*_ga_7ZB89HGG0P*MTY5NDAzNDk5NC42LjEuMTY5NDAzNTAxMS4wLjAuMA..">  **here** </a>)
-
-
-
-
----
-## Slurm Overview
-#### Slurm manages all the details of compute node usage:
-* Prioritizing and scheduling jobs
-* Listing running and pending jobs
-* Canceling jobs
-* Checking job resource usage
-
-#### General workflow for jobs
-* You request an allocation
-* Slurm finds then grants you compute resources
-* You run commands or execute a script on those resources
-* You or your script exits and system automatically releases resources
-
-## Partitions
-#### Public Purpose:
-* **day**: for most batch jobs. This is the default if you don't specify one with --partition.
-* **devel**: for jobs with which you need ongoing interaction. For example, exploratory analyses or debugging compilation.
-* **week**: for jobs that need a longer runtime than day allows.
-* **long**: for jobs that need a longer runtime than week allows.
-* **gpu**: for jobs that make use of GPUs.
-* **bigmem**: for jobs that have memory requirements other partitions can't handle.
-* **scavenge**: uses idle nodes from other partitions (can be preempted).
-
-#### PI Partitions
-These partitions are purchased by groups for private use. 
-#### YCGA partitions 
-Intended for projects related to the Yale Center for Genome Analysis
-
-**More information about Mccleary cluster, see** <a href="https://docs.ycrc.yale.edu/clusters/mccleary/">  **here** </a>
-
-## Interactive vs. Batch
-
-#### Interactive jobs:
-* For development, debugging, or interactive environments like R and Matlab
-* One or a few jobs at a time
-#### Batch jobs:
-* Non-interactive
-* Can run many jobs simultaneously
-* Usually your best choice for production computing
-
-## Software
-
-#### Modules
-common software we have installed is available using module.  
-To see available software, run module avail
-```
-module avail
-```
-```
-module avail Python
-```
-```
-module load Python
-```
-
-#### Module commands
-|Command|Function|
-|------|-------|
-|module avail|Browse all modules|
-|module avail string|Find module with string in name|
-|module load name|Make a module available for use|
-|module list|show loaded modules|
-|module unload name|unload a module|
-|module purge|unload all modules|
-
----
-
-## **Online Tutorials**
-
-https://docs.ycrc.yale.edu/resources/online-tutorials/
-
-
-https://research.computing.yale.edu/training/introduction-hpc
-
-https://research.computing.yale.edu/ycrc-bootcamp-practical-introduction-linux 
-
-https://research.computing.yale.edu/training/intro-python
-
-https://research.computing.yale.edu/r-optimization-training-video 
-
-#### Quotas
-To check our course’s cluster quotas, you can click **Utilities** -> **Quotas**
-  <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/quota-check.png" alt="foo bar" title="train &amp; tracks" /></p>
-
-* All storage areas have quotas, both size and file count
-* If you hit your limit, jobs fail
-* Home quota is per user, small
-* Project, scratch60 has a group quota shared with your group, large
----
-
-
 change directory to **project**.
 ```
 cd project
@@ -339,5 +228,115 @@ deleting we can add the “interactive” flag -i to rm which will ask us fo
 rm -r -i testdata
 ```
 This removes everything in the directory, then the directory itself, asking at each step for you to confirm the deletion.
+
+
+
+
+## Transfer Data
+- GUI-based: Open OnDemand, CyberDuck, MobaXterm
+- Command line:  ```scp``` or ```rsync```
+- For large datasets : Globus
+
+#### Globus
+
+- very fast
+- automatic integrity checks
+- Restartable
+- Email notifications
+
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Globus.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+(More information about how to log in and tranfer files with globus <a href="https://docs.globus.org/how-to/get-started/?_gl=1*1s9ku91*_ga*MTczODQzNTcyMy4xNjg5Mjc2NzEw*_ga_7ZB89HGG0P*MTY5NDAzNDk5NC42LjEuMTY5NDAzNTAxMS4wLjAuMA..">  **here** </a>)
+
+---
+## Slurm Overview
+#### Slurm manages all the details of compute node usage:
+* Prioritizing and scheduling jobs
+* Listing running and pending jobs
+* Canceling jobs
+* Checking job resource usage
+
+#### General workflow for jobs
+* You request an allocation
+* Slurm finds then grants you compute resources
+* You run commands or execute a script on those resources
+* You or your script exits and system automatically releases resources
+
+## Partitions
+#### Public Purpose:
+* **day**: for most batch jobs. This is the default if you don't specify one with --partition.
+* **devel**: for jobs with which you need ongoing interaction. For example, exploratory analyses or debugging compilation.
+* **week**: for jobs that need a longer runtime than day allows.
+* **long**: for jobs that need a longer runtime than week allows.
+* **gpu**: for jobs that make use of GPUs.
+* **bigmem**: for jobs that have memory requirements other partitions can't handle.
+* **scavenge**: uses idle nodes from other partitions (can be preempted).
+
+#### PI Partitions
+These partitions are purchased by groups for private use. 
+#### YCGA partitions 
+Intended for projects related to the Yale Center for Genome Analysis
+
+**More information about Mccleary cluster, see** <a href="https://docs.ycrc.yale.edu/clusters/mccleary/">  **here** </a>
+
+## Interactive vs. Batch
+
+#### Interactive jobs:
+* For development, debugging, or interactive environments like R and Matlab
+* One or a few jobs at a time
+#### Batch jobs:
+* Non-interactive
+* Can run many jobs simultaneously
+* Usually your best choice for production computing
+
+## Software
+
+#### Modules
+common software we have installed is available using module.  
+To see available software, run module avail
+```
+module avail
+```
+```
+module avail Python
+```
+```
+module load Python
+```
+
+#### Module commands
+|Command|Function|
+|------|-------|
+|module avail|Browse all modules|
+|module avail string|Find module with string in name|
+|module load name|Make a module available for use|
+|module list|show loaded modules|
+|module unload name|unload a module|
+|module purge|unload all modules|
+
+---
+
+## **Online Tutorials**
+
+https://docs.ycrc.yale.edu/resources/online-tutorials/
+
+
+https://research.computing.yale.edu/training/introduction-hpc
+
+https://research.computing.yale.edu/ycrc-bootcamp-practical-introduction-linux 
+
+https://research.computing.yale.edu/training/intro-python
+
+https://research.computing.yale.edu/r-optimization-training-video 
+
+#### Quotas
+To check our course’s cluster quotas, you can click **Utilities** -> **Quotas**
+  <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/quota-check.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+* All storage areas have quotas, both size and file count
+* If you hit your limit, jobs fail
+* Home quota is per user, small
+* Project, scratch60 has a group quota shared with your group, large
+---
 
 
