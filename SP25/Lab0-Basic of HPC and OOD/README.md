@@ -150,7 +150,6 @@ The cp command to copy a file
 cp /vast/palmer/scratch/beng469/beng469_my393/students.txt ./
 ```
 
-
 ### Rename a File
 We can change the file’s name using `mv`, which is short for “move”:
 
@@ -172,7 +171,7 @@ when you add ```-n``` flag can show us the line number
 ```
 cat -n students-list-sp22.txt
 ```
----
+
 #### ```head/tail```
 
 head: output the first n lines of a file. 
