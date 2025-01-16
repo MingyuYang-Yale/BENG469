@@ -235,7 +235,7 @@ rm students-beng469-sp25.txt
 ```
 This command removes files (```rm``` is short for “remove”). 
 
-Deleting Is Forever! Linux doesn’t have a trash bin that we can recover deleted files. Instead, when we delete files, they are unhooked from the file system so that their storage space on disk can be recycled. 
+Deleting Is Forever! Linux doesn’t have a trash bin that we can recover deleted files. So think twice when you use `rm` command.
 
 ```rm``` by default only works on files, not directories.
 
