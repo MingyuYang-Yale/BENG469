@@ -259,9 +259,7 @@ rm -r -i test2
 |Scratch|~/scratch|Temporary, shared files, purged every 60 days|10TiB/Group|
 
 #### Quotas
-To check our course’s cluster quotas, 
-
-run
+To check our course’s cluster quotas, run:
 ```
 getquota
 ```
