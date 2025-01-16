@@ -214,11 +214,11 @@ less cancer-genes.txt
 
 Next let's see how many lines/words/characters in a file, use ```wc``` command. ```wc``` is the “word count” command, it counts the number of lines, words, and characters in files.
 ```
-wc students-list.txt
+wc students-beng469-sp25.txt
 ```
 
 ```
-wc cancer-gene.txt
+wc cancer-genes.txt
 ```
 
 If we run wc -l instead of just wc, the output shows only the number of lines per file:
