@@ -108,7 +108,6 @@ If you wanna do the analysis on HPC after it's back online,
 | Number of CPU cores per node   | 8        |
 | Memory per CPU core in GiB   | 10       |
 | Partitions   | day        |
-| Reservation (optional)   | beng469        |
 | Additional modules (optional)  | JAGS/4.3.0-foss-2020b   |
 
 Then click Launch to launch an Rstudio session, and connect the Rstudio session once it’s started
