@@ -1,9 +1,21 @@
-```salloc```
-```module load miniconda```
+```
+salloc
+```
+```
+module load miniconda
+```
+```
 conda create -y -n cellphoneDB2 python=3.10
-conda activate cellphoneDB3
-pip install scanpy seaborn gdown jupyter 
+```
+```
+conda activate cellphoneDB
+```
+```
+pip install scanpy seaborn gdown jupyter
+```
+```
 pip install git+https://github.com/saezlab/liana-py
+```
 
 module purge
 ycrc_conda_env.sh update
