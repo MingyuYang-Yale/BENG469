@@ -39,6 +39,7 @@ List all Conda environments
 cat ~/ondemand/conda-jupyter-env-list.txt
 ```
 
-https://explore.data.humancellatlas.org/projects/f83165c5-e2ea-4d15-a5cf-33f3550bffde/project-matrices
 
-vento18_10x.processed.h5ad
+
+Data source: https://explore.data.humancellatlas.org/projects/f83165c5-e2ea-4d15-a5cf-33f3550bffde/project-matrices
+scoll down, you can find the ```vento18_10x.processed.h5ad```, this is what we need for further analysis. you can download by yourself manually. Since I already downloaded, you can use mine in ```/gpfs/gibbs/project/beng469/beng469_my393/vento18_10x.processed.h5ad```
