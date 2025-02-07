@@ -3,7 +3,7 @@ Open OOD site for our class: <a href="https://secure.its.yale.edu/cas/login?serv
 Click **Clusters** -> **shell access**
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-ssh-login-2025.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-Start an interactive job using the ```salloc```, This ensures you are running commands on a compute node rather than the login node.
+Start an interactive job using the ```salloc```, this ensures you are running commands on a compute node rather than the login node.
 ```
 salloc
 ```
