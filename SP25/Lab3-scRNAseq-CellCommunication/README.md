@@ -42,9 +42,15 @@ cat ~/ondemand/conda-jupyter-env-list.txt
 ```
 
 
-### 2. Finding the Data
+### 2. Finding and Accessing the Data
 
-Data source: https://explore.data.humancellatlas.org/projects/f83165c5-e2ea-4d15-a5cf-33f3550bffde/project-matrices
+The dataset is available at: https://explore.data.humancellatlas.org/projects/f83165c5-e2ea-4d15-a5cf-33f3550bffde/project-matrices
+
+<a href="https://explore.data.humancellatlas.org/projects/f83165c5-e2ea-4d15-a5cf-33f3550bffde/project-matrices"> Human Cell Atlas Project Matrices </a>
+
+Open the link above.
+Scroll down until you find vento18_10x.processed.h5ad.
+This file contains the processed single-cell data required for further analysis.
 
 scoll down, you can find the ```vento18_10x.processed.h5ad```, this is what we need for further analysis. you can download by yourself manually. 
 
