@@ -61,7 +61,7 @@ Copy the ```cellphondDB.ipynb``` to you lab3 folder.
 cp /gpfs/gibbs/project/beng469/beng469_my393/lab3/cellphoneDB.ipynb ~/project/lab3/
 ```
 
-
+Launch a jupyter server, select "cellphoneDB"
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-2.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
