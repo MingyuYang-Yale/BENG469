@@ -48,12 +48,15 @@ Select **cellphoneDB** as the environment, keep all other setting as default.
 
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-3.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-After connect to Jupyter, Click **project**  -> **lab3**
+Connect to Jupyter, Click **project**  -> **lab3**
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-4.png" alt="foo bar" title="train &amp; tracks" /></p>
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-5.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 Open the **cellphoneDB.ipynb**
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-6.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+**Run the Notebook**, Execute the cells step by step to complete the analysis.
+
 
 ### 3. Finding the Data
 
