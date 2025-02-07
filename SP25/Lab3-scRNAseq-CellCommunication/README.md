@@ -12,7 +12,7 @@ The file is available at:
 /gpfs/gibbs/project/beng469/beng469_my393/vento18_10x.processed.h5ad
 ```
 
-### 2. Setting Up the Environment
+### 2. Setting Up the Environment for CellPhoneDB
 
 Open OOD site for our class: <a href="https://secure.its.yale.edu/cas/login?service=https%3a%2f%2fbeng469.ycrc.yale.edu%2fpun%2fsys%2fdashboard"> **beng469.ycrc.yale.edu** </a>
 
