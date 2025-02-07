@@ -1,4 +1,4 @@
-### Setting Up the Environment
+### 1. Setting Up the Environment
 
 Open OOD site for our class: <a href="https://secure.its.yale.edu/cas/login?service=https%3a%2f%2fbeng469.ycrc.yale.edu%2fpun%2fsys%2fdashboard"> **beng469.ycrc.yale.edu** </a>
 
@@ -42,6 +42,7 @@ cat ~/ondemand/conda-jupyter-env-list.txt
 ```
 
 
+### 2. Finding the Data
 
 Data source: https://explore.data.humancellatlas.org/projects/f83165c5-e2ea-4d15-a5cf-33f3550bffde/project-matrices
 scoll down, you can find the ```vento18_10x.processed.h5ad```, this is what we need for further analysis. you can download by yourself manually. Since I already downloaded, you can use mine in ```/gpfs/gibbs/project/beng469/beng469_my393/vento18_10x.processed.h5ad```
