@@ -1,4 +1,18 @@
-### 1. Setting Up the Environment
+### 1. Finding the Data
+
+The dataset is available at: https://explore.data.humancellatlas.org/projects/f83165c5-e2ea-4d15-a5cf-33f3550bffde/project-matrices
+
+Open the link above. Scroll down until you find ```vento18_10x.processed.h5ad```. This file contains the processed single-cell data required for further analysis.
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-data.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+#### Using the Pre-downloaded File:
+If you want to save time, you can use the version I have already downloaded.
+The file is available at: 
+```
+/gpfs/gibbs/project/beng469/beng469_my393/vento18_10x.processed.h5ad
+```
+
+### 2. Setting Up the Environment
 
 Open OOD site for our class: <a href="https://secure.its.yale.edu/cas/login?service=https%3a%2f%2fbeng469.ycrc.yale.edu%2fpun%2fsys%2fdashboard"> **beng469.ycrc.yale.edu** </a>
 
@@ -42,16 +56,4 @@ cat ~/ondemand/conda-jupyter-env-list.txt
 ```
 
 
-### 2. Finding and Accessing the Data
 
-The dataset is available at: https://explore.data.humancellatlas.org/projects/f83165c5-e2ea-4d15-a5cf-33f3550bffde/project-matrices
-
-Open the link above. Scroll down until you find ```vento18_10x.processed.h5ad```. This file contains the processed single-cell data required for further analysis.
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-data.png" alt="foo bar" title="train &amp; tracks" /></p>
-
-#### Using the Pre-downloaded File:
-If you want to save time, you can use the version I have already downloaded.
-The file is available at: 
-```
-/gpfs/gibbs/project/beng469/beng469_my393/vento18_10x.processed.h5ad
-```
