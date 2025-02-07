@@ -11,7 +11,7 @@ salloc
 module load miniconda
 ```
 ```
-conda create -y -n cellphoneDB2 python=3.10
+conda create -y -n cellphoneDB python=3.10
 ```
 ```
 conda activate cellphoneDB
