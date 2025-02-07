@@ -55,5 +55,9 @@ List all Conda environments
 cat ~/ondemand/conda-jupyter-env-list.txt
 ```
 
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-1.png" alt="foo bar" title="train &amp; tracks" /></p>
+
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-2.png" alt="foo bar" title="train &amp; tracks" /></p>
+
 
 
