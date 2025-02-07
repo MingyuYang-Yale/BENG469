@@ -36,9 +36,6 @@ Update Conda Environments for OOD
 ```
 ycrc_conda_env.sh update
 ```
-
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-1.png" alt="foo bar" title="train &amp; tracks" /></p>
-
 2. Setting Up the Jupyter Server
 Copy the ```cellphondDB.ipynb``` notebook to your ```lab3``` folder.
 ```
