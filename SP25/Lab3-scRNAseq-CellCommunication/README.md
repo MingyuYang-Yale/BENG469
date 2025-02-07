@@ -65,7 +65,7 @@ Launch a jupyter server, select "cellphoneDB", and Launch, all the other part ca
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-2.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-3.png" alt="foo bar" title="train &amp; tracks" /></p>
-Click **project**  -> **lab3*
+Click **project**  -> **lab3**
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-4.png" alt="foo bar" title="train &amp; tracks" /></p>
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-5.png" alt="foo bar" title="train &amp; tracks" /></p>
 Open the **cellphoneDB.ipynb**
