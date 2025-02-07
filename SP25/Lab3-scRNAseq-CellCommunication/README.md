@@ -36,7 +36,7 @@ Update Conda Environments for OOD
 ```
 ycrc_conda_env.sh update
 ```
-2. Setting Up the Jupyter Server
+### 2. Setting Up the Jupyter Server
 Copy the ```cellphondDB.ipynb``` notebook to your ```lab3``` folder.
 ```
 cp /gpfs/gibbs/project/beng469/beng469_my393/lab3/cellphoneDB.ipynb ~/project/lab3/
