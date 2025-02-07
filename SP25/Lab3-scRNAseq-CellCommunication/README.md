@@ -48,8 +48,7 @@ Select **cellphoneDB** as the environment, keep all other setting as default.
 
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-3.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-#### Open the Notebook
-Click **project**  -> **lab3**
+After connect to Jupyter, Click **project**  -> **lab3**
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-4.png" alt="foo bar" title="train &amp; tracks" /></p>
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-5.png" alt="foo bar" title="train &amp; tracks" /></p>
 
