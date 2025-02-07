@@ -17,40 +17,41 @@ Create a new Conda environment named CellPhoneDB
 ```
 conda create -y -n cellphoneDB python=3.10
 ```
-Activate the virtual environment
+Activate the Virtual Environment
 ```
 conda activate cellphoneDB
 ```
-Install necessary Python packages
+Install Required Python packages
 ```
 pip install scanpy seaborn gdown jupyter
 ```
 ```
 pip install git+https://github.com/saezlab/liana-py
 ```
-Purge all loaded modules
+Purge Loaded Modules
 ```
 module purge
 ```
-Update Conda environments for OOD
+Update Conda Environments for OOD
 ```
 ycrc_conda_env.sh update
 ```
-List all Conda environments 
-```
-cat ~/ondemand/conda-jupyter-env-list.txt
-```
+
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-Copy the ```cellphondDB.ipynb``` to you lab3 folder.
+2. Setting Up the Jupyter Server
+Copy the ```cellphondDB.ipynb``` notebook to your ```lab3``` folder.
 ```
 cp /gpfs/gibbs/project/beng469/beng469_my393/lab3/cellphoneDB.ipynb ~/project/lab3/
 ```
-Launch a jupyter server, select "cellphoneDB", and Launch, all the other part can use default parameters.
+Launch a jupyter server
+Select **cellphoneDB** as the environment, keep all other setting as default.
+
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-2.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-3.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+#### Open the Notebook
 Click **project**  -> **lab3**
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-4.png" alt="foo bar" title="train &amp; tracks" /></p>
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-5.png" alt="foo bar" title="train &amp; tracks" /></p>
@@ -58,7 +59,7 @@ Click **project**  -> **lab3**
 Open the **cellphoneDB.ipynb**
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-6.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-### 2. Finding the Data
+### 3. Finding the Data
 
 The dataset is available at: https://explore.data.humancellatlas.org/projects/f83165c5-e2ea-4d15-a5cf-33f3550bffde/project-matrices
 
