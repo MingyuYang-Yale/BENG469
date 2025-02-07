@@ -26,6 +26,7 @@ pip install scanpy seaborn gdown jupyter
 ```
 pip install git+https://github.com/saezlab/liana-py
 ```
+Purge all loaded modules
 ```
 module purge
 ```
