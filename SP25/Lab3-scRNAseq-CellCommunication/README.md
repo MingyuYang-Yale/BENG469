@@ -47,6 +47,7 @@ cat ~/ondemand/conda-jupyter-env-list.txt
 The dataset is available at: https://explore.data.humancellatlas.org/projects/f83165c5-e2ea-4d15-a5cf-33f3550bffde/project-matrices
 
 Open the link above. Scroll down until you find ```vento18_10x.processed.h5ad```. This file contains the processed single-cell data required for further analysis.
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-data.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 #### Using the Pre-downloaded File:
 If you want to save time, you can use the version I have already downloaded.
