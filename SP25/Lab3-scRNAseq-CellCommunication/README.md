@@ -3,19 +3,23 @@ Open OOD site for our class: <a href="https://secure.its.yale.edu/cas/login?serv
 Click **Clusters** -> **shell access**
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-ssh-login-2025.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-Start an interactive job using the salloc
+Start an interactive job using the ```salloc```, This ensures you are running commands on a compute node rather than the login node.
 ```
 salloc
 ```
+Load the Miniconda module, Miniconda is needed to create and manage Python environments.
 ```
 module load miniconda
 ```
+Create a new Conda environment named CellPhoneDB
 ```
 conda create -y -n cellphoneDB python=3.10
 ```
+Activate the virtual environment
 ```
 conda activate cellphoneDB
 ```
+Install necessary Python packages
 ```
 pip install scanpy seaborn gdown jupyter
 ```
@@ -25,9 +29,11 @@ pip install git+https://github.com/saezlab/liana-py
 ```
 module purge
 ```
+Update Conda environments for OOD
 ```
 ycrc_conda_env.sh update
 ```
+List all Conda environments 
 ```
 cat ~/ondemand/conda-jupyter-env-list.txt
 ```
