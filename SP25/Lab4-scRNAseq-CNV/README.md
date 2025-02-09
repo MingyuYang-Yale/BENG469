@@ -20,7 +20,7 @@ Then create a new directory called "**Lab4**" and upload the files ("CopyKAT.Rmd
 ### During the lab session (Thursday):
 
 
-1. Go to [beng469.ycrc.yale.edu](https://beng469.ycrc.yale.edu) in your web browser (make sure that you are on Yale Secure Network or Yale VPN).
+1. Open OOD at [beng469.ycrc.yale.edu](https://beng469.ycrc.yale.edu) in your web browser (make sure that you are on Yale Secure Network or Yale VPN).
 2. Copy codes and datasets:
 ```
 cp -r /gpfs/gibbs/project/beng469/beng469_my393/Lab4/ ~/project
