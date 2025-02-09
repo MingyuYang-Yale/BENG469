@@ -4,8 +4,7 @@ In this computational lab, we will go through examples of calculating single cel
 
 
 #### 2. Download files:
-Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity" from Files on Canvas.
-<p><img width="1000" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/download-1.png" alt="foo bar" title="train &amp; tracks" /></p>
+Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity" from Files on Canvas, then upload it to HPC.
 
 **Alternatively**, you can use the following command line to create "Lab4" folder and copy codes and datasets to this folder:
 ```
