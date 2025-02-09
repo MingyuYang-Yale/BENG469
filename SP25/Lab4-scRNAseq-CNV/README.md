@@ -3,10 +3,7 @@
 In this computational lab, we will go through examples of calculating single cell copy number profiles from 10X single cell RNA data, predicting tumor and normal cells, and inferring tumor subclones from using [CopyKAT](https://github.com/navinlabcode/copykat) and [InferCNV](https://github.com/broadinstitute/inferCNV/wiki). We will try to replicate the results presented in Figure 2a and 2c from the [Paper](https://www.nature.com/articles/s41587-020-00795-2) discussed this Tuesday.
 
 
-#### 2. Download files:
-Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity" from Files on Canvas, then upload it to HPC.
-
-**Alternatively**, you can use the following command to copy codes and datasets to your folder:
+#### 2. Copy codes and datasets:
 ```
 cp -r /gpfs/gibbs/project/beng469/beng469_my393/Lab4/ ~/project
 ```
