@@ -4,11 +4,13 @@ In this computational lab, we will go through examples of calculating single cel
 
 ### Pre-lab task:
 (Estimated completion time: 3 mins)
-1. Download "lab2-scRNAseq-TrajAnalysis.Rproj", "Trajectory_monocle2.Rmd", and "Trajectory_monocle3.Rmd" under 9-21-2023_L2_scRNA-seq(2)cell trajectory analysis/ from Files on Canvas.
+1. Download "CopyKAT.Rmd", "InferCNV.Rmd" under 2-13-2025_L4_scRNA-seq(4) CNV and clonal heterogeneity/ from Files on Canvas.
 ![plot](./pic1.png)
 
 2.Upload the files to your project folder on HPC:
-Open McCleary OnDemand at beng469.ycrc.yale.edu in a browser window, and go to Files menu and click open your project folder (/gpfs/gibbs/project/beng469/beng469_YourNetID). Then create a new directory called "lab2-scRNAseq-TrajAnalysis" and upload the files ("lab2-scRNAseq-TrajAnalysis.Rproj", "Trajectory_monocle2.Rmd", and "Trajectory_monocle3.Rmd") under this new directory.
+Open McCleary OnDemand at [beng469.ycrc.yale.edu](https://beng469.ycrc.yale.edu)  in a browser window, and go to **Files** menu and click open your project folder (/gpfs/gibbs/project/beng469/beng469_YourNetID). 
+
+Then create a new directory called "**Lab4**" and upload the files ("CopyKAT.Rmd", "InferCNV.Rmd") under this new directory.
 
 ### During the lab session (Thursday):
 
