@@ -2,11 +2,22 @@
 
 In this computational lab, we will go through examples of calculating single cell copy number profiles from 10X single cell RNA data, predicting tumor and normal cells, and inferring tumor subclones from using [CopyKAT](https://github.com/navinlabcode/copykat) and [InferCNV](https://github.com/broadinstitute/inferCNV/wiki). We will try to replicate the results presented in Figure 2a and 2c from the [Paper](https://www.nature.com/articles/s41587-020-00795-2) discussed this Tuesday.
 
-#### 1. Prerequisites:
+## Using HPC 
 
-- HPC is currently under maintenance, so I will be conducting the lab session using my personal laptop for demonstration purposes.
-- The files and data are uploaded to Canvas, you can download and upload them to HPC once it's back online, and run the analysis after the lab session.
-- **Alternatively**, to actively participate during the session, you can [install R](https://cran.r-project.org/) and [R Studio](https://posit.co/download/rstudio-desktop/) on your own laptop prior the lab session and follow the instructions below on how to run the analysis locally on your own computer.
+1. Go to [beng469.ycrc.yale.edu](https://beng469.ycrc.yale.edu) in your web browser (make sure that you are on Yale Secure Network or Yale VPN).
+
+2. Go to the Rstudio-server initialization page, and specify the parameters/resources as follows:
+
+| Parameters      | Values |
+| ----------- | ----------- |
+| R version      | R/4.2.0-foss-2020b       |
+| Number of hours   | 6        |
+| Number of CPU cores per node   | 8        |
+| Memory per CPU core in GiB   | 10       |
+| Partitions   | day        |
+| Additional modules (optional)  | JAGS/4.3.0-foss-2020b   |
+
+Then click Launch to launch an Rstudio session, and connect the Rstudio session once it’s started
   
 #### 2. Download files:
 Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity" from Files on Canvas.
@@ -93,21 +104,3 @@ Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity
 
 
 
-## Using HPC 
-
-If you wanna do the analysis on HPC after it's back online, 
-
-1. Go to [beng469.ycrc.yale.edu](https://beng469.ycrc.yale.edu) in your web browser (make sure that you are on Yale Secure Network or Yale VPN).
-
-2. Go to the Rstudio-server initialization page, and specify the parameters/resources as follows:
-
-| Parameters      | Values |
-| ----------- | ----------- |
-| R version      | R/4.2.0-foss-2020b       |
-| Number of hours   | 6        |
-| Number of CPU cores per node   | 8        |
-| Memory per CPU core in GiB   | 10       |
-| Partitions   | day        |
-| Additional modules (optional)  | JAGS/4.3.0-foss-2020b   |
-
-Then click Launch to launch an Rstudio session, and connect the Rstudio session once it’s started
