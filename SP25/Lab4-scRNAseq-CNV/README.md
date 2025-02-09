@@ -34,6 +34,8 @@ Go to the Rstudio-server initialization page, and specify the parameters/resourc
 | Additional modules (optional)  | JAGS/4.3.0-foss-2020b   |
 
 Then click Launch to launch an Rstudio session, and connect the Rstudio session once it’s started
+
+![plot](./pic4.png)
   
 
 #### 5. Open both 'CopyKAT.Rmd' and 'InferCNV.Rmd' by clicking on them.
