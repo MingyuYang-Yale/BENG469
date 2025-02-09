@@ -10,8 +10,10 @@ In this computational lab, we will go through examples of calculating single cel
 2.Upload the files to your project folder on HPC:
 
 Open McCleary OnDemand at [beng469.ycrc.yale.edu](https://beng469.ycrc.yale.edu)  in a browser window, and go to **Files** menu and click open your project folder (/gpfs/gibbs/project/beng469/beng469_YourNetID). 
+![plot](./pic2.png)
 
 Then create a new directory called "**Lab4**" and upload the files ("CopyKAT.Rmd", "InferCNV.Rmd") under this new directory.
+![plot](./pic3.png)
 
 ### During the lab session (Thursday):
 
