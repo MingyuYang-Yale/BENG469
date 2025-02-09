@@ -2,14 +2,24 @@
 
 In this computational lab, we will go through examples of calculating single cell copy number profiles from 10X single cell RNA data, predicting tumor and normal cells, and inferring tumor subclones from using [CopyKAT](https://github.com/navinlabcode/copykat) and [InferCNV](https://github.com/broadinstitute/inferCNV/wiki). We will try to replicate the results presented in Figure 2a and 2c from the [Paper](https://www.nature.com/articles/s41587-020-00795-2) discussed this Tuesday.
 
-#### Using HPC
+### Pre-lab task:
+(Estimated completion time: 3 mins)
+1. Download "lab2-scRNAseq-TrajAnalysis.Rproj", "Trajectory_monocle2.Rmd", and "Trajectory_monocle3.Rmd" under 9-21-2023_L2_scRNA-seq(2)cell trajectory analysis/ from Files on Canvas.
+![plot](./pic1.png)
+
+2.Upload the files to your project folder on HPC:
+Open McCleary OnDemand at beng469.ycrc.yale.edu in a browser window, and go to Files menu and click open your project folder (/gpfs/gibbs/project/beng469/beng469_YourNetID). Then create a new directory called "lab2-scRNAseq-TrajAnalysis" and upload the files ("lab2-scRNAseq-TrajAnalysis.Rproj", "Trajectory_monocle2.Rmd", and "Trajectory_monocle3.Rmd") under this new directory.
+
+### During the lab session (Thursday):
+
 
 1. Go to [beng469.ycrc.yale.edu](https://beng469.ycrc.yale.edu) in your web browser (make sure that you are on Yale Secure Network or Yale VPN).
 2. Copy codes and datasets:
 ```
 cp -r /gpfs/gibbs/project/beng469/beng469_my393/Lab4/ ~/project
 ```
-3. Go to the Rstudio-server initialization page, and specify the parameters/resources as follows:
+3. Launch an Rstudio-server session:
+Go to the Rstudio-server initialization page, and specify the parameters/resources as follows:
 
 | Parameters      | Values |
 | ----------- | ----------- |
