@@ -14,7 +14,7 @@ In this computational lab, we will go through examples of calculating single cel
 | Number of hours   | 6        |
 | Number of CPU cores per node   | 8        |
 | Memory per CPU core in GiB   | 10       |
-| Partitions   | day        |
+| Partitions   | day or devel       |
 | Additional modules (optional)  | JAGS/4.3.0-foss-2020b   |
 
 Then click Launch to launch an Rstudio session, and connect the Rstudio session once it’s started
