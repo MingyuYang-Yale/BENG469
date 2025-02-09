@@ -17,9 +17,9 @@ Download the folder "10-5-2023 _ L4 _ scRNA-seq (4) CNV and clonal heterogeneity
 | ----------- | ----------- |
 | R version      | R/4.2.0-foss-2020b       |
 | Number of hours   | 6        |
-| Number of CPU cores per node   | 8        |
+| Number of CPU cores per node   | 4        |
 | Memory per CPU core in GiB   | 10       |
-| Partitions   | day or devel       |
+| Partitions   | day       |
 | Additional modules (optional)  | JAGS/4.3.0-foss-2020b   |
 
 Then click Launch to launch an Rstudio session, and connect the Rstudio session once it’s started
