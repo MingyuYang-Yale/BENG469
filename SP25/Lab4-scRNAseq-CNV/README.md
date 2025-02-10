@@ -19,7 +19,6 @@ Then create a new directory called "**Lab4**" and upload the files ("CopyKAT.Rmd
 
 ### During the lab session (Thursday):
 
-
 1. Open OOD at [beng469.ycrc.yale.edu](https://beng469.ycrc.yale.edu) in your web browser (make sure that you are on Yale Secure Network or Yale VPN).
 2. Launch an Rstudio-server session:
 Go to the Rstudio-server initialization page, and specify the parameters/resources as follows:
@@ -37,7 +36,8 @@ Then click Launch to launch an Rstudio session, and connect the Rstudio session 
 
 ![plot](./pic4.png)
 
-3.Open the R markdown tutorials:
+3. Open the R markdown tutorials:
+
 Once you are inside Rstudio, use the file navigation panel at the bottom right to click open your project/ folder then the Lab4/ folder you created, then click open “CopyKAT.Rmd” and “InferCNV.Rmd” . We will walk through the basic analysis steps from there.
 
 --- 
