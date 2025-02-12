@@ -2,7 +2,7 @@
 
 In this computational lab, we will go through examples of calculating single cell copy number profiles from 10X single cell RNA data, predicting tumor and normal cells, and inferring tumor subclones from using [CopyKAT](https://github.com/navinlabcode/copykat) and [InferCNV](https://github.com/broadinstitute/inferCNV/wiki). We will try to replicate the results presented in Figure 2a and 2c from the [Paper](https://www.nature.com/articles/s41587-020-00795-2) discussed this Tuesday.
 
-<p><img width="600" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP25/Lab4-scRNAseq-CNV/pic0.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP25/Lab4-scRNAseq-CNV/pic0.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ### Pre-lab task:
 (Estimated completion time: 3~5 mins)
