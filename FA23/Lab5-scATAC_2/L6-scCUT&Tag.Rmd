@@ -1,0 +1,307 @@
+---
+title: "scCUT_Tag"
+output: html_document
+date: "2023-10-23"
+---
+# BiocManager::install("BSgenome.Mmusculus.UCSC.mm10")
+
+### Run the code below to clean the environment load the library
+```{r}
+rm(list = ls())
+.libPaths("/gpfs/gibbs/project/beng469/beng469_sb2723/R/x86_64-pc-linux-gnu-library/4.2" )
+```
+
+### Load packages (check package installation)
+```{r message=FALSE, warning=FALSE}
+library(Signac) 
+library(Seurat)
+library(monocle3)
+library(GenomeInfoDb)
+library(BSgenome.Mmusculus.UCSC.mm10)
+library(EnsDb.Mmusculus.v75)
+library(ggplot2)
+library(patchwork)
+library(SeuratWrappers)
+library(cicero)
+library(JASPAR2020)
+library(TFBSTools)
+library(ggseqlogo)
+set.seed(1234)
+```
+
+### Load the Seurat object for mouse brain
+### https://stuartlab.org/signac/articles/mouse_brain_vignette
+```{r}
+# counts <- Read10X_h5("/gpfs/gibbs/project/beng469/beng469_sb2723/L6_scCUT_Tag/atac_v1_adult_brain_fresh_5k_filtered_peak_bc_matrix.h5")
+# metadata <- read.csv(
+#   file = "/gpfs/gibbs/project/beng469/beng469_sb2723/L6_scCUT_Tag/atac_v1_adult_brain_fresh_5k_singlecell.csv",
+#   header = TRUE,
+#   row.names = 1
+# )
+# 
+# brain_assay <- CreateChromatinAssay(
+#   counts = counts,
+#   sep = c(":", "-"),
+#   genome = "mm10",
+#   fragments = '/gpfs/gibbs/project/beng469/beng469_sb2723/L6_scCUT_Tag/atac_v1_adult_brain_fresh_5k_fragments.tsv.gz',
+#   min.cells = 1
+# )
+# ## Computing hash
+# brain <- CreateSeuratObject(
+#   counts = brain_assay,
+#   assay = 'peaks',
+#   project = 'ATAC',
+#   meta.data = metadata
+# )
+# # extract gene annotations from EnsDb
+# annotations <- GetGRangesFromEnsDb(ensdb = EnsDb.Mmusculus.v75)
+# 
+# # change to UCSC style since the data was mapped to hg19
+# seqlevels(annotations) <- paste0('chr', seqlevels(annotations))
+# genome(annotations) <- "mm10"
+# 
+# # add the gene information to the object
+# Annotation(brain) <- annotations
+# 
+# 
+# ## Next we compute some useful per-cell QC metrics.
+# brain <- NucleosomeSignal(object = brain)
+# brain$nucleosome_group <- ifelse(brain$nucleosome_signal > 4, 'NS > 4', 'NS < 4')
+# FragmentHistogram(object = brain, group.by = 'nucleosome_group', region = 'chr1-1-10000000')
+# 
+# brain <- TSSEnrichment(brain, fast = FALSE)
+# brain$high.tss <- ifelse(brain$TSS.enrichment > 2, 'High', 'Low')
+# TSSPlot(brain, group.by = 'high.tss') + NoLegend()
+# 
+# brain$pct_reads_in_peaks <- brain$peak_region_fragments / brain$passed_filters * 100
+# brain$blacklist_ratio <- brain$blacklist_region_fragments / brain$peak_region_fragments
+# 
+# VlnPlot(
+#   object = brain,
+#   features = c('pct_reads_in_peaks', 'peak_region_fragments',
+#                'TSS.enrichment', 'blacklist_ratio', 'nucleosome_signal'),
+#   pt.size = 0.1,
+#   ncol = 5
+# )
+# 
+# brain <- subset(
+#   x = brain,
+#   subset = peak_region_fragments > 3000 &
+#     peak_region_fragments < 100000 &
+#     pct_reads_in_peaks > 40 &
+#     blacklist_ratio < 0.025 &
+#     nucleosome_signal < 4 &
+#     TSS.enrichment > 2
+# )
+# brain
+# saveRDS(brain, file="/gpfs/gibbs/project/beng469/beng469_sb2723/L6_scCUT_Tag/adult_mouse_brain.rds")
+
+brain <- readRDS("/gpfs/gibbs/project/beng469/beng469_sb2723/L6_scCUT_Tag/adult_mouse_brain.rds")
+brain
+```
+
+### Normalization and linear dimensional reduction
+```{r}
+brain <- RunTFIDF(brain)
+brain <- FindTopFeatures(brain, min.cutoff = 'q0')
+brain <- RunSVD(object = brain)
+DepthCor(brain)
+```
+```{r}
+brain <- RunUMAP(
+  object = brain,
+  reduction = 'lsi',
+  dims = 2:30
+)
+brain <- FindNeighbors(
+  object = brain,
+  reduction = 'lsi',
+  dims = 2:30
+)
+brain <- FindClusters(
+  object = brain,
+  algorithm = 3,
+  resolution = 1.2,
+  verbose = FALSE
+)
+
+DimPlot(object = brain, label = TRUE) + NoLegend()
+```
+
+### Create a gene activity matrix
+```{r}
+# compute gene activities
+gene.activities <- GeneActivity(brain)
+
+# add the gene activity matrix to the Seurat object as a new assay
+brain[['RNA']] <- CreateAssayObject(counts = gene.activities)
+brain <- NormalizeData(
+  object = brain,
+  assay = 'RNA',
+  normalization.method = 'LogNormalize',
+  scale.factor = median(brain$nCount_RNA)
+)
+
+DefaultAssay(brain) <- 'RNA'
+FeaturePlot(
+  object = brain,
+  features = c('Sst','Pvalb',"Gad2","Neurod6","Rorb","Syt6"),
+  pt.size = 0.1,
+  max.cutoff = 'q95',
+  ncol = 3
+)
+```
+### Integrating with scRNA-seq data
+
+<!-- # ```{r} -->
+<!-- # # Load the pre-processed scRNA-seq data -->
+<!-- # allen_rna <- readRDS("/gpfs/gibbs/project/beng469/beng469_sb2723/L6_scCUT_Tag/allen_brain.rds") -->
+<!-- # allen_rna <- FindVariableFeatures( -->
+<!-- #   object = allen_rna, -->
+<!-- #   nfeatures = 5000 -->
+<!-- # ) -->
+<!-- #  -->
+<!-- # transfer.anchors <- FindTransferAnchors( -->
+<!-- #   reference = allen_rna, -->
+<!-- #   query = brain, -->
+<!-- #   reduction = 'cca', -->
+<!-- #   dims = 1:40 -->
+<!-- # ) -->
+<!-- #  -->
+<!-- # predicted.labels <- TransferData( -->
+<!-- #   anchorset = transfer.anchors, -->
+<!-- #   refdata = allen_rna$subclass, -->
+<!-- #   weight.reduction = brain[['lsi']], -->
+<!-- #   dims = 2:30 -->
+<!-- # ) -->
+<!-- #  -->
+<!-- # brain <- AddMetaData(object = brain, metadata = predicted.labels) -->
+<!-- #  -->
+<!-- # saveRDS(brain, file="/gpfs/gibbs/project/beng469/beng469_sb2723/L6_scCUT_Tag/adult_mouse_brain_scRNA.rds") -->
+<!-- # ``` -->
+
+
+```{r}
+allen_rna <- readRDS("/gpfs/gibbs/project/beng469/beng469_sb2723/L6_scCUT_Tag/allen_brain.rds") 
+brain <- readRDS("/gpfs/gibbs/project/beng469/beng469_sb2723/L6_scCUT_Tag/adult_mouse_brain_scRNA.rds")
+
+plot1 <- DimPlot(allen_rna, group.by = 'subclass', label = TRUE, repel = TRUE) + NoLegend() + ggtitle('scRNA-seq')
+plot2 <- DimPlot(brain, group.by = 'predicted.id', label = TRUE, repel = TRUE) + NoLegend() + ggtitle('scATAC-seq')
+plot1 + plot2
+```
+
+### Motif analysis
+### Sequence motifs are short, recurring patterns in DNA that are presumed to have a biological function. Often they indicate sequence-specific binding sites for proteins such as nucleases and transcription factors (TF). (https://www.nature.com/articles/nbt0406-423#:~:text=Sequence%20motifs%20are%20short%2C%20recurring,and%20transcription%20factors%20(TF).)
+
+```{r}
+mouse_brain <- readRDS("/gpfs/gibbs/project/beng469/beng469_sb2723/L6_scCUT_Tag/adult_mouse_brain_scRNA.rds")
+mouse_brain
+```
+
+```{r}
+p1 <- DimPlot(mouse_brain, label = TRUE, pt.size = 0.1) + NoLegend()
+p1
+```
+
+### Adding motif information to the Seurat object
+### https://stuartlab.org/signac/articles/motif_vignette
+# To add the DNA sequence motif information required for motif analyses, we can run the AddMotifs() function:
+<!-- # ```{r} -->
+<!-- # DefaultAssay(mouse_brain) <- "peaks" -->
+<!-- #  -->
+<!-- # # Get a list of motif position frequency matrices from the JASPAR database -->
+<!-- # pfm <- getMatrixSet( -->
+<!-- #   x = JASPAR2020, -->
+<!-- #   opts = list(collection = "CORE", tax_group = 'vertebrates', all_versions = FALSE) -->
+<!-- # ) -->
+<!-- #  -->
+<!-- # # add motif information -->
+<!-- # mouse_brain <- AddMotifs( -->
+<!-- #   object = mouse_brain, -->
+<!-- #   genome = BSgenome.Mmusculus.UCSC.mm10, -->
+<!-- #   pfm = pfm -->
+<!-- # ) -->
+<!-- #  -->
+<!-- # saveRDS(mouse_brain, file="/gpfs/gibbs/project/beng469/beng469_sb2723/L6_scCUT_Tag/adult_mouse_brain_motif_1.rds") -->
+<!-- # ``` -->
+
+### Computing motif activities
+<!-- We can also compute a per-cell motif activity score by running chromVAR. This allows us to visualize motif activities per cell, and also provides an alternative method of identifying differentially-active motifs between cell types. -->
+
+<!-- ChromVAR identifies motifs associated with variability in chromatin accessibility between cells. See the chromVAR paper for a complete description of the method. -->
+```{r}
+# library(BiocParallel)
+# register(MulticoreParam(16))
+# #mouse_brain <- readRDS("/gpfs/gibbs/project/beng469/beng469_sb2723/L6_scCUT_Tag/adult_mouse_brain_motif_1.rds")
+# mouse_brain <- RunChromVAR(
+#   object = mouse_brain,
+#   genome = BSgenome.Mmusculus.UCSC.mm10
+# )
+
+#saveRDS(mouse_brain, file="/gpfs/gibbs/project/beng469/beng469_sb2723/L6_scCUT_Tag/adult_mouse_brain_chromVAR.rds")
+
+mouse_brain <- readRDS("/gpfs/gibbs/project/beng469/beng469_sb2723/L6_scCUT_Tag/adult_mouse_brain_chromVAR.rds")
+
+DefaultAssay(mouse_brain) <- 'chromvar'
+
+# look at the activity of Mef2c, change to Spi1, and more. lower cap is for mouse genome
+p2 <- FeaturePlot(
+  object = mouse_brain,
+  features = "MA0497.1",
+  min.cutoff = 'q10',
+  max.cutoff = 'q90',
+  pt.size = 0.1
+)
+p1 + p2
+```
+
+
+```{r}
+differential.activity <- FindMarkers(
+  object = mouse_brain,
+  ident.1 = '1',
+  ident.2 = '2',
+  only.pos = TRUE,
+  mean.fxn = rowMeans,
+  fc.name = "avg_diff"
+)
+
+MotifPlot(
+  object = mouse_brain,
+  motifs = head(rownames(differential.activity)),
+  assay = 'peaks'
+)
+```
+
+
+<!-- ### Finding overrepresented motifs -->
+<!-- ##To identify potentially important cell-type-specific regulatory sequences, we can search for DNA motifs that are overrepresented in a set of peaks that are differentially accessible between cell types. -->
+<!-- ```{r} -->
+<!-- da_peaks <- FindMarkers( -->
+<!--   object = mouse_brain, -->
+<!--   ident.1 = '1', -->
+<!--   ident.2 = '2', -->
+<!--   only.pos = TRUE, -->
+<!--   test.use = 'LR', -->
+<!--   min.pct = 0.05, -->
+<!--   latent.vars = 'nCount_peaks' -->
+<!-- ) -->
+
+<!-- # get top differentially accessible peaks -->
+<!-- top.da.peak <- rownames(da_peaks[da_peaks$p_val < 0.005, ]) -->
+<!-- ``` -->
+
+<!-- ```{r} -->
+<!-- # test enrichment -->
+<!-- enriched.motifs <- FindMotifs( -->
+<!--   object = mouse_brain, -->
+<!--   features = top.da.peak -->
+<!-- ) -->
+<!-- ``` -->
+
+<!-- ```{r} -->
+<!-- MotifPlot( -->
+<!--   object = mouse_brain, -->
+<!--   motifs = head(rownames(enriched.motifs)) -->
+<!-- ) -->
+<!-- ``` -->
