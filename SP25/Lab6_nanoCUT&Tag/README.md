@@ -33,13 +33,3 @@ Then click Launch to launch an Rstudio session, and connect the Rstudio session 
 
 Once you are inside Rstudio, use the file navigation panel at the bottom right to click open your **project**/ folder then the **Lab4**/ folder you created, then click open “**L6_nanoCUTTag.Rmd**” . 
 
-#### Clonal Subpopulation Identification
-
-- Apply hierarchical clustering to single-cell copy number data.
-- Identify the largest distance between aneuploid tumor cells and diploid stromal cells.
-- If genomic distance is not significant, switch to the GMM definition model to predict single tumor cells individually.
-- Cluster single-cell copy number data to identify clonal subpopulations.
-- Generate consensus profiles representing subclonal genotypes for further analysis of gene expression differences.
-
-
-
