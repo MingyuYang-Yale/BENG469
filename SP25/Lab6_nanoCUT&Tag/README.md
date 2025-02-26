@@ -7,7 +7,7 @@ In this computational lab, we will go through some of the downtream analysis for
 (Estimated completion time: 3~5 mins)
 1. Download "L6_nanoCUTTag.Rmd" from Files on Canvas.
 
-2.Upload the files to your project folder on HPC:
+2. Upload the files to your project folder on HPC:
 
 Open McCleary OnDemand at [beng469.ycrc.yale.edu](https://beng469.ycrc.yale.edu)  in a browser window, and go to **Files** menu and click open your project folder (/gpfs/gibbs/project/beng469/beng469_YourNetID).
 
