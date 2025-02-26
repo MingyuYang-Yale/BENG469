@@ -25,7 +25,7 @@ Go to the Rstudio-server initialization page, and specify the parameters/resourc
 | Number of hours   | 6        |
 | Number of CPU cores per node   | 1        |
 | Memory per CPU core in GiB   | 32       |
-| Partitions   | devel or day or education     |
+| Partitions   | devel / day / education     |
 
 Then click Launch to launch an Rstudio session, and connect the Rstudio session once it’s started
 
