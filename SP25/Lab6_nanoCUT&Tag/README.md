@@ -4,7 +4,6 @@
 In this computational lab, we will go through some of the downtream analysis for multi-modality epigenetic data using the examples of Nano CUT&Tag in the paper https://www.nature.com/articles/s41596-023-00932-6.
 
 ### Pre-lab task:
-(Estimated completion time: 3~5 mins)
 1. Download "L6_nanoCUTTag.Rmd" from Files on Canvas.
 
 2. Upload the files to your project folder on HPC:
