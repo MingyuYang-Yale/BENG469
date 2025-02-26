@@ -31,7 +31,7 @@ Then click Launch to launch an Rstudio session, and connect the Rstudio session 
 
 3. Open the R markdown tutorials:
 
-Once you are inside Rstudio, use the file navigation panel at the bottom right to click open your **project**/ folder then the **Lab4**/ folder you created, then click open “**L6_nanoCUTTag.Rmd**” . 
+Once you are inside Rstudio, use the file navigation panel at the bottom right to click open your **project**/ folder then the **Lab6**/ folder you created, then click open “**L6_nanoCUTTag.Rmd**” . 
 
 #### Clonal Subpopulation Identification
 
