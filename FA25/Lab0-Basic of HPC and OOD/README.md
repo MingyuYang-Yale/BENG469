@@ -103,18 +103,19 @@ For the first two methods, you'll need an ssh key to access. The process of gene
 
 - Click **interactive apps** -> **Rstudio Server**
 
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Rstudio-ood1.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Rstudio-ood11.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 - After it’s running, then click the "connect to Rstudio Server".
 
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Rstudio-ood2.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Rstudio-ood22.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Rstudio-ood33.png" alt="foo bar" title="train &amp; tracks" /></p>
 - Click **interactive apps** -> **Jupyter**
 
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Python-ood1.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Python-ood11.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 - After it’s running, then click the "connect to Jupyter".
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Python-ood2.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Python-ood22.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ---
 ## Navigating Files and Directories by command line
