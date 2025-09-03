@@ -78,19 +78,19 @@ For the first two methods, you'll need an ssh key to access. The process of gene
 
 - Open OOD site for our class: <a href="https://secure.its.yale.edu/cas/login?service=https%3a%2f%2fbeng469f.ycrc.yale.edu%2fpun%2fsys%2fdashboard"> **beng469f.ycrc.yale.edu** </a>
 - Log in with your Yale NetID and password
-   <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-login.png" alt="foo bar" title="train &amp; tracks" /></p>
+   <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/bouchet-login.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 - After login you will see the OOD dashboard.
 
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-2025.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-2025f.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 - Click **Clusters** -> **shell access**
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-ssh-login-2025.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-ssh-login-2025f.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 
 - Click **Files**
 
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-storages-2025.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/ood-storages-2025f.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 - Storage Types
   
