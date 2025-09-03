@@ -301,19 +301,13 @@ getquota
 
 
 ## Partitions
-#### Public Purpose:
 * **day**: for most batch jobs. This is the default if you don't specify one with --partition.
 * **devel**: for jobs with which you need ongoing interaction. For example, exploratory analyses or debugging compilation.
 * **week**: for jobs that need a longer runtime than day allows.
-* **long**: for jobs that need a longer runtime than week allows.
 * **gpu**: for jobs that make use of GPUs.
+* **gpu_devel**: for develop GPU-enabled code, or for debug jobs that make use of GPUs
 * **bigmem**: for jobs that have memory requirements other partitions can't handle.
-* **scavenge**: uses idle nodes from other partitions (can be preempted).
-
-#### PI Partitions
-These partitions are purchased by groups for private use. 
-#### YCGA partitions 
-Intended for projects related to the Yale Center for Genome Analysis
+* **mpi**: for tightly-coupled parallel programs that make efficient use of multiple nodes.
 
 **More information about Bouchet cluster, see** <a href="https://docs.ycrc.yale.edu/clusters/bouchet/">  **here** </a>
 
