@@ -46,7 +46,7 @@ More information: https://docs.ycrc.yale.edu/clusters/
 ----
 ## Setting up an account
 
-You should have received an email from Yale Center for Research Computing:
+You should have received an email from Yale Center for Research Computing（YCRC）:
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/mail-from-ycrc-bouchet-2025-2.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 ### Log in to the HPC
@@ -55,18 +55,19 @@ Only reachable from Yale campus network:
 - YaleSecure (on campus)
 - Yale VPN (off campus)
 
-#### Three general methods to login:
-1. Command line SSH (Linux or MacOS)
+#### Two main ways to access HPC:
+1. Command line access via SSH 
 ```
     ssh beng469f_my393@bouchet.ycrc.yale.edu
 ```
-2. Graphical ssh tool (MobaXterm for Windows)
+   -  SSH requires you to set up an SSH key.
+   -  The process for generating keys varies by operating system.
+   -  Find detailed instructions on how to generate and upload SSH keys <a href="https://docs.ycrc.yale.edu/clusters-at-yale/access/ssh/"> **here** </a> .
+
   
-3. Open OnDemand(OOD), web-based login
+2. Open OnDemand(OOD), a web-based portal for easier access.
 
-For the first two methods, you'll need an ssh key to access. The process of generating SSH keys varies depending on your platform. Find detailed instructions on how to generate and upload SSH keys <a href="https://docs.ycrc.yale.edu/clusters-at-yale/access/ssh/"> **here** </a> .
-
-**In this class, we will mainly use Open OnDemand to access the HPC.** For more advanced use cases not well supported by the Open OnDemand, you can connect to the HPC using SSH.
+**For this class, we will use Open OnDemand to access the HPC.** For more advanced use cases not well supported by the Open OnDemand, you can connect to the HPC using SSH.
 
 ## What is Open OnDemond(OOD)
 - OOD is an open-source web portal for HPC centers to provide users with an easy-to-use web interface to HPC clusters.
