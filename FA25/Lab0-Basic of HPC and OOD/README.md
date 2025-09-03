@@ -101,6 +101,7 @@ For the first two methods, you'll need an ssh key to access. The process of gene
 |Scratch|~/scratch|Temporary, shared files, purged every 60 days|10TiB/Group|
 
 
+
 - Click **interactive apps** -> **Rstudio Server**
 
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Rstudio-ood11.png" alt="foo bar" title="train &amp; tracks" /></p>
