@@ -32,7 +32,7 @@
 
 ### Yale HPC
 
-|Cluster||CPUs|Nodes|Login Address|Purpose|
+|Cluster||Approx. Core Count|Nodes|Login Address|Purpose|
 |------|-------|------|-------|------|------|
 |<a href="https://docs.ycrc.yale.edu/clusters/bouchet/"> Bouchet </a>|<p><img height="100" src="https://docs.ycrc.yale.edu/img/edward-bouchet.jpg" alt="foo bar" title="train &amp; tracks" /> </p>|11,000|180|bouchet.ycrc.yale.edu|All research with low-risk data|
 |<a href="https://docs.ycrc.yale.edu/clusters/grace/"> Grace </a>|<p><img height="100" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Grace.png" alt="foo bar" title="train &amp; tracks" /> </p>|26,000|670|grace.hpc.yale.edu|General|
