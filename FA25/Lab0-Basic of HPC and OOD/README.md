@@ -39,6 +39,7 @@
 |<a href="https://docs.ycrc.yale.edu/clusters/mccleary/"> McCleary </a>|<p><img height="100" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Mccleary.png" alt="foo bar" title="train &amp; tracks" /> </p>|13,000|340|mccleary.ycrc.yale.edu|Medical/Life science,YCGA|
 |<a href="https://docs.ycrc.yale.edu/clusters/milgram/"> Milgram </a>|<p><img height="100" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Milgram.png" alt="foo bar" title="train &amp; tracks" /> </p>|2,000|50|milgram.hpc.yale.edu|Sensitive data|
 |<a href="https://docs.ycrc.yale.edu/clusters/misha/"> Misha </a>|<p><img height="100" src="https://docs.ycrc.yale.edu/img/misha.jpeg" alt="foo bar" title="train &amp; tracks" /> </p>|2,000|40|misha.ycrc.yale.edu|<a href="https://wti.yale.edu/"> Wu Tsai Institute </a>|
+|<a href="https://docs.ycrc.yale.edu/clusters/grace/"> Hopper </a>|<p><img height="100" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Grace.png" alt="foo bar" title="train &amp; tracks" /> </p>|6,000|100|-|General|
 
 More information: https://docs.ycrc.yale.edu/clusters/
 
