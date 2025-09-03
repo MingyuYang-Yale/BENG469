@@ -36,7 +36,7 @@
 |------|-------|------|-------|------|------|
 |<a href="https://docs.ycrc.yale.edu/clusters/bouchet/"> Bouchet </a>|<p><img height="100" src="https://docs.ycrc.yale.edu/img/edward-bouchet.jpg" alt="foo bar" title="train &amp; tracks" /> </p>|11,000|180|bouchet.ycrc.yale.edu|All research with low-risk data|
 |<a href="https://docs.ycrc.yale.edu/clusters/grace/"> Grace </a>|<p><img height="100" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Grace.png" alt="foo bar" title="train &amp; tracks" /> </p>|26,000|670|grace.hpc.yale.edu|General|
-|McCleary|<p><img height="100" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Mccleary.png" alt="foo bar" title="train &amp; tracks" /> </p>|13,000|340|mccleary.ycrc.yale.edu|Medical/Life science,YCGA|
+|<a href="https://docs.ycrc.yale.edu/clusters/mccleary/"> McCleary </a>|<p><img height="100" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Mccleary.png" alt="foo bar" title="train &amp; tracks" /> </p>|13,000|340|mccleary.ycrc.yale.edu|Medical/Life science,YCGA|
 |Milgram|<p><img height="100" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Milgram.png" alt="foo bar" title="train &amp; tracks" /> </p>|2,000|50|milgram.hpc.yale.edu|Sensitive data|
 |Misha|<p><img height="100" src="https://docs.ycrc.yale.edu/img/misha.jpeg" alt="foo bar" title="train &amp; tracks" /> </p>|2,000|40|misha.ycrc.yale.edu|<a href="https://wti.yale.edu/"> Wu Tsai Institute </a>|
 
