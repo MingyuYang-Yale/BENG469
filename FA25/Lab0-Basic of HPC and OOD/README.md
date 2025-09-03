@@ -60,9 +60,9 @@ Only reachable from Yale campus network:
 ```
     ssh beng469f_my393@bouchet.ycrc.yale.edu
 ```
-       -  SSH requires you to set up an SSH key.
-       -  The process for generating keys varies by operating system.
-       -  Find detailed instructions on how to generate and upload SSH keys <a href="https://docs.ycrc.yale.edu/clusters-at-yale/access/ssh/"> **here** </a> .
+    -  SSH requires you to set up an SSH key.
+    -  The process for generating keys varies by operating system.
+    -  Find detailed instructions on how to generate and upload SSH keys <a href="https://docs.ycrc.yale.edu/clusters-at-yale/access/ssh/"> **here** </a> .
 
   
 2. Open OnDemand(OOD), a web-based portal for easier access.
