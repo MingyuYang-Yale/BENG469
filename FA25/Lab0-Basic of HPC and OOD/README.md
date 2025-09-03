@@ -56,7 +56,7 @@ Only reachable from Yale campus network:
 - Yale VPN (off campus)
 
 #### Two main ways to access HPC:
-1. Command line access via SSH 
+1. Command line access via **SSH**
 ```
     ssh beng469f_my393@bouchet.ycrc.yale.edu
 ```
@@ -66,7 +66,7 @@ Only reachable from Yale campus network:
  - Find detailed instructions on how to generate and upload SSH keys <a href="https://docs.ycrc.yale.edu/clusters-at-yale/access/ssh/"> **here** </a> .
 
   
-2. Open OnDemand(OOD), a web-based portal for easier access.
+2. **Open OnDemand(OOD)**, a web-based portal for easier access.
 
 **For this class, we will use Open OnDemand to access the HPC.** For more advanced use cases not well supported by the Open OnDemand, you can connect to the HPC using SSH.
 
