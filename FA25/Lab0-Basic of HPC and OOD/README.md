@@ -359,6 +359,7 @@ module load Python
 ## **Online Tutorials**
 
 https://docs.ycrc.yale.edu/resources/online-tutorials/
+
 https://research.computing.yale.edu/self-guided-training-resources#hpc
 
 https://www.youtube.com/watch?si=C76V3SUrr7H46Kpj&v=Wvao_o1ACBQ&feature=youtu.be
