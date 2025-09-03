@@ -57,7 +57,7 @@ Only reachable from Yale campus network:
 #### Three general methods to login:
 1. Command line SSH (Linux or MacOS)
 ```
-    ssh beng469_netid@mccleary.ycrc.yale.edu
+    ssh beng469f_my393@bouchet.ycrc.yale.edu
 ```
 2. Graphical ssh tool (MobaXterm for Windows)
   
