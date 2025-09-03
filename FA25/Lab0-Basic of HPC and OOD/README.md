@@ -96,7 +96,7 @@ For the first two methods, you'll need an ssh key to access. The process of gene
   
 |Name|Location|Good for|Quota|
 |------|-------|------|-------|
-|Home|~/|Scripts|125GiB/Person|
+|Home|~/|Scripts|125GiB/user|
 |Project|~/project|Larger datasets (keep a copy elsewhere)|4TiB/Group|
 |Scratch|~/scratch|Temporary, shared files, purged every 60 days|10TiB/Group|
 
