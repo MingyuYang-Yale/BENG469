@@ -166,7 +166,7 @@ The command to change locations is `cd` followed by a directory name to change o
 cd project_beng469f/
 ```
 ```
-ls -lrt
+ls -l
 ```
 ```
 cd beng469f_NetID
