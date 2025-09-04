@@ -353,3 +353,8 @@ https://www.youtube.com/watch?si=135TmpuvVE1MQ6eF&v=_kMHT_tkweo&feature=youtu.be
 https://www.youtube.com/watch?si=2-45fmJpKxjPPnfz&v=qCeqjStTXcE&feature=youtu.be
 
 ---
+
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Q1.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Q2.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Q3.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Q4.png" alt="foo bar" title="train &amp; tracks" /></p>
