@@ -132,18 +132,6 @@ Only reachable from Yale campus network:
 * **bigmem**: for jobs that have memory requirements other partitions can't handle.
 * **mpi**: for tightly-coupled parallel programs that make efficient use of multiple nodes.
 
-  ---
-## Interactive vs. Batch
-
-#### Interactive jobs:
-* For development, debugging, or interactive environments like R and Matlab
-* One or a few jobs at a time
-#### Batch jobs:
-* Non-interactive
-* Can run many jobs simultaneously
-* Usually your best choice for production computing
-
-
 **More information about Bouchet cluster, see** <a href="https://docs.ycrc.yale.edu/clusters/bouchet/">  **here** </a>
 
 ---
