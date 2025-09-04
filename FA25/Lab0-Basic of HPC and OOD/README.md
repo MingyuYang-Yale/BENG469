@@ -131,6 +131,8 @@ Only reachable from Yale campus network:
 * **gpu_devel**: for develop GPU-enabled code, or for debug jobs that make use of GPUs
 * **bigmem**: for jobs that have memory requirements other partitions can't handle.
 * **mpi**: for tightly-coupled parallel programs that make efficient use of multiple nodes.
+* **education** and **education_gpu**: special partitions for Yale courses
+
 
 **More information about Bouchet cluster, see** <a href="https://docs.ycrc.yale.edu/clusters/bouchet/">  **here** </a>
 
