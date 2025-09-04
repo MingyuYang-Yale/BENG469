@@ -161,7 +161,13 @@ ls --help
 ### Move Around
 The command to change locations is `cd` followed by a directory name to change our working directory. cd stands for “change directory”.
 ```
-cd project
+cd project_beng469f/
+```
+```
+ls -lrt
+```
+```
+cd beng469f_NetID
 ```
 
 ### Make a Directory
