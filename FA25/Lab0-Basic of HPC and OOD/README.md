@@ -181,6 +181,9 @@ change directory to "Lab0"
 ```
 cd Lab0
 ```
+```
+pwd
+```
 
 ### Copy a File
 The cp command to copy a file 
