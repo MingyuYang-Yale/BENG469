@@ -185,7 +185,7 @@ cd Lab0
 ### Copy a File
 The cp command to copy a file 
 ```
-cp /vast/palmer/scratch/beng469/beng469_my393/students.txt ./
+cp /nfs/roberts/scratch/beng469f/beng469f_my393/students.txt ./
 ```
 
 ### Rename a File
