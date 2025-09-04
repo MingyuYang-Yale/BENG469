@@ -293,18 +293,6 @@ Removing the files in a directory recursively can be a very dangerous operation.
 ```
 rm -r -i test2
 ```
-
-
-### Quotas
-To monitor your current storage usage & limits, run:
-```
-getquota
-```
-* All storage areas have quotas, both size and file count
-* If you hit your limit, jobs fail
-* Home quota is per user, small
-* Project, scratch has a group quota shared with your group, large
-  
 ---
 
 ## Transfer Data
