@@ -268,7 +268,7 @@ You can also use -w to get only the number of words, or -c to get only the numbe
 ### Delete a File
 
 ```
-rm students-beng469-sp25.txt
+rm students-beng469-fa25.txt
 ```
 This command removes files (```rm``` is short for “remove”). 
 
