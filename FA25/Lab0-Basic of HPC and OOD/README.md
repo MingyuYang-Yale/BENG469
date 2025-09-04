@@ -197,7 +197,7 @@ cp /nfs/roberts/scratch/beng469f/beng469f_my393/students.txt ./
 We can change the file’s name using `mv`, which is short for “move”:
 
 ```
-mv students.txt students-beng469-sp25.txt
+mv students.txt students-beng469-fa25.txt
 ```
 
 ### Look inside files: 
