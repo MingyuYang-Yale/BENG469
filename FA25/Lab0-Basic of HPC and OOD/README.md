@@ -122,6 +122,18 @@ Only reachable from Yale campus network:
 - After it’s running, then click the "connect to Jupyter".
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/Assignment1/Python-ood22.png" alt="foo bar" title="train &amp; tracks" /></p>
 
+
+## Partitions
+* **day**: for most batch jobs. This is the default if you don't specify one with --partition.
+* **devel**: for jobs with which you need ongoing interaction. For example, exploratory analyses or debugging compilation.
+* **week**: for jobs that need a longer runtime than day allows.
+* **gpu**: for jobs that make use of GPUs.
+* **gpu_devel**: for develop GPU-enabled code, or for debug jobs that make use of GPUs
+* **bigmem**: for jobs that have memory requirements other partitions can't handle.
+* **mpi**: for tightly-coupled parallel programs that make efficient use of multiple nodes.
+
+**More information about Bouchet cluster, see** <a href="https://docs.ycrc.yale.edu/clusters/bouchet/">  **here** </a>
+
 ---
 ## Navigating Files and Directories by command line
 
@@ -302,17 +314,6 @@ getquota
 
 ---
 
-
-## Partitions
-* **day**: for most batch jobs. This is the default if you don't specify one with --partition.
-* **devel**: for jobs with which you need ongoing interaction. For example, exploratory analyses or debugging compilation.
-* **week**: for jobs that need a longer runtime than day allows.
-* **gpu**: for jobs that make use of GPUs.
-* **gpu_devel**: for develop GPU-enabled code, or for debug jobs that make use of GPUs
-* **bigmem**: for jobs that have memory requirements other partitions can't handle.
-* **mpi**: for tightly-coupled parallel programs that make efficient use of multiple nodes.
-
-**More information about Bouchet cluster, see** <a href="https://docs.ycrc.yale.edu/clusters/bouchet/">  **here** </a>
 
 ---
 ## Interactive vs. Batch
