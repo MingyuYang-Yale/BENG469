@@ -206,13 +206,13 @@ mv students.txt students-beng469-fa25.txt
 
 The cat (short for “concatenate“), which means join together, we can use ```cat``` to join multiple files together and print out their contents. we can also use cat print out only a file's content.
 
-Let's use ```cat``` to display contents of students-beng469-sp25.txt :  
+Let's use ```cat``` to display contents of students-beng469-fa25.txt :  
 ```
-cat students-beng469-sp25.txt
+cat students-beng469-fa25.txt
 ```
 when you add ```-n``` flag can show us the line number
 ```
-cat -n students-beng469-sp25.txt
+cat -n students-beng469-fa25.txt
 ```
 
 #### ```head/tail```
@@ -220,11 +220,11 @@ cat -n students-beng469-sp25.txt
 head: output the first n lines of a file. 
 
 ```
-head -n 5 students-beng469-sp25.txt
+head -n 5 students-beng469-fa25.txt
 ```
 tail: output the last n lines of a file. 
 ```
-tail -n 3 students-beng469-sp25.txt
+tail -n 3 students-beng469-fa25.txt
 ```
 Copy a cancer gene list file to your own directory:
 
@@ -251,7 +251,7 @@ less cancer-genes.txt
 
 Next let's see how many lines/words/characters in a file, use ```wc``` command. ```wc``` is the “word count” command, it counts the number of lines, words, and characters in files.
 ```
-wc students-beng469-sp25.txt
+wc students-beng469-fa25.txt
 ```
 
 ```
@@ -260,7 +260,7 @@ wc cancer-genes.txt
 
 If we run wc -l instead of just wc, the output shows only the number of lines per file:
 ```
-wc -l students-beng469-sp25.txt
+wc -l students-beng469-fa25.txt
 ```
 You can also use -w to get only the number of words, or -c to get only the number of characters.
 
