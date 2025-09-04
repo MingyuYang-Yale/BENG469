@@ -350,10 +350,9 @@ https://docs.ycrc.yale.edu/resources/online-tutorials/
 https://research.computing.yale.edu/self-guided-training-resources#hpc
 
 https://www.youtube.com/watch?si=C76V3SUrr7H46Kpj&v=Wvao_o1ACBQ&feature=youtu.be
+
 https://www.youtube.com/watch?si=135TmpuvVE1MQ6eF&v=_kMHT_tkweo&feature=youtu.be
+
 https://www.youtube.com/watch?si=2-45fmJpKxjPPnfz&v=qCeqjStTXcE&feature=youtu.be
 
 ---
-
-
-https://supercontainers.github.io/hpc-containers-survey/2024/two-thousand-twenty-four/
