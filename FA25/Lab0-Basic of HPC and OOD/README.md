@@ -229,7 +229,7 @@ tail -n 3 students-beng469-fa25.txt
 Copy a cancer gene list file to your own directory:
 
 ```
-cp /vast/palmer/scratch/beng469/beng469_my393/cancer-genes.txt ./
+cp /nfs/roberts/scratch/beng469f/beng469f_my393/cancer-gene.txt ./
 ```
 ```
 head cancer-genes.txt
