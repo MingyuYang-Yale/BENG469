@@ -66,11 +66,12 @@ Copy the ```cellphondDB.ipynb``` notebook to your ```Lab3``` folder.
 cp /nfs/roberts/project/beng469f/beng469f_yl2499/Lab3/* ./
 ```
 Launch a jupyter server
-Select **cellphoneDB** as the environment, keep all other setting as default.
+Select **cellphoneDB** as the environment.
 
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-2.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/lab3-1.png" alt="foo bar" title="train &amp; tracks" /></p>
 
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-3.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/lab3-2.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/lab3-3.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 Connect to Jupyter, Click **project**  -> **lab3**
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-4.png" alt="foo bar" title="train &amp; tracks" /></p>
