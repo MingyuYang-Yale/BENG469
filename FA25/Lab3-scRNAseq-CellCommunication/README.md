@@ -36,22 +36,8 @@ Update Conda Environments for OOD
 ```
 ycrc_conda_env.sh update
 ```
+### 2. Create Lab3 folder and copy the Jupyternote book
 
-### 2. Finding the Data
-
-The dataset is available at: https://explore.data.humancellatlas.org/projects/f83165c5-e2ea-4d15-a5cf-33f3550bffde/project-matrices
-
-Open the link above. Scroll down until you find ```vento18_10x.processed.h5ad```. This file contains the processed single-cell data required for further analysis.
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-data.png" alt="foo bar" title="train &amp; tracks" /></p>
-
-#### Using the Pre-downloaded File:
-If you want to save time, you can use the version I have already downloaded.
-The file is available at: 
-```
-/nfs/roberts/project/beng469f/beng469f_yl2499/Lab3_data/vento18_10x.processed.h5ad
-```
-
-### 3. Setting Up the Jupyter Server
 ```
 cd project_beng469f
 ```
@@ -65,6 +51,7 @@ Copy the ```cellphondDB.ipynb``` notebook to your ```Lab3``` folder.
 ```
 cp /nfs/roberts/project/beng469f/beng469f_yl2499/Lab3/* ./
 ```
+### 3. Setting Up the Jupyter Server
 Launch a jupyter server
 Select **cellphoneDB** as the environment.
 
