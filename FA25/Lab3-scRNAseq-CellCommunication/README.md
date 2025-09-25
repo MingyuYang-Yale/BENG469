@@ -47,7 +47,7 @@ cd beng469f_NETID
 ```
 mkdir Lab3 && cd Lab3
 ```
-Copy the ```cellphondDB.ipynb``` notebook to your ```Lab3``` folder.
+Copy the ```cellphondDB.ipynb``` notebook and other files to your ```Lab3``` folder.
 ```
 cp /nfs/roberts/project/beng469f/beng469f_yl2499/Lab3/* ./
 ```
