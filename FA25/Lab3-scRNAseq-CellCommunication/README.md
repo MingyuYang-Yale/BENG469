@@ -74,11 +74,11 @@ Select **cellphoneDB** as the environment.
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/lab3-3.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 Connect to Jupyter, Click **project**  -> **lab3**
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-4.png" alt="foo bar" title="train &amp; tracks" /></p>
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-5.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/lab3-4.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/lab3-5.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 Open the **cellphoneDB.ipynb**
-<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/ccc-6.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/lab3-6.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 **Run the Notebook**, Execute the cells step by step to complete the analysis.
 
