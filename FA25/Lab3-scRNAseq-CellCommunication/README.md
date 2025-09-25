@@ -36,7 +36,7 @@ Update Conda Environments for OOD
 ```
 ycrc_conda_env.sh update
 ```
-### 2. Create Lab3 folder and copy the Jupyternote book
+### 2. Create Lab3 folder and copy files
 
 ```
 cd project_beng469f
