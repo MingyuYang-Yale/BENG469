@@ -63,7 +63,7 @@ mkdir Lab3 && cd Lab3
 ```
 Copy the ```cellphondDB.ipynb``` notebook to your ```Lab3``` folder.
 ```
-cp /nfs/roberts/project/beng469f/beng469f_yl2499/Lab3/cellphoneDB.ipynb ./
+cp /nfs/roberts/project/beng469f/beng469f_yl2499/Lab3/* ./
 ```
 Launch a jupyter server
 Select **cellphoneDB** as the environment, keep all other setting as default.
