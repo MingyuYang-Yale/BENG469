@@ -7,7 +7,7 @@ Click **Clusters** -> **shell access**
 
 Start an interactive job using the ```salloc```, this ensures you are running commands on a compute node rather than the login node.
 ```
-salloc
+salloc --partition=education
 ```
 Load the Miniconda module, Miniconda is needed to create and manage Python environments.
 ```
