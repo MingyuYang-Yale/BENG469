@@ -52,9 +52,18 @@ The file is available at:
 ```
 
 ### 3. Setting Up the Jupyter Server
-Copy the ```cellphondDB.ipynb``` notebook to your ```lab3``` folder.
 ```
-cp /gpfs/gibbs/project/beng469/beng469_my393/lab3/cellphoneDB.ipynb ~/project/lab3/
+cd project_beng469f
+```
+```
+cd beng469f_NETID
+```
+```
+mkdir Lab3 && cd Lab3
+```
+Copy the ```cellphondDB.ipynb``` notebook to your ```Lab3``` folder.
+```
+cp /nfs/roberts/project/beng469f/beng469f_yl2499/Lab3/cellphoneDB.ipynb ./
 ```
 Launch a jupyter server
 Select **cellphoneDB** as the environment, keep all other setting as default.
