@@ -75,6 +75,7 @@ Select **cellphoneDB** as the environment.
 
 Connect to Jupyter, Click **project_beng469f** -> find your own folder (beng469f_NETID) -> **Lab3**
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/lab3-4.png" alt="foo bar" title="train &amp; tracks" /></p>
+<p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/lab3-7.png" alt="foo bar" title="train &amp; tracks" /></p>
 <p><img width="800" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/SP21/lab3-5.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 Open the **cellphoneDB.ipynb**
