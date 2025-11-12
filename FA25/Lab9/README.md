@@ -13,7 +13,10 @@ salloc --mem=16g
 cd project_beng469f/beng469_NETID
 ```
 ```
-mkdir Lab9 && cd Lab9
+mkdir Lab9
+```
+```
+cd Lab9
 ```
 ```
 module load miniconda
@@ -43,5 +46,15 @@ Start Jupyter notebook with SpatialGlue pipeline
 | Number of hours   | 6        |
 | Number of CPU cores per node   | 4        |
 | Memory per CPU core in GiB   | 16       |
+| Partitions   |  education/devel/day     |
+
+Start Rstudio
+| **Parameters**      | **Values** |
+| ----------- | ----------- |
+|Rstudio-Server version | RStudio-Server/2024.12.1-563|
+|R version| R/4/4/1-foss-2022b|
+| Number of hours   | 6        |
+| Number of CPU cores per node   | 1        |
+| Memory per CPU core in GiB   | 8      |
 | Partitions   |  education/devel/day     |
 
