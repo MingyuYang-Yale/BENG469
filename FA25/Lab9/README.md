@@ -52,7 +52,7 @@ exit
 | **Parameters**      | **Values** |
 | ----------- | ----------- |
 |Rstudio-Server version | RStudio-Server/2024.12.1-563|
-|R version| R/4/4/1-foss-2022b|
+|R version| R/4.4.1-foss-2022b|
 | Number of hours   | 6        |
 | Number of CPU cores per node   | 1        |
 | Memory per CPU core in GiB   | 8      |
