@@ -31,12 +31,11 @@ cp /nfs/roberts/project/beng469f/shared/SpatialGlue/mclust.r
 exit
 ```
 
-Start Jupyter notebook with SpatialGlue pipeline \
+Start Jupyter notebook with SpatialGlue pipeline
 
 | **Parameters**      | **Values** |
-
 | ----------- | ----------- |
-|version|conda:SpatialGlue-env|
+|version | conda:SpatialGlue-env|
 | Number of hours   | 6        |
 | Number of CPU cores per node   | 4        |
 | Memory per CPU core in GiB   | 16       |
