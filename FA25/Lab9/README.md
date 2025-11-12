@@ -22,7 +22,7 @@ cd Lab9
 module load miniconda
 ```
 ```
-conda env create -f ./project_beng469f/shared/SpatialGlue/SpatialGlue.yml
+conda env create -f /nfs/roberts/project/beng469f/shared/SpatialGlue/SpatialGlue.yml
 ```
 ```
 ycrc_conda_env.sh update
