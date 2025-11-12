@@ -48,7 +48,7 @@ exit
 | Memory per CPU core in GiB   | 16       |
 | Partitions   |  education/devel/day     |
 
-### Start Rstudio
+### Start Rstudio Server
 | **Parameters**      | **Values** |
 | ----------- | ----------- |
 |Rstudio-Server version | RStudio-Server/2024.12.1-563|
