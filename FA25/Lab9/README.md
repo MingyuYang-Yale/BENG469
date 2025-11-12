@@ -38,7 +38,7 @@ cp /nfs/roberts/project/beng469f/shared/SpatialGlue/mclust.r ./
 exit
 ```
 
-Start Jupyter notebook with SpatialGlue pipeline
+### Start Jupyter notebook with SpatialGlue pipeline
 
 | **Parameters**      | **Values** |
 | ----------- | ----------- |
@@ -48,7 +48,7 @@ Start Jupyter notebook with SpatialGlue pipeline
 | Memory per CPU core in GiB   | 16       |
 | Partitions   |  education/devel/day     |
 
-Start Rstudio
+### Start Rstudio
 | **Parameters**      | **Values** |
 | ----------- | ----------- |
 |Rstudio-Server version | RStudio-Server/2024.12.1-563|
