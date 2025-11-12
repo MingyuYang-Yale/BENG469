@@ -40,3 +40,4 @@ Start Jupyter notebook with SpatialGlue pipeline
 | Number of CPU cores per node   | 4        |
 | Memory per CPU core in GiB   | 16       |
 | Partitions   |  education/devel/day     |
+
