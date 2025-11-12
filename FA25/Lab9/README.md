@@ -24,7 +24,7 @@ ycrc_conda_env.sh update
 cp /nfs/roberts/project/beng469f/shared/SpatialGlue/SpatialGlue.ipynb ./
 ```
 ```
-cp /nfs/roberts/project/beng469f/shared/SpatialGlue/mclust.r
+cp /nfs/roberts/project/beng469f/shared/SpatialGlue/mclust.r ./
 ```
 
 ```
