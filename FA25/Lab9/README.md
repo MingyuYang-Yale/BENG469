@@ -10,7 +10,7 @@ Click **Clusters** -> **shell access**
 salloc --mem=16g
 ```
 ```
-cd scratch_beng469f/beng469f_NETID
+cd scratch_beng469f/beng469f_NETID   # remember to replace NETID with your own
 ```
 ```
 mkdir Lab9
