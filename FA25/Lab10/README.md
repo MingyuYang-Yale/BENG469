@@ -40,3 +40,4 @@ cp -r /nfs/roberts/project/beng469f/shared/Lab10/applications/ ./
 | Memory per CPU core in GiB   | 16       |
 | Partitions   |  education/devel/day     |
 
+<p><img width="400" src="https://github.com/MingyuYang-Yale/BENG469/blob/main/FA25/Lab10/jupyte.png" alt="foo bar" title="train &amp; tracks" />
