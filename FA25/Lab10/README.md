@@ -29,6 +29,9 @@ ycrc_conda_env.sh update
 ```
 cp -r /nfs/roberts/project/beng469f/shared/Lab10/applications/ ./
 ```
+```
+exit
+```
 
 ### Start Jupyter notebook with DeepCell pipeline
 
