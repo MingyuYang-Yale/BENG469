@@ -4,7 +4,7 @@ Open OOD site : <a href="https://beng469f.ycrc.yale.edu/"> **beng469f.ycrc.yale.
 
 Click **Clusters** -> **shell access**
 
-## Deepcell environment setup
+## DeepCell environment setup
 ```
 salloc --mem=16g
 ```
@@ -30,7 +30,7 @@ ycrc_conda_env.sh update
 cp -r /nfs/roberts/project/beng469f/shared/Lab10/applications/ ./
 ```
 
-### Start Jupyter notebook with Deepcell pipeline
+### Start Jupyter notebook with DeepCell pipeline
 
 | **Parameters**      | **Values** |
 | ----------- | ----------- |
