@@ -29,3 +29,14 @@ ycrc_conda_env.sh update
 ```
 cp -r /nfs/roberts/project/beng469f/shared/Lab10/applications/ ./
 ```
+
+### Start Jupyter notebook with Deepcell pipeline
+
+| **Parameters**      | **Values** |
+| ----------- | ----------- |
+|version | conda:deepcell|
+| Number of hours   | 6        |
+| Number of CPU cores per node   | 4        |
+| Memory per CPU core in GiB   | 16       |
+| Partitions   |  education/devel/day     |
+
