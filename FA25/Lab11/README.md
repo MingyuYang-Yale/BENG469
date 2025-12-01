@@ -24,7 +24,7 @@ cd project_beng469f/beng469f_NETID
 mkdir Lab11
 ```
 
-##copy the files related to iStar to Lab11
+## copy the files related to iStar to Lab11
 
 ```
 cp /nfs/roberts/project/beng469f/shared/Lab11/iStar/* ./
