@@ -4,6 +4,9 @@
 salloc
 ```
 ```
+module load miniconda
+```
+```
 conda env create -f /nfs/roberts/project/beng469f/shared/Lab11/istar_environment.yml
 ```
 ```
