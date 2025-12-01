@@ -47,7 +47,7 @@ cp -r /nfs/roberts/project/beng469f/shared/Lab11/checkpoints ./
 
 | **Parameters**      | **Values** |
 | ----------- | ----------- |
-|version | conda:deepcell|
+|version | conda:iStar_origin|
 | Number of hours   | 6        |
 | Number of CPU cores per node   | 8        |
 | Memory per CPU core in GiB   | 8       |
