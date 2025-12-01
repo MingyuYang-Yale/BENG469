@@ -42,3 +42,14 @@ cp -r /nfs/roberts/project/beng469f/shared/Lab11/demo ./
 ```
 cp -r /nfs/roberts/project/beng469f/shared/Lab11/checkpoints ./
 ```
+
+### Start Jupyter notebook with iStar pipeline
+
+| **Parameters**      | **Values** |
+| ----------- | ----------- |
+|version | conda:deepcell|
+| Number of hours   | 6        |
+| Number of CPU cores per node   | 8        |
+| Memory per CPU core in GiB   | 8       |
+| Partitions   |  education/devel/day     |
+
