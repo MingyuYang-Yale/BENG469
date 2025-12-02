@@ -1,3 +1,9 @@
+# BENG469 - LAB10
+
+Open OOD site : <a href="https://beng469f.ycrc.yale.edu/"> **beng469f.ycrc.yale.edu** </a>
+
+Click **Clusters** -> **shell access**
+
 ## install conda env
 
 ```
