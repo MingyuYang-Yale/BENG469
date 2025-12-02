@@ -36,6 +36,9 @@ cd project_beng469f/beng469f_NETID
 ```
 mkdir Lab11
 ```
+```
+cd Lab11
+```
 
 ## copy the files related to iStar to Lab11
 
