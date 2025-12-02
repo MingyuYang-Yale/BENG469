@@ -43,6 +43,10 @@ cp -r /nfs/roberts/project/beng469f/shared/Lab11/demo ./
 cp -r /nfs/roberts/project/beng469f/shared/Lab11/checkpoints ./
 ```
 
+```
+exit
+```
+
 ### Start Jupyter notebook with iStar pipeline
 
 | **Parameters**      | **Values** |
