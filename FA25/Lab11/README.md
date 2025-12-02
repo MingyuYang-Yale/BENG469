@@ -4,7 +4,7 @@ Open OOD site : <a href="https://beng469f.ycrc.yale.edu/"> **beng469f.ycrc.yale.
 
 Click **Clusters** -> **shell access**
 
-## install conda env
+## install iStar conda env
 
 ```
 salloc
