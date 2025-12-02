@@ -63,3 +63,6 @@ exit
 | Memory per CPU core in GiB   | 8       |
 | Partitions   |  education/devel/day     |
 
+
+Run the **istar_demo.ipynb** notebook
+
